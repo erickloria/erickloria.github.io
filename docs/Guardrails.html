@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Erick Loría Soto">
-<meta name="dcterms.date" content="2025-04-23">
+<meta name="dcterms.date" content="2025-04-28">
 
-<title>AI Policy and Guidelines – UWCCR / Use of AI</title>
+<title>Departmental SOPs for AI Integration – UWCCR / Use of AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,27 +22,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -119,10 +99,33 @@ div.csl-indent {
     <a class="nav-link" href="./3G_AI_Framework.html"> 
 <span class="menu-text">3G AI Framework</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./Guardrails.html" aria-current="page"> 
-<span class="menu-text">Guardrails</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-guardrails" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Guardrails</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-guardrails">    
+        <li>
+    <a class="dropdown-item" href="./Guardrails.html">
+ <span class="dropdown-text">Guardrails</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./Academic_Team.html">
+ <span class="dropdown-text">Academic Team</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./human_resources.qmd">
+ <span class="dropdown-text">Human Resources</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./co_curricular.qmd">
+ <span class="dropdown-text">Co-Curricular / Residential Life</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./administration.qmd">
+ <span class="dropdown-text">Administration</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./glossary.html"> 
 <span class="menu-text">Glossary</span></a>
@@ -143,26 +146,14 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#the-uwc-ai-levels-of-use" id="toc-the-uwc-ai-levels-of-use" class="nav-link" data-scroll-target="#the-uwc-ai-levels-of-use">The UWC AI Levels of Use</a>
-  <ul class="collapse">
-  <li><a href="#level-1-no-ai" id="toc-level-1-no-ai" class="nav-link" data-scroll-target="#level-1-no-ai"><img src="Images/scale1.PNG" class="img-fluid" width="40"> Level 1: No AI</a></li>
-  <li><a href="#level-2-ai-planning" id="toc-level-2-ai-planning" class="nav-link" data-scroll-target="#level-2-ai-planning"><img src="Images/scale2.PNG" class="img-fluid" width="40"> Level 2: AI Planning</a></li>
-  <li><a href="#level-3-ai-collaboration" id="toc-level-3-ai-collaboration" class="nav-link" data-scroll-target="#level-3-ai-collaboration"><img src="Images/scale3.PNG" class="img-fluid" width="40"> Level 3: AI Collaboration</a></li>
-  <li><a href="#level-4-full-ai" id="toc-level-4-full-ai" class="nav-link" data-scroll-target="#level-4-full-ai"><img src="Images/scale4.PNG" class="img-fluid" width="40"> Level 4: Full AI</a></li>
-  <li><a href="#level-5-ai-exploration" id="toc-level-5-ai-exploration" class="nav-link" data-scroll-target="#level-5-ai-exploration"><img src="Images/scale5.PNG" class="img-fluid" width="40"> Level 5: AI Exploration</a></li>
-  </ul></li>
-  <li><a href="#departmental-sops-for-ai-integration" id="toc-departmental-sops-for-ai-integration" class="nav-link" data-scroll-target="#departmental-sops-for-ai-integration">Departmental SOPs for AI Integration</a>
+  <li><a href="#departmental-sops-for-ai-integration" id="toc-departmental-sops-for-ai-integration" class="nav-link active" data-scroll-target="#departmental-sops-for-ai-integration">Departmental SOPs for AI Integration</a>
   <ul class="collapse">
   <li><a href="#academic-team" id="toc-academic-team" class="nav-link" data-scroll-target="#academic-team">Academic Team</a></li>
   <li><a href="#human-resources" id="toc-human-resources" class="nav-link" data-scroll-target="#human-resources">Human Resources</a></li>
   <li><a href="#co-curricular-team" id="toc-co-curricular-team" class="nav-link" data-scroll-target="#co-curricular-team">Co-Curricular Team</a></li>
   <li><a href="#administration-team" id="toc-administration-team" class="nav-link" data-scroll-target="#administration-team">Administration Team</a></li>
   </ul></li>
-  <li><a href="#oversight-and-implementation" id="toc-oversight-and-implementation" class="nav-link" data-scroll-target="#oversight-and-implementation">Oversight and Implementation</a>
-  <ul class="collapse">
-  <li><a href="#unacceptable-uses-of-ai-at-uwc-costa-rica" id="toc-unacceptable-uses-of-ai-at-uwc-costa-rica" class="nav-link" data-scroll-target="#unacceptable-uses-of-ai-at-uwc-costa-rica">Unacceptable Uses of AI at UWC Costa Rica</a></li>
-  </ul></li>
+  <li><a href="#oversight-and-implementation" id="toc-oversight-and-implementation" class="nav-link" data-scroll-target="#oversight-and-implementation">Oversight and Implementation</a></li>
   </ul>
 </nav>
     </div>
@@ -171,7 +162,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">AI Policy and Guidelines</h1>
+<h1 class="title">Departmental SOPs for AI Integration</h1>
 </div>
 
 
@@ -188,7 +179,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 23, 2025</p>
+      <p class="date">April 28, 2025</p>
     </div>
   </div>
   
@@ -200,52 +191,16 @@ div.csl-indent {
 </header>
 
 
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
 <p>This internal policy guide outlines the ethical and pedagogical use of Artificial Intelligence (AI) at UWC Costa Rica. In alignment with the UWC mission to unite people, nations, and cultures for peace and a sustainable future, this guide promotes the responsible, inclusive, and value-driven integration of AI into our academic, administrative, and co-curricular life.</p>
-</section>
-<section id="the-uwc-ai-levels-of-use" class="level1">
-<h1>The UWC AI Levels of Use</h1>
-<p>To support clarity in expectations, UWC Costa Rica adopts a 5-level AI usage scale adapted from Perkins, Furze, Roe &amp; MacVaugh (2024). These levels provide structure for both students and staff when determining appropriate use of AI in assessments and tasks.</p>
-<section id="level-1-no-ai" class="level3">
-<h3 class="anchored" data-anchor-id="level-1-no-ai"><img src="Images/scale1.PNG" class="img-fluid" width="40"> Level 1: No AI</h3>
-<blockquote class="blockquote">
-<p>The assessment is completed entirely without AI assistance in a controlled environment.<br>
-<strong>You must not use AI at any point during the assessment. You must demonstrate your core skills and knowledge.</strong></p>
-</blockquote>
-</section>
-<section id="level-2-ai-planning" class="level3">
-<h3 class="anchored" data-anchor-id="level-2-ai-planning"><img src="Images/scale2.PNG" class="img-fluid" width="40"> Level 2: AI Planning</h3>
-<blockquote class="blockquote">
-<p>AI may be used for pre-task activities such as brainstorming or outlining.<br>
-<strong>You may use AI for planning, idea development, and research. Final submissions must show how you refined these ideas independently.</strong></p>
-</blockquote>
-</section>
-<section id="level-3-ai-collaboration" class="level3">
-<h3 class="anchored" data-anchor-id="level-3-ai-collaboration"><img src="Images/scale3.PNG" class="img-fluid" width="40"> Level 3: AI Collaboration</h3>
-<blockquote class="blockquote">
-<p>AI may help generate or revise work, but students must critically evaluate and edit all AI-generated content.<br>
-<strong>You may use AI for drafting or feedback but must demonstrate human judgment and authorship.</strong></p>
-</blockquote>
-</section>
-<section id="level-4-full-ai" class="level3">
-<h3 class="anchored" data-anchor-id="level-4-full-ai"><img src="Images/scale4.PNG" class="img-fluid" width="40"> Level 4: Full AI</h3>
-<blockquote class="blockquote">
-<p>AI may be used extensively, with students directing it to meet assessment goals.<br>
-<strong>You may use AI throughout your task but must still showcase independent understanding and critical thinking.</strong></p>
-</blockquote>
-</section>
-<section id="level-5-ai-exploration" class="level3">
-<h3 class="anchored" data-anchor-id="level-5-ai-exploration"><img src="Images/scale5.PNG" class="img-fluid" width="40"> Level 5: AI Exploration</h3>
-<blockquote class="blockquote">
-<p>AI is used as a creative partner, enabling co-designed tasks and novel approaches.<br>
-<strong>You should use AI innovatively to solve problems or co-create with your instructor.</strong></p>
-</blockquote>
-<p>Source: <span class="citation" data-cites="furze2024">Furze (<a href="#ref-furze2024" role="doc-biblioref">2024</a>)</span></p>
-</section>
-</section>
 <section id="departmental-sops-for-ai-integration" class="level1">
 <h1>Departmental SOPs for AI Integration</h1>
+<p>This section outlines the Standard Operating Procedures (SOPs) for AI use across core areas of the school. Each department has its own file where policy guidelines will be expanded. The Academic Team file contains the AI usage scale and associated expectations, while the remaining departmental files provide general operational outlines to be refined with stakeholder input.</p>
+<ul>
+<li><a href="./Academic_Team.html"><code>Academic Team</code></a>: Focuses on instructional design, assessments, and levels of AI use permitted in classroom tasks.</li>
+<li><a href="Human_Resources.qmd"><code>Human Resources</code></a>: Addresses AI use in hiring, onboarding, and staff development.</li>
+<li><a href="CoCurricular_Team.qmd"><code>Co-Curricular Team</code></a>: Outlines ethical AI use in extracurriculars, service, and student leadership.</li>
+<li><a href="Administration_Team.qmd"><code>Administration Team</code></a>: Defines responsible use of AI in scheduling, operations, and communication.</li>
+</ul>
 <section id="academic-team" class="level2">
 <h2 class="anchored" data-anchor-id="academic-team">Academic Team</h2>
 <ul>
@@ -288,78 +243,14 @@ div.csl-indent {
 <ul>
 <li>A <strong>UWC AI Committee</strong> will be established, consisting of representatives from all departments and student leadership.</li>
 <li>This committee will be trained first and then cascade knowledge to each team.</li>
-<li>The policy is a living document and will be updated annually based on feedback, use cases, and evolving global practices.</li>
-<li>Aligned with UWC International’s AI Policy (2024) and Costa Rica’s National AI Strategy (MICITT, 2024).</li>
+<li>The policy is a living document and will be updated every semester based on feedback, use cases, and evolving global practices.</li>
+<li>Aligned with UWC International’s AI Policy (2024), Costa Rica’s National AI Strategy (MICITT, 2024), and the Green Schools National Network (GSNN) framework.</li>
 </ul>
-<section id="unacceptable-uses-of-ai-at-uwc-costa-rica" class="level2">
-<h2 class="anchored" data-anchor-id="unacceptable-uses-of-ai-at-uwc-costa-rica">Unacceptable Uses of AI at UWC Costa Rica</h2>
-<p>This table outlines scenarios where the use of AI is deemed inappropriate or unethical across different roles in our school community. These guidelines reflect UWC’s core values of academic integrity, respect, and responsible innovation.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 13%">
-<col style="width: 86%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Role</th>
-<th>Unacceptable Use Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Student</strong></td>
-<td>Submitting AI-generated content without citation or permission.</td>
-</tr>
-<tr class="even">
-<td><strong>Student</strong></td>
-<td>Using AI for assignments where personal reflection or written expression is assessed.</td>
-</tr>
-<tr class="odd">
-<td><strong>Student</strong></td>
-<td>Sharing personal or sensitive information with AI tools without proper safeguards.</td>
-</tr>
-<tr class="even">
-<td><strong>Student</strong></td>
-<td>Relying on AI as a primary source without validating or citing original sources.</td>
-</tr>
-<tr class="odd">
-<td><strong>Student</strong></td>
-<td>Using AI for impersonation, manipulation, or harassment.</td>
-</tr>
-<tr class="even">
-<td><strong>Teacher</strong></td>
-<td>Using AI to generate unedited report card comments or feedback.</td>
-</tr>
-<tr class="odd">
-<td><strong>Teacher</strong></td>
-<td>Failing to disclose when AI was used to design or generate instructional materials.</td>
-</tr>
-<tr class="even">
-<td><strong>Faculty/Staff</strong></td>
-<td>Using AI tools to make performance evaluations or disciplinary decisions without human oversight.</td>
-</tr>
-<tr class="odd">
-<td><strong>Any Role</strong></td>
-<td>Entering identifiable data (e.g., full names, student IDs) into non-approved AI systems.</td>
-</tr>
-<tr class="even">
-<td><strong>Any Role</strong></td>
-<td>Using AI to automate decision-making without verifying results or maintaining human control.</td>
-</tr>
-</tbody>
-</table>
-<p>These practices compromise ethical standards, data privacy, and the educational values of our institution. If in doubt, individuals should consult their department head or the UWC AI Committee.</p>
-
 
 
 </section>
-</section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-furze2024" class="csl-entry" role="listitem">
-Furze, Leon. 2024. <span>“Updating the AI Assessment Scale.”</span> 2024. <a href="https://leonfurze.com/2024/08/28/updating-the-ai-assessment-scale/">https://leonfurze.com/2024/08/28/updating-the-ai-assessment-scale/</a>.
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

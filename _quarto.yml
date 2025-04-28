@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
   title: "AI at UWC"
 
 website:
