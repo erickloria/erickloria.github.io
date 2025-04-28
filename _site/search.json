@@ -1,0 +1,457 @@
+[
+  {
+    "objectID": "Policy_Guide.html",
+    "href": "Policy_Guide.html",
+    "title": "UWC Costa Rica AI Policy Guide",
+    "section": "",
+    "text": "This internal policy guide outlines the ethical and pedagogical use of Artificial Intelligence (AI) at UWC Costa Rica. In alignment with the UWC mission to unite people, nations, and cultures for peace and a sustainable future, this guide promotes the responsible, inclusive, and value-driven integration of AI into our academic, administrative, and co-curricular life."
+  },
+  {
+    "objectID": "Policy_Guide.html#academic-team",
+    "href": "Policy_Guide.html#academic-team",
+    "title": "UWC Costa Rica AI Policy Guide",
+    "section": "Academic Team",
+    "text": "Academic Team\n\nAll assessments must state the permitted AI level from the scale above.\nTeachers are responsible for guiding students in when and how to cite AI tools.\nAssignments should be periodically updated to emphasize personal engagement, critical thinking, and voice.\nTeachers co-lead the rollout of AI pedagogy and modeling ethical use in the classroom."
+  },
+  {
+    "objectID": "Policy_Guide.html#human-resources",
+    "href": "Policy_Guide.html#human-resources",
+    "title": "UWC Costa Rica AI Policy Guide",
+    "section": "Human Resources",
+    "text": "Human Resources\n\nHR defines which roles or responsibilities may involve AI use and ensures clear expectations are communicated.\nCollaborates with team leads to define ethical parameters for AI usage in job functions.\nMaintains records of AI tool authorizations and ensures compliance with institutional expectations.\nParticipates in the AI Committee and co-leads staff onboarding and training on AI policy."
+  },
+  {
+    "objectID": "Policy_Guide.html#co-curricular-team",
+    "href": "Policy_Guide.html#co-curricular-team",
+    "title": "UWC Costa Rica AI Policy Guide",
+    "section": "Co-Curricular Team",
+    "text": "Co-Curricular Team\n\nEncourages exploratory AI use in service, arts, clubs, and student leadership — always aligned with the 5-level scale.\nFacilitates student understanding of AI as a creative tool in projects and initiatives.\nProvides safe platforms and support for AI-enhanced presentations, event design, or outreach.\nCo-leads sessions on AI ethics for student leadership groups and affinity groups."
+  },
+  {
+    "objectID": "Policy_Guide.html#administration-team",
+    "href": "Policy_Guide.html#administration-team",
+    "title": "UWC Costa Rica AI Policy Guide",
+    "section": "Administration Team",
+    "text": "Administration Team\n\nUses AI to support administrative functions like scheduling, translation, data organization, and communication.\nResponsible for ensuring that data privacy and institutional values are upheld in all operational AI systems.\nLeads internal audits of AI tools for transparency, security, and sustainability.\nServes as an example of responsible AI use to model for the community how automation can enhance—not replace—human leadership."
+  },
+  {
+    "objectID": "AI_Policy.html",
+    "href": "AI_Policy.html",
+    "title": "UWC Costa Rica AI Policy Alignment",
+    "section": "",
+    "text": "This policy is developed in alignment with three key guiding frameworks:\n\nUWC Costa Rica Strategic Plan (2022–2027), which emphasizes sustainability, innovation, personalized and experiential learning, and community engagement (UWC Costa Rica 2022).\nNational Artificial Intelligence Strategy of Costa Rica (MICITT, 2024–2027), which underscores ethical AI use, human rights, and equity (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones (MICITT) 2024).\nGreen Schools National Network (GSNN) Framework, particularly in cultivating holistic and experiential learning, promoting wellbeing, and integrating efficient systems (Green Schools National Network 2024)."
+  },
+  {
+    "objectID": "AI_Policy.html#framework-selected",
+    "href": "AI_Policy.html#framework-selected",
+    "title": "UWC Costa Rica AI Policy Alignment",
+    "section": "",
+    "text": "This policy is developed in alignment with three key guiding frameworks:\n\nUWC Costa Rica Strategic Plan (2022–2027), which emphasizes sustainability, innovation, personalized and experiential learning, and community engagement (UWC Costa Rica 2022).\nNational Artificial Intelligence Strategy of Costa Rica (MICITT, 2024–2027), which underscores ethical AI use, human rights, and equity (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones (MICITT) 2024).\nGreen Schools National Network (GSNN) Framework, particularly in cultivating holistic and experiential learning, promoting wellbeing, and integrating efficient systems (Green Schools National Network 2024)."
+  },
+  {
+    "objectID": "AI_Policy.html#key-priorities-uwc2022",
+    "href": "AI_Policy.html#key-priorities-uwc2022",
+    "title": "UWC Costa Rica AI Policy Alignment",
+    "section": "Key Priorities (UWC Costa Rica 2022)",
+    "text": "Key Priorities (UWC Costa Rica 2022)\n\nSustainability\nPersonalized and Experiential Learning\nAcademic Excellence and Future-Readiness\nBelonging and Community Well-being\nGlobal Citizenship"
+  },
+  {
+    "objectID": "AI_Policy.html#ai-integration-3g-ai-framework",
+    "href": "AI_Policy.html#ai-integration-3g-ai-framework",
+    "title": "UWC Costa Rica AI Policy Alignment",
+    "section": "AI Integration (3G AI Framework)",
+    "text": "AI Integration (3G AI Framework)\n\nGovernance\nAI governance at UWC Costa Rica is structured as a comprehensive, school-wide initiative. Governance includes an interdisciplinary AI Committee comprising representatives from:\n\nAcademic Leadership Team\n\nHuman Resources\n\nCo-curricular Department\n\nAdministration\n\nStudent and Community Voices\n\nThis committee oversees implementation, compliance, and ethical integration of AI across academic and operational domains (UWC Costa Rica 2022).\n\n\nGuidance\nGuidance will ensure thorough professional development in AI literacy aligned explicitly with UWC Costa Rica’s strategic goals (UWC Costa Rica 2022). The interdisciplinary AI Committee members will first undergo extensive training in ethical and effective AI use. Subsequently, this committee will:\n\nFacilitate broader staff training\n\nCreate clear onboarding procedures for new hires\n\nConduct ongoing peer observation and co-teaching\n\nFoster school-wide understanding of AI’s ethical implications (Furze 2024)\n\n\n\nGuardrails\nGuardrails will be articulated as Standard Operating Procedures (SOPs), ensuring ethical AI integration aligns with institutional commitments to sustainability, diversity, inclusion, academic integrity, and transparency (UWC Costa Rica 2022). These SOPs will explicitly outline acceptable AI uses, proper citation practices, and protocols addressing equity, bias mitigation, and privacy."
+  },
+  {
+    "objectID": "AI_Policy.html#potential-impacts-of-ai",
+    "href": "AI_Policy.html#potential-impacts-of-ai",
+    "title": "UWC Costa Rica AI Policy Alignment",
+    "section": "Potential Impacts of AI",
+    "text": "Potential Impacts of AI\n\n\n\n\n\n\n\n\nPriority\nAI Support & Amplification\nAI Challenges & Tensions\n\n\n\n\nSustainability\nEnhanced resource optimization; simulations for sustainability education (UWC Costa Rica 2022; Green Schools National Network 2024).\nAI systems may contribute to increased energy consumption and electronic waste, potentially contradicting sustainability goals. Institutions must balance the environmental costs of AI technologies with their potential benefits.\n\n\nPersonalized Learning\nCustomized learning pathways; personalized feedback (United World Colleges (UWC) 2024).\nWhile AI enables individualized learning experiences, it may unintentionally reduce meaningful human interaction and exacerbate inequities if some students lack reliable access to necessary tools or devices.\n\n\nAcademic Excellence\nEnhanced analytical capabilities; skill development (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones (MICITT) 2024; United World Colleges (UWC) 2024).\nOverreliance on AI for content generation may compromise academic integrity, lead to superficial understanding, and perpetuate biases embedded in training data.\n\n\nBelonging & Well-being\nWell-being monitoring; inclusivity and support (United World Colleges (UWC) 2024; Green Schools National Network 2024).\nAI tools may raise significant concerns around student privacy and data security, and if misapplied, may reinforce exclusion through biased predictions or intrusive surveillance.\n\n\nGlobal Citizenship\nFacilitating global collaboration; intercultural understanding (United World Colleges (UWC) 2024).\nIf AI systems are not culturally sensitive or inclusive in their data and outputs, they may misrepresent global perspectives and contribute to inequity rather than promoting global citizenship."
+  },
+  {
+    "objectID": "AI_Policy.html#references",
+    "href": "AI_Policy.html#references",
+    "title": "UWC Costa Rica AI Policy Alignment",
+    "section": "References",
+    "text": "References\n\n(Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones (MICITT) 2024) Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones (MICITT). (2024). National Artificial Intelligence Strategy of Costa Rica 2024–2027. San José, Costa Rica.\n(United World Colleges (UWC) 2024) United World Colleges (UWC). (2024). Policy on the Use of Artificial Intelligence. UWC International.\n(UWC Costa Rica 2022) UWC Costa Rica. (2022). 2022-2027 Strategic Plan. Santa Ana, Costa Rica.\n(Furze 2024) Furze, L. (2024). Updating the AI Assessment Scale. Retrieved from https://leonfurze.com/2024/08/28/updating-the-ai-assessment-scale/\n(Green Schools National Network 2024) Green Schools National Network. (2024). Costa Rica Systems Thinking Integration Report. GSNN."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Policy Portal",
+    "section": "",
+    "text": "Welcome to the AI Policy hub for UWC Costa Rica. This site hosts two key documents that guide our strategic and operational approach to artificial intelligence in our educational environment.\n\n\nThis document was part of our AI policy design work with International School Services (ISS). It includes:\n\nAlignment of UWC values with the Costa Rican National AI Strategy, UWC International AI Policy, Green Schools National Network.\nApplication of the 3G Framework: Governance, Guidance, and Guardrails.\nThematic analysis of UWC’s strategic priorities and how AI supports or challenges them.\n\nRead the 3G AI Framework\n\n\n\nThis document serves as our internal Standard Operating Procedure (SOP) and outlines:\n\nThe 5-level AI usage scale adopted from Leon Furze and collaborators.\nDepartment-specific guidelines for AI use across academics, HR, co-curricular, and administration.\nImplementation strategy, governance model, and oversight committee structure.\n\nRead the AI Policy Guide"
+  },
+  {
+    "objectID": "index.html#ai-policy-guide",
+    "href": "index.html#ai-policy-guide",
+    "title": "Policy Portal",
+    "section": "",
+    "text": "This document serves as our internal Standard Operating Procedure (SOP) and outlines:\n\nThe 5-level AI usage scale adopted from Leon Furze and collaborators.\nDepartment-specific guidelines for AI use across academics, HR, co-curricular, and administration.\nImplementation strategy, governance model, and oversight committee structure.\n\nRead the AI Policy Guide"
+  },
+  {
+    "objectID": "index.html#g-ai-framework-assignment",
+    "href": "index.html#g-ai-framework-assignment",
+    "title": "Policy Portal",
+    "section": "",
+    "text": "This document was part of our AI policy design work with International School Services (ISS). It includes:\n\nAlignment of UWC values with the Costa Rican National AI Strategy, UWC International AI Policy, Green Schools National Network.\nApplication of the 3G Framework: Governance, Guidance, and Guardrails.\nThematic analysis of UWC’s strategic priorities and how AI supports or challenges them.\n\nRead the 3G AI Framework"
+  },
+  {
+    "objectID": "Policy_Guide.html#unacceptable-uses-of-ai-at-uwc-costa-rica",
+    "href": "Policy_Guide.html#unacceptable-uses-of-ai-at-uwc-costa-rica",
+    "title": "UWC Costa Rica AI Policy Guide",
+    "section": "Unacceptable Uses of AI at UWC Costa Rica",
+    "text": "Unacceptable Uses of AI at UWC Costa Rica\nThis table outlines scenarios where the use of AI is deemed inappropriate or unethical across different roles in our school community. These guidelines reflect UWC’s core values of academic integrity, respect, and responsible innovation.\n\n\n\n\n\n\n\nRole\nUnacceptable Use Example\n\n\n\n\nStudent\nSubmitting AI-generated content without citation or permission.\n\n\nStudent\nUsing AI for assignments where personal reflection or written expression is assessed.\n\n\nStudent\nSharing personal or sensitive information with AI tools without proper safeguards.\n\n\nStudent\nRelying on AI as a primary source without validating or citing original sources.\n\n\nStudent\nUsing AI for impersonation, manipulation, or harassment.\n\n\nTeacher\nUsing AI to generate unedited report card comments or feedback.\n\n\nTeacher\nFailing to disclose when AI was used to design or generate instructional materials.\n\n\nFaculty/Staff\nUsing AI tools to make performance evaluations or disciplinary decisions without human oversight.\n\n\nAny Role\nEntering identifiable data (e.g., full names, student IDs) into non-approved AI systems.\n\n\nAny Role\nUsing AI to automate decision-making without verifying results or maintaining human control.\n\n\n\nThese practices compromise ethical standards, data privacy, and the educational values of our institution. If in doubt, individuals should consult their department head or the UWC AI Committee."
+  },
+  {
+    "objectID": "glossary.html",
+    "href": "glossary.html",
+    "title": "Glossary of Key AI Terms",
+    "section": "",
+    "text": "Glossary of Terms\nThis glossary provides clear definitions for key terms used throughout the UWC Costa Rica AI Policy documents to support a common understanding among all staff and stakeholders.\n\n\nArtificial Intelligence (AI)\nThe broad field of computer science focused on creating systems capable of performing tasks that typically require human intelligence, such as recognizing patterns, making decisions, or solving problems.\n\n\n\nGenerative AI (Gen AI)\nA subset of AI that focuses on models capable of creating new content, such as text, images, music, or code. Examples include ChatGPT, Gemini, and Perplexity, which generate outputs based on patterns learned from large datasets.\n\n\n\nStandard Operating Procedure (SOP)\nA documented process that outlines specific guidelines, protocols, and responsibilities to ensure consistency and best practices across an organization. In the AI Policy, SOPs define acceptable AI use within different school departments."
+  },
+  {
+    "objectID": "glossary.html#glossary-of-terms",
+    "href": "glossary.html#glossary-of-terms",
+    "title": "Glossary of Key AI Terms",
+    "section": "",
+    "text": "This glossary provides brief definitions of key terms used throughout our AI policy documentation to support clarity and shared understanding across our learning community.\n\n\nThe capability of machines or computer systems to perform tasks that typically require human intelligence, such as problem-solving, decision-making, or language understanding.\n\n\n\nA category of artificial intelligence that creates new content—such as text, images, or audio—based on patterns learned from data. Examples include ChatGPT, DALL·E, and Bard.\n\n\n\nA subset of AI focused on algorithms that allow systems to learn from data, identify patterns, and make decisions with minimal human intervention.\n\n\n\nA machine learning model trained on vast amounts of text to generate human-like responses to natural language prompts. LLMs are the backbone of many generative AI tools.\n\n\n\nA detailed, step-by-step guideline or protocol that outlines approved practices for the use of AI across departments and roles within the school."
+  },
+  {
+    "objectID": "AI_Policy.html#key-priorities",
+    "href": "AI_Policy.html#key-priorities",
+    "title": "UWC Costa Rica AI Policy Alignment",
+    "section": "Key Priorities",
+    "text": "Key Priorities\n\nSustainability\nPersonalized and Experiential Learning\nAcademic Excellence and Future-Readiness\nBelonging and Community Well-being\nGlobal Citizenship"
+  },
+  {
+    "objectID": "index.html#ai-policy-and-guideline",
+    "href": "index.html#ai-policy-and-guideline",
+    "title": "Policy Portal",
+    "section": "",
+    "text": "This document serves as our internal Standard Operating Procedure (SOP) and outlines:\n\nThe 5-level AI usage scale adopted from Leon Furze and collaborators.\nDepartment-specific guidelines for AI use across academics, HR, co-curricular, and administration.\nImplementation strategy, governance model, and oversight committee structure.\n\nRead the AI Policy Guide"
+  },
+  {
+    "objectID": "index.html#g-ai-framework-alignment",
+    "href": "index.html#g-ai-framework-alignment",
+    "title": "Policy Portal",
+    "section": "",
+    "text": "This document was part of our AI policy design work with International School Services (ISS). It includes:\n\nAlignment of UWC values with the Costa Rican National AI Strategy, UWC International AI Policy, Green Schools National Network.\nApplication of the 3G Framework: Governance, Guidance, and Guardrails.\nThematic analysis of UWC’s strategic priorities and how AI supports or challenges them.\n\nRead the 3G AI Framework"
+  },
+  {
+    "objectID": "index.html#ai-policy-and-guidelines",
+    "href": "index.html#ai-policy-and-guidelines",
+    "title": "Policy Portal",
+    "section": "",
+    "text": "This document serves as our internal Standard Operating Procedure (SOP) and outlines:\n\nThe 5-level AI usage scale adopted from Leon Furze and collaborators.\nDepartment-specific guidelines for AI use across academics, HR, co-curricular, and administration.\nImplementation strategy, governance model, and oversight committee structure.\n\nRead the AI Policy Guide"
+  },
+  {
+    "objectID": "3G_AI_Framework.html",
+    "href": "3G_AI_Framework.html",
+    "title": "AI Policy Alignment",
+    "section": "",
+    "text": "This policy is developed in alignment with three key guiding frameworks:\n\nUWC Costa Rica Strategic Plan (2022–2027), which emphasizes sustainability, innovation, personalized and experiential learning, and community engagement (UWC Costa Rica 2022).\nNational Artificial Intelligence Strategy of Costa Rica (MICITT, 2024–2027), which underscores ethical AI use, human rights, and equity (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones (MICITT) 2024).\nGreen Schools National Network (GSNN) Framework, particularly in cultivating holistic and experiential learning, promoting wellbeing, and integrating efficient systems (Green Schools National Network 2024)."
+  },
+  {
+    "objectID": "3G_AI_Framework.html#framework-selected",
+    "href": "3G_AI_Framework.html#framework-selected",
+    "title": "AI Policy Alignment",
+    "section": "",
+    "text": "This policy is developed in alignment with three key guiding frameworks:\n\nUWC Costa Rica Strategic Plan (2022–2027), which emphasizes sustainability, innovation, personalized and experiential learning, and community engagement (UWC Costa Rica 2022).\nNational Artificial Intelligence Strategy of Costa Rica (MICITT, 2024–2027), which underscores ethical AI use, human rights, and equity (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones (MICITT) 2024).\nGreen Schools National Network (GSNN) Framework, particularly in cultivating holistic and experiential learning, promoting wellbeing, and integrating efficient systems (Green Schools National Network 2024)."
+  },
+  {
+    "objectID": "3G_AI_Framework.html#key-priorities",
+    "href": "3G_AI_Framework.html#key-priorities",
+    "title": "AI Policy Alignment",
+    "section": "Key Priorities",
+    "text": "Key Priorities\n\nSustainability\nPersonalized and Experiential Learning\nAcademic Excellence and Future-Readiness\nBelonging and Community Well-being\nGlobal Citizenship"
+  },
+  {
+    "objectID": "3G_AI_Framework.html#ai-integration-3g-ai-framework",
+    "href": "3G_AI_Framework.html#ai-integration-3g-ai-framework",
+    "title": "AI Policy Alignment",
+    "section": "AI Integration (3G AI Framework)",
+    "text": "AI Integration (3G AI Framework)\n\nGovernance\nAI governance at UWC Costa Rica is structured as a comprehensive, school-wide initiative. Governance includes an interdisciplinary AI Committee comprising representatives from:\n\nAcademic Leadership Team\n\nHuman Resources\n\nCo-curricular Department\n\nAdministration\n\nStudent and Community Voices\n\nThis committee oversees implementation, compliance, and ethical integration of AI across academic and operational domains (UWC Costa Rica 2022).\n\n\nGuidance\nGuidance will ensure thorough professional development in AI literacy aligned explicitly with UWC Costa Rica’s strategic goals (UWC Costa Rica 2022). The interdisciplinary AI Committee members will first undergo extensive training in ethical and effective AI use. Subsequently, this committee will:\n\nFacilitate broader staff training\n\nCreate clear onboarding procedures for new hires\n\nConduct ongoing peer observation and co-teaching\n\nFoster school-wide understanding of AI’s ethical implications (Furze 2024)\n\n\n\nGuardrails\nGuardrails will be articulated as Standard Operating Procedures (SOPs), ensuring ethical AI integration aligns with institutional commitments to sustainability, diversity, inclusion, academic integrity, and transparency (UWC Costa Rica 2022). These SOPs will explicitly outline acceptable AI uses, proper citation practices, and protocols addressing equity, bias mitigation, and privacy."
+  },
+  {
+    "objectID": "3G_AI_Framework.html#potential-impacts-of-ai",
+    "href": "3G_AI_Framework.html#potential-impacts-of-ai",
+    "title": "AI Policy Alignment",
+    "section": "Potential Impacts of AI",
+    "text": "Potential Impacts of AI\n\n\n\n\n\n\n\n\nPriority\nAI Support & Amplification\nAI Challenges & Tensions\n\n\n\n\nSustainability\nEnhanced resource optimization; simulations for sustainability education (UWC Costa Rica 2022; Green Schools National Network 2024).\nAI systems may contribute to increased energy consumption and electronic waste, potentially contradicting sustainability goals. Institutions must balance the environmental costs of AI technologies with their potential benefits.\n\n\nPersonalized Learning\nCustomized learning pathways; personalized feedback (United World Colleges (UWC) 2024).\nWhile AI enables individualized learning experiences, it may unintentionally reduce meaningful human interaction and exacerbate inequities if some students lack reliable access to necessary tools or devices.\n\n\nAcademic Excellence\nEnhanced analytical capabilities; skill development (Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones (MICITT) 2024; United World Colleges (UWC) 2024).\nOverreliance on AI for content generation may compromise academic integrity, lead to superficial understanding, and perpetuate biases embedded in training data.\n\n\nBelonging & Well-being\nWell-being monitoring; inclusivity and support (United World Colleges (UWC) 2024; Green Schools National Network 2024).\nAI tools may raise significant concerns around student privacy and data security, and if misapplied, may reinforce exclusion through biased predictions or intrusive surveillance.\n\n\nGlobal Citizenship\nFacilitating global collaboration; intercultural understanding (United World Colleges (UWC) 2024).\nIf AI systems are not culturally sensitive or inclusive in their data and outputs, they may misrepresent global perspectives and contribute to inequity rather than promoting global citizenship."
+  },
+  {
+    "objectID": "Guardrails.html",
+    "href": "Guardrails.html",
+    "title": "Departmental SOPs for AI Integration",
+    "section": "",
+    "text": "This internal policy guide outlines the ethical and pedagogical use of Artificial Intelligence (AI) at UWC Costa Rica. In alignment with the UWC mission to unite people, nations, and cultures for peace and a sustainable future, this guide promotes the responsible, inclusive, and value-driven integration of AI into our academic, administrative, and co-curricular life."
+  },
+  {
+    "objectID": "Guardrails.html#academic-team",
+    "href": "Guardrails.html#academic-team",
+    "title": "Departmental SOPs for AI Integration",
+    "section": "Academic Team",
+    "text": "Academic Team\n\nAll assessments must state the permitted AI level from the scale above.\nTeachers are responsible for guiding students in when and how to cite AI tools.\nAssignments should be periodically updated to emphasize personal engagement, critical thinking, and voice.\nTeachers co-lead the rollout of AI pedagogy and modeling ethical use in the classroom."
+  },
+  {
+    "objectID": "Guardrails.html#human-resources",
+    "href": "Guardrails.html#human-resources",
+    "title": "Departmental SOPs for AI Integration",
+    "section": "Human Resources",
+    "text": "Human Resources\n\nHR defines which roles or responsibilities may involve AI use and ensures clear expectations are communicated.\nCollaborates with team leads to define ethical parameters for AI usage in job functions.\nMaintains records of AI tool authorizations and ensures compliance with institutional expectations.\nParticipates in the AI Committee and co-leads staff onboarding and training on AI policy."
+  },
+  {
+    "objectID": "Guardrails.html#co-curricular-team",
+    "href": "Guardrails.html#co-curricular-team",
+    "title": "Departmental SOPs for AI Integration",
+    "section": "Co-Curricular Team",
+    "text": "Co-Curricular Team\n\nEncourages exploratory AI use in service, arts, clubs, and student leadership — always aligned with the 5-level scale.\nFacilitates student understanding of AI as a creative tool in projects and initiatives.\nProvides safe platforms and support for AI-enhanced presentations, event design, or outreach.\nCo-leads sessions on AI ethics for student leadership groups and affinity groups."
+  },
+  {
+    "objectID": "Guardrails.html#administration-team",
+    "href": "Guardrails.html#administration-team",
+    "title": "Departmental SOPs for AI Integration",
+    "section": "Administration Team",
+    "text": "Administration Team\n\nUses AI to support administrative functions like scheduling, translation, data organization, and communication.\nResponsible for ensuring that data privacy and institutional values are upheld in all operational AI systems.\nLeads internal audits of AI tools for transparency, security, and sustainability.\nServes as an example of responsible AI use to model for the community how automation can enhance—not replace—human leadership."
+  },
+  {
+    "objectID": "Guardrails.html#unacceptable-uses-of-ai-at-uwc-costa-rica",
+    "href": "Guardrails.html#unacceptable-uses-of-ai-at-uwc-costa-rica",
+    "title": "AI Policy and Guidelines",
+    "section": "Unacceptable Uses of AI at UWC Costa Rica",
+    "text": "Unacceptable Uses of AI at UWC Costa Rica\nThis table outlines scenarios where the use of AI is deemed inappropriate or unethical across different roles in our school community. These guidelines reflect UWC’s core values of academic integrity, respect, and responsible innovation.\n\n\n\n\n\n\n\nRole\nUnacceptable Use Example\n\n\n\n\nStudent\nSubmitting AI-generated content without citation or permission.\n\n\nStudent\nUsing AI for assignments where personal reflection or written expression is assessed.\n\n\nStudent\nSharing personal or sensitive information with AI tools without proper safeguards.\n\n\nStudent\nRelying on AI as a primary source without validating or citing original sources.\n\n\nStudent\nUsing AI for impersonation, manipulation, or harassment.\n\n\nTeacher\nUsing AI to generate unedited report card comments or feedback.\n\n\nTeacher\nFailing to disclose when AI was used to design or generate instructional materials.\n\n\nFaculty/Staff\nUsing AI tools to make performance evaluations or disciplinary decisions without human oversight.\n\n\nAny Role\nEntering identifiable data (e.g., full names, student IDs) into non-approved AI systems.\n\n\nAny Role\nUsing AI to automate decision-making without verifying results or maintaining human control.\n\n\n\nThese practices compromise ethical standards, data privacy, and the educational values of our institution. If in doubt, individuals should consult their department head or the UWC AI Committee."
+  },
+  {
+    "objectID": "Academic_Team.html",
+    "href": "Academic_Team.html",
+    "title": "Academic Team",
+    "section": "",
+    "text": "This page outlines specific expectations for staff and student use of AI in academic contexts. These include the permitted levels of AI engagement, protocols for citation and transparency, and clearly defined acceptable and unacceptable uses."
+  },
+  {
+    "objectID": "Academic_Team.html#acceptable-use-academic-staff",
+    "href": "Academic_Team.html#acceptable-use-academic-staff",
+    "title": "Academic Team SOP",
+    "section": "Acceptable Use: Academic Staff",
+    "text": "Acceptable Use: Academic Staff\n\n\n\n\n\n\n\nPractice\nDescription\n\n\n\n\nAssignment Design\nIndicate permitted AI level and include clear instructions on use and citation.\n\n\nAI Tool Use\nUse AI to differentiate instruction, provide feedback, and co-create resources.\n\n\nCitation Modeling\nDemonstrate ethical citation practices for AI in your own teaching materials.\n\n\nAssessment Integrity\nUpdate assessments to focus on process, originality, and personalized application."
+  },
+  {
+    "objectID": "Academic_Team.html#unacceptable-use-academic-staff",
+    "href": "Academic_Team.html#unacceptable-use-academic-staff",
+    "title": "Academic Team SOP",
+    "section": "Unacceptable Use: Academic Staff",
+    "text": "Unacceptable Use: Academic Staff\n\n\n\n\n\n\n\nPractice\nDescription\n\n\n\n\nUnclear Expectations\nFailing to communicate AI permissions for assignments or assessments.\n\n\nFull AI Substitution\nUsing AI to generate unreviewed lessons or feedback without modification.\n\n\nInaccurate Detection\nUsing unreliable AI detectors as the sole evidence of misconduct.\n\n\nNon-Inclusive Tools\nRecommending tools that are inaccessible to all students (e.g., login barriers, English-only tools)."
+  },
+  {
+    "objectID": "Academic_Team.html#acceptable-use-students",
+    "href": "Academic_Team.html#acceptable-use-students",
+    "title": "Academic Team SOP",
+    "section": "Acceptable Use: Students",
+    "text": "Acceptable Use: Students\n\n\n\n\n\n\n\nPractice\nDescription\n\n\n\n\nLevel-Based Use\nFollow assignment guidelines and only use AI to the permitted extent.\n\n\nAI Disclosure\nCite any tool used and explain how it was used in the final submission.\n\n\nCreative Collaboration\nUse AI to enhance—not replace—your thinking and writing.\n\n\nReflective Practice\nAnalyze and question AI outputs critically before using them."
+  },
+  {
+    "objectID": "Academic_Team.html#unacceptable-use-students",
+    "href": "Academic_Team.html#unacceptable-use-students",
+    "title": "Academic Team SOP",
+    "section": "Unacceptable Use: Students",
+    "text": "Unacceptable Use: Students\n\n\n\n\n\n\n\nPractice\nDescription\n\n\n\n\nUnauthorized Generation\nSubmitting AI-generated content without permission or citation.\n\n\nFabricated Sources\nUsing AI to generate citations or references that do not exist.\n\n\nMisrepresentation\nClaiming AI-created ideas or phrasing as entirely personal work.\n\n\nPeer Misuse\nEncouraging or enabling others to misuse AI against school policy."
+  },
+  {
+    "objectID": "Academic_Team.html#ai-use-guidelines-for-academic-staff",
+    "href": "Academic_Team.html#ai-use-guidelines-for-academic-staff",
+    "title": "Academic Team",
+    "section": "AI Use Guidelines for Academic Staff",
+    "text": "AI Use Guidelines for Academic Staff\n\n\n\n\n\n\n\n\nPractice Type\nPractice\nDescription\n\n\n\n\nAcceptable\nAssignment Design\nIndicate permitted AI level and include clear instructions on use and citation.\n\n\nAcceptable\nAI Tool Use\nUse AI to differentiate instruction, provide feedback, and co-create resources.\n\n\nAcceptable\nCitation Modeling\nDemonstrate ethical citation practices for AI in your own teaching materials.\n\n\nAcceptable\nAssessment Integrity\nUpdate assessments to focus on process, originality, and personalized application.\n\n\nUnacceptable\nUnclear Expectations\nFailing to communicate AI permissions for assignments or assessments.\n\n\nUnacceptable\nFull AI Substitution\nUsing AI to generate unreviewed lessons or feedback without modification.\n\n\nUnacceptable\nInaccurate Detection\nUsing unreliable AI detectors as the sole evidence of misconduct.\n\n\nUnacceptable\nNon-Inclusive Tools\nRecommending tools that are inaccessible to all students (e.g., login barriers, English-only tools)."
+  },
+  {
+    "objectID": "Academic_Team.html#ai-use-guidelines-for-students",
+    "href": "Academic_Team.html#ai-use-guidelines-for-students",
+    "title": "Academic Team",
+    "section": "AI Use Guidelines for Students",
+    "text": "AI Use Guidelines for Students\n\n\n\n\n\n\n\n\nPractice Type\nPractice\nDescription\n\n\n\n\nAcceptable\nLevel-Based Use\nFollow assignment guidelines and only use AI to the permitted extent.\n\n\nAcceptable\nAI Disclosure\nCite any tool used and explain how it was used in the final submission.\n\n\nAcceptable\nCreative Collaboration\nUse AI to enhance—not replace—your thinking and writing.\n\n\nAcceptable\nReflective Practice\nAnalyze and question AI outputs critically before using them.\n\n\nUnacceptable\nUnauthorized Generation\nSubmitting AI-generated content without permission or citation.\n\n\nUnacceptable\nFabricated Sources\nUsing AI to generate citations or references that do not exist.\n\n\nUnacceptable\nMisrepresentation\nClaiming AI-created ideas or phrasing as entirely personal work.\n\n\nUnacceptable\nPeer Misuse\nEncouraging or enabling others to misuse AI against school policy."
+  },
+  {
+    "objectID": "glossary.html#artificial-intelligence-ai",
+    "href": "glossary.html#artificial-intelligence-ai",
+    "title": "Glossary of Key AI Terms",
+    "section": "",
+    "text": "The broad field of computer science focused on creating systems capable of performing tasks that typically require human intelligence, such as recognizing patterns, making decisions, or solving problems."
+  },
+  {
+    "objectID": "glossary.html#generative-ai-gen-ai",
+    "href": "glossary.html#generative-ai-gen-ai",
+    "title": "Glossary of Key AI Terms",
+    "section": "",
+    "text": "A subset of AI that focuses on models capable of creating new content, such as text, images, music, or code. Examples include ChatGPT, Gemini, and Perplexity, which generate outputs based on patterns learned from large datasets."
+  },
+  {
+    "objectID": "glossary.html#standard-operating-procedure-sop",
+    "href": "glossary.html#standard-operating-procedure-sop",
+    "title": "Glossary of Key AI Terms",
+    "section": "",
+    "text": "A documented process that outlines specific guidelines, protocols, and responsibilities to ensure consistency and best practices across an organization. In the AI Policy, SOPs define acceptable AI use within different school departments."
+  },
+  {
+    "objectID": "student_guideline.html",
+    "href": "student_guideline.html",
+    "title": "Student AI Guidelines",
+    "section": "",
+    "text": "At UWC Costa Rica, we value academic integrity, critical thinking, and authentic learning experiences. As artificial intelligence (AI) becomes a common tool in education, we are committed to guiding students in using it responsibly.\nStudents must complete all assignments using a Google Workspace provided file (Docs, Sheets, Slides). Edit histories will be reviewed to ensure authenticity. Students who fail to submit drafts on time or submit work with minimal documented progress risk an academic authenticity investigation, particularly in IB assessments where extended development over time is expected.\nCurrently, the only approved generative AI tool for student use is Google Gemini. Other AI platforms are under review and not authorized until formally approved.\nStudents must also adhere to the AI usage levels defined in the UWC AI Usage Scale."
+  },
+  {
+    "objectID": "student_guideline.html#group-1-studies-in-language-and-literature",
+    "href": "student_guideline.html#group-1-studies-in-language-and-literature",
+    "title": "Student AI Guidelines",
+    "section": "Group 1: Studies in Language and Literature",
+    "text": "Group 1: Studies in Language and Literature\n(Placeholder)"
+  },
+  {
+    "objectID": "student_guideline.html#group-2-language-acquisition",
+    "href": "student_guideline.html#group-2-language-acquisition",
+    "title": "Student AI Guidelines",
+    "section": "Group 2: Language Acquisition",
+    "text": "Group 2: Language Acquisition\n(Placeholder)"
+  },
+  {
+    "objectID": "student_guideline.html#group-3-individuals-and-societies",
+    "href": "student_guideline.html#group-3-individuals-and-societies",
+    "title": "Student AI Guidelines",
+    "section": "Group 3: Individuals and Societies",
+    "text": "Group 3: Individuals and Societies\n(Placeholder)"
+  },
+  {
+    "objectID": "student_guideline.html#group-4-sciences",
+    "href": "student_guideline.html#group-4-sciences",
+    "title": "Student AI Guidelines",
+    "section": "Group 4: Sciences",
+    "text": "Group 4: Sciences\n(Placeholder)"
+  },
+  {
+    "objectID": "student_guideline.html#group-5-mathematics",
+    "href": "student_guideline.html#group-5-mathematics",
+    "title": "Student AI Guidelines",
+    "section": "Group 5: Mathematics",
+    "text": "Group 5: Mathematics\n(Placeholder)"
+  },
+  {
+    "objectID": "student_guideline.html#group-6-the-arts",
+    "href": "student_guideline.html#group-6-the-arts",
+    "title": "Student AI Guidelines",
+    "section": "Group 6: The Arts",
+    "text": "Group 6: The Arts\n(Placeholder)"
+  },
+  {
+    "objectID": "student_guideline.html#citing-ai-use-apa-7th-edition-apa2023publishing-apa2023chatgpt",
+    "href": "student_guideline.html#citing-ai-use-apa-7th-edition-apa2023publishing-apa2023chatgpt",
+    "title": "Student AI Guidelines",
+    "section": "Citing AI Use: APA (7th Edition) (Association 2023a) (Association 2023b)",
+    "text": "Citing AI Use: APA (7th Edition) (Association 2023a) (Association 2023b)\nWhen using AI-generated text (such as from ChatGPT or Gemini) in academic work at UWC Costa Rica, students must cite AI outputs correctly according to APA 7th edition guidelines.\nIf you quote or closely paraphrase AI-generated content:\n\nDescribe in the text how the AI tool was used.\nProvide the full prompt and a summary of the AI-generated response within the appropriate section (e.g., Methodology or Introduction).\nReference the AI model as software, following APA software citation format.\n\nIn-text citation examples:\n\nParenthetical: (OpenAI, 2023)\nNarrative: OpenAI (2023)\n\n\nExample of Citation in a Paper\n\n\n\n\n\n\nExample of Citation in a Paper\n\n\n\nWhen prompted with “Explain the importance of sustainability in education,” the ChatGPT-generated response indicated that integrating sustainability topics into curricula “fosters global citizenship, critical thinking, and a sense of responsibility toward environmental and social challenges” (OpenAI, 2025).\n\nBibliography\nOpenAI. (2025). ChatGPT (March 14 version) [Large language model]. https://chat.openai.com/chat"
+  },
+  {
+    "objectID": "student_guideline.html#citing-ai-use-apa-7th-edition-apa2023publishing",
+    "href": "student_guideline.html#citing-ai-use-apa-7th-edition-apa2023publishing",
+    "title": "Student AI Guidelines",
+    "section": "Citing AI Use: APA (7th Edition) (Association 2023)",
+    "text": "Citing AI Use: APA (7th Edition) (Association 2023)\nWhen using AI-generated text (such as from ChatGPT or Gemini) in academic work at UWC Costa Rica, students must cite AI outputs correctly according to APA 7th edition guidelines.\nIf you quote or closely paraphrase AI-generated content:\n\nDescribe in the text how the AI tool was used.\nProvide the full prompt and a summary of the AI-generated response within the appropriate section (e.g., Methodology or Introduction).\nReference the AI model as software, following APA software citation format.\n\nIn-text citation examples: - Parenthetical: (OpenAI, 2023) - Narrative: OpenAI (2023)\nReference list example: ```plaintext OpenAI. (2023). ChatGPT (March 14 version) [Large language model]. https://chat.openai.com/chat"
+  },
+  {
+    "objectID": "student_guideline.html#bibliography",
+    "href": "student_guideline.html#bibliography",
+    "title": "Student AI Guidelines",
+    "section": "Bibliography",
+    "text": "Bibliography\nOpenAI. (2025). ChatGPT (March 14 version) [Large language model]. https://chat.openai.com/chat"
+  },
+  {
+    "objectID": "Academic_Team.html#students",
+    "href": "Academic_Team.html#students",
+    "title": "Academic Team",
+    "section": "Students",
+    "text": "Students\nStudents must follow clear guidelines for the ethical and transparent use of AI tools in their academic work. The following document outlines the rules for AI use, expectations for citation, and provides examples to help students apply these standards appropriately:\nStudent Guidelines for AI Use"
+  },
+  {
+    "objectID": "Academic_Team.html#source-furze2024",
+    "href": "Academic_Team.html#source-furze2024",
+    "title": "Academic Team",
+    "section": "Source: Furze (2024)",
+    "text": "Source: Furze (2024)"
+  },
+  {
+    "objectID": "student_guideline.html#apa-7th-edition-apa2023publishing-apa2023chatgpt",
+    "href": "student_guideline.html#apa-7th-edition-apa2023publishing-apa2023chatgpt",
+    "title": "Student AI Guidelines",
+    "section": "APA (7th Edition) (Association 2023a) (Association 2023b)",
+    "text": "APA (7th Edition) (Association 2023a) (Association 2023b)\nWhen using AI-generated text (such as from ChatGPT or Gemini) in academic work at UWC Costa Rica, students must cite AI outputs correctly according to APA 7th edition guidelines.\nIf you quote or closely paraphrase AI-generated content:\n\nDescribe in the text how the AI tool was used.\nProvide the full prompt and a summary of the AI-generated response within the appropriate section (e.g., Methodology or Introduction).\nReference the AI model as software, following APA software citation format.\n\nIn-text citation examples:\n\nParenthetical: (OpenAI, 2023)\nNarrative: OpenAI (2023)\n\n\nExample of Citation in a Paper\n\n\n\n\n\n\nExample of Citation in a Paper\n\n\n\nWhen prompted with “Explain the importance of sustainability in education,” the ChatGPT-generated response indicated that integrating sustainability topics into curricula “fosters global citizenship, critical thinking, and a sense of responsibility toward environmental and social challenges” (OpenAI, 2025).\n\nBibliography\nOpenAI. (2025). ChatGPT (March 14 version) [Large language model]. https://chat.openai.com/chat"
+  },
+  {
+    "objectID": "parents_guidelines.html",
+    "href": "parents_guidelines.html",
+    "title": "Parent Guidelines for AI Use",
+    "section": "",
+    "text": "At UWC Costa Rica, we are committed to integrating artificial intelligence (AI) tools thoughtfully and responsibly into our academic environment. Our goal is to enhance student learning while safeguarding student well-being, privacy, and academic integrity.\nStudent use of AI must adhere strictly to the guidelines outlined in the UWC Costa Rica Student Handbook as well as the IB Academic Integrity Policy to ensure ethical and responsible use of technology.\nDuring the academic year, teachers may incorporate approved generative AI (GenAI) tools to support and enrich the learning experience. At present, Gemini for Education is the only approved GenAI platform, pending further evaluation of others. AI usage will be closely supervised by teachers, and students are expected to act ethically and responsibly at all times when using these tools.\n\n\nThe administration will distribute an official opt-out form for families who prefer that their child not participate in activities involving generative AI (GenAI) tools. No written notice is required at this time.\nA draft of the upcoming opt-out form is provided below for informational purposes only:\n\nDear Parents and Guardians,\nThis year, our classroom will be using generative artificial intelligence (GenAI) to enhance our learning experiences. We will be using Gemini (Google for Education) as the approved platform.\nIn order for Gemini to be made available for your child to use, you and your child will need to review and agree to Gemini’s Usage Policies and Terms of Use. It is extremely important that you and your child are aware of the risks and liabilities associated with using GenAI before agreeing to Gemini’s Terms of Use. You remain legally responsible for any personal actions taken by your child on this platform and acknowledge that Gemini is a third-party platform outside of the control of UWC Costa Rica.\nAmong other things, in agreeing to Gemini’s Terms of Use, you agree that your child will:\n\nComply with all applicable laws (including privacy laws and laws governing copyright and other intellectual property);\nLimit Gemini’s liability for any loss or damages;\nIndemnify and hold harmless Gemini (Google) from and against any of your costs, losses, liabilities, and expenses (including attorneys’ fees) from third-party claims arising from your child’s use of Gemini.\n\nIn exchange for your student’s use of the Gemini platform, you also agree to release, indemnify, and defend UWC Costa Rica and its representatives from any liabilities related to your student’s use of Gemini.\nIf you would like to opt your student out of participating in learning via Gemini, an official opt-out form will be shared by UWC Costa Rica for you to complete. If no opt-out form is received, your child will be permitted to engage with approved AI tools under supervision.\nIf you have any questions about your child’s use of GenAI tools, please contact your child’s teacher or the academic office.\n\nThe administration team will finalize the opt-out process and provide the official form for families to complete."
+  },
+  {
+    "objectID": "parents_guidelines.html#opt-out-option-for-families",
+    "href": "parents_guidelines.html#opt-out-option-for-families",
+    "title": "Parent Guidelines for AI Use",
+    "section": "",
+    "text": "The administration will distribute an official opt-out form for families who prefer that their child not participate in activities involving generative AI (GenAI) tools. No written notice is required at this time.\nA draft of the upcoming opt-out form is provided below for informational purposes only:\n\nDear Parents and Guardians,\nThis year, our classroom will be using generative artificial intelligence (GenAI) to enhance our learning experiences. We will be using Gemini (Google for Education) as the approved platform.\nIn order for Gemini to be made available for your child to use, you and your child will need to review and agree to Gemini’s Usage Policies and Terms of Use. It is extremely important that you and your child are aware of the risks and liabilities associated with using GenAI before agreeing to Gemini’s Terms of Use. You remain legally responsible for any personal actions taken by your child on this platform and acknowledge that Gemini is a third-party platform outside of the control of UWC Costa Rica.\nAmong other things, in agreeing to Gemini’s Terms of Use, you agree that your child will:\n\nComply with all applicable laws (including privacy laws and laws governing copyright and other intellectual property);\nLimit Gemini’s liability for any loss or damages;\nIndemnify and hold harmless Gemini (Google) from and against any of your costs, losses, liabilities, and expenses (including attorneys’ fees) from third-party claims arising from your child’s use of Gemini.\n\nIn exchange for your student’s use of the Gemini platform, you also agree to release, indemnify, and defend UWC Costa Rica and its representatives from any liabilities related to your student’s use of Gemini.\nIf you would like to opt your student out of participating in learning via Gemini, an official opt-out form will be shared by UWC Costa Rica for you to complete. If no opt-out form is received, your child will be permitted to engage with approved AI tools under supervision.\nIf you have any questions about your child’s use of GenAI tools, please contact your child’s teacher or the academic office.\n\nThe administration team will finalize the opt-out process and provide the official form for families to complete."
+  },
+  {
+    "objectID": "Academic_Team.html#parents",
+    "href": "Academic_Team.html#parents",
+    "title": "Academic Team",
+    "section": "Parents",
+    "text": "Parents\nParents are provided with important information regarding the use of AI in their child’s educational environment. This document outlines the general context of AI use at UWC Costa Rica and includes an optional opt-out form for families who do not wish their student to engage with AI tools in classroom activities.\nParent Guidelines for AI Use"
+  },
+  {
+    "objectID": "Academic_Team.html#staff",
+    "href": "Academic_Team.html#staff",
+    "title": "Academic Team",
+    "section": "Staff",
+    "text": "Staff\nStaff are required to model ethical and responsible AI practices while ensuring authenticity, transparency, and equity in student learning experiences. The following document provides the guidelines for appropriate and inappropriate uses of AI for staff members:\nStaff Guidelines for AI Use"
+  },
+  {
+    "objectID": "staff_guidelines.html",
+    "href": "staff_guidelines.html",
+    "title": "Staff Guidelines for AI Use",
+    "section": "",
+    "text": "UWC Costa Rica is committed to using Artificial Intelligence (AI) ethically and responsibly to enhance educational outcomes while maintaining academic integrity. This document outlines expectations and responsibilities for staff regarding AI integration in teaching and learning.\n\n\n\nAcademic Integrity: Staff must model responsible AI use and maintain high standards of academic honesty.\nTransparency: When AI is used in creating instructional materials, assessments, or feedback, it must be disclosed where appropriate.\nEquity and Fairness: AI-generated outputs must not exacerbate inequities among students, particularly those learning English as a second language (ESL).\n\n\n\n\nTeachers are advised NOT to rely solely on AI detection software to evaluate student work. Current AI detection tools are unreliable and have been documented to:\n\nWrongly flag work by ESL students at disproportionately higher rates.\nProduce high false-positive rates even for entirely human-written content.\nLack the transparency and validation necessary for disciplinary decisions.\n\nInstead, teachers should:\n\nCompare submitted work against prior student submissions and writing style.\nEngage students in conversations about their work when concerns arise.\nRefer to the IB Academic Integrity Policy when authenticity issues are suspected.\n\n\nImportant: Authenticity investigations must be based on reasonable doubt, not detection software alone.\n\n\n\n\n\n\n\n\n\n\n\nPractice\nDescription\n\n\n\n\nDifferentiation\nUse AI to tailor instruction for diverse student needs.\n\n\nAssessment Design\nDesign tasks aligned with the 5 Levels of AI Use Scale and clearly communicate expectations.\n\n\nFeedback Enhancement\nUse AI to assist in providing formative feedback while maintaining personalization.\n\n\nComment Assistance\nStaff may use AI tools to help format and edit written comments, particularly for non-native English speakers, but the substance of comments must be based on the teacher’s authentic assessment of the student.\n\n\nAdministrative Support\nEmploy AI for non-academic tasks like resource organization or scheduling assistance.\n\n\n\n\n\n\n\n\n\n\n\n\n\nPractice\nDescription\n\n\n\n\nFull Automation\nSubmitting AI-generated content without human review or customization.\n\n\nMisrepresentation\nFailing to disclose the use of AI in teaching materials or assessments where necessary.\n\n\nInappropriate Reliance\nOverusing AI tools for core pedagogical tasks like lesson planning, assessment feedback, or writing comments without critical engagement.\n\n\nBias Introduction\nUsing AI outputs without checking for bias, stereotyping, or cultural insensitivity.\n\n\nComment Substitution\nAllowing AI to entirely generate narrative comments without teacher oversight or personalization based on actual student performance.\n\n\n\n\n\n\n\nMost UWC Costa Rica students are over 16 years old, and necessary technology waivers are already on file.\nStaff should maintain human-centered learning experiences, ensuring that technology enhances, rather than replaces, critical thinking, dialogue, and collaboration.\nAI usage should always align with UWC Costa Rica’s Mission, the IB Learner Profile, and the school’s Code of Conduct."
+  },
+  {
+    "objectID": "staff_guidelines.html#ethical-considerations",
+    "href": "staff_guidelines.html#ethical-considerations",
+    "title": "Staff Guidelines for AI Use",
+    "section": "",
+    "text": "Academic Integrity: Staff must model responsible AI use and maintain high standards of academic honesty.\nTransparency: When AI is used in creating instructional materials, assessments, or feedback, it must be disclosed where appropriate.\nEquity and Fairness: AI-generated outputs must not exacerbate inequities among students, particularly those learning English as a second language (ESL)."
+  },
+  {
+    "objectID": "staff_guidelines.html#ai-detection-tools-limitations-and-cautions",
+    "href": "staff_guidelines.html#ai-detection-tools-limitations-and-cautions",
+    "title": "Staff Guidelines for AI Use",
+    "section": "",
+    "text": "Teachers are advised NOT to rely solely on AI detection software to evaluate student work. Current AI detection tools are unreliable and have been documented to:\n\nWrongly flag work by ESL students at disproportionately higher rates.\nProduce high false-positive rates even for entirely human-written content.\nLack the transparency and validation necessary for disciplinary decisions.\n\nInstead, teachers should:\n\nCompare submitted work against prior student submissions and writing style.\nEngage students in conversations about their work when concerns arise.\nRefer to the IB Academic Integrity Policy when authenticity issues are suspected.\n\n\nImportant: Authenticity investigations must be based on reasonable doubt, not detection software alone."
+  },
+  {
+    "objectID": "staff_guidelines.html#acceptable-ai-use-by-staff",
+    "href": "staff_guidelines.html#acceptable-ai-use-by-staff",
+    "title": "Staff Guidelines for AI Use",
+    "section": "",
+    "text": "Practice\nDescription\n\n\n\n\nDifferentiation\nUse AI to tailor instruction for diverse student needs.\n\n\nAssessment Design\nDesign tasks aligned with the 5 Levels of AI Use Scale and clearly communicate expectations.\n\n\nFeedback Enhancement\nUse AI to assist in providing formative feedback while maintaining personalization.\n\n\nComment Assistance\nStaff may use AI tools to help format and edit written comments, particularly for non-native English speakers, but the substance of comments must be based on the teacher’s authentic assessment of the student.\n\n\nAdministrative Support\nEmploy AI for non-academic tasks like resource organization or scheduling assistance."
+  },
+  {
+    "objectID": "staff_guidelines.html#unacceptable-ai-use-by-staff",
+    "href": "staff_guidelines.html#unacceptable-ai-use-by-staff",
+    "title": "Staff Guidelines for AI Use",
+    "section": "",
+    "text": "Practice\nDescription\n\n\n\n\nFull Automation\nSubmitting AI-generated content without human review or customization.\n\n\nMisrepresentation\nFailing to disclose the use of AI in teaching materials or assessments where necessary.\n\n\nInappropriate Reliance\nOverusing AI tools for core pedagogical tasks like lesson planning, assessment feedback, or writing comments without critical engagement.\n\n\nBias Introduction\nUsing AI outputs without checking for bias, stereotyping, or cultural insensitivity.\n\n\nComment Substitution\nAllowing AI to entirely generate narrative comments without teacher oversight or personalization based on actual student performance."
+  },
+  {
+    "objectID": "staff_guidelines.html#important-reminders",
+    "href": "staff_guidelines.html#important-reminders",
+    "title": "Staff Guidelines for AI Use",
+    "section": "",
+    "text": "Most UWC Costa Rica students are over 16 years old, and necessary technology waivers are already on file.\nStaff should maintain human-centered learning experiences, ensuring that technology enhances, rather than replaces, critical thinking, dialogue, and collaboration.\nAI usage should always align with UWC Costa Rica’s Mission, the IB Learner Profile, and the school’s Code of Conduct."
+  }
+]

@@ -1,0 +1,34 @@
+project:
+  type: website
+  title: "AI at UWC"
+
+website:
+  title: "UWCCR / Use of AI"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: 3G_AI_Framework.qmd
+        text: 3G AI Framework
+      - text: Guardrails
+        menu:
+          - href: Guardrails.qmd
+            text: Guardrails 
+          - href: Academic_Team.qmd
+            text: Academic Team 
+          - href: human_resources.qmd
+            text: Human Resources 
+          - href: co_curricular.qmd
+            text: Co-Curricular / Residential Life
+          - href: administration.qmd
+            text: Administration 
+      - href: glossary.qmd
+        text: Glossary
+
+format:
+  docx:
+    toc: true
+    number-sections: true
+    highlight-style: github
+
+    

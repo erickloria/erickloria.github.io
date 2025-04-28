@@ -1,0 +1,72 @@
+---
+title: "AI Policy Alignment"
+author: "Erick Loría Soto"
+date: "today"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    css: styles.css
+bibliography: references.bib
+---
+
+## Framework Selected
+
+This policy is developed in alignment with three key guiding frameworks:
+
+- **UWC Costa Rica Strategic Plan (2022–2027)**, which emphasizes sustainability, innovation, personalized and experiential learning, and community engagement [@uwc2022].
+- **National Artificial Intelligence Strategy of Costa Rica (MICITT, 2024–2027)**, which underscores ethical AI use, human rights, and equity [@micitt2024].
+- **Green Schools National Network (GSNN) Framework**, particularly in cultivating holistic and experiential learning, promoting wellbeing, and integrating efficient systems [@gsnn2024].
+
+---
+
+## Key Priorities 
+
+- **Sustainability**
+- **Personalized and Experiential Learning**
+- **Academic Excellence and Future-Readiness**
+- **Belonging and Community Well-being**
+- **Global Citizenship**
+
+---
+
+## AI Integration (3G AI Framework)
+
+### Governance
+
+AI governance at UWC Costa Rica is structured as a comprehensive, school-wide initiative. Governance includes an interdisciplinary AI Committee comprising representatives from:
+
+- Academic Leadership Team  
+- Human Resources  
+- Co-curricular Department  
+- Administration  
+- Student and Community Voices  
+
+This committee oversees implementation, compliance, and ethical integration of AI across academic and operational domains [@uwc2022].
+
+### Guidance
+
+Guidance will ensure thorough professional development in AI literacy aligned explicitly with UWC Costa Rica’s strategic goals [@uwc2022]. The interdisciplinary AI Committee members will first undergo extensive training in ethical and effective AI use. Subsequently, this committee will:
+
+- Facilitate broader staff training  
+- Create clear onboarding procedures for new hires  
+- Conduct ongoing peer observation and co-teaching  
+- Foster school-wide understanding of AI’s ethical implications [@furze2024]
+
+### Guardrails
+
+Guardrails will be articulated as Standard Operating Procedures (SOPs), ensuring ethical AI integration aligns with institutional commitments to sustainability, diversity, inclusion, academic integrity, and transparency [@uwc2022]. These SOPs will explicitly outline acceptable AI uses, proper citation practices, and protocols addressing equity, bias mitigation, and privacy.
+
+---
+
+## Potential Impacts of AI
+
+| Priority                            | AI Support & Amplification                                                     | AI Challenges & Tensions                                                                                 |
+|-------------------------------------|---------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
+| **Sustainability**                  | Enhanced resource optimization; simulations for sustainability education [@uwc2022; @gsnn2024].| AI systems may contribute to increased energy consumption and electronic waste, potentially contradicting sustainability goals. Institutions must balance the environmental costs of AI technologies with their potential benefits. |
+| **Personalized Learning**           | Customized learning pathways; personalized feedback [@uwc2024].                      | While AI enables individualized learning experiences, it may unintentionally reduce meaningful human interaction and exacerbate inequities if some students lack reliable access to necessary tools or devices.               |
+| **Academic Excellence**             | Enhanced analytical capabilities; skill development [@micitt2024; @uwc2024].         | Overreliance on AI for content generation may compromise academic integrity, lead to superficial understanding, and perpetuate biases embedded in training data.                                                         |
+| **Belonging & Well-being**          | Well-being monitoring; inclusivity and support [@uwc2024; @gsnn2024].                           | AI tools may raise significant concerns around student privacy and data security, and if misapplied, may reinforce exclusion through biased predictions or intrusive surveillance.                                         |
+| **Global Citizenship**              | Facilitating global collaboration; intercultural understanding [@uwc2024].           | If AI systems are not culturally sensitive or inclusive in their data and outputs, they may misrepresent global perspectives and contribute to inequity rather than promoting global citizenship.                          |
+
+---

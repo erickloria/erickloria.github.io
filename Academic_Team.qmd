@@ -1,0 +1,42 @@
+---
+title: "Academic Team"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    css: styles.css
+bibliography: references.bib
+---
+
+This page outlines specific expectations for staff and student use of AI in academic contexts. These include the permitted levels of AI engagement, protocols for citation and transparency, and clearly defined acceptable and unacceptable uses.
+
+# The UWC AI Levels of Use
+
+To support clarity in expectations, UWC Costa Rica adopts a 5-level AI usage scale adapted from Perkins, Furze, Roe & MacVaugh (2024). These levels provide structure for both students and staff when determining appropriate use of AI in assessments and tasks.
+
+| Level | Description | Guidelines |
+|:-----:|:------------|:------------|
+| ![](Images/scale1.PNG){width=40px} <br> **Level 1: No AI** | The assessment is completed entirely without AI assistance in a controlled environment. | **You must not use AI at any point during the assessment. You must demonstrate your core skills and knowledge.** |
+| ![](Images/scale2.PNG){width=40px} <br> **Level 2: AI Planning** | AI may be used for pre-task activities such as brainstorming or outlining. | **You may use AI for planning, idea development, and research. Final submissions must show how you refined these ideas independently.** |
+| ![](Images/scale3.PNG){width=40px} <br> **Level 3: AI Collaboration** | AI may help generate or revise work, but students must critically evaluate and edit all AI-generated content. | **You may use AI for drafting or feedback but must demonstrate human judgment and authorship.** |
+| ![](Images/scale4.PNG){width=40px} <br> **Level 4: Full AI** | AI may be used extensively, with students directing it to meet assessment goals. | **You may use AI throughout your task but must still showcase independent understanding and critical thinking.** |
+| ![](Images/scale5.PNG){width=40px} <br> **Level 5: AI Exploration** | AI is used as a creative partner, enabling co-designed tasks and novel approaches. | **You should use AI innovatively to solve problems or co-create with your instructor.** |
+
+Source: @furze2024
+
+# Guidelines
+
+## Students 
+Students must follow clear guidelines for the ethical and transparent use of AI tools in their academic work. The following document outlines the rules for AI use, expectations for citation, and provides examples to help students apply these standards appropriately:
+
+[Student Guidelines for AI Use](student_guideline.qmd)
+
+## Parents
+Parents are provided with important information regarding the use of AI in their child's educational environment. This document outlines the general context of AI use at UWC Costa Rica and includes an optional opt-out form for families who do not wish their student to engage with AI tools in classroom activities.
+
+[Parent Guidelines for AI Use](parents_guidelines.qmd)
+
+## Staff
+Staff are required to model ethical and responsible AI practices while ensuring authenticity, transparency, and equity in student learning experiences. The following document provides the guidelines for appropriate and inappropriate uses of AI for staff members:
+
+[Staff Guidelines for AI Use](staff_guidelines.qmd)
