@@ -1,0 +1,62 @@
+---
+title: "Staff Guidelines for AI Use"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    css: styles.css
+bibliography: references.bib
+---
+
+
+UWC Costa Rica is committed to using Artificial Intelligence (AI) ethically and responsibly to enhance educational outcomes while maintaining academic integrity. This document outlines expectations and responsibilities for staff regarding AI integration in teaching and learning.
+
+## Ethical Considerations
+
+- **Academic Integrity**: Staff must model responsible AI use and maintain high standards of academic honesty.
+- **Transparency**: When AI is used in creating instructional materials, assessments, or feedback, it must be disclosed where appropriate.
+- **Equity and Fairness**: AI-generated outputs must not exacerbate inequities among students, particularly those learning English as a second language (ESL).
+
+## AI Detection Tools: Limitations and Cautions
+
+Teachers are advised **NOT to rely solely on AI detection software** to evaluate student work. Current AI detection tools are unreliable and have been documented to:
+
+- Wrongly flag work by ESL students at disproportionately higher rates.
+- Produce high false-positive rates even for entirely human-written content.
+- Lack the transparency and validation necessary for disciplinary decisions.
+
+Instead, teachers should:
+
+- Compare submitted work against prior student submissions and writing style.
+- Engage students in conversations about their work when concerns arise.
+- Refer to the IB Academic Integrity Policy when authenticity issues are suspected.
+
+> **Important**: Authenticity investigations must be based on reasonable doubt, not detection software alone.
+
+## Acceptable AI Use by Staff
+
+| Practice               | Description |
+|-------------------------|-------------|
+| Differentiation         | Use AI to tailor instruction for diverse student needs. |
+| Assessment Design       | Design tasks aligned with the 5 Levels of AI Use Scale and clearly communicate expectations. |
+| Feedback Enhancement    | Use AI to assist in providing formative feedback while maintaining personalization. |
+| Comment Assistance      | Staff may use AI tools to help format and edit written comments, particularly for non-native English speakers, but the substance of comments must be based on the teacher’s authentic assessment of the student. |
+| Administrative Support  | Employ AI for non-academic tasks like resource organization or scheduling assistance. |
+
+## Unacceptable AI Use by Staff
+
+| Practice               | Description |
+|-------------------------|-------------|
+| Full Automation         | Submitting AI-generated content without human review or customization. |
+| Misrepresentation       | Failing to disclose the use of AI in teaching materials or assessments where necessary. |
+| Inappropriate Reliance  | Overusing AI tools for core pedagogical tasks like lesson planning, assessment feedback, or writing comments without critical engagement. |
+| Bias Introduction       | Using AI outputs without checking for bias, stereotyping, or cultural insensitivity. |
+| Comment Substitution    | Allowing AI to entirely generate narrative comments without teacher oversight or personalization based on actual student performance. |
+
+## Important Reminders
+
+- Most UWC Costa Rica students are over 16 years old, and necessary technology waivers are already on file.
+- Staff should maintain human-centered learning experiences, ensuring that technology enhances, rather than replaces, critical thinking, dialogue, and collaboration.
+- AI usage should always align with UWC Costa Rica’s Mission, the IB Learner Profile, and the school’s Code of Conduct.
+
+---

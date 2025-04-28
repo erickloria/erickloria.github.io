@@ -1,0 +1,38 @@
+---
+title: "Policy Portal"
+# docx:
+#     toc: true
+#     number-sections: true
+#     highlight-style: github
+format:
+  html:
+    theme: cosmo
+    toc: true
+    css: styles.css
+---
+
+# UWC Costa Rica AI Policy Portal
+
+Welcome to the AI Policy hub for UWC Costa Rica. This site hosts two key documents that guide our strategic and operational approach to artificial intelligence in our educational environment.
+
+## 📘 3G AI Framework Alignment 
+
+This document was part of our AI policy design work with International School Services (ISS). It includes:
+
+- Alignment of UWC values with the Costa Rican National AI Strategy, UWC International AI Policy, Green Schools National Network.
+- Application of the 3G Framework: Governance, Guidance, and Guardrails.
+- Thematic analysis of UWC’s strategic priorities and how AI supports or challenges them.
+
+[Read the 3G AI Framework](3G_AI_Framework.qmd)
+
+## 📄 AI Policy and Guidelines
+
+This document serves as our internal Standard Operating Procedure (SOP) and outlines:
+
+- The 5-level AI usage scale adopted from Leon Furze and collaborators.
+- Department-specific guidelines for AI use across academics, HR, co-curricular, and administration.
+- Implementation strategy, governance model, and oversight committee structure.
+
+[Read the AI Policy Guide](Guardrails.qmd)
+
+

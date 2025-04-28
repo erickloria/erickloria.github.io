@@ -1,0 +1,113 @@
+---
+title: "Student AI Guidelines"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    css: styles.css
+bibliography: references.bib
+---
+
+# Introduction
+
+At UWC Costa Rica, we value academic integrity, critical thinking, and authentic learning experiences. As artificial intelligence (AI) becomes a common tool in education, we are committed to guiding students in using it responsibly. 
+
+Students must complete all assignments using a Google Workspace provided file (Docs, Sheets, Slides). Edit histories will be reviewed to ensure authenticity. Students who fail to submit drafts on time or submit work with minimal documented progress risk an academic authenticity investigation, particularly in IB assessments where extended development over time is expected.
+
+Currently, the **only approved generative AI tool** for student use is **Google Gemini**. Other AI platforms are under review and not authorized until formally approved.
+
+Students must also adhere to the AI usage levels defined in the UWC AI Usage Scale.
+
+# Authorized AI Tools and Use
+
+- Only **Google Workspace** documents must be used for assignments to maintain a verifiable editing history.
+- Only **Gemini** is approved for generative AI use unless otherwise specified.
+- Teachers will define which AI Level (1-5) applies to each assignment.
+- Unauthorized AI tools are not permitted and will be treated as academic misconduct.
+
+# Academic Integrity and IB Authenticity
+
+Per IB expectations, coursework such as Internal Assessments (IAs) and Extended Essays (EEs) must be the result of sustained work over time.
+
+Failure to submit drafts or working documents regularly may lead to authenticity checks. Assignments turned in without prior drafts or clear progression may be flagged for potential misconduct, including improper AI use.
+
+# Acceptable Use of AI
+
+| Practice                | Description |
+|--------------------------|-------------|
+| Brainstorming            | Using AI to generate ideas or explore topics during initial stages. |
+| Research Support         | Summarizing articles, proposing search terms, or refining research questions. |
+| Drafting Assistance      | Using AI feedback to improve organization or language, with critical human editing. |
+| Reflective Thinking      | Critiquing AI outputs and integrating only verified, relevant information. |
+
+# Unacceptable Use of AI
+
+| Practice                 | Description |
+|---------------------------|-------------|
+| Unauthorized Generation   | Submitting AI-generated work without disclosure or permission. |
+| Fabricated Citations      | Including sources or references invented by AI tools. |
+| Misrepresentation         | Passing off AI-generated ideas or text as entirely original work. |
+| Circumventing Monitoring  | Avoiding Google Docs or hiding editing history. |
+
+# Citation Guidelines for AI Use
+
+All students must cite their use of AI tools clearly in their assignments.
+
+## APA (7th Edition) [@apa2023publishing] [@apa2023chatgpt]
+
+When using AI-generated text (such as from ChatGPT or Gemini) in academic work at UWC Costa Rica, students must cite AI outputs correctly according to APA 7th edition guidelines.
+
+If you quote or closely paraphrase AI-generated content:
+
+- **Describe** in the text how the AI tool was used.
+- **Provide** the full prompt and a summary of the AI-generated response within the appropriate section (e.g., Methodology or Introduction).
+- **Reference** the AI model as software, following APA software citation format.
+
+**In-text citation examples**:
+
+- Parenthetical: (OpenAI, 2023)
+- Narrative: OpenAI (2023)
+
+### Example of Citation in a Paper
+
+::: {.callout-tip title="Example of Citation in a Paper"}
+When prompted with “Explain the importance of sustainability in education,” the ChatGPT-generated response indicated that integrating sustainability topics into curricula "fosters global citizenship, critical thinking, and a sense of responsibility toward environmental and social challenges" (OpenAI, 2025).
+
+*Bibliography* 
+---
+OpenAI. (2025). ChatGPT (March 14 version) [Large language model]. https://chat.openai.com/chat
+:::
+
+# AI Use Across IB Subject Groups
+
+*(Details to be added later)*
+
+## Group 1: Studies in Language and Literature
+_(Placeholder)_
+
+## Group 2: Language Acquisition
+_(Placeholder)_
+
+## Group 3: Individuals and Societies
+_(Placeholder)_
+
+## Group 4: Sciences
+_(Placeholder)_
+
+## Group 5: Mathematics
+_(Placeholder)_
+
+## Group 6: The Arts
+_(Placeholder)_
+
+# Monitoring and Consequences
+
+Teachers will regularly review **Google Workspace edit history** to ensure assignments show authentic development.
+
+Violations of AI use expectations will be handled under:
+
+- UWC Costa Rica Code of Conduct
+- IB Academic Integrity Policy
+- UWC Costa Rica AI Guidelines and SOPs
+
+Consequences may include assignment invalidation, disciplinary review, and formal reporting to the IB when applicable.

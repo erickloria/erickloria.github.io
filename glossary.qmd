@@ -1,0 +1,32 @@
+---
+title: "Glossary of Key AI Terms"
+author: "Erick Loría Soto"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    css: styles.css
+---
+
+# Glossary of Terms
+
+This glossary provides clear definitions for key terms used throughout the UWC Costa Rica AI Policy documents to support a common understanding among all staff and stakeholders.
+
+---
+
+### Artificial Intelligence (AI)
+
+The broad field of computer science focused on creating systems capable of performing tasks that typically require human intelligence, such as recognizing patterns, making decisions, or solving problems.
+
+---
+
+### Generative AI (Gen AI)
+A subset of AI that focuses on models capable of creating new content, such as text, images, music, or code. Examples include ChatGPT, Gemini, and Perplexity, which generate outputs based on patterns learned from large datasets.
+
+---
+
+### Standard Operating Procedure (SOP)
+
+A documented process that outlines specific guidelines, protocols, and responsibilities to ensure consistency and best practices across an organization. In the AI Policy, SOPs define acceptable AI use within different school departments.
+
+---

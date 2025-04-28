@@ -1,0 +1,46 @@
+---
+title: "Parent Guidelines for AI Use"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    css: styles.css
+bibliography: references.bib
+---
+
+# AI Use in the Classroom: Parent Information
+
+At UWC Costa Rica, we are committed to integrating artificial intelligence (AI) tools thoughtfully and responsibly into our academic environment. Our goal is to enhance student learning while safeguarding student well-being, privacy, and academic integrity.
+
+Student use of AI must adhere strictly to the guidelines outlined in the UWC Costa Rica Student Handbook as well as the IB Academic Integrity Policy to ensure ethical and responsible use of technology.
+
+During the academic year, teachers may incorporate approved generative AI (GenAI) tools to support and enrich the learning experience. At present, Gemini for Education is the only approved GenAI platform, pending further evaluation of others. AI usage will be closely supervised by teachers, and students are expected to act ethically and responsibly at all times when using these tools.
+
+## Opt-Out Option for Families
+
+The administration will distribute an official opt-out form for families who prefer that their child not participate in activities involving generative AI (GenAI) tools. No written notice is required at this time.
+
+A draft of the upcoming opt-out form is provided below for informational purposes only:
+
+---
+
+Dear Parents and Guardians,  
+This year, our classroom will be using generative artificial intelligence (GenAI) to enhance our learning experiences. We will be using Gemini (Google for Education) as the approved platform.  
+
+In order for Gemini to be made available for your child to use, you and your child will need to review and agree to Gemini’s Usage Policies and Terms of Use. It is extremely important that you and your child are aware of the risks and liabilities associated with using GenAI before agreeing to Gemini’s Terms of Use. You remain legally responsible for any personal actions taken by your child on this platform and acknowledge that Gemini is a third-party platform outside of the control of UWC Costa Rica.
+
+Among other things, in agreeing to Gemini’s Terms of Use, you agree that your child will:
+
+- Comply with all applicable laws (including privacy laws and laws governing copyright and other intellectual property);
+- Limit Gemini’s liability for any loss or damages;
+- Indemnify and hold harmless Gemini (Google) from and against any of your costs, losses, liabilities, and expenses (including attorneys’ fees) from third-party claims arising from your child’s use of Gemini.
+
+In exchange for your student’s use of the Gemini platform, you also agree to release, indemnify, and defend UWC Costa Rica and its representatives from any liabilities related to your student’s use of Gemini.
+
+If you would like to opt your student out of participating in learning via Gemini, an official opt-out form will be shared by UWC Costa Rica for you to complete. If no opt-out form is received, your child will be permitted to engage with approved AI tools under supervision.
+
+If you have any questions about your child’s use of GenAI tools, please contact your child’s teacher or the academic office.
+
+---
+
+The administration team will finalize the opt-out process and provide the official form for families to complete.

@@ -1,0 +1,61 @@
+---
+title: "Departmental SOPs for AI Integration"
+author: "Erick Loría Soto"
+date: "today"
+# docx:
+#     toc: true
+#     number-sections: true
+#     highlight-style: github
+format:
+  html:
+    theme: cosmo
+    toc: true
+    css: styles.css
+bibliography: references.bib
+---
+
+This internal policy guide outlines the ethical and pedagogical use of Artificial Intelligence (AI) at UWC Costa Rica. In alignment with the UWC mission to unite people, nations, and cultures for peace and a sustainable future, this guide promotes the responsible, inclusive, and value-driven integration of AI into our academic, administrative, and co-curricular life.
+
+# Departmental SOPs for AI Integration
+
+This section outlines the Standard Operating Procedures (SOPs) for AI use across core areas of the school. Each department has its own file where policy guidelines will be expanded. The Academic Team file contains the AI usage scale and associated expectations, while the remaining departmental files provide general operational outlines to be refined with stakeholder input.
+
+- [`Academic Team`](Academic_Team.qmd): Focuses on instructional design, assessments, and levels of AI use permitted in classroom tasks.
+- [`Human Resources`](Human_Resources.qmd): Addresses AI use in hiring, onboarding, and staff development.
+- [`Co-Curricular Team`](CoCurricular_Team.qmd): Outlines ethical AI use in extracurriculars, service, and student leadership.
+- [`Administration Team`](Administration_Team.qmd): Defines responsible use of AI in scheduling, operations, and communication.
+
+## Academic Team
+
+- All assessments must state the permitted AI level from the scale above.
+- Teachers are responsible for guiding students in when and how to cite AI tools.
+- Assignments should be periodically updated to emphasize personal engagement, critical thinking, and voice.
+- Teachers co-lead the rollout of AI pedagogy and modeling ethical use in the classroom.
+
+## Human Resources
+
+- HR defines which roles or responsibilities may involve AI use and ensures clear expectations are communicated.
+- Collaborates with team leads to define ethical parameters for AI usage in job functions.
+- Maintains records of AI tool authorizations and ensures compliance with institutional expectations.
+- Participates in the AI Committee and co-leads staff onboarding and training on AI policy.
+
+## Co-Curricular Team
+
+- Encourages exploratory AI use in service, arts, clubs, and student leadership — always aligned with the 5-level scale.
+- Facilitates student understanding of AI as a creative tool in projects and initiatives.
+- Provides safe platforms and support for AI-enhanced presentations, event design, or outreach.
+- Co-leads sessions on AI ethics for student leadership groups and affinity groups.
+
+## Administration Team
+
+- Uses AI to support administrative functions like scheduling, translation, data organization, and communication.
+- Responsible for ensuring that data privacy and institutional values are upheld in all operational AI systems.
+- Leads internal audits of AI tools for transparency, security, and sustainability.
+- Serves as an example of responsible AI use to model for the community how automation can enhance—not replace—human leadership.
+
+# Oversight and Implementation
+
+- A **UWC AI Committee** will be established, consisting of representatives from all departments and student leadership.
+- This committee will be trained first and then cascade knowledge to each team.
+- The policy is a living document and will be updated every semester based on feedback, use cases, and evolving global practices.
+- Aligned with UWC International’s AI Policy (2024), Costa Rica’s National AI Strategy (MICITT, 2024), and the Green Schools National Network (GSNN) framework.
