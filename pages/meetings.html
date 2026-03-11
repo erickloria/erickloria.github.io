@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Meeting — IB Physics &amp; TOK</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .meetings-shell {
+      display: grid;
+      gap: 28px;
+    }
+    .meetings-intro {
+      background: linear-gradient(135deg, var(--card) 0%, var(--blue-10) 100%);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 16px 36px rgba(0, 64, 153, 0.08);
+    }
+    .meetings-intro h2 {
+      font-size: 28px;
+      line-height: 1.15;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    .meetings-intro p {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .meetings-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+      align-items: start;
+    }
+    .meetings-panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 14px 30px rgba(0, 64, 153, 0.08);
+    }
+    .meetings-panel-primary {
+      background: linear-gradient(135deg, var(--card) 0%, var(--blue-10) 100%);
+    }
+    .meetings-panel h3 {
+      font-size: 22px;
+      color: var(--blue);
+      margin-bottom: 6px;
+    }
+    .meetings-panel p {
+      color: var(--muted);
+      font-size: 14.5px;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+    .meetings-note {
+      background: var(--blue-10);
+      border: 1px solid var(--blue-25);
+      border-radius: 12px;
+      padding: 14px 16px;
+      color: var(--callout-blue-text);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+    @media (max-width: 900px) {
+      .meetings-intro {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+<script src="../js/layout.js"></script>
+
+<div class="hero">
+  <div class="hero-ribbon"></div>
+  <div class="hero-circle-1"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Appointments</div>
+    <h1>Book a Meeting</h1>
+    <p>Use the calendar below to schedule a meeting time.</p>
+  </div>
+</div>
+
+<div class="page">
+  <div class="meetings-shell">
+    <div class="meetings-intro">
+      <h2>Meetings and Availability</h2>
+      <p>Use this page to schedule time with me or check where I will be. The appointment scheduler is best for booking a conversation in advance, while the calendar helps you see my location and general availability.</p>
+    </div>
+
+    <div class="meetings-grid">
+      <div class="meetings-panel meetings-panel-primary">
+        <h3>Book a Meeting</h3>
+        <p>Choose an available appointment slot below. This is the best option for office hours, quick questions, or planned one-to-one meetings.</p>
+        <div class="meetings-note">If the scheduler does not appear, use the direct link above to open it in a new tab.</div>
+        <div class="calendar-embed">
+          <iframe src="https://calendar.google.com/calendar/appointments/AcZssZ30mE65qXhSu3dgsjZ18lq192wTG6kcVGG0-2g=?gv=true" title="Google Calendar appointment scheduling" style="border:0;" width="100%" height="650" frameborder="0"></iframe>
+        </div>
+      </div>
+
+      <div class="meetings-panel">
+        <h3>Calendar and Location</h3>
+        <p>Use this calendar to see where I am, when I am teaching, and when I may be available on campus.</p>
+        <div class="calendar-embed">
+          <iframe src="https://calendar.google.com/calendar/embed?src=erick.loria%40uwccostarica.org&amp;ctz=America%2FCosta_Rica&amp;mode=WEEK" title="Google Calendar availability and location" style="border:0;" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
