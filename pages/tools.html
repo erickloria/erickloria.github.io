@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Tools — IB Physics &amp; TOK</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .badge-tools{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;background:var(--blue-10);color:var(--action-text);border:1.5px solid var(--action-border);}
+    .tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin-bottom:40px;}
+    .tool-card{background:linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.78) 100%);border:1px solid var(--border);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:12px;box-shadow:0 18px 40px rgba(15,33,64,.08);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:box-shadow .2s,transform .2s;border-left-width:4px;}
+    .tool-card:hover{box-shadow:0 22px 48px rgba(15,33,64,.12);transform:translateY(-2px);}
+    .tool-card-primary{border-left:4px solid var(--blue);}
+    .tool-card-secondary{border-left:4px solid var(--green);}
+    .tool-top{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    .tool-meta{flex:1;min-width:0;}
+    .tool-name{font-weight:600;font-size:15.5px;color:var(--text);margin-bottom:2px;}
+    .tool-type{font-size:12px;color:var(--muted);}
+    .tool-link{font-size:12px;font-weight:600;color:var(--action-text);text-decoration:none;white-space:nowrap;padding:4px 10px;border:1.5px solid var(--action-border);border-radius:6px;transition:background .15s;flex-shrink:0;background:var(--card);}
+    .tool-link:hover{background:var(--action-fill);}
+    .tool-desc{font-size:14px;color:var(--muted);line-height:1.65;}
+    .tags{display:flex;flex-wrap:wrap;gap:5px;}
+    .tag{font-size:11.5px;font-weight:600;padding:3px 10px;border-radius:100px;}
+    .tag-blue{background:var(--blue-10);color:var(--action-text);}
+    .tag-green{background:var(--green-10);color:var(--badge-green-text);}
+    .tag-purple{background:var(--purple-10);color:var(--purple);}
+    .tag-orange{background:var(--orange-10);color:var(--badge-orange-text);}
+    @media (prefers-color-scheme: dark) {
+      .tool-card {
+        background:linear-gradient(180deg, rgba(18,28,46,0.92) 0%, rgba(18,28,46,0.76) 100%);
+      }
+    }
+  </style>
+</head>
+<body>
+<script src="../js/layout.js"></script>
+<div class="hero">
+  <div class="hero-ribbon"></div><div class="hero-circle-1"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Course Materials</div>
+    <h1>Course Tools</h1>
+    <p>The main platforms used for labs, graphing, reading, problem solving, and professional scientific writing.</p>
+  </div>
+</div>
+<div class="page">
+  <div class="section">
+    <div class="badge-tools">Core Platforms</div>
+    <h2 class="section-title">Tools Used Across the Course</h2>
+    <p class="section-desc">These are the main tools used in class for lab work, homework, graphing, simulations, and checking calculations.</p>
+    <div class="tool-grid">
+      <div class="tool-card tool-card-primary">
+        <div class="tool-top"><div class="brand-logo brand-logo-wide"><img src="../Images/Vernier_Logo-06.webp" alt="Vernier logo"></div><div class="tool-meta"><div class="tool-name">Logger Pro</div><div class="tool-type">Data Collection and Analysis</div></div><a class="tool-link" href="https://drive.google.com/drive/folders/1ZUqJ2HXcGLWeInikXTjZOQTGobHFUsjq?usp=sharing" target="_blank">Visit</a></div>
+        <div class="tool-desc">Primary software for data collection, graphing, and analysis in laboratory work.</div>
+        <div class="tags"><span class="tag tag-blue">Labs</span><span class="tag tag-green">Graphing</span><span class="tag tag-orange">Analysis</span></div>
+      </div>
+      <div class="tool-card tool-card-primary">
+        <div class="tool-top"><div class="brand-logo brand-logo-wide"><img src="../Images/Kognity_full_logo_GREEN-RGB.png" alt="Kognity logo"></div><div class="tool-meta"><div class="tool-name">Kognity</div><div class="tool-type">Digital Textbook</div></div><a class="tool-link" href="https://kognity.com" target="_blank">Visit</a></div>
+        <div class="tool-desc">Main textbook platform for reading, homework, and guided practice.</div>
+        <div class="tags"><span class="tag tag-green">Textbook</span><span class="tag tag-blue">Practice</span></div>
+      </div>
+      <div class="tool-card tool-card-primary">
+        <div class="tool-top"><div class="brand-logo"><img src="../Images/images-9.jpeg" alt="Wolfram Alpha logo"></div><div class="tool-meta"><div class="tool-name">Wolfram Alpha</div><div class="tool-type">Calculator and Solver</div></div><a class="tool-link" href="https://www.wolframalpha.com" target="_blank">Visit</a></div>
+        <div class="tool-desc">Useful for checking calculations, algebraic manipulation, and equation solving.</div>
+        <div class="tags"><span class="tag tag-blue">Math</span><span class="tag tag-purple">Checking work</span></div>
+      </div>
+      <div class="tool-card tool-card-primary">
+        <div class="tool-top"><div class="tool-meta"><div class="tool-name">oPhysics</div><div class="tool-type">Physics Simulations</div></div><a class="tool-link" href="https://ophysics.com" target="_blank">Visit</a></div>
+        <div class="tool-desc">Interactive simulations for visualizing physical ideas and testing variables.</div>
+        <div class="tags"><span class="tag tag-orange">Simulations</span><span class="tag tag-blue">Concepts</span></div>
+      </div>
+      <div class="tool-card tool-card-primary">
+        <div class="tool-top"><div class="brand-logo brand-logo-wide"><img src="../Images/high-resolution-desmos-logo-vector-svg-ai-file-included-v0-8l1kzoyzqyd61.png.webp" alt="Desmos logo"></div><div class="tool-meta"><div class="tool-name">Desmos</div><div class="tool-type">Graphing Calculator</div></div><a class="tool-link" href="https://www.desmos.com" target="_blank">Visit</a></div>
+        <div class="tool-desc">Fast graphing and function visualization for classwork and data analysis.</div>
+        <div class="tags"><span class="tag tag-green">Graphing</span><span class="tag tag-blue">Functions</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="badge-tools">LaTeX</div>
+    <h2 class="section-title">Scientific Writing Tools</h2>
+    <p class="section-desc">LaTeX is the standard for clean scientific and mathematical writing, and it is worth learning early.</p>
+    <div class="callout callout-blue" style="margin-bottom:24px;"><div class="brand-logo brand-logo-tall"><img src="../Images/LaTeX_logo.svg.png" alt="LaTeX logo"></div><span>All of my exams, documents, pages, images, and course materials are written in LaTeX.</span></div>
+    <div class="tool-grid">
+      <div class="tool-card tool-card-secondary">
+        <div class="tool-top"><div class="brand-logo brand-logo-wide"><img src="../Images/overleaf-logo-primary.jpg" alt="Overleaf logo"></div><div class="tool-meta"><div class="tool-name">Overleaf</div><div class="tool-type">Collaborative LaTeX Editor</div></div><a class="tool-link" href="https://www.overleaf.com" target="_blank">Visit</a></div>
+        <div class="tool-desc">The established standard for collaborative LaTeX writing in universities and research environments.</div>
+        <div class="tags"><span class="tag tag-blue">LaTeX</span><span class="tag tag-green">Collaboration</span><span class="tag tag-orange">Academic writing</span></div>
+      </div>
+      <div class="tool-card tool-card-secondary">
+        <div class="tool-top"><div class="tool-meta"><div class="tool-name">Prism</div><div class="tool-type">OpenAI LaTeX Workspace</div></div><a class="tool-link" href="https://openai.com/prism/" target="_blank">Visit</a></div>
+        <div class="tool-desc">A newer LaTeX-focused writing tool that supports drafting, editing, formatting, citations, and scientific writing workflows.</div>
+        <div class="tags"><span class="tag tag-blue">LaTeX</span><span class="tag tag-purple">Drafting</span><span class="tag tag-green">Formatting</span></div>
+      </div>
+    </div>
+    <div class="callout callout-green"><span>Support</span><span>If you want to get started with LaTeX, feel free to email me or come speak with me and we can look at which tool fits your workflow best.</span></div>
+  </div>
+</div>
+</body>
+</html>

@@ -5,158 +5,468 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IB Physics &amp; TOK — UWC Costa Rica</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .home-page {
+      background:
+        radial-gradient(circle at top left, rgba(0, 64, 153, 0.10), transparent 32%),
+        radial-gradient(circle at top right, rgba(29, 163, 129, 0.12), transparent 28%),
+        var(--bg);
+    }
+    .home-shell {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 36px 32px 88px;
+    }
+    .home-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.82) 0%, rgba(230,236,245,0.88) 100%);
+      box-shadow: 0 24px 60px rgba(15, 33, 64, 0.10);
+      backdrop-filter: blur(18px);
+      margin-bottom: 22px;
+    }
+    .home-hero::before {
+      content: "";
+      position: absolute;
+      inset: -20% auto auto 58%;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(29, 163, 129, 0.20), transparent 68%);
+      pointer-events: none;
+    }
+    .home-hero::after {
+      content: "";
+      position: absolute;
+      inset: auto auto -38% -6%;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 64, 153, 0.16), transparent 70%);
+      pointer-events: none;
+    }
+    .home-hero-panel {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+    }
+    .home-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(255,255,255,0.78);
+      color: var(--heading);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .home-title {
+      font-size: clamp(40px, 7vw, 72px);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      color: var(--text);
+      margin-bottom: 18px;
+      max-width: 8ch;
+    }
+    .home-summary {
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--muted);
+      max-width: 62ch;
+      margin-bottom: 24px;
+    }
+    .home-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .home-meta span {
+      display: inline-flex;
+      align-items: center;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.74);
+      border: 1px solid rgba(255,255,255,0.78);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .home-section {
+      margin-top: 18px;
+      margin-bottom: 26px;
+    }
+    .home-section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .home-section-heading h2 {
+      font-size: 28px;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--heading);
+    }
+    .home-section-heading p {
+      max-width: 54ch;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .home-primary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .home-secondary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .home-card {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      min-height: 260px;
+      padding: 24px;
+      border-radius: 26px;
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.86) 0%, rgba(255,255,255,0.62) 100%);
+      box-shadow: 0 18px 40px rgba(15, 33, 64, 0.08);
+      text-decoration: none;
+      color: inherit;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      backdrop-filter: blur(16px);
+    }
+    .home-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 48px rgba(15, 33, 64, 0.12);
+      border-color: var(--action-border);
+    }
+    .home-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -60px -80px auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      opacity: 0.75;
+      pointer-events: none;
+    }
+    .home-card-physics::before {
+      background: radial-gradient(circle, rgba(0, 64, 153, 0.18), transparent 72%);
+    }
+    .home-card-tok::before {
+      background: radial-gradient(circle, rgba(29, 163, 129, 0.20), transparent 72%);
+    }
+    .home-card-misc::before {
+      background: radial-gradient(circle, rgba(143, 43, 125, 0.18), transparent 72%);
+    }
+    .home-card-utility::before {
+      background: radial-gradient(circle, rgba(0, 64, 153, 0.14), transparent 72%);
+    }
+    .home-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .home-card-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .home-card-arrow {
+      color: var(--action-soft);
+      font-size: 20px;
+      line-height: 1;
+    }
+    .home-card h3 {
+      font-size: 30px;
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+      color: var(--text);
+      max-width: 10ch;
+    }
+    .home-card p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+      max-width: 34ch;
+    }
+    .home-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: auto;
+    }
+    .home-card li {
+      color: var(--text);
+      font-size: 13px;
+      line-height: 1.5;
+      padding-top: 8px;
+      border-top: 1px solid rgba(127, 160, 204, 0.20);
+    }
+    .home-info-bar {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+    .home-info-card {
+      padding: 18px 20px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.62);
+      box-shadow: 0 12px 28px rgba(15, 33, 64, 0.06);
+      backdrop-filter: blur(14px);
+    }
+    .home-info-card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--heading);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .home-info-card span {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    .home-about {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 26px;
+      align-items: start;
+      padding: 28px;
+      border-radius: 28px;
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.84) 0%, rgba(255,255,255,0.66) 100%);
+      box-shadow: 0 22px 48px rgba(15, 33, 64, 0.08);
+      backdrop-filter: blur(16px);
+    }
+    .home-about-copy h2 {
+      font-size: 30px;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: var(--heading);
+      margin-bottom: 8px;
+    }
+    .home-about-role {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+    .home-about-copy p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text);
+    }
+    .home-about-copy p + p {
+      margin-top: 12px;
+    }
+    .home-about-copy a {
+      color: var(--action-text);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .home-about-copy a:hover {
+      text-decoration: underline;
+    }
+    @media (prefers-color-scheme: dark) {
+      .home-page {
+        background:
+          radial-gradient(circle at top left, rgba(73, 112, 181, 0.18), transparent 34%),
+          radial-gradient(circle at top right, rgba(29, 163, 129, 0.14), transparent 28%),
+          var(--bg);
+      }
+      .home-hero,
+      .home-card,
+      .home-info-card,
+      .home-about {
+        background:
+          linear-gradient(180deg, rgba(18,28,46,0.88) 0%, rgba(18,28,46,0.70) 100%);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+      }
+      .home-chip,
+      .home-meta span {
+        background: rgba(18, 28, 46, 0.82);
+        border-color: rgba(127, 160, 204, 0.24);
+      }
+      .home-card li {
+        border-top-color: rgba(127, 160, 204, 0.16);
+      }
+    }
+    @media (max-width: 980px) {
+      .home-primary-grid,
+      .home-info-bar,
+      .home-secondary-grid {
+        grid-template-columns: 1fr;
+      }
+      .home-about {
+        grid-template-columns: 1fr;
+      }
+      .home-title {
+        max-width: none;
+      }
+    }
+    @media (max-width: 768px) {
+      .home-shell {
+        padding: 22px 18px 56px;
+      }
+      .home-hero,
+      .home-about {
+        padding: 22px;
+      }
+      .home-card {
+        min-height: 220px;
+        padding: 20px;
+      }
+      .home-title {
+        font-size: clamp(34px, 14vw, 54px);
+      }
+      .home-summary {
+        font-size: 16px;
+      }
+      .home-section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="home-page">
 <script src="js/layout.js"></script>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-ribbon"></div>
-  <div class="hero-circle-1"></div>
-  <div class="hero-circle-2"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow fade-up">Course Resources</div>
-    <h1 class="fade-up delay-1">IB Physics &amp; TOK</h1>
-    <p class="fade-up delay-2">Course materials, assessments, and academic support for the IB Physics and Theory of Knowledge courses.</p>
-  </div>
-</div>
-
-<div class="page">
-
-  <!-- IMPORTANT LINKS -->
-  <div class="section fade-up">
-    <h2 class="section-title">Important Links</h2>
-    <p class="section-desc">Frequently used tools and resources for the course.</p>
-    <div class="grid grid-2">
-
-      <a class="link-card card-blue" href="https://drive.google.com/drive/folders/1ZUqJ2HXcGLWeInikXTjZOQTGobHFUsjq?usp=sharing" target="_blank">
-        <div class="card-icon icon-blue">💾</div>
-        <div>
-          <div class="link-card-label">Logger Pro Download</div>
-          <div class="link-card-desc">Data collection and analysis software for labs</div>
-        </div>
-        <span class="link-arrow">↗</span>
-      </a>
-
-      <a class="link-card card-green" href="https://kognity.com" target="_blank">
-        <div class="card-icon icon-green">📚</div>
-        <div>
-          <div class="link-card-label">Kognity</div>
-          <div class="link-card-desc">IB Physics digital textbook and practice</div>
-        </div>
-        <span class="link-arrow">↗</span>
-      </a>
-
-      <a class="link-card card-blue" href="https://www.wolframalpha.com" target="_blank">
-        <div class="card-icon icon-blue">🧮</div>
-        <div>
-          <div class="link-card-label">Wolfram Alpha</div>
-          <div class="link-card-desc">Advanced calculator and equation solver</div>
-        </div>
-        <span class="link-arrow">↗</span>
-      </a>
-
-      <a class="link-card card-orange" href="https://ophysics.com" target="_blank">
-        <div class="card-icon icon-orange">⚛️</div>
-        <div>
-          <div class="link-card-label">oPhysics Simulators</div>
-          <div class="link-card-desc">Interactive physics simulations</div>
-        </div>
-        <span class="link-arrow">↗</span>
-      </a>
-
-      <a class="link-card card-green" href="https://www.desmos.com" target="_blank">
-        <div class="card-icon icon-green">📈</div>
-        <div>
-          <div class="link-card-label">Desmos</div>
-          <div class="link-card-desc">Graphing calculator for data analysis</div>
-        </div>
-        <span class="link-arrow">↗</span>
-      </a>
-
-    </div>
-  </div>
-
-  <div class="divider"></div>
-
-  <!-- ABOUT ME -->
-  <div class="section">
-    <h2 class="section-title">About Me</h2>
-    <div class="profile fade-up">
-      <div class="profile-avatar">
-        <img src="DSC04634.jpg" alt="Erick Loria Soto">
-      </div>
-      <div>
-        <div class="profile-name">Erick Loría Soto</div>
-        <div class="profile-role">Physics &amp; TOK Teacher · UWC Costa Rica</div>
-        <div class="profile-body">
-          <p>I was born in Costa Rica but raised in Milwaukee, Wisconsin, which has given me a unique blend of cultures and experiences that I bring to my teaching and everyday life.</p>
-          <p>As a passionate educator and lifelong learner, I've dedicated my career to teaching Physics, Astronomy, and various other courses. My goal is to create engaging and dynamic lessons that spark curiosity and foster deep understanding in my students.</p>
-          <p>I hold a Bachelor's degree in Physics from the Universidad de Costa Rica (UCR) and am currently pursuing a Master's degree in Teaching in the Natural Sciences at Universidad Nacional (UNA) in Costa Rica.</p>
-          <p>Outside the classroom, I have a deep passion for astronomy and technology. I love to travel and connect with nature through hiking, finding inspiration in the great outdoors. In my time off, I help at a yoga retreat center in the Osa Peninsula, combining my love for teaching and yoga in a beautiful natural setting.</p>
-          <p style="margin-top:16px;">
-            <a href="mailto:erick.loria@uwccostarica.org" style="color:var(--blue);font-weight:600;text-decoration:none;">
-              erick.loria@uwccostarica.org
-            </a>
-          </p>
-        </div>
+<main class="home-shell">
+  <section class="home-hero">
+    <div class="home-hero-panel">
+      <div class="home-chip">UWC Costa Rica</div>
+      <h1 class="home-title">IB Physics &amp; TOK</h1>
+      <p class="home-summary">Course materials, assessment guidance, meeting information, and academic support for IB Physics and Theory of Knowledge at UWC Costa Rica.</p>
+      <div class="home-meta">
+        <span>IB Diploma Programme</span>
+        <span>Physics and Theory of Knowledge</span>
+        <span>Meetings, tools, and support</span>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="divider"></div>
-
-  <!-- QUICK NAVIGATE -->
-  <div class="section">
-    <h2 class="section-title">Explore the Site</h2>
-    <p class="section-desc">Jump to any section of the course.</p>
-    <div class="grid">
-
-      <a class="card card-blue" href="pages/tok.html">
-        <div class="card-icon icon-blue">🧠</div>
-        <div class="card-title">Theory of Knowledge</div>
-        <div class="card-desc">Course resources for Theory of Knowledge, including exhibition and essay support.</div>
-      </a>
-
-      <a class="card card-green" href="pages/labs.html">
-        <div class="card-icon icon-green">🔬</div>
-        <div class="card-title">Labs</div>
-        <div class="card-desc">Lab instructions, data sheets, and Logger Pro files.</div>
-      </a>
-
-      <a class="card card-orange" href="pages/internal-assessment.html">
-        <div class="card-icon icon-orange">📋</div>
-        <div class="card-title">Internal Assessment</div>
-        <div class="card-desc">IA guidance, rubrics, and example investigations.</div>
-      </a>
-
-      <a class="card card-purple" href="pages/extended-essay.html">
-        <div class="card-icon icon-purple">📝</div>
-        <div class="card-title">Extended Essay</div>
-        <div class="card-desc">EE support for Physics Group 4 topics.</div>
-      </a>
-
-      <a class="card card-blue" href="pages/book-hw.html">
-        <div class="card-icon icon-blue">📖</div>
-        <div class="card-title">Book &amp; Homework</div>
-        <div class="card-desc">Textbook links, assigned readings, and homework tasks.</div>
-      </a>
-
-      <a class="card card-green" href="pages/ai-tools.html">
-        <div class="card-icon icon-green">AI</div>
-        <div class="card-title">AI Tools</div>
-        <div class="card-desc">Approved and personal AI tools for study and learning.</div>
-      </a>
-
-      <a class="card card-orange" href="pages/meetings.html">
-        <div class="card-icon icon-orange">Meet</div>
-        <div class="card-title">Book a Meeting</div>
-        <div class="card-desc">Schedule a meeting time through the appointment calendar.</div>
-      </a>
-
+  <section class="home-section">
+    <div class="home-section-heading">
+      <h2>Main Areas</h2>
+      <p>Choose the part of the site you want to enter.</p>
     </div>
-  </div>
+    <div class="home-primary-grid">
+      <a class="home-card home-card-physics" href="pages/resources.html">
+        <div class="home-card-top">
+          <div class="home-card-label">Course</div>
+          <div class="home-card-arrow">+</div>
+        </div>
+        <h3>IB Physics</h3>
+        <p>Core course materials, assessments, and the main academic workflow for the year.</p>
+        <ul>
+          <li>Book &amp; Homework, Labs, and Presentations</li>
+          <li>Internal Assessment and Extended Essay support</li>
+          <li>Course tools and structured resources</li>
+        </ul>
+      </a>
 
-</div>
+      <a class="home-card home-card-tok" href="pages/tok.html">
+        <div class="home-card-top">
+          <div class="home-card-label">Course</div>
+          <div class="home-card-arrow">+</div>
+        </div>
+        <h3>TOK</h3>
+        <p>Theory of Knowledge guidance and writing support collected in one focused section.</p>
+        <ul>
+          <li>Prompt dissection and argument scaffolding</li>
+          <li>Materials kept separate from Physics resources</li>
+          <li>Clear access for TOK-specific support</li>
+        </ul>
+      </a>
+
+      <a class="home-card home-card-misc" href="pages/misc.html">
+        <div class="home-card-top">
+          <div class="home-card-label">Resources</div>
+          <div class="home-card-arrow">+</div>
+        </div>
+        <h3>Misc</h3>
+        <p>Supporting materials that are useful, but not part of the main course structure.</p>
+        <ul>
+          <li>SAT preparation materials</li>
+          <li>Listening Corner resources</li>
+          <li>Summer program opportunities</li>
+        </ul>
+      </a>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <div class="home-section-heading">
+      <h2>Utilities</h2>
+      <p>Direct access to scheduling and AI guidance.</p>
+    </div>
+    <div class="home-secondary-grid">
+      <a class="home-card home-card-utility" href="pages/meetings.html">
+        <div class="home-card-top">
+          <div class="home-card-label">Scheduling</div>
+          <div class="home-card-arrow">+</div>
+        </div>
+        <h3>Meetings</h3>
+        <p>Book time with me directly and check my calendar and general availability.</p>
+        <ul>
+          <li>Appointment scheduler</li>
+          <li>Calendar and location view</li>
+        </ul>
+      </a>
+
+      <a class="home-card home-card-utility" href="pages/ai-tools.html">
+        <div class="home-card-top">
+          <div class="home-card-label">Guidance</div>
+          <div class="home-card-arrow">+</div>
+        </div>
+        <h3>AI Tools</h3>
+        <p>Approved and personal AI tools for research, writing, coding, and academic support.</p>
+        <ul>
+          <li>School-safe tools separated from personal tools</li>
+          <li>Clear guidance for research and academic work</li>
+        </ul>
+      </a>
+    </div>
+  </section>
+
+  <section class="home-about">
+    <div class="profile-avatar">
+      <img src="Images/DSC04634.jpg" alt="Erick Loria Soto">
+    </div>
+    <div class="home-about-copy">
+      <h2>Erick Loria Soto</h2>
+      <div class="home-about-role">Physics &amp; TOK Teacher · UWC Costa Rica</div>
+      <p>I was born in Costa Rica but raised in Milwaukee, Wisconsin, which has given me a blend of cultures and experiences that I bring to my teaching and everyday life.</p>
+      <p>As an educator and lifelong learner, I have dedicated my career to teaching Physics, Astronomy, and related courses. My goal is to design learning experiences that are engaging, rigorous, and intellectually curious.</p>
+      <p>I hold a Bachelor's degree in Physics from the Universidad de Costa Rica and I am currently pursuing a Master's degree in Teaching in the Natural Sciences at Universidad Nacional in Costa Rica.</p>
+      <p>Outside the classroom, I have a deep interest in astronomy and technology. I enjoy travel, hiking, and time in nature, and I also help at a yoga retreat center in the Osa Peninsula.</p>
+      <p><a href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></p>
+    </div>
+  </section>
+</main>
 </body>
 </html>

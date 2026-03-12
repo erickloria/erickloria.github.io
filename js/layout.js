@@ -1,27 +1,44 @@
 // Inject shared nav and footer into every page after the DOM is parsed.
 document.addEventListener('DOMContentLoaded', () => {
+  const inPagesDir = window.location.pathname.includes('/pages/');
+  const homeHref = inPagesDir ? '../index.html' : 'index.html';
+  const pagePrefix = inPagesDir ? '' : 'pages/';
+  const assetPrefix = inPagesDir ? '../' : '';
+
   const nav = `
   <nav class="nav">
-    <a href="../index.html" class="nav-brand">
-      <div class="nav-brand-text">Course Site</div>
+    <a href="${homeHref}" class="nav-brand">
+      <picture class="nav-brand-logo">
+        <source media="(prefers-color-scheme: dark)" srcset="${assetPrefix}Images/Logo-Main-White.png">
+        <img src="${assetPrefix}Images/Logo-Main-Color.png" alt="UWC Costa Rica logo">
+      </picture>
+      <div class="nav-brand-copy">
+        <div class="nav-brand-text">Home</div>
+      </div>
     </a>
     <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
       <li class="nav-dropdown">
-        <a href="../pages/resources.html">Resources</a>
+        <a href="${pagePrefix}resources.html">IB Physics</a>
         <ul class="dropdown-menu">
-          <li><a href="../pages/tok.html">TOK</a></li>
-          <li><a href="../pages/book-hw.html">Book &amp; HW</a></li>
-          <li><a href="../pages/labs.html">Labs</a></li>
-          <li><a href="../pages/presentations.html">Presentations</a></li>
-          <li><a href="../pages/extended-essay.html">Extended Essay</a></li>
-          <li><a href="../pages/internal-assessment.html">Internal Assessment</a></li>
-          <li><a href="../pages/sat.html">SAT</a></li>
-          <li><a href="../pages/listening-corner.html">Listening Corner</a></li>
+          <li><a href="${pagePrefix}book-hw.html">Book &amp; HW</a></li>
+          <li><a href="${pagePrefix}tools.html">Course Tools</a></li>
+          <li><a href="${pagePrefix}extended-essay.html">Extended Essay</a></li>
+          <li><a href="${pagePrefix}internal-assessment.html">Internal Assessment</a></li>
+          <li><a href="${pagePrefix}labs.html">Labs</a></li>
+          <li><a href="${pagePrefix}presentations.html">Presentations</a></li>
         </ul>
       </li>
-      <li><a href="../pages/meetings.html">Meetings</a></li>
-      <li><a href="../pages/ai-tools.html">AI Tools</a></li>
+      <li><a href="${pagePrefix}tok.html">TOK</a></li>
+      <li class="nav-dropdown">
+        <a href="${pagePrefix}misc.html">Misc</a>
+        <ul class="dropdown-menu">
+          <li><a href="${pagePrefix}listening-corner.html">Listening Corner</a></li>
+          <li><a href="${pagePrefix}sat.html">SAT</a></li>
+          <li><a href="${pagePrefix}summer-programs.html">Summer Programs</a></li>
+        </ul>
+      </li>
+      <li><a href="${pagePrefix}meetings.html">Meetings</a></li>
+      <li><a href="${pagePrefix}ai-tools.html">AI Tools</a></li>
     </ul>
     <button class="nav-hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -30,9 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const footer = `
   <footer class="footer">
-    <div>
-      <div class="footer-brand">IB Physics &amp; TOK — UWC Costa Rica</div>
-      <div>Erick Loría Soto &nbsp;·&nbsp; <a href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></div>
+    <div class="footer-brand-wrap">
+      <img class="footer-logo" src="${assetPrefix}Images/Logo-Main-White.png" alt="UWC Costa Rica logo">
+      <div>
+        <div class="footer-brand">IB Physics &amp; TOK — UWC Costa Rica</div>
+        <div>Erick Loría Soto &nbsp;·&nbsp; <a href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></div>
+      </div>
     </div>
     <div>UWC Costa Rica &nbsp;·&nbsp; IB Diploma Programme</div>
   </footer>`;

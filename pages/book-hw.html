@@ -5,6 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book & Homework — IB Physics &amp; TOK</title>
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .chapter-breakdown {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .chapter-breakdown div {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+      padding-top: 10px;
+      border-top: 1px solid rgba(127, 160, 204, 0.18);
+    }
+    .chapter-breakdown div:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+    .chapter-breakdown strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+    .exercise-grid .card-title {
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+    @media (prefers-color-scheme: dark) {
+      .chapter-breakdown div {
+        border-top-color: rgba(127, 160, 204, 0.14);
+      }
+    }
+  </style>
 </head>
 <body>
 <script src="../js/layout.js"></script>
@@ -21,9 +52,17 @@
 
 <div class="page">
   <div class="section">
-    <h2 class="section-title">Coursebook and Answer Key</h2>
-    <p class="section-desc">A PDF version of the coursebook and the exercise answer key are linked below. The coursebook file is large and may take some time to download on the school network during peak hours.</p>
+    <h2 class="section-title">Core Study Materials</h2>
+    <p class="section-desc">The main textbook materials for the course are collected here. The coursebook PDF is large and may take some time to download on the school network during peak hours.</p>
     <div class="grid grid-2">
+      <a class="link-card card-green" href="https://kognity.com" target="_blank">
+        <div class="brand-logo brand-logo-wide"><img src="../Images/Kognity_full_logo_GREEN-RGB.png" alt="Kognity logo"></div>
+        <div>
+          <div class="link-card-label">Kognity</div>
+          <div class="link-card-desc">Use Kognity for textbook reading, guided practice, and assigned digital work</div>
+        </div>
+        <span class="link-arrow">Open</span>
+      </a>
       <a class="link-card card-blue" href="https://drive.google.com/file/d/1xsRz1-3hxK2Ob-zYIE9v1hycgcB51a29/view" target="_blank">
         <div class="card-icon icon-blue">Book</div>
         <div>
@@ -53,95 +92,123 @@
   </div>
 
   <div class="section">
-    <h2 class="section-title">Unit A</h2>
-    <div class="grid grid-2">
+    <h2 class="section-title">Recommended Book Exercises</h2>
+    <p class="section-desc">Additional practice problems from the textbook, organized by chapter and section.</p>
+    <div class="grid grid-2 exercise-grid">
       <div class="card card-blue">
         <div class="card-title">Chapter 1</div>
-        <div class="card-desc">Problems: 2, 5, 6, 7, 10, 12, 14, 15, 18, 19-24, 29, 30, 33, 34, 35, 37.</div>
+        <div class="chapter-breakdown">
+          <div><strong>1.1 Displacement, distance, speed and velocity:</strong> 1-4</div>
+          <div><strong>1.2 Uniformly accelerated motion:</strong> 5, 6, 7, 10, 12, 14, 15, 18</div>
+          <div><strong>1.3 Graphs of Motion:</strong> 19-24</div>
+          <div><strong>1.4 Projectile Motion:</strong> 29, 30, 33, 34, 35, 37</div>
+        </div>
       </div>
       <div class="card card-blue">
         <div class="card-title">Chapter 2</div>
-        <div class="card-desc">Problems: 1-14, 15, 17, 20, 21, 23, 24, 27, 28, 29, 30, 31, 33, 35, 36, 37, 39, 43, 44.</div>
+        <div class="chapter-breakdown">
+          <div><strong>2.1 Forces and their directions:</strong> 1-14</div>
+          <div><strong>2.2 Newton's Laws:</strong> 15, 17, 20, 21, 23, 24, 27, 28, 29, 30, 31</div>
+          <div><strong>2.3 Circular Motion:</strong> 33, 35, 36, 37, 39, 43, 44</div>
+        </div>
       </div>
       <div class="card card-blue">
         <div class="card-title">Chapter 3</div>
-        <div class="card-desc">Problems: 22-26. Complete all worked examples on pages 72-77. You may also try questions 1-21, but we have not yet covered the final definition of work and non-conservative forces.</div>
+        <div class="chapter-breakdown">
+          <div><strong>Worked examples:</strong> pages 72-77</div>
+          <div><strong>3.1 Work:</strong> 1-21</div>
+          <div><strong>3.2 Conservation of energy:</strong> 22-26</div>
+          <div><strong>3.3 Power and efficiency:</strong> 32-37</div>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Unit B</h2>
-    <div class="grid grid-2">
+      <div class="card card-blue">
+        <div class="card-title">Chapter 4</div>
+        <div class="chapter-breakdown">
+          <div><strong>4.1 Newton's Laws:</strong> 1, 2, 4</div>
+          <div><strong>4.2 Impulse and force-time graphs:</strong> 6, 7, 8, 9, 10</div>
+          <div><strong>4.3 Conservation of Momentum:</strong> 11</div>
+          <div><strong>4.4 Kinetic Energy and Momentum:</strong> 12-18, 20-23</div>
+          <div><strong>4.5 Two dimensional collisions:</strong> all</div>
+        </div>
+      </div>
       <div class="card card-green">
         <div class="card-title">Chapter 7</div>
-        <div class="card-desc">Problems: 2, 9, 12, 14, 16, 20, 21, 23, 24, 31, 32, 34, 36, 37, 41, 43, 48, 50, 54.</div>
+        <div class="chapter-breakdown">
+          <div><strong>7.1 Particles, temperature and energy:</strong> 2, 7</div>
+          <div><strong>7.2 Specific Heat Capacity and change of phase:</strong> 9, 12, 14, 16, 20, 21</div>
+          <div><strong>7.3 Thermal Energy Transfer:</strong> 23, 24, 31, 32, 34, 36, 37, 41, 43, 48, 50, 54</div>
+        </div>
+      </div>
+      <div class="card card-green">
+        <div class="card-title">Chapter 8</div>
+        <div class="chapter-breakdown">
+          <div><strong>8.1 Radiation from real bodies:</strong> 1-5</div>
+          <div><strong>8.2 Energy Balance of the Earth:</strong> 6, 7, 8, 13, 19</div>
+        </div>
       </div>
       <div class="card card-green">
         <div class="card-title">Chapter 9</div>
-        <div class="card-desc">Problems: 3, 5, 9, 10, 12, 15, 16, 17, 20, 23, 24, 26, 29, 32.</div>
+        <div class="chapter-breakdown">
+          <div><strong>9.1 Moles, molar mass, and the Avogadro constant:</strong> 3, 5, 9</div>
+          <div><strong>9.2 Ideal Gas:</strong> 10, 12, 15, 16, 17, 20</div>
+          <div><strong>9.3 The Boltzmann Equation:</strong> 23, 24, 26, 29, 32</div>
+        </div>
       </div>
       <div class="card card-green">
-        <div class="card-title">Chapter 10 (HL)</div>
-        <div class="card-desc">Problems: 1, 3, 5, 7, 8, 10, 13, 16, 20, 23, 22 (demonstration problem), 24, 28, 30, 32, 33, 35, 39, 40, 42.</div>
+        <div class="card-title">Chapter 10</div>
+        <div class="chapter-breakdown">
+          <div><strong>10.1 Internal Energy:</strong> 1, 3, 5, 7</div>
+          <div><strong>10.2 The First Law of Thermodynamics:</strong> 8, 10, 13, 16, 20, 23, 22 (demonstration problem), 24</div>
+          <div><strong>10.3 The Second Law of Thermodynamics:</strong> 28, 30, 32</div>
+          <div><strong>10.4 Heat Engines:</strong> 33, 35, 39, 40, 42</div>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Unit C</h2>
-    <div class="grid grid-2">
-      <div class="card card-orange">
-        <div class="card-title">Chapter 12 (HL)</div>
-        <div class="card-desc">Problems: 5, 6, 7, 9, 10, 13, 14, 16, 19, 22, 24, 25, 28, 30, 34, 36, 38.</div>
-      </div>
-      <div class="card card-orange">
-        <div class="card-title">Chapter 13</div>
-        <div class="card-desc">Problems: 5, 6, 11, 14, 16, 19.</div>
+      <div class="card card-green">
+        <div class="card-title">Chapter 11</div>
+        <div class="chapter-breakdown">
+          <div><strong>11.1 Potential difference, current and resistance:</strong> 1-6, 8-19</div>
+          <div><strong>11.2 Voltage, power, and EMF:</strong> 20-29</div>
+          <div><strong>11.3 Resistors in Electric Circuits:</strong> 32, 33, 34, 35, 37, 38, 39, 40, 41, 42, 43, 44, 46, 47</div>
+          <div><strong>11.4 Terminal potential difference and the potential divider:</strong> 48, 50, 51, 52, 53, 54, 55</div>
+        </div>
       </div>
       <div class="card card-orange">
         <div class="card-title">Chapter 14</div>
-        <div class="card-desc">SL: 2, 5, 6, 7, 9, 11, 12, 14, 20, 21, 24, 27, 31, 34. The Snell's Law problems are in Google Classroom because the book contains limited practice. HL: 35, 37, 38, 40, 41, 42, 44, 46.</div>
+        <div class="chapter-breakdown">
+          <div><strong>14.1 Reflection and Refraction:</strong> 2, 5, 6, 7, 9, 11, 12</div>
+          <div><strong>14.3 Diffraction and Interference:</strong> 20, 21, 24, 27, 31, 34</div>
+          <div><strong>14.4 Single Slit Interference:</strong> 35, 37, 38</div>
+          <div><strong>14.5 Multiple Slits:</strong> 40, 41, 42, 44, 46</div>
+        </div>
       </div>
       <div class="card card-orange">
         <div class="card-title">Chapter 15</div>
-        <div class="card-desc">Problems: 6, 8, 9, 10, 12, 13, 14, 15, 17, 19, 20, 25, 26, 27, 28.</div>
+        <div class="chapter-breakdown">
+          <div><strong>15.1-15.3 Standing Waves:</strong> 6, 8, 9, 10, 12, 13, 14, 15, 17, 19, 20</div>
+          <div><strong>15.4 Resonance and Damping:</strong> 25, 26, 27, 28</div>
+        </div>
       </div>
       <div class="card card-orange">
         <div class="card-title">Chapter 16</div>
-        <div class="card-desc">SL: 1-7. HL: 8-18.</div>
+        <div class="chapter-breakdown">
+          <div><strong>Recommended exercises:</strong> all of them</div>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Unit D</h2>
-    <div class="grid grid-2">
       <div class="card card-purple">
         <div class="card-title">Chapter 17</div>
-        <div class="card-desc">Problems: 2, 3, 5 (very similar to Paper 1 problems), 7, 11, 13, 17, 19, 21, 23, 25, 26, 29, 31, 32, 34, 35, 39, 40.</div>
+        <div class="chapter-breakdown">
+          <div><strong>17.1 Newton's law of gravitation:</strong> 2, 3, 5 (very similar to P1 problems), 7, 11, 13, 17</div>
+          <div><strong>HL 17.2 Gravitational potential and energy:</strong> 19, 21, 23, 25, 26</div>
+          <div><strong>HL 17.3 Motion in a gravitational field:</strong> 29, 31, 32, 34, 35, 39, 40</div>
+        </div>
       </div>
       <div class="card card-purple">
         <div class="card-title">Chapter 18</div>
-        <div class="card-desc">Problems: 4, 5, 7, 9, 10, 11, 13, 15, 17, 19, 21, 26, 27, 28, 30, 33, 35, 36, 38, 40, 42, 43, 45, 46, 48, 50, 53, 55.</div>
-      </div>
-      <div class="card card-purple">
-        <div class="card-title">Chapter 19</div>
-        <div class="card-desc">Problems: All.</div>
-      </div>
-      <div class="card card-purple">
-        <div class="card-title">Chapter 20</div>
-        <div class="card-desc">Problems: All.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Unit E</h2>
-    <div class="grid grid-2">
-      <div class="card card-red">
-        <div class="card-title">Chapter 21</div>
-        <div class="card-desc">Problems: 6, 7, 10, 11, 12, 13, 14, 15, 18, 19, 22 (optional).</div>
+        <div class="chapter-breakdown">
+          <div><strong>18.1 Electric charge, force and field:</strong> 2, 3, 5 (very similar to P1 problems), 7, 11, 13</div>
+          <div><strong>18.2 Magnetic field and force:</strong> 17, 19, 21, 23, 25, 26, 29, 31, 32, 34, 35</div>
+          <div><strong>18.3 Electric potential and electric potential energy:</strong> 39, 40, 42, 44, 45, 46, 48, 49, 51, 53, 54, 55</div>
+        </div>
       </div>
     </div>
   </div>

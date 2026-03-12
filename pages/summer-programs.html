@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summer Programs — IB Physics &amp; TOK</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .badge-programs{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;background:var(--orange-10);color:var(--badge-orange-text);border:1.5px solid var(--callout-orange-border);}
+    .program-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;}
+    .program-card{background:linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.78) 100%);border:1px solid var(--border);border-left:4px solid var(--orange);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:12px;box-shadow:0 18px 40px rgba(15,33,64,.08);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:box-shadow .2s,transform .2s;}
+    .program-card:hover{box-shadow:0 22px 48px rgba(15,33,64,.12);transform:translateY(-2px);}
+    .program-top{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    .program-meta{flex:1;min-width:0;}
+    .program-name{font-weight:600;font-size:15.5px;color:var(--text);margin-bottom:2px;}
+    .program-type{font-size:12px;color:var(--muted);}
+    .program-link{font-size:12px;font-weight:600;color:var(--action-text);text-decoration:none;white-space:nowrap;padding:4px 10px;border:1.5px solid var(--action-border);border-radius:6px;transition:background .15s;flex-shrink:0;background:var(--card);}
+    .program-link:hover{background:var(--action-fill);}
+    .program-desc{font-size:14px;color:var(--muted);line-height:1.65;}
+    .tags{display:flex;flex-wrap:wrap;gap:5px;}
+    .tag{font-size:11.5px;font-weight:600;padding:3px 10px;border-radius:100px;}
+    .tag-blue{background:var(--blue-10);color:var(--action-text);}
+    .tag-green{background:var(--green-10);color:var(--badge-green-text);}
+    .tag-orange{background:var(--orange-10);color:var(--badge-orange-text);}
+    .tag-purple{background:var(--purple-10);color:var(--purple);}
+    .tag-red{background:var(--red-10);color:var(--red);}
+    @media (prefers-color-scheme: dark) {
+      .program-card {
+        background:linear-gradient(180deg, rgba(18,28,46,0.92) 0%, rgba(18,28,46,0.76) 100%);
+      }
+    }
+  </style>
+</head>
+<body>
+<script src="../js/layout.js"></script>
+<div class="hero">
+  <div class="hero-ribbon"></div><div class="hero-circle-1"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Beyond The Classroom</div>
+    <h1>Summer Programs</h1>
+    <p>Programs worth exploring if you are looking for science, research, engineering, or university-level enrichment over the break.</p>
+  </div>
+</div>
+<div class="page">
+  <div class="section">
+    <div class="badge-programs">Opportunities</div>
+    <h2 class="section-title">Programs to Look Into</h2>
+    <p class="section-desc">These are strong summer options for students interested in advanced science study, research, and academic enrichment.</p>
+    <div class="program-grid">
+      <div class="program-card">
+        <div class="program-top"><div class="program-meta"><div class="program-name">Haus der Astronomie Summer Internship</div><div class="program-type">Astronomy Research Internship</div></div><a class="program-link" href="https://www.haus-der-astronomie.de/en/what-we-do/internships/summer-internship" target="_blank">Visit</a></div>
+        <div class="program-desc">This internship has already produced two Extended Essays and one Internal Assessment from UWC Costa Rica students, so it is especially worth a serious look.</div>
+        <div class="tags"><span class="tag tag-blue">Astronomy</span><span class="tag tag-green">Research</span><span class="tag tag-orange">UWC CR results</span></div>
+      </div>
+      <div class="program-card">
+        <div class="program-top"><div class="program-meta"><div class="program-name">Summer Science Program</div><div class="program-type">Science and Research Program</div></div><a class="program-link" href="https://ssp.org/getting-started/" target="_blank">Visit</a></div>
+        <div class="program-desc">A well-known program for students interested in challenging scientific work and intensive academic collaboration.</div>
+        <div class="tags"><span class="tag tag-green">Science</span><span class="tag tag-blue">Research</span></div>
+      </div>
+      <div class="program-card">
+        <div class="program-top"><div class="program-meta"><div class="program-name">UC Santa Cruz Summer Internship Program</div><div class="program-type">University Summer Program</div></div><a class="program-link" href="https://sip.ucsc.edu" target="_blank">Visit</a></div>
+        <div class="program-desc">A university-hosted summer opportunity with mentorship, enrichment, and exposure to advanced study.</div>
+        <div class="tags"><span class="tag tag-purple">Internship</span><span class="tag tag-blue">University</span></div>
+      </div>
+      <div class="program-card">
+        <div class="program-top"><div class="program-meta"><div class="program-name">Carnegie Mellon Pre-College (SAMS)</div><div class="program-type">STEM Academic Program</div></div><a class="program-link" href="https://www.cmu.edu/pre-college/academic-programs/sams.html" target="_blank">Visit</a></div>
+        <div class="program-desc">A strong pre-college STEM program for students interested in rigorous academic preparation and quantitative work.</div>
+        <div class="tags"><span class="tag tag-orange">STEM</span><span class="tag tag-blue">Pre-college</span></div>
+      </div>
+      <div class="program-card">
+        <div class="program-top"><div class="program-meta"><div class="program-name">Imperial College London Global Summer School</div><div class="program-type">Physical Sciences Programme</div></div><a class="program-link" href="https://www.imperial.ac.uk/be-inspired/global-summer-school/residential-programme/physical-sciences/" target="_blank">Visit</a></div>
+        <div class="program-desc">A physical sciences summer programme for students who want an international university experience.</div>
+        <div class="tags"><span class="tag tag-red">Physical sciences</span><span class="tag tag-blue">University</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

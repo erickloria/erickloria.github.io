@@ -6,11 +6,11 @@
   <title>AI Tools — IB Physics &amp; TOK</title>
   <link rel="stylesheet" href="../css/style.css">
   <style>
-    .badge-approved{display:inline-flex;align-items:center;gap:6px;padding:4px 14px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;background:var(--green-10);color:var(--badge-green-text);border:1.5px solid var(--green-25);}
-    .badge-personal {display:inline-flex;align-items:center;gap:6px;padding:4px 14px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;background:var(--orange-10);color:var(--badge-orange-text);border:1.5px solid var(--callout-orange-border);}
+    .badge-approved{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;background:var(--green-10);color:var(--badge-green-text);border:1.5px solid var(--green-25);}
+    .badge-personal{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;background:var(--orange-10);color:var(--badge-orange-text);border:1.5px solid var(--callout-orange-border);}
     .ai-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin-bottom:40px;}
-    .ai-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px;display:flex;flex-direction:column;gap:12px;transition:box-shadow .2s,transform .2s;}
-    .ai-card:hover{box-shadow:0 8px 28px rgba(0,64,153,.10);transform:none;}
+    .ai-card{background:linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.78) 100%);border:1px solid var(--border);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:12px;transition:box-shadow .2s,transform .2s;border-left-width:4px;box-shadow:0 18px 40px rgba(15,33,64,.08);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);}
+    .ai-card:hover{box-shadow:0 22px 48px rgba(15,33,64,.12);transform:translateY(-2px);}
     .ai-card-approved{border-left:4px solid var(--green);}
     .ai-card-personal{border-left:4px solid var(--blue-50);}
     .ai-top{display:flex;align-items:center;justify-content:space-between;gap:12px;}
@@ -18,15 +18,16 @@
     .ai-meta{flex:1;min-width:0;}
     .ai-name{font-weight:600;font-size:15.5px;color:var(--text);margin-bottom:2px;}
     .ai-type{font-size:12px;color:var(--muted);}
-    .ai-link{font-size:12px;font-weight:600;color:var(--blue);text-decoration:none;white-space:nowrap;padding:4px 10px;border:1.5px solid var(--blue-25);border-radius:6px;transition:background .15s;flex-shrink:0;}
-    .ai-link:hover{background:var(--blue-10);}
+    .ai-link{font-size:12px;font-weight:600;color:var(--action-text);text-decoration:none;white-space:nowrap;padding:4px 10px;border:1.5px solid var(--action-border);border-radius:6px;transition:background .15s;flex-shrink:0;background:var(--card);}
+    .ai-link:hover{background:var(--action-fill);}
     .ai-desc{font-size:14px;color:var(--muted);line-height:1.65;}
     .tags{display:flex;flex-wrap:wrap;gap:5px;}
     .tag{font-size:11.5px;font-weight:600;padding:3px 10px;border-radius:100px;}
-    .tag-blue{background:var(--blue-10);color:var(--blue);}
+    .tag-blue{background:var(--blue-10);color:var(--action-text);}
     .tag-green{background:var(--green-10);color:var(--badge-green-text);}
     .tag-purple{background:var(--purple-10);color:var(--purple);}
     .tag-orange{background:var(--orange-10);color:var(--badge-orange-text);}
+    .tag-red{background:var(--red-10);color:var(--red);}
     .who{display:flex;gap:6px;align-items:center;}
     .who-label{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;}
     .who-badge{font-size:11.5px;font-weight:600;padding:2px 10px;border-radius:100px;}
@@ -40,6 +41,12 @@
     .dot-blue{background:var(--blue);}
     .dot-green{background:var(--green);}
     .dot-orange{background:var(--orange);}
+    .dot-purple{background:var(--purple);}
+    @media (prefers-color-scheme: dark) {
+      .ai-card {
+        background:linear-gradient(180deg, rgba(18,28,46,0.92) 0%, rgba(18,28,46,0.76) 100%);
+      }
+    }
   </style>
 </head>
 <body>
@@ -48,30 +55,30 @@
   <div class="hero-ribbon"></div><div class="hero-circle-1"></div>
   <div class="hero-inner">
     <div class="hero-eyebrow">Course Materials</div>
-    <h1>AI Tools for Education</h1>
-    <p>A curated directory of AI tools for teaching and learning, organised by approved school use and personal use only.</p>
+    <h1>AI Tools</h1>
+    <p>Approved and personal AI tools for writing, research, coding, and academic support.</p>
   </div>
 </div>
 <div class="page">
-  <div class="callout callout-orange" style="margin-bottom:40px;"><span>⚠️</span><span><strong>Important:</strong> Only Section 1 tools may be used with school-related work involving student data, assessment information, or personally identifiable information. Never use non-approved tools with school data.</span></div>
+  <div class="callout callout-orange" style="margin-bottom:40px;"><span>Policy</span><span><strong>Important:</strong> Only the approved Google Workspace AI tools may be used with school-related work involving student data, assessment information, or personally identifiable information. Never use non-approved tools with school data.</span></div>
 
   <div class="section">
     <div class="badge-approved">Approved for School Use</div>
-    <h2 class="section-title">Section 1 — Approved AI Tools</h2>
+    <h2 class="section-title">Approved AI Tools</h2>
     <p class="section-desc">Formally approved for school work. Access through your official school Google account. <strong>Student and institutional data may only be entered here.</strong></p>
-    <div class="callout callout-green" style="margin-bottom:24px;"><span>🔒</span><span><strong>Data safe.</strong> These tools operate within the school's Google Workspace environment.</span></div>
+    <div class="callout callout-green" style="margin-bottom:24px;"><span>Safe</span><span><strong>Data safe.</strong> These tools operate within the school's Google Workspace environment.</span></div>
     <div class="sub-h"><span class="dot dot-green"></span>Google Workspace AI Tools</div>
     <div class="ai-grid">
       <div class="ai-card ai-card-approved">
-        <div class="ai-top"><div class="ai-icon icon-blue">Google</div><div class="ai-meta"><div class="ai-name">Gemini for Workspace</div><div class="ai-type">Google · AI Assistant</div></div><a class="ai-link" href="https://gemini.google.com" target="_blank">Visit</a></div>
+        <div class="ai-top"><div class="brand-logo"><img src="../Images/gemini-color.png" alt="Gemini logo"></div><div class="ai-meta"><div class="ai-name">Gemini for Workspace</div><div class="ai-type">Google · AI Assistant</div></div><a class="ai-link" href="https://gemini.google.com" target="_blank">Visit</a></div>
         <div class="ai-desc">Integrated into Docs, Sheets, Slides, Gmail, and Drive. Use your school Google account where enabled.</div>
         <div class="tags"><span class="tag tag-blue">Lesson planning</span><span class="tag tag-green">Drafting</span><span class="tag tag-orange">Summarization</span><span class="tag tag-purple">Translation</span></div>
         <div class="who"><span class="who-label">For:</span><span class="who-badge who-both">Staff &amp; Students</span></div>
       </div>
       <div class="ai-card ai-card-approved">
-        <div class="ai-top"><div class="ai-icon icon-green">Google</div><div class="ai-meta"><div class="ai-name">NotebookLM</div><div class="ai-type">Google · Research Assistant</div></div><a class="ai-link" href="https://notebooklm.google.com" target="_blank">Visit</a></div>
+        <div class="ai-top"><div class="brand-logo"><img src="../Images/notebooklm-scaled.png.webp" alt="NotebookLM logo"></div><div class="ai-meta"><div class="ai-name">NotebookLM</div><div class="ai-type">Google · Research Assistant</div></div><a class="ai-link" href="https://notebooklm.google.com" target="_blank">Visit</a></div>
         <div class="ai-desc">Generates summaries, study guides, FAQs, and audio overviews from documents you upload. Only uses your sources.</div>
-        <div class="tags"><span class="tag tag-green">IA &amp; EE research</span><span class="tag tag-blue">Study guides</span><span class="tag tag-orange">Audio summaries</span></div>
+        <div class="tags"><span class="tag tag-green">Research</span><span class="tag tag-blue">Study guides</span><span class="tag tag-orange">Audio summaries</span></div>
         <div class="who"><span class="who-label">For:</span><span class="who-badge who-both">Staff &amp; Students</span></div>
       </div>
     </div>
@@ -79,49 +86,36 @@
 
   <div class="section">
     <div class="badge-personal">Personal Use Only</div>
-    <h2 class="section-title">Section 2 — Personal Learning Tools</h2>
+    <h2 class="section-title">Personal AI Tools</h2>
     <p class="section-desc">Useful for personal exploration and learning. <strong>Never enter student names, grades, safeguarding data, or school information into these tools.</strong></p>
 
     <div class="sub-h"><span class="dot dot-blue"></span>General AI Assistants</div>
     <div class="ai-grid">
       <div class="ai-card ai-card-personal">
-        <div class="ai-top"><div class="ai-icon icon-blue">Anthropic</div><div class="ai-meta"><div class="ai-name">Claude</div><div class="ai-type">Anthropic · AI Assistant</div></div><a class="ai-link" href="https://www.anthropic.com/claude" target="_blank">Visit</a></div>
+        <div class="ai-top"><div class="brand-logo"><img src="../Images/claude-color.png" alt="Claude logo"></div><div class="ai-meta"><div class="ai-name">Claude</div><div class="ai-type">Anthropic · AI Assistant</div></div><a class="ai-link" href="https://www.anthropic.com/claude" target="_blank">Visit</a></div>
         <div class="ai-desc">Strong for thoughtful writing, document analysis, coding help, and research workflows that benefit from clear explanations and structured output.</div>
         <div class="tags"><span class="tag tag-green">Writing</span><span class="tag tag-blue">Analysis</span><span class="tag tag-purple">Coding</span></div>
         <div class="who"><span class="who-label">For:</span><span class="who-badge who-both">Staff &amp; Students</span></div>
         <div class="pnote pnote-red"><span>Restricted</span><span>Personal use only.</span></div>
       </div>
-
       <div class="ai-card ai-card-personal">
-        <div class="ai-top"><div class="ai-icon icon-green">OpenAI</div><div class="ai-meta"><div class="ai-name">ChatGPT</div><div class="ai-type">OpenAI · Generative AI</div></div><a class="ai-link" href="https://chat.openai.com" target="_blank">Visit</a></div>
+        <div class="ai-top"><div class="brand-logo"><img src="../Images/chatgpt-logo-png_seeklogo-465219.png" alt="ChatGPT logo"></div><div class="ai-meta"><div class="ai-name">ChatGPT</div><div class="ai-type">OpenAI · Generative AI</div></div><a class="ai-link" href="https://chat.openai.com" target="_blank">Visit</a></div>
         <div class="ai-desc">Great for brainstorming, explaining concepts, coding help, and questions. Free tier available.</div>
         <div class="tags"><span class="tag tag-green">Brainstorming</span><span class="tag tag-blue">Concepts</span><span class="tag tag-purple">Coding</span></div>
         <div class="who"><span class="who-label">For:</span><span class="who-badge who-both">Staff &amp; Students</span></div>
         <div class="pnote pnote-red"><span>Restricted</span><span>Do not enter student data or school information.</span></div>
       </div>
       <div class="ai-card ai-card-personal">
-        <div class="ai-top"><div class="ai-icon icon-blue">Search</div><div class="ai-meta"><div class="ai-name">Perplexity</div><div class="ai-type">AI Search Engine</div></div><a class="ai-link" href="https://www.perplexity.ai" target="_blank">Visit</a></div>
+        <div class="ai-top"><div class="brand-logo"><img src="../Images/unnamed-5.png" alt="Perplexity logo"></div><div class="ai-meta"><div class="ai-name">Perplexity</div><div class="ai-type">AI Search Engine</div></div><a class="ai-link" href="https://www.perplexity.ai" target="_blank">Visit</a></div>
         <div class="ai-desc">Answers with cited, real-time web references. Good for research and fact-checking.</div>
         <div class="tags"><span class="tag tag-blue">Research</span><span class="tag tag-green">Fact-checking</span><span class="tag tag-orange">Sources</span></div>
         <div class="who"><span class="who-label">For:</span><span class="who-badge who-both">Staff &amp; Students</span></div>
         <div class="pnote pnote-red"><span>Restricted</span><span>Personal use only.</span></div>
       </div>
-
       <div class="ai-card ai-card-personal">
-        <div class="ai-top"><div class="ai-icon icon-blue">DeepSeek</div><div class="ai-meta"><div class="ai-name">DeepSeek</div><div class="ai-type">DeepSeek · AI Assistant</div></div><a class="ai-link" href="https://www.deepseek.com/en/" target="_blank">Visit</a></div>
+        <div class="ai-top"><div class="brand-logo"><img src="../Images/deepseek-color.png" alt="DeepSeek logo"></div><div class="ai-meta"><div class="ai-name">DeepSeek</div><div class="ai-type">DeepSeek · AI Assistant</div></div><a class="ai-link" href="https://www.deepseek.com/en/" target="_blank">Visit</a></div>
         <div class="ai-desc">Useful for writing, coding support, research, and everyday question answering with free access on web and app.</div>
         <div class="tags"><span class="tag tag-green">Writing</span><span class="tag tag-blue">Research</span><span class="tag tag-purple">Coding</span></div>
-        <div class="who"><span class="who-label">For:</span><span class="who-badge who-both">Staff &amp; Students</span></div>
-        <div class="pnote pnote-red"><span>Restricted</span><span>Personal use only.</span></div>
-      </div>
-    </div>
-
-    <div class="sub-h"><span class="dot dot-green"></span>Academic Research</div>
-    <div class="ai-grid">
-      <div class="ai-card ai-card-personal">
-        <div class="ai-top"><div class="ai-icon icon-blue">OpenAI</div><div class="ai-meta"><div class="ai-name">Prism</div><div class="ai-type">OpenAI · LaTeX Workspace</div></div><a class="ai-link" href="https://openai.com/prism/" target="_blank">Visit</a></div>
-        <div class="ai-desc">A LaTeX-native workspace for scientific writing with integrated AI support for proofreading, citations, literature search, formatting, and collaboration.</div>
-        <div class="tags"><span class="tag tag-blue">LaTeX</span><span class="tag tag-green">Scientific writing</span><span class="tag tag-orange">Citations</span></div>
         <div class="who"><span class="who-label">For:</span><span class="who-badge who-both">Staff &amp; Students</span></div>
         <div class="pnote pnote-red"><span>Restricted</span><span>Personal use only.</span></div>
       </div>
@@ -148,7 +142,7 @@
         <div class="pnote pnote-orange"><span>Policy</span><span><strong>Policy:</strong> Basic spell-check OK at all levels. AI rewrites must be declared. Never enter school data.</span></div>
       </div>
       <div class="ai-card ai-card-personal">
-        <div class="ai-top"><div class="ai-icon icon-blue">Translation</div><div class="ai-meta"><div class="ai-name">DeepL</div><div class="ai-type">AI Translation</div></div><a class="ai-link" href="https://www.deepl.com" target="_blank">Visit</a></div>
+        <div class="ai-top"><div class="brand-logo brand-logo-wide"><img src="../Images/DeepL_logo.svg" alt="DeepL logo"></div><div class="ai-meta"><div class="ai-name">DeepL</div><div class="ai-type">AI Translation</div></div><a class="ai-link" href="https://www.deepl.com" target="_blank">Visit</a></div>
         <div class="ai-desc">High-quality translation. Permitted for translating external sources. Not permitted for translating your own IA or EE writing.</div>
         <div class="tags"><span class="tag tag-blue">Source translation</span><span class="tag tag-green">Language support</span></div>
         <div class="who"><span class="who-label">For:</span><span class="who-badge who-both">Staff &amp; Students</span></div>
