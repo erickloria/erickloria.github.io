@@ -6,8 +6,6 @@
       <stop offset="100%" stop-color="#004099" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <rect width="200" height="200" fill="#ffffff"/>
-
   <!-- accretion disk -->
   <ellipse cx="100" cy="100" rx="36" ry="10" stroke="#1DA381" stroke-width=".8" fill="none" opacity=".38" transform="rotate(-18 100 100)"/>
   <ellipse cx="100" cy="100" rx="52" ry="14" stroke="#004099" stroke-width=".5" fill="none" opacity=".16" transform="rotate(-18 100 100)"/>

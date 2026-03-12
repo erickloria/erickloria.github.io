@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <a href="${homeHref}" class="nav-brand">
       <picture class="nav-brand-logo">
         <source media="(prefers-color-scheme: dark)" srcset="${assetPrefix}ELS_logo_exports/01_icon_color_dark.svg">
-        <img src="${assetPrefix}ELS_logo_exports/02_icon_color_light.svg" alt="Erick Loría Soto logo">
+        <img src="${assetPrefix}ELS_logo_exports/02_icon_color_light.svg?v=20260311b" alt="Erick Loría Soto logo">
       </picture>
       <div class="nav-brand-copy">
         <div class="nav-brand-text">Home</div>

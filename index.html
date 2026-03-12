@@ -75,7 +75,8 @@
       letter-spacing: -0.04em;
       color: var(--text);
       margin-bottom: 18px;
-      max-width: 10ch;
+      max-width: none;
+      white-space: nowrap;
     }
     .home-summary {
       font-size: 18px;
@@ -326,6 +327,7 @@
       }
       .home-title {
         max-width: none;
+        white-space: normal;
       }
     }
     @media (max-width: 768px) {
@@ -455,8 +457,11 @@
   </section>
 
   <section class="home-about">
-    <div class="profile-avatar">
-      <img src="Images/DSC04634.jpg" alt="Erick Loria Soto">
+    <div class="profile-brand-column">
+      <div class="profile-avatar">
+        <img src="Images/DSC04634.jpg" alt="Erick Loria Soto">
+      </div>
+      <img class="profile-personal-logo" src="ELS_logo_exports/02_icon_color_light.svg?v=20260311b" alt="Erick Loria Soto logo">
     </div>
     <div class="home-about-copy">
       <h2>Erick Loria Soto</h2>
