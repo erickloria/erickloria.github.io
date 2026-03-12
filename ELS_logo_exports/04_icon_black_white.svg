@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- ELS Personal Logo | Erick Alberto Loria Soto | Icon · Black · White -->
+  <defs/>
+  <rect width="200" height="200" fill="#ffffff"/>
+
+  <ellipse cx="100" cy="100" rx="36" ry="10" stroke="#0a0a0a" stroke-width=".8" fill="none" opacity=".1" transform="rotate(-18 100 100)"/>
+  <line x1="100" y1="100" x2="185" y2="44" stroke="#0a0a0a" stroke-width="1.2" stroke-linecap="round" opacity=".22"/>
+  <line x1="100" y1="100" x2="18"  y2="154" stroke="#0a0a0a" stroke-width=".7" stroke-linecap="round" opacity=".1"/>
+  <path d="M100,100 Q72,84 54,62"   stroke="#0a0a0a" stroke-width=".9" fill="none" stroke-linecap="round" opacity=".18"/>
+  <path d="M100,100 L44,100"         stroke="#0a0a0a" stroke-width=".9" stroke-linecap="round" opacity=".14"/>
+  <path d="M100,100 Q72,116 54,136"  stroke="#0a0a0a" stroke-width=".9" fill="none" stroke-linecap="round" opacity=".14"/>
+  <path d="M100,100 Q128,84 148,66"  stroke="#0a0a0a" stroke-width=".85" fill="none" stroke-linecap="round" opacity=".17"/>
+  <path d="M100,100 Q128,116 146,134" stroke="#0a0a0a" stroke-width=".85" fill="none" stroke-linecap="round" opacity=".14"/>
+  <path d="M100,100 L74,138"         stroke="#0a0a0a" stroke-width=".8" stroke-linecap="round" opacity=".15"/>
+  <circle cx="100" cy="100" r="3.2" fill="#0a0a0a" opacity=".6"/>
+  <circle cx="100" cy="100" r="1.5" fill="white"/>
+  <circle cx="185" cy="44"  r="2.2" fill="#0a0a0a" opacity=".22"/>
+  <text x="100" y="118" font-family="'DM Sans', -apple-system, sans-serif" font-weight="500" font-size="72" fill="#0a0a0a" text-anchor="middle" letter-spacing="4">ELS</text>
+</svg>

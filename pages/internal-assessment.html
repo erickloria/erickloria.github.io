@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<script src="../js/layout.js"></script>
+<script src="../js/layout.js?v=20260311b"></script>
 
 <div class="hero">
   <div class="hero-ribbon"></div>
@@ -15,28 +15,29 @@
   <div class="hero-inner">
     <div class="hero-eyebrow">Resources</div>
     <h1>Internal Assessment</h1>
-    <p>Structure, criteria, timeline, and example investigations for the IB Physics IA.</p>
+    <p>Structure, analysis, uncertainty, graphing, and scientific writing guidance for the IB Physics IA.</p>
   </div>
 </div>
 
 <div class="page">
-  <div class="section">
-    <h2 class="section-title">About the Physics IA</h2>
-    <p class="section-desc">The Internal Assessment is a 10-hour practical investigation worth 20% of your final IB score. It is assessed on five criteria: Personal Engagement, Exploration, Analysis, Evaluation, and Communication. The final report has a 3,000-word limit.</p>
-    <div class="callout callout-green">
-      <span>Note</span>
-      <span>IA topic proposals are due at the start of Year 2. Use the structure guide and examples below to understand the expected organization and level of analysis.</span>
-    </div>
-    <div class="grid grid-2">
-      <a class="link-card card-green" href="https://docs.google.com/document/d/1efUSfh4Q2AtTHuykdhSTT1UwBX5bbAffY0v1bZ7SW6s/edit?tab=t.0#heading=h.fhlex96wu5yg" target="_blank">
-        <div class="card-icon icon-green">Guide</div>
-        <div>
-          <div class="link-card-label">IA Structure Guide</div>
-          <div class="link-card-desc">Guidance on organizing the report and meeting the expectations for each section.</div>
+  <div class="markdown-shell">
+    <div class="markdown-layout">
+      <aside class="markdown-sidebar">
+        <div class="markdown-sidebar-title">On This Page</div>
+        <nav id="manual-toc" class="markdown-toc"></nav>
+      </aside>
+      <div class="section">
+        <div class="markdown-content markdown-loading" data-markdown-src="internal-assessment.md" data-markdown-toc="#manual-toc">
+          <p>Loading guide...</p>
         </div>
-        <span class="link-arrow">Open</span>
-      </a>
+      </div>
+    </div>
+  </div>
 
+  <div class="section" style="margin-top:22px;">
+    <h2 class="section-title">Example IAs</h2>
+    <p class="section-desc">Use the folder below to review sample Internal Assessments and compare how different investigations are structured.</p>
+    <div class="grid grid-2">
       <a class="link-card card-green" href="https://drive.google.com/drive/u/0/folders/1yO9OwdAT2V_K8bwFVHNXbCXeed2ex9BA" target="_blank">
         <div class="card-icon icon-green">Ex</div>
         <div>
@@ -48,5 +49,15 @@
     </div>
   </div>
 </div>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="../js/markdown-page.js?v=20260311g"></script>
 </body>
 </html>

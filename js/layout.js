@@ -4,13 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const homeHref = inPagesDir ? '../index.html' : 'index.html';
   const pagePrefix = inPagesDir ? '' : 'pages/';
   const assetPrefix = inPagesDir ? '../' : '';
+  const currentYear = new Date().getFullYear();
 
   const nav = `
   <nav class="nav">
     <a href="${homeHref}" class="nav-brand">
       <picture class="nav-brand-logo">
-        <source media="(prefers-color-scheme: dark)" srcset="${assetPrefix}Images/Logo-Main-White.png">
-        <img src="${assetPrefix}Images/Logo-Main-Color.png" alt="UWC Costa Rica logo">
+        <source media="(prefers-color-scheme: dark)" srcset="${assetPrefix}ELS_logo_exports/01_icon_color_dark.svg">
+        <img src="${assetPrefix}ELS_logo_exports/02_icon_color_light.svg" alt="Erick Loría Soto logo">
       </picture>
       <div class="nav-brand-copy">
         <div class="nav-brand-text">Home</div>
@@ -38,7 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
         </ul>
       </li>
       <li><a href="${pagePrefix}meetings.html">Meetings</a></li>
-      <li><a href="${pagePrefix}ai-tools.html">AI Tools</a></li>
+      <li class="nav-dropdown">
+        <a href="${pagePrefix}ai-tools.html">AI</a>
+        <ul class="dropdown-menu">
+          <li><a href="${pagePrefix}ai-tools.html">Tools</a></li>
+          <li><a href="${pagePrefix}ai-citation-guide.html">Citation</a></li>
+        </ul>
+      </li>
     </ul>
     <button class="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="site-nav-links">
       <span></span><span></span><span></span>
@@ -48,13 +55,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const footer = `
   <footer class="footer">
     <div class="footer-brand-wrap">
-      <img class="footer-logo" src="${assetPrefix}Images/Logo-Main-White.png" alt="UWC Costa Rica logo">
-      <div>
+      <div class="footer-logo-group">
+        <img class="footer-logo" src="${assetPrefix}Images/Logo-Main-White.png" alt="UWC Costa Rica logo">
+        <img class="footer-logo footer-logo-personal" src="${assetPrefix}ELS_logo_exports/05_icon_white_transparent.svg" alt="Erick Loría Soto logo">
+      </div>
+      <div class="footer-copy">
         <div class="footer-brand">IB Physics &amp; TOK — UWC Costa Rica</div>
-        <div>Erick Loría Soto &nbsp;·&nbsp; <a href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></div>
+        <div class="footer-contact">Erick Loría Soto · <a href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></div>
       </div>
     </div>
-    <div>UWC Costa Rica &nbsp;·&nbsp; IB Diploma Programme</div>
+    <div class="footer-legal">
+      <strong>Copyright ${currentYear} Erick Loría Soto.</strong> All original site content, course materials, design, and writing are my own unless otherwise credited. Built with HTML, CSS, JavaScript, and GitHub Pages.
+    </div>
   </footer>`;
 
   document.body.insertAdjacentHTML('afterbegin', nav);
@@ -64,6 +76,14 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.nav-links a').forEach(a => {
     const href = (a.getAttribute('href') || '').split('/').pop();
     if (href === path) a.classList.add('active');
+  });
+
+  document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+    const activeChild = dropdown.querySelector('.dropdown-menu a.active');
+    if (activeChild) {
+      const trigger = dropdown.querySelector(':scope > a');
+      if (trigger) trigger.classList.add('active');
+    }
   });
 
   const hamburger = document.querySelector('.nav-hamburger');

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual Viewer — IB Physics &amp; TOK</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<script src="../js/layout.js?v=20260311b"></script>
+
+<div class="hero">
+  <div class="hero-ribbon"></div>
+  <div class="hero-circle-1"></div>
+  <div class="hero-inner">
+    <div id="manual-eyebrow" class="hero-eyebrow">Manuals</div>
+    <h1 id="manual-title">Manual</h1>
+    <p id="manual-desc">Rendered from a local Markdown file.</p>
+  </div>
+</div>
+
+<div class="page">
+  <div class="markdown-shell">
+    <div class="markdown-layout">
+      <aside class="markdown-sidebar">
+        <div class="markdown-sidebar-title">On This Page</div>
+        <nav id="manual-toc" class="markdown-toc"></nav>
+      </aside>
+      <div class="section">
+        <div id="manual-content" class="markdown-content markdown-loading" data-markdown-toc="#manual-toc">
+          <p>Loading manual...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (() => {
+    const params = new URLSearchParams(window.location.search);
+    const src = params.get('src') || '';
+    const title = params.get('title') || 'Manual';
+    const eyebrow = params.get('eyebrow') || 'Manuals';
+    const desc = params.get('desc') || 'Rendered from a local Markdown file.';
+
+    document.title = `${title} — IB Physics & TOK`;
+    document.getElementById('manual-title').textContent = title;
+    document.getElementById('manual-eyebrow').textContent = eyebrow;
+    document.getElementById('manual-desc').textContent = desc;
+
+    const content = document.getElementById('manual-content');
+
+    if (!src) {
+      content.innerHTML = '<p>No markdown source was provided.</p>';
+      return;
+    }
+
+    content.setAttribute('data-markdown-src', src);
+  })();
+</script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="../js/markdown-page.js?v=20260311g"></script>
+</body>
+</html>
