@@ -30,6 +30,45 @@
       margin-bottom: 12px;
       font-size: 18px;
     }
+    .chapter-breakdown div,
+    .chapter-breakdown strong,
+    .link-card-label,
+    .link-card-desc {
+      overflow-wrap: anywhere;
+    }
+    @media (max-width: 1024px) {
+      .exercise-grid {
+        gap: 18px;
+      }
+      .exercise-grid .card {
+        padding: 22px;
+      }
+      .exercise-grid .card-title {
+        font-size: 20px;
+        margin-bottom: 14px;
+      }
+      .chapter-breakdown div {
+        font-size: 14px;
+        line-height: 1.7;
+      }
+    }
+    @media (max-width: 768px) {
+      .exercise-grid .card {
+        padding: 18px;
+      }
+      .exercise-grid .card-title {
+        font-size: 18px;
+        margin-bottom: 12px;
+      }
+      .chapter-breakdown {
+        gap: 8px;
+      }
+      .chapter-breakdown div {
+        font-size: 13.5px;
+        line-height: 1.65;
+        padding-top: 8px;
+      }
+    }
     @media (prefers-color-scheme: dark) {
       .chapter-breakdown div {
         border-top-color: rgba(127, 160, 204, 0.14);

@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <li><a href="${pagePrefix}meetings.html">Meetings</a></li>
       <li><a href="${pagePrefix}ai-tools.html">AI Tools</a></li>
     </ul>
-    <button class="nav-hamburger" aria-label="Menu">
+    <button class="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="site-nav-links">
       <span></span><span></span><span></span>
     </button>
   </nav>`;
@@ -69,11 +69,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.nav-hamburger');
   const navLinks = document.querySelector('.nav-links');
   if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.id = 'site-nav-links';
+
+    const closeNav = () => {
+      navLinks.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    };
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 1024) closeNav();
+      });
+    });
+
     document.addEventListener('click', e => {
       if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-        navLinks.classList.remove('open');
+        closeNav();
       }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1024) closeNav();
     });
   }
 });
