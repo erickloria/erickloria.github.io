@@ -1,120 +1,128 @@
-// Inject shared nav and footer into every page after the DOM is parsed.
+// Inject shared nav and footer into pages that still use the shared layout system.
 document.addEventListener('DOMContentLoaded', () => {
   const inPagesDir = window.location.pathname.includes('/pages/');
   const homeHref = inPagesDir ? '../index.html' : 'index.html';
   const pagePrefix = inPagesDir ? '' : 'pages/';
-  const assetPrefix = inPagesDir ? '../' : '';
   const currentYear = new Date().getFullYear();
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+
+  const sectionPages = {
+    home: new Set(['index.html', '']),
+    physics: new Set([
+      'resources.html',
+      'book-hw.html',
+      'tools.html',
+      'extended-essay.html',
+      'internal-assessment.html',
+      'labs.html',
+      'presentations.html'
+    ]),
+    tok: new Set([
+      'tok.html',
+      'tok-exhibition-guide.html'
+    ]),
+    misc: new Set([
+      'misc.html',
+      'listening-corner.html',
+      'sat.html',
+      'summer-programs.html'
+    ]),
+    ai: new Set([
+      'ai-tools.html',
+      'ai-citation-guide.html'
+    ]),
+    meetings: new Set([
+      'meetings.html'
+    ])
+  };
+
+  const section = Object.entries(sectionPages).find(([, pages]) => pages.has(path))?.[0] || 'default';
+  document.body.dataset.page = path;
+  document.body.dataset.section = section;
 
   const nav = `
   <nav class="nav">
-    <a href="${homeHref}" class="nav-brand">
-      <picture class="nav-brand-logo">
-        <source media="(prefers-color-scheme: dark)" srcset="${assetPrefix}ELS_logo_exports/01_icon_color_dark.svg">
-        <img src="${assetPrefix}ELS_logo_exports/02_icon_color_light.svg?v=20260311b" alt="Erick Loría Soto logo">
-      </picture>
-      <div class="nav-brand-copy">
-        <div class="nav-brand-text">Home</div>
+    <div class="nav-inner">
+      <a href="${homeHref}" class="nav-brand">
+        <div class="nav-brand-text">The Physics Lab</div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="${pagePrefix}resources.html" data-nav-key="physics">IB Physics</a></li>
+        <li><a href="${pagePrefix}tok.html" data-nav-key="tok">TOK</a></li>
+        <li><a href="${pagePrefix}misc.html" data-nav-key="misc">Resources</a></li>
+        <li><a href="${pagePrefix}ai-tools.html" data-nav-key="ai">AI Tools</a></li>
+        <li><a href="${pagePrefix}meetings.html" data-nav-key="meetings">Meetings</a></li>
+      </ul>
+      <a href="${pagePrefix}meetings.html" class="nav-cta btn-primary">Meetings</a>
+      <button class="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="site-nav-mobile">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="site-nav-mobile">
+      <div class="nav-mobile-inner">
+        <a href="${pagePrefix}resources.html" data-nav-key="physics">IB Physics</a>
+        <a href="${pagePrefix}tok.html" data-nav-key="tok">TOK</a>
+        <a href="${pagePrefix}misc.html" data-nav-key="misc">Resources</a>
+        <a href="${pagePrefix}ai-tools.html" data-nav-key="ai">AI Tools</a>
+        <a href="${pagePrefix}meetings.html" data-nav-key="meetings">Meetings</a>
+        <a href="${pagePrefix}meetings.html" class="nav-mobile-cta btn-primary">Meetings</a>
       </div>
-    </a>
-    <ul class="nav-links">
-      <li class="nav-dropdown">
-        <a href="${pagePrefix}resources.html">IB Physics</a>
-        <ul class="dropdown-menu">
-          <li><a href="${pagePrefix}book-hw.html">Book &amp; HW</a></li>
-          <li><a href="${pagePrefix}tools.html">Course Tools</a></li>
-          <li><a href="${pagePrefix}extended-essay.html">Extended Essay</a></li>
-          <li><a href="${pagePrefix}internal-assessment.html">Internal Assessment</a></li>
-          <li><a href="${pagePrefix}labs.html">Labs</a></li>
-          <li><a href="${pagePrefix}presentations.html">Presentations</a></li>
-        </ul>
-      </li>
-      <li><a href="${pagePrefix}tok.html">TOK</a></li>
-      <li class="nav-dropdown">
-        <a href="${pagePrefix}misc.html">Misc</a>
-        <ul class="dropdown-menu">
-          <li><a href="${pagePrefix}listening-corner.html">Listening Corner</a></li>
-          <li><a href="${pagePrefix}sat.html">SAT</a></li>
-          <li><a href="${pagePrefix}summer-programs.html">Summer Programs</a></li>
-        </ul>
-      </li>
-      <li><a href="${pagePrefix}meetings.html">Meetings</a></li>
-      <li class="nav-dropdown">
-        <a href="${pagePrefix}ai-tools.html">AI</a>
-        <ul class="dropdown-menu">
-          <li><a href="${pagePrefix}ai-tools.html">Tools</a></li>
-          <li><a href="${pagePrefix}ai-citation-guide.html">Citation</a></li>
-        </ul>
-      </li>
-    </ul>
-    <button class="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="site-nav-links">
-      <span></span><span></span><span></span>
-    </button>
+    </div>
   </nav>`;
 
   const footer = `
   <footer class="footer">
-    <div class="footer-brand-wrap">
-      <div class="footer-logo-group">
-        <img class="footer-logo" src="${assetPrefix}Images/Logo-Main-White.png" alt="UWC Costa Rica logo">
-        <img class="footer-logo footer-logo-personal" src="${assetPrefix}ELS_logo_exports/05_icon_white_transparent.svg" alt="Erick Loría Soto logo">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-copy">
+          <div class="footer-brand">IB Physics &amp; TOK — UWC Costa Rica</div>
+          <div class="footer-contact">Erick Loria Soto · <a href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></div>
+        </div>
+        <div class="footer-legal">
+          <strong>Copyright ${currentYear} Erick Loria Soto.</strong> All original site content, course materials, design, and writing are my own unless otherwise credited. Built with HTML, CSS, JavaScript, and GitHub Pages.
+        </div>
       </div>
-      <div class="footer-copy">
-        <div class="footer-brand">IB Physics &amp; TOK — UWC Costa Rica</div>
-        <div class="footer-contact">Erick Loría Soto · <a href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></div>
-      </div>
-    </div>
-    <div class="footer-legal">
-      <strong>Copyright ${currentYear} Erick Loría Soto.</strong> All original site content, course materials, design, and writing are my own unless otherwise credited. Built with HTML, CSS, JavaScript, and GitHub Pages.
     </div>
   </footer>`;
 
   document.body.insertAdjacentHTML('afterbegin', nav);
   document.body.insertAdjacentHTML('beforeend', footer);
 
-  const path = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    const href = (a.getAttribute('href') || '').split('/').pop();
-    if (href === path) a.classList.add('active');
+  document.querySelectorAll(`[data-nav-key="${section}"]`).forEach(link => {
+    link.classList.add('active');
   });
 
-  document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
-    const activeChild = dropdown.querySelector('.dropdown-menu a.active');
-    if (activeChild) {
-      const trigger = dropdown.querySelector(':scope > a');
-      if (trigger) trigger.classList.add('active');
-    }
-  });
+  if (typeof window.initSiteNavDropdowns === 'function') {
+    window.initSiteNavDropdowns();
+  }
 
   const hamburger = document.querySelector('.nav-hamburger');
-  const navLinks = document.querySelector('.nav-links');
-  if (hamburger && navLinks) {
-    navLinks.id = 'site-nav-links';
-
+  const mobileMenu = document.querySelector('.nav-mobile');
+  if (hamburger && mobileMenu) {
     const closeNav = () => {
-      navLinks.classList.remove('open');
+      mobileMenu.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
     };
 
     hamburger.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
+      const isOpen = mobileMenu.classList.toggle('open');
       hamburger.setAttribute('aria-expanded', String(isOpen));
     });
 
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth <= 1024) closeNav();
-      });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeNav);
     });
 
     document.addEventListener('click', e => {
-      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
         closeNav();
       }
     });
 
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 1024) closeNav();
+      if (window.innerWidth > 900) {
+        closeNav();
+      }
     });
   }
 });

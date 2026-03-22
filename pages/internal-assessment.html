@@ -1,70 +1,760 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Internal Assessment — IB Physics &amp; TOK</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>Physics Internal Assessment | The Physics Lab</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#e8e8ea",
+            "primary-fixed": "#d9e2ff",
+            "secondary-fixed-dim": "#65dbb6",
+            "on-secondary-fixed-variant": "#00513e",
+            "on-tertiary-container": "#fe8be2",
+            "on-tertiary": "#ffffff",
+            "on-primary-container": "#92b1ff",
+            "secondary-fixed": "#82f8d1",
+            "primary": "#002b6c",
+            "primary-fixed-dim": "#b0c6ff",
+            "on-tertiary-fixed-variant": "#7d1a6e",
+            "surface-container-low": "#f3f3f6",
+            "surface-container": "#edeef0",
+            "on-tertiary-fixed": "#3a0032",
+            "tertiary-fixed": "#ffd7f0",
+            "on-secondary-fixed": "#002117",
+            "on-error": "#ffffff",
+            "on-surface-variant": "#434652",
+            "secondary-container": "#82f8d1",
+            "tertiary-fixed-dim": "#fface7",
+            "error-container": "#ffdad6",
+            "tertiary": "#5b0050",
+            "on-primary": "#ffffff",
+            "inverse-surface": "#2f3133",
+            "primary-container": "#004099",
+            "surface-bright": "#f9f9fb",
+            "background": "#f9f9fb",
+            "on-background": "#1a1c1e",
+            "inverse-on-surface": "#f0f0f3",
+            "inverse-primary": "#b0c6ff",
+            "outline-variant": "#c3c6d4",
+            "surface-container-highest": "#e2e2e5",
+            "surface": "#f9f9fb",
+            "surface-dim": "#d9dadc",
+            "on-primary-fixed-variant": "#04429b",
+            "outline": "#737783",
+            "on-surface": "#1a1c1e",
+            "error": "#ba1a1a",
+            "surface-tint": "#2d5bb4",
+            "surface-variant": "#e2e2e5",
+            "on-secondary": "#ffffff",
+            "on-error-container": "#93000a",
+            "on-primary-fixed": "#001945",
+            "secondary": "#006c53",
+            "on-secondary-container": "#007259",
+            "tertiary-container": "#7b186c"
+          },
+          fontFamily: {
+            "headline": ["Manrope", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+            "label": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .signature-gradient {
+      background: linear-gradient(135deg, #004099 0%, #1DA381 100%);
+    }
+    .editorial-shadow {
+      box-shadow: 0 24px 48px -12px rgba(0, 43, 108, 0.08);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .ia-markdown {
+      color: #434652;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+    .ia-markdown .markdown-brand {
+      display: none !important;
+    }
+    .ia-markdown h1,
+    .ia-markdown h2,
+    .ia-markdown h3,
+    .ia-markdown h4,
+    .ia-markdown h5,
+    .ia-markdown h6 {
+      font-family: "Manrope", sans-serif;
+      color: #002b6c;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      margin-top: 2.4rem;
+      margin-bottom: 1rem;
+      scroll-margin-top: 7rem;
+    }
+    .ia-markdown h1 {
+      font-size: 2.35rem;
+      font-weight: 800;
+    }
+    .ia-markdown h2 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      border-top: 1px solid rgba(195, 198, 212, 0.45);
+      padding-top: 1.85rem;
+    }
+    .ia-markdown h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+    .ia-markdown h4,
+    .ia-markdown h5,
+    .ia-markdown h6 {
+      font-size: 1.08rem;
+      font-weight: 700;
+    }
+    .ia-markdown p,
+    .ia-markdown li {
+      margin-bottom: 1rem;
+    }
+    .ia-markdown ul,
+    .ia-markdown ol {
+      padding-left: 1.4rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .ia-markdown ul {
+      list-style: disc outside;
+    }
+    .ia-markdown ol {
+      list-style: decimal outside;
+    }
+    .ia-markdown a {
+      color: #004099;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+    .ia-markdown hr {
+      border: 0;
+      border-top: 1px solid rgba(195, 198, 212, 0.45);
+      margin: 2rem 0;
+    }
+    .ia-markdown blockquote {
+      margin: 1.5rem 0;
+      padding: 1rem 1.25rem;
+      border-left: 4px solid #65dbb6;
+      background: rgba(130, 248, 209, 0.1);
+      color: #002b6c;
+      font-style: italic;
+      border-radius: 0.75rem;
+    }
+    .ia-markdown code {
+      background: rgba(0, 64, 153, 0.08);
+      color: #002b6c;
+      padding: 0.15rem 0.35rem;
+      border-radius: 0.35rem;
+      font-size: 0.95em;
+    }
+    .ia-markdown pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 1.25rem;
+      border-radius: 1rem;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+    .ia-markdown pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+    }
+    .ia-markdown table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      overflow: hidden;
+      border-radius: 1rem;
+    }
+    .ia-markdown th,
+    .ia-markdown td {
+      padding: 0.95rem 1rem;
+      border-bottom: 1px solid rgba(195, 198, 212, 0.45);
+      vertical-align: top;
+      text-align: left;
+    }
+    .ia-markdown th {
+      background: #e8e8ea;
+      color: #002b6c;
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+    }
+    .ia-markdown tbody tr:last-child td {
+      border-bottom: 0;
+    }
+    .ia-markdown img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 1.5rem 0;
+      padding: 0.75rem;
+      border-radius: 1.25rem;
+      background: #ffffff;
+      box-shadow: 0 18px 36px rgba(15, 33, 64, 0.08);
+    }
+    .ia-guide-section .markdown-actions {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 2rem 1rem;
+      margin: 0;
+    }
+    .ia-guide-section .markdown-print-button {
+      appearance: none;
+      border: 1px solid rgba(195, 198, 212, 0.7);
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.94);
+      color: #004099;
+      box-shadow: 0 12px 28px rgba(15, 33, 64, 0.08);
+      font-size: 0.82rem;
+      font-weight: 700;
+      line-height: 1;
+      padding: 0.8rem 1.1rem;
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+    .ia-guide-section .markdown-print-button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 30px rgba(15, 33, 64, 0.12);
+      border-color: rgba(0, 64, 153, 0.2);
+    }
+    .markdown-sidebar {
+      position: sticky;
+      top: 7rem;
+      padding: 1.3rem;
+      border-radius: 1.5rem;
+      background: #f3f3f6;
+      max-height: calc(100vh - 8.5rem);
+      overflow: auto;
+    }
+    .markdown-sidebar-title {
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #737783;
+      margin-bottom: 1rem;
+    }
+    .markdown-toc {
+      display: grid;
+      gap: 0.45rem;
+    }
+    .markdown-toc-group {
+      background: rgba(255, 255, 255, 0.74);
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+    .markdown-toc-summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 0.85rem 1rem;
+      color: #002b6c;
+      font-size: 0.82rem;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+    .markdown-toc-summary::-webkit-details-marker {
+      display: none;
+    }
+    .markdown-toc-summary::after {
+      content: "+";
+      float: right;
+      color: #737783;
+    }
+    .markdown-toc-group[open] .markdown-toc-summary::after {
+      content: "-";
+    }
+    .markdown-toc-group-links {
+      display: grid;
+      gap: 0.2rem;
+      padding: 0 0.65rem 0.65rem;
+    }
+    .markdown-toc a {
+      display: block;
+      padding: 0.65rem 0.8rem;
+      border-radius: 0.85rem;
+      color: #5d687a;
+      text-decoration: none;
+      font-size: 0.8rem;
+      line-height: 1.45;
+    }
+    .markdown-toc a:hover,
+    .markdown-toc a.active {
+      background: rgba(0, 64, 153, 0.08);
+      color: #004099;
+    }
+    .markdown-toc a.level-3 {
+      margin-left: 0.7rem;
+      font-size: 0.76rem;
+    }
+    .markdown-toc a.markdown-toc-overview {
+      margin-left: 0;
+      font-weight: 700;
+    }
+    .markdown-toc a.markdown-toc-standalone {
+      font-weight: 800;
+    }
+    .markdown-toc a.level-4,
+    .markdown-toc a.level-5,
+    .markdown-toc a.level-6 {
+      margin-left: 1.15rem;
+      font-size: 0.74rem;
+    }
+    @media (max-width: 1280px) {
+      .markdown-sidebar {
+        position: static;
+        max-height: none;
+      }
+    }
+    @media (max-width: 1024px) {
+      .ia-markdown h1 {
+        font-size: 2.05rem;
+      }
+      .ia-markdown h2 {
+        font-size: 1.65rem;
+      }
+      .ia-guide-section .markdown-actions {
+        padding: 0 1.5rem 1rem;
+      }
+    }
+  </style>
 </head>
-<body>
-<script src="../js/layout.js?v=20260311b"></script>
-
-<div class="hero">
-  <div class="hero-ribbon"></div>
-  <div class="hero-circle-1"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">Resources</div>
-    <h1>Internal Assessment</h1>
-    <p>Structure, analysis, uncertainty, graphing, and scientific writing guidance for the IB Physics IA.</p>
-  </div>
-</div>
-
-<div class="page">
-  <div class="section">
-    <div class="callout callout-green">
-      <span>Examples</span>
-      <span>Use the example IA folder below to compare investigation structure, graphing, uncertainty treatment, and evaluation choices before drafting or revising your own report.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Example IAs</h2>
-    <p class="section-desc">Use the folder below to review sample Internal Assessments and compare how different investigations are structured.</p>
-    <div class="grid grid-2">
-      <a class="link-card card-green" href="https://drive.google.com/drive/u/0/folders/1yO9OwdAT2V_K8bwFVHNXbCXeed2ex9BA" target="_blank">
-        <div class="card-icon icon-green">Ex</div>
-        <div>
-          <div class="link-card-label">Example IAs</div>
-          <div class="link-card-desc">Folder of internal assessment examples for review and reference.</div>
-        </div>
-        <span class="link-arrow">Open</span>
+<body class="bg-background font-body text-on-surface min-h-screen flex flex-col">
+  <nav class="bg-white/80 backdrop-blur-xl shadow-sm sticky top-0 z-50">
+    <div class="w-full px-8 py-4 max-w-7xl mx-auto flex items-center md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8">
+      <a class="text-xl font-extrabold tracking-tighter bg-gradient-to-r from-[#004099] to-[#1DA381] bg-clip-text text-transparent justify-self-start" href="../index.html">
+        The Physics Lab
       </a>
+      <div class="hidden md:flex items-center gap-8 justify-self-center">
+        <a class="text-[#004099] font-bold border-b-2 border-[#1DA381] pb-1" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="tok.html">TOK</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="misc.html">Resources</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="meetings.html">Meetings</a>
+      </div>
+      <div class="hidden md:flex justify-self-end">
+        <a class="signature-gradient text-white px-6 py-2.5 rounded-xl font-bold tracking-tight active:scale-95 duration-150 ease-in-out" href="meetings.html">
+          Meetings
+        </a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden text-primary" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="material-symbols-outlined text-primary text-3xl">menu</span>
+      </button>
     </div>
-  </div>
+    <div id="mobile-menu" class="hidden md:hidden px-8 pb-5 max-w-7xl mx-auto">
+      <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-4 flex flex-col gap-3 shadow-lg">
+        <a class="text-[#004099] font-bold" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="tok.html">TOK</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="misc.html">Resources</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="meetings.html">Meetings</a>
+        <a class="signature-gradient text-white px-6 py-3 rounded-xl font-bold text-center transition-all active:scale-95 duration-150" href="meetings.html">
+          Meetings
+        </a>
+      </div>
+    </div>
+  </nav>
 
-  <div class="markdown-shell">
-    <div class="markdown-layout">
-      <aside class="markdown-sidebar">
-        <div class="markdown-sidebar-title">On This Page</div>
-        <nav id="manual-toc" class="markdown-toc"></nav>
+  <main class="flex-1 w-full">
+    <div class="max-w-[1500px] mx-auto px-6 md:px-8 py-8 md:py-10 flex gap-10">
+      <aside class="hidden xl:flex xl:w-64 xl:shrink-0">
+        <div class="sticky top-28 h-fit w-full bg-surface-container-low rounded-[1.6rem] p-4">
+          <div class="mb-6 px-2">
+            <h2 class="text-lg font-bold text-primary font-headline">IA Framework</h2>
+            <p class="text-xs text-on-surface-variant font-medium">Physics Internal Assessment guide</p>
+          </div>
+          <nav class="space-y-2">
+            <a class="flex items-center gap-3 px-4 py-3 bg-white text-primary rounded-r-full shadow-sm font-semibold transition-transform hover:translate-x-1" href="#overview">
+              <span class="material-symbols-outlined">dashboard</span>
+              <span>Overview</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:translate-x-1 transition-transform hover:text-secondary" href="#structure">
+              <span class="material-symbols-outlined">article</span>
+              <span>Structure</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:translate-x-1 transition-transform hover:text-secondary" href="#rq">
+              <span class="material-symbols-outlined">quiz</span>
+              <span>Research Question</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:translate-x-1 transition-transform hover:text-secondary" href="#variables">
+              <span class="material-symbols-outlined">tune</span>
+              <span>Variables</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:translate-x-1 transition-transform hover:text-secondary" href="#model">
+              <span class="material-symbols-outlined">functions</span>
+              <span>Physics Model</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:translate-x-1 transition-transform hover:text-secondary" href="#methodology">
+              <span class="material-symbols-outlined">biotech</span>
+              <span>Methodology</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:translate-x-1 transition-transform hover:text-secondary" href="#processing">
+              <span class="material-symbols-outlined">analytics</span>
+              <span>Processing</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:translate-x-1 transition-transform hover:text-secondary" href="#uncertainty">
+              <span class="material-symbols-outlined">precision_manufacturing</span>
+              <span>Uncertainty</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:translate-x-1 transition-transform hover:text-secondary" href="#graphs">
+              <span class="material-symbols-outlined">query_stats</span>
+              <span>Graphs</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:translate-x-1 transition-transform hover:text-secondary" href="#evaluation">
+              <span class="material-symbols-outlined">rate_review</span>
+              <span>Evaluation</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:translate-x-1 transition-transform hover:text-secondary" href="#full-guide">
+              <span class="material-symbols-outlined">menu_book</span>
+              <span>Full Guide</span>
+            </a>
+          </nav>
+        </div>
       </aside>
-      <div class="section">
-        <div class="markdown-content markdown-loading" data-markdown-src="internal-assessment.md" data-markdown-toc="#manual-toc">
-          <p>Loading guide...</p>
+
+      <div class="flex-1 min-w-0">
+        <div class="grid grid-cols-1 xl:grid-cols-12 gap-10">
+          <div class="xl:col-span-8 space-y-10">
+            <section id="overview" class="scroll-mt-28 relative signature-gradient rounded-[2rem] p-8 md:p-10 overflow-hidden text-white editorial-shadow">
+              <div class="relative z-10">
+                <span class="inline-flex items-center px-4 py-1.5 rounded-full bg-white/15 text-xs font-bold tracking-[0.2em] uppercase mb-6">IB Physics IA</span>
+                <h1 class="font-headline text-[clamp(1rem,4.3vw,4.25rem)] font-extrabold tracking-tight mb-5 leading-[1.02] [text-wrap:balance]">Physics Internal Assessment</h1>
+                <p class="max-w-3xl text-lg md:text-xl text-white/90 leading-relaxed">
+                  A full guide to planning, writing, and evaluating the IB Physics IA: research question alignment, variables, methodology, data processing, uncertainty, graphs, regression, scientific context, evaluation, improvements, and conclusion.
+                </p>
+                <div class="flex flex-wrap gap-4 mt-8">
+                  <a class="bg-white text-primary px-8 py-4 rounded-xl font-bold hover:bg-surface-container transition-colors" href="https://drive.google.com/drive/u/0/folders/1yO9OwdAT2V_K8bwFVHNXbCXeed2ex9BA" target="_blank" rel="noreferrer">Open Example IAs</a>
+                  <a class="glass-card text-primary px-8 py-4 rounded-xl font-bold border border-white/20 hover:bg-white/80 transition-colors" href="#full-guide">Jump to Full Guide</a>
+                </div>
+              </div>
+              <div class="absolute -right-12 -bottom-12 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
+            </section>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <section id="structure" class="scroll-mt-28 p-8 bg-surface-container rounded-xl flex flex-col justify-between">
+                <div>
+                  <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4 inline-block">Guide Section</span>
+                  <h2 class="font-headline text-2xl font-bold text-on-surface mb-3">Structure of a Physics IA</h2>
+                  <p class="text-on-surface-variant leading-relaxed mb-5">
+                    Your IA should normally follow a clear scientific structure: research question, theory or model, variables, methodology, raw data, data processing, graphs, uncertainty analysis, evaluation, conclusion, and references.
+                  </p>
+                </div>
+                <div class="grid grid-cols-2 gap-3 text-sm font-semibold text-primary">
+                  <div class="bg-white/70 rounded-xl px-4 py-3">Research question</div>
+                  <div class="bg-white/70 rounded-xl px-4 py-3">Physics model</div>
+                  <div class="bg-white/70 rounded-xl px-4 py-3">Data and graphs</div>
+                  <div class="bg-white/70 rounded-xl px-4 py-3">Evaluation</div>
+                </div>
+              </section>
+
+              <section id="rq" class="scroll-mt-28 p-8 bg-surface-container-high rounded-xl">
+                <span class="bg-primary-container/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4 inline-block">Alignment Rule</span>
+                <h2 class="font-headline text-2xl font-bold text-on-surface mb-3">Research Question</h2>
+                <p class="text-on-surface-variant leading-relaxed mb-5">
+                  The research question should match the title of the investigation, the data you actually collect, the data you process, and the principal graph used in the analysis.
+                </p>
+                <div class="p-4 bg-white/70 rounded-xl border-l-4 border-secondary text-primary italic">
+                  The reader should be able to look at the research question, then look at the main graph, and immediately see that the graph is answering the question.
+                </div>
+              </section>
+
+              <section id="variables" class="scroll-mt-28 md:col-span-2 p-8 bg-white rounded-xl shadow-sm">
+                <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Variables</h2>
+                <p class="text-on-surface-variant leading-relaxed mb-6">
+                  Define each variable clearly and explain how it is measured, which instrument is used, what the precision or resolution is, how the independent variable is varied, and how controlled variables are kept constant in practice.
+                </p>
+                <div class="grid md:grid-cols-3 gap-4">
+                  <div class="p-4 bg-surface-container-low rounded-lg">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-1">Independent</p>
+                    <p class="font-semibold text-primary">Explain how it is changed across a useful range and why that range was chosen.</p>
+                  </div>
+                  <div class="p-4 bg-surface-container-low rounded-lg">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-1">Dependent</p>
+                    <p class="font-semibold text-secondary">State how it is measured and which instrument provides the reading.</p>
+                  </div>
+                  <div class="p-4 bg-surface-container-low rounded-lg">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-1">Controlled</p>
+                    <p class="font-semibold text-tertiary-container">Explain both why control matters and what you do to keep conditions stable.</p>
+                  </div>
+                </div>
+              </section>
+
+              <section id="model" class="scroll-mt-28 p-8 bg-surface-container rounded-xl">
+                <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4 inline-block">Physics Theory</span>
+                <h2 class="font-headline text-2xl font-bold text-on-surface mb-3">Physics Model</h2>
+                <p class="text-on-surface-variant leading-relaxed mb-4">
+                  Include only the physics that is directly relevant to the investigation. Identify the model, define the main quantities and symbols, explain the expected relationship, and connect the theory to the graph or regression used later.
+                </p>
+                <div class="text-sm font-medium text-primary space-y-2">
+                  <div class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-secondary">check_circle</span><span>Use theory to prepare the reader for the analysis.</span></div>
+                  <div class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-secondary">check_circle</span><span>Cite the textbook or scientific source behind the model.</span></div>
+                </div>
+              </section>
+
+              <section id="methodology" class="scroll-mt-28 p-8 bg-primary-container text-white rounded-xl md:col-span-2 overflow-hidden relative">
+                <div class="relative z-10">
+                  <h2 class="font-headline text-3xl font-extrabold mb-4">Methodology</h2>
+                  <p class="text-on-primary-container text-lg leading-relaxed mb-6 max-w-3xl">
+                    Your experiment must be reproducible. Another student should be able to follow your method and obtain a similar data set. A strong method is clear, justified, appropriate for the physics, and consistent with the variables, theory, and later analysis.
+                  </p>
+                  <div class="grid md:grid-cols-2 gap-4 text-sm">
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-xl">
+                      <p class="font-bold text-white mb-2">Include</p>
+                      <p class="text-on-primary-container">Equipment list, setup diagram, measuring devices, instrument resolution, step-by-step procedure, and number of trials.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-xl">
+                      <p class="font-bold text-white mb-2">Justify</p>
+                      <p class="text-on-primary-container">Why the range was chosen, why the instrument is appropriate, why the controls matter, and how the setup reduces uncertainty or improves reliability.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="absolute -right-12 -bottom-16 opacity-15 pointer-events-none">
+                  <span class="material-symbols-outlined text-[13rem]">biotech</span>
+                </div>
+              </section>
+
+              <section id="processing" class="scroll-mt-28 p-8 bg-surface-container-highest rounded-xl">
+                <h2 class="font-headline text-2xl font-bold text-on-surface mb-3">Data Processing</h2>
+                <p class="text-on-surface-variant text-sm leading-relaxed mb-4">
+                  Show clearly how raw measurements became the processed values used in the analysis. That may include averages, transformed variables, gradients, intercepts, percentage differences, uncertainty calculations, and repeated-trial analysis.
+                </p>
+                <div class="p-4 bg-white rounded-lg border border-outline-variant/40 text-sm text-primary">
+                  At least one sample calculation should usually be shown for each important type of processing.
+                </div>
+              </section>
+
+              <section id="uncertainty" class="scroll-mt-28 p-8 bg-[#1DA381]/5 rounded-xl border border-[#1DA381]/20">
+                <div class="flex items-center gap-3 mb-4">
+                  <span class="material-symbols-outlined text-[#1DA381]" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+                  <h2 class="font-headline text-2xl font-bold text-[#006c53]">Uncertainty Analysis</h2>
+                </div>
+                <p class="text-on-surface-variant text-sm leading-relaxed mb-4">
+                  Distinguish clearly between instrument uncertainty, spread in repeated values, and propagated uncertainty. Every measured quantity should include an uncertainty.
+                </p>
+                <div class="p-4 bg-white rounded-lg border border-outline-variant/30 font-mono text-xs text-secondary text-center">
+                  L = 0.050 ± 0.001 m
+                </div>
+              </section>
+
+              <section id="graphs" class="scroll-mt-28 md:col-span-2 p-8 bg-surface-container rounded-xl">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-6">
+                  <div>
+                    <h2 class="font-headline text-3xl font-extrabold text-on-surface mb-2">Graphs and Regression</h2>
+                    <p class="text-on-surface-variant max-w-3xl">
+                      The principal graph should directly answer the research question and match the relationship predicted by the physics model. Axes need labels and units, error bars should be included, and linearization should be justified by the model.
+                    </p>
+                  </div>
+                  <div class="text-xs font-bold uppercase tracking-[0.2em] text-secondary">2 example graphs from the guide</div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div class="bg-white rounded-[1.25rem] p-4 editorial-shadow">
+                    <img alt="Force vs extension graph with uncertainty bars" class="w-full h-auto rounded-xl" src="../Images/ia-force-extension-graph.svg">
+                    <p class="mt-4 text-sm text-on-surface-variant">A clear relationship graph with labeled axes, units, and uncertainty bars.</p>
+                  </div>
+                  <div class="bg-white rounded-[1.25rem] p-4 editorial-shadow">
+                    <img alt="Linearized IA graph with uncertainty bars" class="w-full h-auto rounded-xl" src="../Images/ia-linearization-graph.svg">
+                    <p class="mt-4 text-sm text-on-surface-variant">A linearized graph used when the original relationship is not linear in its raw form.</p>
+                  </div>
+                </div>
+              </section>
+
+              <section id="evaluation" class="scroll-mt-28 md:col-span-2 p-10 bg-surface-container rounded-xl relative overflow-hidden">
+                <div class="relative z-10">
+                  <h2 class="font-headline text-3xl font-extrabold text-on-surface mb-4">Evaluation and Improvements</h2>
+                  <p class="text-on-surface-variant leading-relaxed max-w-3xl mb-6">
+                    Rank limitations by significance instead of listing them randomly. Explain what the problem was, why it mattered, how it affected the data or analysis, whether it produced random or systematic error, and which improvements would realistically strengthen the investigation.
+                  </p>
+                  <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-white/70 rounded-xl px-5 py-4 text-sm text-primary font-semibold">Explain the mechanism of the limitation.</div>
+                    <div class="bg-white/70 rounded-xl px-5 py-4 text-sm text-primary font-semibold">Rank the major limitations by importance.</div>
+                    <div class="bg-white/70 rounded-xl px-5 py-4 text-sm text-primary font-semibold">Propose realistic changes that improve precision, accuracy, or validity.</div>
+                  </div>
+                </div>
+                <span class="absolute -right-8 -top-8 text-surface-container-highest opacity-30 select-none">
+                  <span class="material-symbols-outlined" style="font-size: 160px;">query_stats</span>
+                </span>
+              </section>
+            </div>
+
+          </div>
+
+          <aside class="xl:col-span-4 space-y-8">
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-surface-container">
+              <div class="flex items-center gap-3 mb-6">
+                <span class="material-symbols-outlined text-primary">insights</span>
+                <h3 class="font-headline text-xl font-bold">Guide Snapshot</h3>
+              </div>
+              <div class="bg-surface-container-low rounded-[1.25rem] p-4 mb-6">
+                <img alt="Linearized graph example from the IA guide" class="w-full h-auto rounded-xl" src="../Images/ia-linearization-graph.svg">
+              </div>
+              <div class="grid grid-cols-3 gap-4 text-center mb-6">
+                <div class="bg-surface-container-low rounded-xl px-3 py-4">
+                  <div class="text-3xl font-headline font-black text-primary">16</div>
+                  <div class="text-[10px] uppercase tracking-widest text-on-surface-variant">Guide sections</div>
+                </div>
+                <div class="bg-surface-container-low rounded-xl px-3 py-4">
+                  <div class="text-3xl font-headline font-black text-secondary">2</div>
+                  <div class="text-[10px] uppercase tracking-widest text-on-surface-variant">Graph examples</div>
+                </div>
+                <div class="bg-surface-container-low rounded-xl px-3 py-4">
+                  <div class="text-3xl font-headline font-black text-primary">1</div>
+                  <div class="text-[10px] uppercase tracking-widest text-on-surface-variant">Example folder</div>
+                </div>
+              </div>
+              <p class="text-sm text-on-surface-variant leading-relaxed">
+                A strong IA demonstrates clear physics reasoning, careful experimental design, rigorous data analysis, and thoughtful evaluation.
+              </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-surface-container">
+              <h4 class="font-headline text-xl font-bold mb-6 flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary">folder_open</span>
+                Quick Resources
+              </h4>
+              <div class="space-y-4">
+                <a class="group block p-4 rounded-lg bg-surface-container-low hover:bg-primary hover:text-white transition-all" href="https://drive.google.com/drive/u/0/folders/1yO9OwdAT2V_K8bwFVHNXbCXeed2ex9BA" target="_blank" rel="noreferrer">
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <p class="font-bold text-sm">Example IAs</p>
+                      <p class="text-[10px] opacity-70">Folder of internal assessment examples</p>
+                    </div>
+                    <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+                  </div>
+                </a>
+                <a class="group block p-4 rounded-lg bg-surface-container-low hover:bg-secondary hover:text-white transition-all" href="meetings.html">
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <p class="font-bold text-sm">Book Tutorial</p>
+                      <p class="text-[10px] opacity-70">Open the meetings page for IA help</p>
+                    </div>
+                    <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">calendar_month</span>
+                  </div>
+                </a>
+                <a class="group block p-4 rounded-lg bg-surface-container-low hover:bg-tertiary-container hover:text-white transition-all" href="tools.html">
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <p class="font-bold text-sm">Course Tools</p>
+                      <p class="text-[10px] opacity-70">Logger Pro, Desmos, Kognity, and more</p>
+                    </div>
+                    <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">science</span>
+                  </div>
+                </a>
+                <a class="group block p-4 rounded-lg bg-surface-container-low hover:bg-error hover:text-white transition-all" href="labs.html">
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <p class="font-bold text-sm">Labs Page</p>
+                      <p class="text-[10px] opacity-70">Lab software and analysis tools</p>
+                    </div>
+                    <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">query_stats</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="signature-gradient p-1 rounded-xl">
+              <div class="bg-white p-6 rounded-[calc(0.75rem-1px)]">
+                <h5 class="font-bold text-primary mb-2">Final Checklist</h5>
+                <ul class="space-y-2 text-xs text-on-surface-variant leading-relaxed">
+                  <li>Research question matches the analysis.</li>
+                  <li>Physics theory is explained and connected to the model.</li>
+                  <li>Uncertainty propagation is included where needed.</li>
+                  <li>Graphs include error bars and defensible trendlines.</li>
+                  <li>Results are compared to theory and evaluated clearly.</li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+
+          <section id="full-guide" class="xl:col-span-12 scroll-mt-28 section ia-guide-section bg-white rounded-[2rem] shadow-sm border border-outline-variant/20 overflow-hidden">
+            <div class="px-8 pt-8 pb-4 flex flex-col md:flex-row md:items-end justify-between gap-4">
+              <div>
+                <span class="inline-flex px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-widest mb-3">Full Markdown Guide</span>
+                <h2 class="font-headline text-4xl font-extrabold text-primary tracking-tight">Full IA Guide</h2>
+                <p class="text-on-surface-variant mt-2 max-w-4xl">The full Physics IA guide below is loaded directly from your markdown file, including equations, tables, graphs, and the detailed checklist.</p>
+              </div>
+            </div>
+            <div class="px-6 pb-8">
+              <div class="grid grid-cols-1 lg:grid-cols-[17rem_minmax(0,1fr)] xl:grid-cols-[18rem_minmax(0,1fr)] gap-8 items-start">
+                <aside class="markdown-sidebar">
+                  <div class="markdown-sidebar-title">On This Page</div>
+                  <nav id="manual-toc" class="markdown-toc"></nav>
+                </aside>
+                <div class="bg-white rounded-[1.5rem] px-6 md:px-8 pb-6 min-w-0">
+                  <div class="markdown-content ia-markdown markdown-loading" data-markdown-src="internal-assessment.md" data-markdown-toc="#manual-toc">
+                    <p>Loading guide...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>
-  </div>
-</div>
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  </main>
+
+  <footer class="bg-slate-50 w-full mt-auto">
+    <div class="w-full px-8 py-12 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 md:gap-10">
+        <div class="flex flex-col gap-2 text-center md:text-left">
+          <div class="text-lg font-bold text-slate-900">IB Physics &amp; TOK — UWC Costa Rica</div>
+          <div class="font-['Inter'] text-sm tracking-wide text-slate-500">Erick Loria Soto · <a class="hover:text-[#004099] transition-colors" href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></div>
+        </div>
+        <div class="font-['Inter'] text-sm tracking-wide text-slate-500 text-center md:text-right max-w-2xl">
+          <strong class="text-slate-700">Copyright 2026 Erick Loria Soto.</strong> All original site content, course materials, design, and writing are my own unless otherwise credited. Built with HTML, CSS, JavaScript, and GitHub Pages.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isExpanded));
+        mobileMenu.classList.toggle('hidden');
+      });
     }
-  };
-</script>
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="../js/markdown-page.js?v=20260311g"></script>
+
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script src="../js/nav-dropdowns.js?v=20260321e"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="../js/markdown-page.js?v=20260311g"></script>
 </body>
 </html>

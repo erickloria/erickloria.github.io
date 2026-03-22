@@ -1,172 +1,472 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Tools — IB Physics &amp; TOK</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <style>
-    .badge-approved{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;background:var(--green-10);color:var(--badge-green-text);border:1.5px solid var(--green-25);}
-    .badge-personal{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;background:var(--orange-10);color:var(--badge-orange-text);border:1.5px solid var(--callout-orange-border);}
-    .ai-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin-bottom:40px;}
-    .ai-card{background:linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.78) 100%);border:1px solid var(--border);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:12px;transition:box-shadow .2s,transform .2s;border-left-width:4px;box-shadow:0 18px 40px rgba(15,33,64,.08);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);}
-    .ai-card:hover{box-shadow:0 22px 48px rgba(15,33,64,.12);transform:translateY(-2px);}
-    .ai-card-approved{border-left:4px solid var(--green);}
-    .ai-card-personal{border-left:4px solid var(--blue-50);}
-    .ai-top{display:flex;align-items:center;justify-content:space-between;gap:12px;}
-    .ai-icon{display:none;}
-    .ai-meta{flex:1;min-width:0;}
-    .ai-name{font-weight:600;font-size:15.5px;color:var(--text);margin-bottom:2px;}
-    .ai-type{font-size:12px;color:var(--muted);}
-    .ai-link{font-size:12px;font-weight:600;color:var(--action-text);text-decoration:none;white-space:nowrap;padding:4px 10px;border:1.5px solid var(--action-border);border-radius:6px;transition:background .15s;flex-shrink:0;background:var(--card);}
-    .ai-link:hover{background:var(--action-fill);}
-    .ai-desc{font-size:14px;color:var(--muted);line-height:1.65;}
-    .tags{display:flex;flex-wrap:wrap;gap:5px;}
-    .tag{font-size:11.5px;font-weight:600;padding:3px 10px;border-radius:100px;}
-    .tag-blue{background:var(--blue-10);color:var(--action-text);}
-    .tag-green{background:var(--green-10);color:var(--badge-green-text);}
-    .tag-purple{background:var(--purple-10);color:var(--purple);}
-    .tag-orange{background:var(--orange-10);color:var(--badge-orange-text);}
-    .tag-red{background:var(--red-10);color:var(--red);}
-    .who{display:flex;gap:6px;align-items:center;}
-    .who-label{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;}
-    .who-badge{font-size:11.5px;font-weight:600;padding:2px 10px;border-radius:100px;}
-    .who-both{background:var(--green-10);color:var(--badge-green-text);}
-    .pnote{display:flex;align-items:flex-start;gap:8px;border-left:3px solid;border-radius:0 6px 6px 0;padding:10px 12px;font-size:12.5px;line-height:1.58;}
-    .pnote-red{background:var(--red-10);border-color:var(--red);color:var(--text);}
-    .pnote-orange{background:var(--orange-10);border-color:var(--orange);color:var(--callout-orange-text);}
-    .pnote strong{font-weight:600;}
-    .sub-h{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--border);}
-    .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
-    .dot-blue{background:var(--blue);}
-    .dot-green{background:var(--green);}
-    .dot-orange{background:var(--orange);}
-    .dot-purple{background:var(--purple);}
-    @media (prefers-color-scheme: dark) {
-      .ai-card {
-        background:linear-gradient(180deg, rgba(18,28,46,0.92) 0%, rgba(18,28,46,0.76) 100%);
+  <title>AI Tools | The Physics Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-low": "#f3f3f6",
+            "surface": "#f9f9fb",
+            "primary-fixed-dim": "#b0c6ff",
+            "on-tertiary-fixed-variant": "#7d1a6e",
+            "primary-container": "#004099",
+            "surface-tint": "#2d5bb4",
+            "on-tertiary-fixed": "#3a0032",
+            "on-secondary-fixed-variant": "#00513e",
+            "on-error-container": "#93000a",
+            "primary-fixed": "#d9e2ff",
+            "error-container": "#ffdad6",
+            "inverse-primary": "#b0c6ff",
+            "outline": "#737783",
+            "on-tertiary-container": "#fe8be2",
+            "on-tertiary": "#ffffff",
+            "inverse-surface": "#2f3133",
+            "tertiary-container": "#7b186c",
+            "secondary-container": "#82f8d1",
+            "on-secondary": "#ffffff",
+            "surface-container-highest": "#e2e2e5",
+            "background": "#f9f9fb",
+            "secondary": "#006c53",
+            "on-primary-fixed-variant": "#04429b",
+            "on-primary": "#ffffff",
+            "on-primary-fixed": "#001945",
+            "tertiary": "#5b0050",
+            "secondary-fixed-dim": "#65dbb6",
+            "on-primary-container": "#92b1ff",
+            "inverse-on-surface": "#f0f0f3",
+            "tertiary-fixed-dim": "#fface7",
+            "surface-bright": "#f9f9fb",
+            "surface-container-high": "#e8e8ea",
+            "surface-dim": "#d9dadc",
+            "on-error": "#ffffff",
+            "outline-variant": "#c3c6d4",
+            "on-surface": "#1a1c1e",
+            "on-surface-variant": "#434652",
+            "tertiary-fixed": "#ffd7f0",
+            "surface-container": "#edeef0",
+            "secondary-fixed": "#82f8d1",
+            "primary": "#002b6c",
+            "on-secondary-container": "#007259",
+            "surface-variant": "#e2e2e5",
+            "on-secondary-fixed": "#002117",
+            "error": "#ba1a1a",
+            "surface-container-lowest": "#ffffff",
+            "on-background": "#1a1c1e"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          }
+        }
       }
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    }
+    .signature-gradient {
+      background: linear-gradient(135deg, #004099 0%, #1DA381 100%);
+    }
+    .glass-panel {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background-color: rgba(255, 255, 255, 0.72);
+    }
+    .editorial-shadow {
+      box-shadow: 0 24px 48px -12px rgba(0, 64, 153, 0.08);
     }
   </style>
 </head>
-<body>
-<script src="../js/layout.js?v=20260311b"></script>
-<div class="hero">
-  <div class="hero-ribbon"></div><div class="hero-circle-1"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">Course Materials</div>
-    <h1>AI Tools</h1>
-    <p>Approved and personal AI tools for writing, research, coding, and academic support.</p>
-  </div>
-</div>
-<div class="page">
-  <div class="callout callout-orange" style="margin-bottom:40px;"><span>Policy</span><span><strong>Important:</strong> Only the approved Google Workspace AI tools may be used with school-related work involving student data, assessment information, or personally identifiable information. Never use non-approved tools with school data.</span></div>
-
-  <div class="section">
-    <div class="badge-approved">Approved for School Use</div>
-    <h2 class="section-title">Approved AI Tools</h2>
-    <p class="section-desc">Formally approved for school work. Access through your official school Google account. <strong>Student and institutional data may only be entered here.</strong></p>
-    <div class="callout callout-green" style="margin-bottom:24px;"><span>Safe</span><span><strong>Data safe.</strong> These tools operate within the school's Google Workspace environment.</span></div>
-    <div class="sub-h"><span class="dot dot-green"></span>Google Workspace AI Tools</div>
-    <div class="ai-grid">
-      <div class="ai-card ai-card-approved">
-        <div class="ai-top"><div class="brand-logo"><img src="../Images/gemini-color.png" alt="Gemini logo"></div><div class="ai-meta"><div class="ai-name">Gemini for Workspace</div><div class="ai-type">Google · AI Assistant</div></div><a class="ai-link" href="https://gemini.google.com" target="_blank">Visit</a></div>
-        <div class="ai-desc">Integrated into Docs, Sheets, Slides, Gmail, and Drive. Use your school Google account where enabled.</div>
-        <div class="tags"><span class="tag tag-blue">Lesson planning</span><span class="tag tag-green">Drafting</span><span class="tag tag-orange">Summarization</span><span class="tag tag-purple">Translation</span></div>
-        <div class="who"><span class="who-label">For:</span><span class="who-badge who-both">Staff &amp; Students</span></div>
-      </div>
-      <div class="ai-card ai-card-approved">
-        <div class="ai-top"><div class="brand-logo"><img src="../Images/notebooklm-scaled.png.webp" alt="NotebookLM logo"></div><div class="ai-meta"><div class="ai-name">NotebookLM</div><div class="ai-type">Google · Research Assistant</div></div><a class="ai-link" href="https://notebooklm.google.com" target="_blank">Visit</a></div>
-        <div class="ai-desc">Generates summaries, study guides, FAQs, and audio overviews from documents you upload. Only uses your sources.</div>
-        <div class="tags"><span class="tag tag-green">Research</span><span class="tag tag-blue">Study guides</span><span class="tag tag-orange">Audio summaries</span></div>
-        <div class="who"><span class="who-label">For:</span><span class="who-badge who-both">Staff &amp; Students</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="badge-personal">Personal Use Only</div>
-    <h2 class="section-title">Personal AI Tools</h2>
-    <p class="section-desc">Useful for personal exploration and learning. <strong>Never enter student names, grades, safeguarding data, or school information into these tools.</strong></p>
-
-    <div class="sub-h"><span class="dot dot-blue"></span>General AI Assistants</div>
-    <div class="ai-grid">
-      <div class="ai-card ai-card-personal">
-        <div class="ai-top"><div class="brand-logo"><img src="../Images/claude-color.png" alt="Claude logo"></div><div class="ai-meta"><div class="ai-name">Claude</div><div class="ai-type">Anthropic · AI Assistant</div></div><a class="ai-link" href="https://www.anthropic.com/claude" target="_blank">Visit</a></div>
-        <div class="ai-desc">Strong for thoughtful writing, document analysis, coding help, and research workflows that benefit from clear explanations and structured output.</div>
-        <div class="tags"><span class="tag tag-green">Writing</span><span class="tag tag-blue">Analysis</span><span class="tag tag-purple">Coding</span></div>
-        <div class="who"><span class="who-label">For:</span><span class="who-badge who-both">Staff &amp; Students</span></div>
-        <div class="pnote pnote-red"><span>Restricted</span><span>Personal use only.</span></div>
-      </div>
-      <div class="ai-card ai-card-personal">
-        <div class="ai-top"><div class="brand-logo"><img src="../Images/chatgpt-logo-png_seeklogo-465219.png" alt="ChatGPT logo"></div><div class="ai-meta"><div class="ai-name">ChatGPT</div><div class="ai-type">OpenAI · Generative AI</div></div><a class="ai-link" href="https://chat.openai.com" target="_blank">Visit</a></div>
-        <div class="ai-desc">Great for brainstorming, explaining concepts, coding help, and questions. Free tier available.</div>
-        <div class="tags"><span class="tag tag-green">Brainstorming</span><span class="tag tag-blue">Concepts</span><span class="tag tag-purple">Coding</span></div>
-        <div class="who"><span class="who-label">For:</span><span class="who-badge who-both">Staff &amp; Students</span></div>
-        <div class="pnote pnote-red"><span>Restricted</span><span>Do not enter student data or school information.</span></div>
-      </div>
-      <div class="ai-card ai-card-personal">
-        <div class="ai-top"><div class="brand-logo"><img src="../Images/unnamed-5.png" alt="Perplexity logo"></div><div class="ai-meta"><div class="ai-name">Perplexity</div><div class="ai-type">AI Search Engine</div></div><a class="ai-link" href="https://www.perplexity.ai" target="_blank">Visit</a></div>
-        <div class="ai-desc">Answers with cited, real-time web references. Good for research and fact-checking.</div>
-        <div class="tags"><span class="tag tag-blue">Research</span><span class="tag tag-green">Fact-checking</span><span class="tag tag-orange">Sources</span></div>
-        <div class="who"><span class="who-label">For:</span><span class="who-badge who-both">Staff &amp; Students</span></div>
-        <div class="pnote pnote-red"><span>Restricted</span><span>Personal use only.</span></div>
-      </div>
-      <div class="ai-card ai-card-personal">
-        <div class="ai-top"><div class="brand-logo"><img src="../Images/deepseek-color.png" alt="DeepSeek logo"></div><div class="ai-meta"><div class="ai-name">DeepSeek</div><div class="ai-type">DeepSeek · AI Assistant</div></div><a class="ai-link" href="https://www.deepseek.com/en/" target="_blank">Visit</a></div>
-        <div class="ai-desc">Useful for writing, coding support, research, and everyday question answering with free access on web and app.</div>
-        <div class="tags"><span class="tag tag-green">Writing</span><span class="tag tag-blue">Research</span><span class="tag tag-purple">Coding</span></div>
-        <div class="who"><span class="who-label">For:</span><span class="who-badge who-both">Staff &amp; Students</span></div>
-        <div class="pnote pnote-red"><span>Restricted</span><span>Personal use only.</span></div>
-      </div>
-    </div>
-
-    <div class="sub-h"><span class="dot dot-purple"></span>Coding &amp; Projects</div>
-    <div class="ai-grid">
-      <div class="ai-card ai-card-personal">
-        <div class="ai-top"><div class="ai-icon icon-purple">OpenAI</div><div class="ai-meta"><div class="ai-name">Codex</div><div class="ai-type">OpenAI · Coding Agent</div></div><a class="ai-link" href="https://openai.com/codex/" target="_blank">Visit</a></div>
-        <div class="ai-desc">Best for project creation, refactors, code review, parallel coding tasks, and turning ideas into working software across app, editor, and terminal workflows.</div>
-        <div class="tags"><span class="tag tag-purple">Project creation</span><span class="tag tag-blue">Refactors</span><span class="tag tag-green">Code review</span></div>
-        <div class="who"><span class="who-label">For:</span><span class="who-badge who-both">Staff &amp; Students</span></div>
-        <div class="pnote pnote-red"><span>Restricted</span><span>Personal use only.</span></div>
-      </div>
-    </div>
-
-    <div class="sub-h"><span class="dot dot-orange"></span>Writing &amp; Language</div>
-    <div class="ai-grid">
-      <div class="ai-card ai-card-personal">
-        <div class="ai-top"><div class="ai-icon icon-green">Writing</div><div class="ai-meta"><div class="ai-name">Grammarly</div><div class="ai-type">Writing Assistant</div></div><a class="ai-link" href="https://www.grammarly.com" target="_blank">Visit</a></div>
-        <div class="ai-desc">Grammar, spelling, and clarity checking. Basic features are standard tools; advanced AI rewrites must be declared per AI Levels of Use.</div>
-        <div class="tags"><span class="tag tag-green">Grammar</span><span class="tag tag-blue">Clarity</span><span class="tag tag-orange">Tone</span></div>
-        <div class="who"><span class="who-label">For:</span><span class="who-badge who-both">Staff &amp; Students</span></div>
-        <div class="pnote pnote-orange"><span>Policy</span><span><strong>Policy:</strong> Basic spell-check OK at all levels. AI rewrites must be declared. Never enter school data.</span></div>
-      </div>
-      <div class="ai-card ai-card-personal">
-        <div class="ai-top"><div class="brand-logo brand-logo-wide"><img src="../Images/DeepL_logo.svg" alt="DeepL logo"></div><div class="ai-meta"><div class="ai-name">DeepL</div><div class="ai-type">AI Translation</div></div><a class="ai-link" href="https://www.deepl.com" target="_blank">Visit</a></div>
-        <div class="ai-desc">High-quality translation. Permitted for translating external sources. Not permitted for translating your own IA or EE writing.</div>
-        <div class="tags"><span class="tag tag-blue">Source translation</span><span class="tag tag-green">Language support</span></div>
-        <div class="who"><span class="who-label">For:</span><span class="who-badge who-both">Staff &amp; Students</span></div>
-        <div class="pnote pnote-orange"><span>Policy</span><span><strong>Policy:</strong> Translating external sources OK. Translating your own IA/EE = not permitted. Cite all translated sources.</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="badge-approved">Citation Guide</div>
-    <h2 class="section-title">AI Citation Guide</h2>
-    <p class="section-desc">Use the full student guide for citation rules, disclosure examples, and style-specific formats for AI use in class.</p>
-    <div class="grid grid-2">
-      <a class="link-card card-blue" href="ai-citation-guide.html">
-        <div class="card-icon icon-blue">Guide</div>
-        <div>
-          <div class="link-card-label">Open the AI Citation Guide</div>
-          <div class="link-card-desc">Full guide in its own page, based directly on the UWC Costa Rica student AI citation document.</div>
-        </div>
-        <span class="link-arrow">Open</span>
+<body class="bg-background font-body text-on-surface min-h-screen flex flex-col">
+  <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+    <nav class="w-full px-8 py-4 max-w-7xl mx-auto flex items-center md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8">
+      <a class="text-xl font-extrabold bg-gradient-to-r from-[#004099] to-[#1DA381] bg-clip-text text-transparent font-headline tracking-tight justify-self-start" href="../index.html">
+        The Physics Lab
       </a>
+      <div class="hidden md:flex items-center gap-8 justify-self-center">
+        <a class="text-slate-600 hover:text-[#004099] transition-colors font-medium" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 hover:text-[#004099] transition-colors font-medium" href="tok.html">TOK</a>
+        <a class="text-slate-600 hover:text-[#004099] transition-colors font-medium" href="misc.html">Resources</a>
+        <a class="text-[#004099] border-b-2 border-[#1DA381] pb-1 font-semibold" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 hover:text-[#004099] transition-colors font-medium" href="meetings.html">Meetings</a>
+      </div>
+      <div class="hidden md:flex justify-self-end">
+        <a class="signature-gradient text-white px-6 py-2 rounded-xl font-headline font-bold active:scale-95 transition-transform" href="meetings.html">
+          Meetings
+        </a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden text-primary" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="material-symbols-outlined text-primary text-3xl">menu</span>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden px-8 pb-5 max-w-7xl mx-auto">
+      <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-4 flex flex-col gap-3 shadow-lg">
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="tok.html">TOK</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="misc.html">Resources</a>
+        <a class="text-[#004099] font-bold" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="meetings.html">Meetings</a>
+        <a class="signature-gradient text-white px-6 py-3 rounded-xl font-bold text-center transition-all active:scale-95 duration-150" href="meetings.html">
+          Meetings
+        </a>
+      </div>
     </div>
-  </div>
+  </header>
 
-</div>
+  <main class="flex-grow">
+    <section class="relative pt-16 pb-24 px-8 overflow-hidden">
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -z-10"></div>
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 z-10">
+          <span class="inline-block py-1 px-3 rounded-full bg-secondary-container text-on-secondary-container font-label text-[0.7rem] font-bold tracking-widest uppercase mb-6">
+            UWC Costa Rica Academic Portal
+          </span>
+          <h1 class="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary leading-[1.05] tracking-tight mb-8 [text-wrap:balance]">
+            AI <span class="inline-block pr-[0.08em] bg-gradient-to-r from-[#004099] to-[#1DA381] bg-clip-text text-transparent">Tools</span>
+          </h1>
+          <p class="text-on-surface-variant text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
+            Approved and personal AI tools for writing, research, coding, and academic support, with clear expectations for data privacy and academic integrity.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a class="signature-gradient text-on-primary px-8 py-4 rounded-xl font-headline font-bold shadow-lg hover:scale-[1.01] transition-all" href="ai-citation-guide.html">
+              Open Citation Guide
+            </a>
+            <a class="bg-surface-container-high text-primary px-8 py-4 rounded-xl font-headline font-bold border border-outline-variant/20 hover:bg-surface-container-highest transition-all" href="#approved-tools">
+              Approved Tools
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-5 relative">
+          <div class="signature-gradient rounded-[2rem] p-8 md:p-10 editorial-shadow rotate-2 scale-[0.98] transition-transform duration-700 hover:rotate-0">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white/14 rounded-2xl p-5 text-white">
+                <div class="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center mb-4">
+                  <img class="w-7 h-7 object-contain" src="../Images/gemini-color.png" alt="Gemini logo">
+                </div>
+                <div class="font-headline font-bold text-lg">Gemini</div>
+                <div class="text-sm text-white/80 mt-1">Google Workspace</div>
+              </div>
+              <div class="bg-white/14 rounded-2xl p-5 text-white">
+                <div class="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center mb-4">
+                  <img class="w-8 h-8 object-contain" src="../Images/notebooklm-scaled.png.webp" alt="NotebookLM logo">
+                </div>
+                <div class="font-headline font-bold text-lg">NotebookLM</div>
+                <div class="text-sm text-white/80 mt-1">Research assistant</div>
+              </div>
+              <div class="bg-white/14 rounded-2xl p-5 text-white col-span-2">
+                <div class="flex items-start gap-4">
+                  <span class="material-symbols-outlined text-3xl">policy</span>
+                  <div>
+                    <div class="font-headline font-bold text-lg mb-1">School Data Rule</div>
+                    <div class="text-sm text-white/80 leading-relaxed">Only the approved Google Workspace AI tools may be used with school-related work involving student data, assessment information, or personally identifiable information.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="glass-panel p-8 rounded-2xl editorial-shadow max-w-[300px] hidden md:block border border-white/40 mt-6 ml-0 lg:ml-6">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+              <span class="font-headline font-extrabold text-on-surface">Institutional Access</span>
+            </div>
+            <p class="text-sm text-on-surface-variant leading-snug">
+              UWC Google Workspace accounts include direct access to Gemini Enterprise and NotebookLM for approved school use.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="approved-tools" class="bg-surface-container-low py-24 px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-10 rounded-[2rem] bg-white p-6 md:p-8 editorial-shadow">
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-red-100 text-[#AD1F53] flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-3xl">gpp_maybe</span>
+            </div>
+            <div>
+              <div class="font-headline text-2xl font-bold text-primary mb-2">Policy</div>
+              <p class="text-on-surface-variant leading-relaxed">
+                Only the approved Google Workspace AI tools may be used with school-related work involving student data, assessment information, or personally identifiable information. Never use non-approved tools with school data.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <h2 class="font-headline text-3xl font-extrabold text-primary mb-2">Approved AI Tools</h2>
+            <p class="text-on-surface-variant max-w-2xl">Formally approved for school work. Access through your official school Google account. Student and institutional data may only be entered here.</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="h-[2px] w-12 bg-secondary hidden md:block"></span>
+            <span class="font-label text-xs font-bold tracking-widest text-secondary uppercase">Academic Integrity First</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-surface-container-lowest p-8 rounded-[1.5rem] editorial-shadow group hover:-translate-y-2 transition-all duration-300">
+            <div class="flex justify-between items-start mb-8 gap-4">
+              <div class="w-16 h-16 rounded-2xl signature-gradient flex items-center justify-center text-on-primary">
+                <img class="w-9 h-9 object-contain" src="../Images/gemini-color.png" alt="Gemini logo">
+              </div>
+              <span class="bg-secondary/10 text-secondary px-4 py-1.5 rounded-full font-label text-[0.7rem] font-extrabold tracking-wider uppercase">Staff &amp; Students</span>
+            </div>
+            <h3 class="font-headline text-2xl font-bold mb-3 text-on-surface">Gemini for Workspace</h3>
+            <p class="text-on-surface-variant mb-8 leading-relaxed">
+              Integrated into Docs, Sheets, Slides, Gmail, and Drive. Use your school Google account where enabled.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span class="bg-blue-100 text-primary px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide">Lesson planning</span>
+              <span class="bg-emerald-100 text-secondary px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide">Drafting</span>
+              <span class="bg-orange-100 text-orange-800 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide">Summarization</span>
+              <span class="bg-fuchsia-100 text-fuchsia-800 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide">Translation</span>
+            </div>
+            <a class="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="https://gemini.google.com" target="_blank" rel="noreferrer">
+              <span>Open Tool</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+
+          <div class="bg-surface-container-lowest p-8 rounded-[1.5rem] editorial-shadow group hover:-translate-y-2 transition-all duration-300">
+            <div class="flex justify-between items-start mb-8 gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-tertiary-container flex items-center justify-center text-on-tertiary">
+                <img class="w-10 h-10 object-contain" src="../Images/notebooklm-scaled.png.webp" alt="NotebookLM logo">
+              </div>
+              <span class="bg-secondary/10 text-secondary px-4 py-1.5 rounded-full font-label text-[0.7rem] font-extrabold tracking-wider uppercase">Staff &amp; Students</span>
+            </div>
+            <h3 class="font-headline text-2xl font-bold mb-3 text-on-surface">NotebookLM</h3>
+            <p class="text-on-surface-variant mb-8 leading-relaxed">
+              Generates summaries, study guides, FAQs, and audio overviews from documents you upload. Only uses your sources.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span class="bg-emerald-100 text-secondary px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide">Research</span>
+              <span class="bg-blue-100 text-primary px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide">Study guides</span>
+              <span class="bg-orange-100 text-orange-800 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide">Audio summaries</span>
+            </div>
+            <a class="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="https://notebooklm.google.com" target="_blank" rel="noreferrer">
+              <span>Get Started</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12">
+          <h2 class="font-headline text-3xl font-extrabold text-primary mb-2">Personal AI Ecosystem</h2>
+          <p class="text-on-surface-variant max-w-2xl">Useful for personal exploration and learning. Never enter student names, grades, safeguarding data, or school information into these tools.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+          <a class="bg-surface-container p-6 rounded-xl border border-transparent hover:border-secondary/20 transition-all cursor-pointer" href="https://www.anthropic.com/claude" target="_blank" rel="noreferrer">
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center">
+                <img class="w-6 h-6 object-contain" src="../Images/claude-color.png" alt="Claude logo">
+              </div>
+              <span class="material-symbols-outlined text-on-surface-variant opacity-40">open_in_new</span>
+            </div>
+            <h4 class="font-headline font-bold text-lg mb-1">Claude</h4>
+            <span class="text-[10px] font-label font-bold tracking-widest uppercase text-on-surface-variant/70">Personal use only</span>
+          </a>
+
+          <a class="bg-surface-container p-6 rounded-xl border border-transparent hover:border-secondary/20 transition-all cursor-pointer" href="https://chat.openai.com" target="_blank" rel="noreferrer">
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center">
+                <img class="w-6 h-6 object-contain" src="../Images/chatgpt-logo-png_seeklogo-465219.png" alt="ChatGPT logo">
+              </div>
+              <span class="material-symbols-outlined text-on-surface-variant opacity-40">open_in_new</span>
+            </div>
+            <h4 class="font-headline font-bold text-lg mb-1">ChatGPT</h4>
+            <span class="text-[10px] font-label font-bold tracking-widest uppercase text-on-surface-variant/70">Personal use only</span>
+          </a>
+
+          <a class="bg-surface-container p-6 rounded-xl border border-transparent hover:border-secondary/20 transition-all cursor-pointer" href="https://www.perplexity.ai" target="_blank" rel="noreferrer">
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-blue-800">
+                <img class="w-6 h-6 object-contain" src="../Images/unnamed-5.png" alt="Perplexity logo">
+              </div>
+              <span class="material-symbols-outlined text-on-surface-variant opacity-40">open_in_new</span>
+            </div>
+            <h4 class="font-headline font-bold text-lg mb-1">Perplexity</h4>
+            <span class="text-[10px] font-label font-bold tracking-widest uppercase text-on-surface-variant/70">Personal use only</span>
+          </a>
+
+          <a class="bg-surface-container p-6 rounded-xl border border-transparent hover:border-secondary/20 transition-all cursor-pointer" href="https://www.deepseek.com/en/" target="_blank" rel="noreferrer">
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center">
+                <img class="w-6 h-6 object-contain" src="../Images/deepseek-color.png" alt="DeepSeek logo">
+              </div>
+              <span class="material-symbols-outlined text-on-surface-variant opacity-40">open_in_new</span>
+            </div>
+            <h4 class="font-headline font-bold text-lg mb-1">DeepSeek</h4>
+            <span class="text-[10px] font-label font-bold tracking-widest uppercase text-on-surface-variant/70">Personal use only</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div class="lg:col-span-2 bg-surface-container-low rounded-[2rem] p-8 editorial-shadow">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-14 h-14 rounded-xl bg-tertiary-container text-white flex items-center justify-center">
+                <span class="material-symbols-outlined text-3xl">terminal</span>
+              </div>
+              <div>
+                <h3 class="font-headline text-2xl font-bold text-primary">Codex</h3>
+                <p class="text-sm text-on-surface-variant">OpenAI · Coding Agent</p>
+              </div>
+            </div>
+            <p class="text-on-surface-variant leading-relaxed mb-6">
+              Best for project creation, refactors, code review, parallel coding tasks, and turning ideas into working software across app, editor, and terminal workflows.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-purple-100 text-fuchsia-800 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide">Project creation</span>
+              <span class="bg-blue-100 text-primary px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide">Refactors</span>
+              <span class="bg-emerald-100 text-secondary px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide">Code review</span>
+            </div>
+            <div class="rounded-2xl bg-red-50 px-5 py-4 text-sm text-rose-800 leading-relaxed">
+              <strong>Restricted:</strong> Personal use only.
+            </div>
+          </div>
+
+          <div class="bg-surface-container-low rounded-[2rem] p-8 editorial-shadow">
+            <h3 class="font-headline text-2xl font-bold text-primary mb-6">Writing &amp; Language</h3>
+            <div class="space-y-5">
+              <a class="block bg-white rounded-2xl p-5 hover:-translate-y-1 transition-transform" href="https://www.grammarly.com" target="_blank" rel="noreferrer">
+                <div class="flex items-start justify-between gap-4 mb-3">
+                  <div class="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-800">
+                    <span class="material-symbols-outlined">spellcheck</span>
+                  </div>
+                  <span class="material-symbols-outlined text-on-surface-variant opacity-40">open_in_new</span>
+                </div>
+                <div class="font-headline font-bold text-lg text-primary mb-2">Grammarly</div>
+                <p class="text-sm text-on-surface-variant leading-relaxed">Basic spell-check OK at all levels. AI rewrites must be declared. Never enter school data.</p>
+              </a>
+
+              <a class="block bg-white rounded-2xl p-5 hover:-translate-y-1 transition-transform" href="https://www.deepl.com" target="_blank" rel="noreferrer">
+                <div class="flex items-start justify-between gap-4 mb-3">
+                  <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
+                    <img class="w-6 h-6 object-contain" src="../Images/DeepL_logo.svg" alt="DeepL logo">
+                  </div>
+                  <span class="material-symbols-outlined text-on-surface-variant opacity-40">open_in_new</span>
+                </div>
+                <div class="font-headline font-bold text-lg text-primary mb-2">DeepL</div>
+                <p class="text-sm text-on-surface-variant leading-relaxed">Translating external sources is OK. Translating your own IA or EE writing is not permitted. Cite all translated sources.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="bg-primary text-on-primary rounded-[2.5rem] overflow-hidden relative">
+          <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div class="p-12 lg:p-20 relative z-10">
+              <h2 class="font-headline text-4xl font-extrabold mb-8 tracking-tight">AI Citation Guide</h2>
+              <p class="text-on-primary-container text-lg mb-12 max-w-md">
+                Use the full student guide for citation rules, disclosure examples, and style-specific formats for generative AI use in class.
+              </p>
+              <div class="space-y-6 mb-10">
+                <div class="flex gap-6 items-start">
+                  <div class="bg-secondary-fixed text-on-secondary-fixed w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 font-bold">1</div>
+                  <div>
+                    <h4 class="font-headline font-bold text-xl mb-2">Tool Specification</h4>
+                    <p class="text-on-primary/70 text-sm">Mention the name of the AI tool and the version used.</p>
+                  </div>
+                </div>
+                <div class="flex gap-6 items-start">
+                  <div class="bg-secondary-fixed text-on-secondary-fixed w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 font-bold">2</div>
+                  <div>
+                    <h4 class="font-headline font-bold text-xl mb-2">Prompt Disclosure</h4>
+                    <p class="text-on-primary/70 text-sm">Briefly describe the prompt provided to the AI and how you used the response.</p>
+                  </div>
+                </div>
+                <div class="flex gap-6 items-start">
+                  <div class="bg-secondary-fixed text-on-secondary-fixed w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 font-bold">3</div>
+                  <div>
+                    <h4 class="font-headline font-bold text-xl mb-2">Date of Access</h4>
+                    <p class="text-on-primary/70 text-sm">Record the exact date when the information was generated or accessed.</p>
+                  </div>
+                </div>
+              </div>
+              <a class="inline-flex items-center gap-3 bg-white text-primary px-8 py-4 rounded-xl font-headline font-bold hover:bg-surface-container transition-colors" href="ai-citation-guide.html">
+                Open the Guide
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </a>
+            </div>
+            <div class="relative min-h-[360px] lg:min-h-full signature-gradient">
+              <div class="absolute inset-0 opacity-15">
+                <div class="absolute top-12 right-12 w-40 h-40 rounded-full bg-white blur-3xl"></div>
+                <div class="absolute bottom-12 left-12 w-48 h-48 rounded-full bg-white blur-3xl"></div>
+              </div>
+              <div class="relative z-10 h-full flex items-center justify-center p-12">
+                <div class="glass-panel rounded-[2rem] p-8 max-w-md border border-white/30">
+                  <div class="flex items-center gap-3 mb-5">
+                    <span class="material-symbols-outlined text-secondary">campaign</span>
+                    <span class="font-headline font-extrabold text-on-surface">Best Practice</span>
+                  </div>
+                  <p class="text-sm text-on-surface-variant leading-relaxed mb-4">
+                    When in doubt, cite and briefly explain your AI use. Transparent attribution is safer than omitting a citation.
+                  </p>
+                  <p class="text-sm text-on-surface-variant leading-relaxed">
+                    Teacher instructions for a specific assignment always take precedence over the general guide.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-50 w-full mt-auto">
+    <div class="w-full px-8 py-12 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 md:gap-10">
+        <div class="flex flex-col gap-2 text-center md:text-left">
+          <div class="text-lg font-bold text-slate-900">IB Physics &amp; TOK — UWC Costa Rica</div>
+          <div class="font-['Inter'] text-sm tracking-wide text-slate-500">Erick Loria Soto · <a class="hover:text-[#004099] transition-colors" href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></div>
+        </div>
+        <div class="font-['Inter'] text-sm tracking-wide text-slate-500 text-center md:text-right max-w-2xl">
+          <strong class="text-slate-700">Copyright 2026 Erick Loria Soto.</strong> All original site content, course materials, design, and writing are my own unless otherwise credited. Built with HTML, CSS, JavaScript, and GitHub Pages.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isExpanded));
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+  <script src="../js/nav-dropdowns.js?v=20260321e"></script>
 </body>
 </html>

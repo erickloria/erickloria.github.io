@@ -1,49 +1,451 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Citation Guide — IB Physics &amp; TOK</title>
+  <title>AI Citation Guide | The Physics Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link rel="stylesheet" href="../css/style.css">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-fixed-variant": "#7d1a6e",
+            "secondary-fixed-dim": "#65dbb6",
+            "on-secondary": "#ffffff",
+            "surface-container": "#edeef0",
+            "on-background": "#1a1c1e",
+            "surface-container-high": "#e8e8ea",
+            "tertiary": "#5b0050",
+            "on-surface": "#1a1c1e",
+            "error-container": "#ffdad6",
+            "outline": "#737783",
+            "surface-dim": "#d9dadc",
+            "on-secondary-fixed-variant": "#00513e",
+            "error": "#ba1a1a",
+            "on-tertiary-container": "#fe8be2",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#434652",
+            "surface-container-highest": "#e2e2e5",
+            "outline-variant": "#c3c6d4",
+            "secondary-container": "#82f8d1",
+            "secondary": "#006c53",
+            "primary-fixed": "#d9e2ff",
+            "inverse-on-surface": "#f0f0f3",
+            "tertiary-container": "#7b186c",
+            "on-error-container": "#93000a",
+            "primary-fixed-dim": "#b0c6ff",
+            "on-primary-fixed-variant": "#04429b",
+            "inverse-primary": "#b0c6ff",
+            "surface-variant": "#e2e2e5",
+            "secondary-fixed": "#82f8d1",
+            "surface": "#f9f9fb",
+            "inverse-surface": "#2f3133",
+            "surface-tint": "#2d5bb4",
+            "primary-container": "#004099",
+            "on-primary-fixed": "#001945",
+            "on-secondary-container": "#007259",
+            "on-tertiary-fixed": "#3a0032",
+            "tertiary-fixed": "#ffd7f0",
+            "surface-container-lowest": "#ffffff",
+            "on-error": "#ffffff",
+            "background": "#f9f9fb",
+            "on-primary": "#ffffff",
+            "surface-container-low": "#f3f3f6",
+            "on-secondary-fixed": "#002117",
+            "on-primary-container": "#92b1ff",
+            "primary": "#002b6c",
+            "tertiary-fixed-dim": "#fface7",
+            "surface-bright": "#f9f9fb"
+          },
+          fontFamily: {
+            "headline": ["Manrope", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+            "label": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .editorial-gradient {
+      background: linear-gradient(135deg, #004099 0%, #1DA381 100%);
+    }
+    .signature-gradient {
+      background: linear-gradient(135deg, #004099 0%, #1DA381 100%);
+    }
+    .guide-shell .markdown-brand {
+      display: none !important;
+    }
+    .guide-shell .markdown-sidebar {
+      display: none;
+    }
+    .guide-shell .markdown-actions {
+      display: flex;
+      justify-content: flex-end;
+      padding: 1.5rem 1.5rem 0;
+      margin: 0;
+    }
+    .guide-shell .markdown-print-button {
+      border: 0;
+      border-radius: 9999px;
+      background: #edeef0;
+      color: #004099;
+      font-size: 0.82rem;
+      font-weight: 800;
+      padding: 0.8rem 1rem;
+      box-shadow: none;
+    }
+    .guide-shell .markdown-content {
+      background: #ffffff;
+      border-radius: 0 0 1.75rem 1.75rem;
+      padding: 0 2rem 2rem;
+    }
+    .guide-shell .markdown-content h1,
+    .guide-shell .markdown-content h2,
+    .guide-shell .markdown-content h3,
+    .guide-shell .markdown-content h4,
+    .guide-shell .markdown-content h5,
+    .guide-shell .markdown-content h6 {
+      font-family: "Manrope", sans-serif;
+      color: #002b6c;
+      scroll-margin-top: 7rem;
+    }
+    .guide-shell .markdown-content h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+    .guide-shell .markdown-content h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #006c53;
+    }
+    .guide-shell .markdown-content blockquote {
+      border-left: 4px solid #1DA381;
+      background: rgba(130, 248, 209, 0.12);
+      color: #002b6c;
+      border-radius: 0.85rem;
+      padding: 1rem 1.2rem;
+    }
+    .guide-shell .markdown-content pre {
+      border-radius: 1rem;
+    }
+    .guide-shell .markdown-content table {
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+    .guide-shell .markdown-content th {
+      background: #e8e8ea;
+      color: #002b6c;
+    }
+    .guide-shell .toc-nav {
+      display: grid;
+      gap: 0.45rem;
+    }
+    .guide-shell .toc-nav .markdown-toc-group {
+      background: rgba(255, 255, 255, 0.84);
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: inset 0 0 0 1px rgba(195, 198, 212, 0.35);
+    }
+    .guide-shell .toc-nav .markdown-toc-summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 0.9rem 1rem;
+      color: #004099;
+      font-size: 0.84rem;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+    .guide-shell .toc-nav .markdown-toc-summary::-webkit-details-marker {
+      display: none;
+    }
+    .guide-shell .toc-nav .markdown-toc-summary::after {
+      content: "+";
+      float: right;
+      color: #737783;
+    }
+    .guide-shell .toc-nav .markdown-toc-group[open] .markdown-toc-summary::after {
+      content: "-";
+    }
+    .guide-shell .toc-nav .markdown-toc-group-links {
+      display: grid;
+      gap: 0.2rem;
+      padding: 0 0.7rem 0.7rem;
+    }
+    .guide-shell .toc-nav a {
+      display: block;
+      padding: 0.75rem 0.85rem;
+      border-radius: 0.85rem;
+      color: #5d687a;
+      text-decoration: none;
+      font-size: 0.8rem;
+      line-height: 1.4;
+    }
+    .guide-shell .toc-nav a:hover,
+    .guide-shell .toc-nav a.active {
+      background: rgba(0, 64, 153, 0.08);
+      color: #004099;
+    }
+    .guide-shell .toc-nav a.level-3 {
+      margin-left: 0.7rem;
+      font-size: 0.76rem;
+    }
+    .guide-shell .toc-nav a.markdown-toc-overview {
+      font-weight: 700;
+      margin-left: 0;
+    }
+    .guide-shell .toc-nav a.markdown-toc-standalone {
+      font-weight: 800;
+    }
+    .guide-shell .toc-nav a.level-4,
+    .guide-shell .toc-nav a.level-5,
+    .guide-shell .toc-nav a.level-6 {
+      margin-left: 1.1rem;
+      font-size: 0.74rem;
+    }
+    .citation-example {
+      background: #0f172a;
+      color: #e2e8f0;
+      border-radius: 1rem;
+      padding: 1.15rem 1.2rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.88rem;
+      line-height: 1.65;
+      overflow-x: auto;
+    }
+  </style>
 </head>
-<body>
-<script src="../js/layout.js?v=20260311b"></script>
+<body class="bg-background font-body text-on-background selection:bg-secondary-container selection:text-on-secondary-container min-h-screen flex flex-col">
+  <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+    <nav class="w-full px-8 py-4 max-w-7xl mx-auto flex items-center md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8">
+      <a class="text-xl font-extrabold bg-gradient-to-r from-[#004099] to-[#1DA381] bg-clip-text text-transparent font-headline tracking-tight justify-self-start" href="../index.html">
+        The Physics Lab
+      </a>
+      <div class="hidden md:flex items-center gap-8 justify-self-center">
+        <a class="text-slate-600 hover:text-[#004099] transition-colors font-medium" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 hover:text-[#004099] transition-colors font-medium" href="tok.html">TOK</a>
+        <a class="text-slate-600 hover:text-[#004099] transition-colors font-medium" href="misc.html">Resources</a>
+        <a class="text-[#004099] border-b-2 border-[#1DA381] pb-1 font-semibold" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 hover:text-[#004099] transition-colors font-medium" href="meetings.html">Meetings</a>
+      </div>
+      <div class="hidden md:flex justify-self-end">
+        <a class="signature-gradient text-white px-6 py-2 rounded-xl font-headline font-bold active:scale-95 transition-transform" href="meetings.html">
+          Meetings
+        </a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden text-primary" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="material-symbols-outlined text-primary text-3xl">menu</span>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden px-8 pb-5 max-w-7xl mx-auto">
+      <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-4 flex flex-col gap-3 shadow-lg">
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="tok.html">TOK</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="misc.html">Resources</a>
+        <a class="text-[#004099] font-bold" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="meetings.html">Meetings</a>
+        <a class="signature-gradient text-white px-6 py-3 rounded-xl font-bold text-center transition-all active:scale-95 duration-150" href="meetings.html">Meetings</a>
+      </div>
+    </div>
+  </header>
 
-<div class="hero">
-  <div class="hero-ribbon"></div>
-  <div class="hero-circle-1"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">AI Tools</div>
-    <h1>AI Citation Guide</h1>
-    <p>Student-facing citation guidance for generative AI use in common academic styles.</p>
-  </div>
-</div>
-
-<div class="page">
-  <div class="markdown-shell">
-    <div class="markdown-layout">
-      <aside class="markdown-sidebar">
-        <div class="markdown-sidebar-title">On This Page</div>
-        <nav id="manual-toc" class="markdown-toc"></nav>
+  <main class="max-w-[1500px] mx-auto px-8 pt-12 pb-24 w-full guide-shell">
+    <div class="flex flex-col xl:flex-row gap-12">
+      <aside class="w-full xl:w-64 shrink-0">
+        <div class="sticky top-24 rounded-r-2xl bg-slate-50 p-4 transition-all">
+          <div class="mb-6 px-2">
+            <h2 class="font-headline font-black text-[#004099] text-lg">Citation Guide</h2>
+            <p class="text-xs text-slate-500 font-label tracking-wide uppercase">Institutional Standards</p>
+          </div>
+          <nav id="manual-toc" class="toc-nav markdown-toc"></nav>
+        </div>
       </aside>
-      <div class="section">
-        <div class="markdown-content markdown-loading" data-markdown-src="ai-citation-guide.md" data-markdown-toc="#manual-toc">
-          <p>Loading guide...</p>
+
+      <section class="flex-1 space-y-16">
+        <header class="relative overflow-hidden rounded-[2rem] editorial-gradient p-12 md:p-20 text-white shadow-2xl">
+          <div class="relative z-10 max-w-4xl">
+            <span class="inline-block bg-white/20 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Living Guide</span>
+            <h1 class="font-headline text-[clamp(1rem,3.15vw,2.85rem)] font-extrabold tracking-tight leading-[1.02] mb-8 [text-wrap:balance]">AI Citation Guide &amp; Academic Integrity</h1>
+            <p class="text-lg md:text-xl text-blue-50/90 leading-relaxed font-body max-w-2xl">
+              The current student guide for citing generative AI at UWC Costa Rica, including APA, MLA, Chicago, NotebookLM, disclosure guidance, and the academic integrity checklist.
+            </p>
+          </div>
+          <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-secondary-fixed-dim/20 rounded-full blur-3xl opacity-50"></div>
+        </header>
+
+        <div class="bg-surface-container-low p-8 rounded-xl border-l-8 border-[#1DA381] shadow-sm">
+          <div class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-[#1DA381] text-3xl">verified_user</span>
+            <div>
+              <h3 class="font-headline font-bold text-xl text-primary mb-2">Institutional Integrity Policy</h3>
+              <p class="text-on-surface-variant leading-relaxed mb-4">
+                Cite AI whenever it contributes meaningfully to your final work, and remember that the assignment level declared by the teacher determines whether AI use is permitted at all. If a teacher gives a required format, that format overrides the general guide.
+              </p>
+              <a class="text-[#006c53] font-bold flex items-center gap-1 hover:underline" href="#when-you-must-cite-ai">
+                Jump to citation rules <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <article class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined">auto_stories</span>
+              </span>
+              <h2 class="font-headline font-bold text-2xl">APA 7th Edition</h2>
+            </div>
+            <p class="text-on-surface-variant mb-6">Use author-date format and cite either a specific AI chat or the AI tool generally, depending on what the reader needs to retrieve.</p>
+            <div class="citation-example mb-6">OpenAI. (2025). ChatGPT [Large language model]. https://chatgpt.com/</div>
+            <ul class="space-y-3 text-sm text-on-surface-variant">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Describe prompts in the method note, appendix, or disclosure if relevant.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Use the exact model name shown in your session when available.</li>
+            </ul>
+          </article>
+
+          <article class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined">history_edu</span>
+              </span>
+              <h2 class="font-headline font-bold text-2xl">MLA 9th Edition</h2>
+            </div>
+            <p class="text-on-surface-variant mb-6">Do not treat the AI tool as the author. Use the generated output or prompt title as the source title and the AI tool as the container.</p>
+            <div class="citation-example mb-6">"Describe the theme of nature in Jane Austen's Mansfield Park" prompt. ChatGPT, model GPT-4o, OpenAI, 23 Sept. 2024, chatgpt.com/share/...</div>
+            <ul class="space-y-3 text-sm text-on-surface-variant">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Cite the specific prompt or output used.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Add a brief note if AI support was substantive.</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="bg-surface-container-lowest p-10 rounded-2xl shadow-sm">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+            <div class="flex items-center gap-3">
+              <span class="w-12 h-12 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary">
+                <span class="material-symbols-outlined">menu_book</span>
+              </span>
+              <h2 class="font-headline font-bold text-2xl">Chicago Style</h2>
+            </div>
+            <span class="bg-surface-container-high px-4 py-1 rounded-full text-xs font-bold text-on-surface-variant">NOTES &amp; BIBLIOGRAPHY</span>
+          </div>
+          <div class="space-y-6">
+            <p class="text-on-surface-variant max-w-3xl">Chicago usually credits AI-generated text in prose or notes. Bibliography entries are only appropriate when there is a stable public link.</p>
+            <div class="citation-example">1. Text generated by ChatGPT, OpenAI, [Day Mon. Year], https://chat.openai.com/chat.</div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
+              <div class="p-4 border-l-2 border-outline-variant">
+                <h4 class="font-bold text-primary mb-1">Author</h4>
+                <p class="text-sm">Usually the company or provider.</p>
+              </div>
+              <div class="p-4 border-l-2 border-outline-variant">
+                <h4 class="font-bold text-primary mb-1">Date</h4>
+                <p class="text-sm">Use the specific generation date whenever possible.</p>
+              </div>
+              <div class="p-4 border-l-2 border-outline-variant">
+                <h4 class="font-bold text-primary mb-1">Stability</h4>
+                <p class="text-sm">Only add bibliography-style entries when the interaction has a stable public URL.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <article class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-10 h-10 rounded-lg bg-secondary-container flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined">library_books</span>
+              </span>
+              <h2 class="font-headline font-bold text-2xl">NotebookLM</h2>
+            </div>
+            <p class="text-on-surface-variant mb-6">NotebookLM responses need two layers of attribution: the NotebookLM interaction itself and the original documents uploaded into the notebook.</p>
+            <ul class="space-y-3 text-sm text-on-surface-variant">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Cite the NotebookLM interaction when relevant.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Cite the underlying readings or notes separately.</li>
+            </ul>
+          </article>
+
+          <article class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined">task_alt</span>
+              </span>
+              <h2 class="font-headline font-bold text-2xl">Before Submission</h2>
+            </div>
+            <ul class="space-y-3 text-sm text-on-surface-variant">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Confirm whether AI was allowed for the assignment level.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Verify all claims and references independently.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Mark AI use clearly in citations, notes, or disclosures.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Make sure the final work reflects your own judgment.</li>
+            </ul>
+          </article>
+        </div>
+
+        <section id="full-guide" class="guide-markdown-card section bg-white rounded-[2rem] shadow-sm overflow-hidden">
+          <div class="px-8 pt-8 pb-4">
+            <span class="inline-block bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Full Guide</span>
+            <h2 class="font-headline text-3xl md:text-4xl font-extrabold text-primary tracking-tight mb-2">AI Citation Guide Markdown</h2>
+            <p class="text-on-surface-variant max-w-3xl">The full guide below is still loaded directly from your markdown file, including the detailed style guidance, disclosure notes, NotebookLM section, checklist, and references.</p>
+          </div>
+          <div class="markdown-content markdown-loading" data-markdown-src="ai-citation-guide.md" data-markdown-toc="#manual-toc">
+            <p>Loading guide...</p>
+          </div>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <footer class="bg-slate-50 w-full mt-auto">
+    <div class="w-full px-8 py-12 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 md:gap-10">
+        <div class="flex flex-col gap-2 text-center md:text-left">
+          <div class="text-lg font-bold text-slate-900">IB Physics &amp; TOK — UWC Costa Rica</div>
+          <div class="font-['Inter'] text-sm tracking-wide text-slate-500">Erick Loria Soto · <a class="hover:text-[#004099] transition-colors" href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></div>
+        </div>
+        <div class="font-['Inter'] text-sm tracking-wide text-slate-500 text-center md:text-right max-w-2xl">
+          <strong class="text-slate-700">Copyright 2026 Erick Loria Soto.</strong> All original site content, course materials, design, and writing are my own unless otherwise credited. Built with HTML, CSS, JavaScript, and GitHub Pages.
         </div>
       </div>
-    </div> 
-  </div>
-</div>
+    </div>
+  </footer>
 
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isExpanded));
+        mobileMenu.classList.toggle('hidden');
+      });
     }
-  };
-</script>
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="../js/markdown-page.js?v=20260311g"></script>
+  </script>
+  <script src="../js/nav-dropdowns.js?v=20260321e"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="../js/markdown-page.js?v=20260311g"></script>
 </body>
 </html>

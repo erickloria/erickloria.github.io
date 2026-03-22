@@ -1,478 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IB Physics &amp; TOK — UWC Costa Rica</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>The Physics Lab — UWC Costa Rica</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#e8e8ea",
+            "primary-fixed": "#d9e2ff",
+            "secondary-fixed-dim": "#65dbb6",
+            "on-secondary-fixed-variant": "#00513e",
+            "on-tertiary-container": "#fe8be2",
+            "on-tertiary": "#ffffff",
+            "on-primary-container": "#92b1ff",
+            "secondary-fixed": "#82f8d1",
+            "primary": "#002b6c",
+            "primary-fixed-dim": "#b0c6ff",
+            "on-tertiary-fixed-variant": "#7d1a6e",
+            "surface-container-low": "#f3f3f6",
+            "surface-container": "#edeef0",
+            "on-tertiary-fixed": "#3a0032",
+            "tertiary-fixed": "#ffd7f0",
+            "on-secondary-fixed": "#002117",
+            "on-error": "#ffffff",
+            "on-surface-variant": "#434652",
+            "secondary-container": "#82f8d1",
+            "tertiary-fixed-dim": "#fface7",
+            "error-container": "#ffdad6",
+            "tertiary": "#5b0050",
+            "on-primary": "#ffffff",
+            "inverse-surface": "#2f3133",
+            "primary-container": "#004099",
+            "surface-bright": "#f9f9fb",
+            "background": "#f9f9fb",
+            "on-background": "#1a1c1e",
+            "inverse-on-surface": "#f0f0f3",
+            "inverse-primary": "#b0c6ff",
+            "outline-variant": "#c3c6d4",
+            "surface-container-highest": "#e2e2e5",
+            "surface": "#f9f9fb",
+            "surface-dim": "#d9dadc",
+            "on-primary-fixed-variant": "#04429b",
+            "outline": "#737783",
+            "on-surface": "#1a1c1e",
+            "error": "#ba1a1a",
+            "surface-tint": "#2d5bb4",
+            "surface-variant": "#e2e2e5",
+            "on-secondary": "#ffffff",
+            "on-error-container": "#93000a",
+            "on-primary-fixed": "#001945",
+            "secondary": "#006c53",
+            "on-secondary-container": "#007259",
+            "tertiary-container": "#7b186c"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          }
+        }
+      }
+    };
+  </script>
   <style>
-    .home-page {
-      background:
-        radial-gradient(circle at top left, rgba(0, 64, 153, 0.10), transparent 32%),
-        radial-gradient(circle at top right, rgba(29, 163, 129, 0.12), transparent 28%),
-        var(--bg);
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     }
-    .home-shell {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 36px 32px 88px;
+    .signature-gradient {
+      background: linear-gradient(135deg, #004099 0%, #1DA381 100%);
     }
-    .home-hero {
-      position: relative;
-      overflow: hidden;
-      padding: 28px;
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.82) 0%, rgba(230,236,245,0.88) 100%);
-      box-shadow: 0 24px 60px rgba(15, 33, 64, 0.10);
-      backdrop-filter: blur(18px);
-      margin-bottom: 22px;
-    }
-    .home-hero::before {
-      content: "";
-      position: absolute;
-      inset: -20% auto auto 58%;
-      width: 340px;
-      height: 340px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(29, 163, 129, 0.20), transparent 68%);
-      pointer-events: none;
-    }
-    .home-hero::after {
-      content: "";
-      position: absolute;
-      inset: auto auto -38% -6%;
-      width: 360px;
-      height: 360px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(0, 64, 153, 0.16), transparent 70%);
-      pointer-events: none;
-    }
-    .home-hero-panel {
-      position: relative;
-      z-index: 1;
-      max-width: 1100px;
-    }
-    .home-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.72);
-      border: 1px solid rgba(255,255,255,0.78);
-      color: var(--heading);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-    .home-title {
-      font-size: clamp(40px, 7vw, 72px);
-      line-height: 0.95;
-      letter-spacing: -0.04em;
-      color: var(--text);
-      margin-bottom: 18px;
-      max-width: none;
-      white-space: nowrap;
-    }
-    .home-summary {
-      font-size: 18px;
-      line-height: 1.75;
-      color: var(--muted);
-      margin-bottom: 24px;
-    }
-    .home-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .home-meta span {
-      display: inline-flex;
-      align-items: center;
-      padding: 9px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.74);
-      border: 1px solid rgba(255,255,255,0.78);
-      color: var(--text);
-      font-size: 13px;
-      font-weight: 600;
-    }
-    .home-section {
-      margin-top: 18px;
-      margin-bottom: 26px;
-    }
-    .home-section-heading {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 16px;
-    }
-    .home-section-heading h2 {
-      font-size: 28px;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      color: var(--heading);
-    }
-    .home-section-heading p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-    .home-primary-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-    .home-secondary-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-    .home-card {
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      min-height: 260px;
-      padding: 24px;
-      border-radius: 26px;
-      border: 1px solid var(--border);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.86) 0%, rgba(255,255,255,0.62) 100%);
-      box-shadow: 0 18px 40px rgba(15, 33, 64, 0.08);
-      text-decoration: none;
-      color: inherit;
-      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(16px);
-    }
-    .home-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 22px 48px rgba(15, 33, 64, 0.12);
-      border-color: var(--action-border);
-    }
-    .home-card::before {
-      content: "";
-      position: absolute;
-      inset: auto -60px -80px auto;
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      opacity: 0.75;
-      pointer-events: none;
-    }
-    .home-card-physics::before {
-      background: radial-gradient(circle, rgba(0, 64, 153, 0.18), transparent 72%);
-    }
-    .home-card-tok::before {
-      background: radial-gradient(circle, rgba(29, 163, 129, 0.20), transparent 72%);
-    }
-    .home-card-misc::before {
-      background: radial-gradient(circle, rgba(143, 43, 125, 0.18), transparent 72%);
-    }
-    .home-card-utility::before {
-      background: radial-gradient(circle, rgba(0, 64, 153, 0.14), transparent 72%);
-    }
-    .home-card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 14px;
-    }
-    .home-card-label {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    .home-card-arrow {
-      color: var(--action-soft);
-      font-size: 20px;
-      line-height: 1;
-    }
-    .home-card h3 {
-      font-size: 30px;
-      line-height: 0.98;
-      letter-spacing: -0.035em;
-      color: var(--text);
-    }
-    .home-card p {
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.7;
-    }
-    .home-card ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-top: auto;
-    }
-    .home-card li {
-      color: var(--text);
-      font-size: 13px;
-      line-height: 1.5;
-      padding-top: 8px;
-      border-top: 1px solid rgba(127, 160, 204, 0.20);
-    }
-    .home-info-bar {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-bottom: 28px;
-    }
-    .home-info-card {
-      padding: 18px 20px;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.62);
-      box-shadow: 0 12px 28px rgba(15, 33, 64, 0.06);
-      backdrop-filter: blur(14px);
-    }
-    .home-info-card strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--heading);
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
-    .home-info-card span {
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.65;
-    }
-    .home-about {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 26px;
-      align-items: start;
-      padding: 28px;
-      border-radius: 28px;
-      border: 1px solid var(--border);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.84) 0%, rgba(255,255,255,0.66) 100%);
-      box-shadow: 0 22px 48px rgba(15, 33, 64, 0.08);
-      backdrop-filter: blur(16px);
-    }
-    .home-about-copy h2 {
-      font-size: 30px;
-      line-height: 1;
-      letter-spacing: -0.03em;
-      color: var(--heading);
-      margin-bottom: 8px;
-    }
-    .home-about-role {
-      font-size: 15px;
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-    .home-about-copy p {
-      font-size: 15px;
-      line-height: 1.8;
-      color: var(--text);
-    }
-    .home-about-copy p + p {
-      margin-top: 12px;
-    }
-    .home-about-copy a {
-      color: var(--action-text);
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .home-about-copy a:hover {
-      text-decoration: underline;
-    }
-    @media (prefers-color-scheme: dark) {
-      .home-page {
-        background:
-          radial-gradient(circle at top left, rgba(73, 112, 181, 0.18), transparent 34%),
-          radial-gradient(circle at top right, rgba(29, 163, 129, 0.14), transparent 28%),
-          var(--bg);
-      }
-      .home-hero,
-      .home-card,
-      .home-info-card,
-      .home-about {
-        background:
-          linear-gradient(180deg, rgba(18,28,46,0.88) 0%, rgba(18,28,46,0.70) 100%);
-        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
-      }
-      .home-chip,
-      .home-meta span {
-        background: rgba(18, 28, 46, 0.82);
-        border-color: rgba(127, 160, 204, 0.24);
-      }
-      .home-card li {
-        border-top-color: rgba(127, 160, 204, 0.16);
-      }
-    }
-    @media (max-width: 1100px) {
-      .home-primary-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-    @media (max-width: 980px) {
-      .home-primary-grid,
-      .home-info-bar,
-      .home-secondary-grid {
-        grid-template-columns: 1fr;
-      }
-      .home-about {
-        grid-template-columns: 1fr;
-      }
-      .home-title {
-        max-width: none;
-        white-space: normal;
-      }
-    }
-    @media (max-width: 768px) {
-      .home-shell {
-        padding: 22px 18px 56px;
-      }
-      .home-hero,
-      .home-about {
-        padding: 22px;
-      }
-      .home-card {
-        min-height: 220px;
-        padding: 20px;
-      }
-      .home-title {
-        font-size: clamp(34px, 14vw, 54px);
-      }
-      .home-summary {
-        font-size: 16px;
-      }
-      .home-section-heading {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      -webkit-backdrop-filter: blur(16px);
     }
   </style>
 </head>
-<body class="home-page">
-<script src="js/layout.js?v=20260311b"></script>
-
-<main class="home-shell">
-  <section class="home-hero">
-    <div class="home-hero-panel">
-      <div class="home-chip">UWC Costa Rica</div>
-      <h1 class="home-title">IB Physics &amp; TOK</h1>
-      <p class="home-summary">Course materials, assessment guidance, meeting information, and academic support for IB Physics and Theory of Knowledge at UWC Costa Rica.</p>
-      <div class="home-meta">
-        <span>IB Diploma Programme</span>
-        <span>Physics and Theory of Knowledge</span>
-        <span>Meetings, tools, and support</span>
+<body class="bg-surface-container-lowest font-body text-on-surface">
+  <nav class="bg-white/80 backdrop-blur-xl shadow-sm sticky top-0 z-50">
+    <div class="w-full px-8 py-4 max-w-7xl mx-auto flex items-center md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8">
+      <a class="text-xl font-extrabold tracking-tighter bg-gradient-to-r from-[#004099] to-[#1DA381] bg-clip-text text-transparent justify-self-start" href="index.html">
+        The Physics Lab
+      </a>
+      <div class="hidden md:flex items-center gap-8 justify-self-center">
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="pages/resources.html">IB Physics</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="pages/tok.html">TOK</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="pages/misc.html">Resources</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="pages/ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="pages/meetings.html">Meetings</a>
+      </div>
+      <div class="hidden md:flex justify-self-end">
+        <a class="signature-gradient text-white px-6 py-2 rounded-xl font-bold transition-all active:scale-95 duration-150" href="pages/meetings.html">
+          Meetings
+        </a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden text-primary" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="material-symbols-outlined text-primary text-3xl">menu</span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-8 pb-5 max-w-7xl mx-auto">
+      <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-4 flex flex-col gap-3 shadow-lg">
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="pages/resources.html">IB Physics</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="pages/tok.html">TOK</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="pages/misc.html">Resources</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="pages/ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="pages/meetings.html">Meetings</a>
+        <a class="signature-gradient text-white px-6 py-3 rounded-xl font-bold text-center transition-all active:scale-95 duration-150" href="pages/meetings.html">
+          Meetings
+        </a>
       </div>
     </div>
-  </section>
+  </nav>
 
-  <section class="home-section">
-    <div class="home-section-heading">
-      <h2>Main Areas</h2>
-      <p>Choose the part of the site you want to enter.</p>
-    </div>
-    <div class="home-primary-grid">
-      <a class="home-card home-card-physics" href="pages/resources.html">
-        <div class="home-card-top">
-          <div class="home-card-label">Course</div>
-          <div class="home-card-arrow">+</div>
+  <main>
+    <section class="relative overflow-hidden pt-20 pb-32 px-8">
+      <div class="absolute top-20 right-10 w-64 h-64 signature-gradient rounded-[3rem] rotate-12 opacity-10 pointer-events-none"></div>
+      <div class="absolute bottom-12 right-[18%] w-48 h-48 bg-secondary-container rounded-full opacity-20 pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto">
+        <div class="relative z-10 max-w-5xl pr-3 md:pr-6">
+          <span class="inline-block px-4 py-1.5 bg-secondary-fixed text-on-secondary-fixed text-xs font-bold tracking-widest uppercase rounded-full mb-6">
+            UWC Costa Rica
+          </span>
+          <h1 class="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-primary leading-[1.05] mb-6">
+            The Physics <span class="inline-block pr-[0.08em] bg-gradient-to-r from-[#004099] to-[#1DA381] bg-clip-text text-transparent italic">Lab</span>
+          </h1>
+          <p class="text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+            Course materials, TOK guidance, AI tools, miscellaneous resources, and tutorial booking for students at UWC Costa Rica.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a class="signature-gradient text-white px-8 py-4 rounded-xl font-bold flex items-center gap-3 active:scale-95 duration-150" href="pages/resources.html">
+              Explore Physics
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+            <a class="bg-surface-container-high text-primary px-8 py-4 rounded-xl font-bold border border-outline-variant/15 active:scale-95 duration-150" href="pages/tok.html">
+              Open TOK Page
+            </a>
+          </div>
         </div>
-        <h3>IB Physics</h3>
-        <p>Core course materials, assessments, and the main academic workflow for the year.</p>
-        <ul>
-          <li>Book &amp; Homework, Labs, and Presentations</li>
-          <li>Internal Assessment and Extended Essay support</li>
-          <li>Course tools and structured resources</li>
-        </ul>
-      </a>
-
-      <a class="home-card home-card-tok" href="pages/tok.html">
-        <div class="home-card-top">
-          <div class="home-card-label">Course</div>
-          <div class="home-card-arrow">+</div>
-        </div>
-        <h3>TOK</h3>
-        <p>Theory of Knowledge guidance and writing support collected in one focused section.</p>
-        <ul>
-          <li>Prompt dissection and argument scaffolding</li>
-          <li>Materials kept separate from Physics resources</li>
-          <li>Clear access for TOK-specific support</li>
-        </ul>
-      </a>
-
-      <a class="home-card home-card-misc" href="pages/misc.html">
-        <div class="home-card-top">
-          <div class="home-card-label">Resources</div>
-          <div class="home-card-arrow">+</div>
-        </div>
-        <h3>Misc</h3>
-        <p>Supporting materials that are useful, but not part of the main course structure.</p>
-        <ul>
-          <li>SAT preparation materials</li>
-          <li>Listening Corner resources</li>
-          <li>Summer program opportunities</li>
-        </ul>
-      </a>
-    </div>
-  </section>
-
-  <section class="home-section">
-    <div class="home-section-heading">
-      <h2>Utilities</h2>
-      <p>Direct access to scheduling and AI guidance.</p>
-    </div>
-    <div class="home-secondary-grid">
-      <a class="home-card home-card-utility" href="pages/meetings.html">
-        <div class="home-card-top">
-          <div class="home-card-label">Scheduling</div>
-          <div class="home-card-arrow">+</div>
-        </div>
-        <h3>Meetings</h3>
-        <p>Book time with me directly and check my calendar and general availability.</p>
-        <ul>
-          <li>Appointment scheduler</li>
-          <li>Calendar and location view</li>
-        </ul>
-      </a>
-
-      <a class="home-card home-card-utility" href="pages/ai-tools.html">
-        <div class="home-card-top">
-          <div class="home-card-label">Guidance</div>
-          <div class="home-card-arrow">+</div>
-        </div>
-        <h3>AI Tools</h3>
-        <p>Approved and personal AI tools for research, writing, coding, and academic support.</p>
-        <ul>
-          <li>School-safe tools separated from personal tools</li>
-          <li>Clear guidance for research and academic work</li>
-        </ul>
-      </a>
-    </div>
-  </section>
-
-  <section class="home-about">
-    <div class="profile-brand-column">
-      <div class="profile-avatar">
-        <img src="Images/DSC04634.jpg" alt="Erick Loria Soto">
       </div>
-      <img class="profile-personal-logo" src="ELS_logo_exports/02_icon_color_light.svg?v=20260311b" alt="Erick Loria Soto logo">
+    </section>
+
+    <section class="bg-surface-container-low py-24 px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+          <a class="md:col-span-8 bg-surface-container-lowest p-10 rounded-xl flex flex-col justify-between group overflow-hidden relative transition-transform hover:-translate-y-1" href="pages/resources.html">
+            <div class="z-10">
+              <h3 class="font-headline text-3xl font-bold text-primary mb-4">IB Physics</h3>
+              <p class="text-on-surface-variant max-w-md mb-8">
+                Book &amp; homework, labs, presentations, internal assessment guidance, extended essay support, and course tools in one place.
+              </p>
+              <span class="inline-flex items-center gap-2 text-secondary font-bold hover:underline">
+                Open Physics Resources
+                <span class="material-symbols-outlined text-sm">open_in_new</span>
+              </span>
+            </div>
+            <div class="absolute -bottom-10 -right-10 w-64 h-64 opacity-5 group-hover:scale-110 transition-transform duration-500">
+              <span class="material-symbols-outlined text-[12rem]">science</span>
+            </div>
+          </a>
+
+          <a class="md:col-span-4 signature-gradient p-10 rounded-xl text-white flex flex-col justify-center items-center text-center transition-transform hover:-translate-y-1" href="pages/tok.html">
+            <span class="material-symbols-outlined text-5xl mb-6">psychology</span>
+            <h3 class="font-headline text-3xl font-bold mb-4">TOK</h3>
+            <p class="opacity-90 mb-8">
+              Exhibition guidance, essay support, prompt breakdowns, and perspectives for Theory of Knowledge.
+            </p>
+            <span class="bg-white/20 backdrop-blur-md text-white border border-white/30 px-6 py-2 rounded-lg font-bold">
+              Open TOK Page
+            </span>
+          </a>
+
+          <a class="md:col-span-4 bg-surface-container p-8 rounded-xl block transition-transform hover:-translate-y-1" href="pages/ai-tools.html">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-lg bg-tertiary-container flex items-center justify-center text-on-tertiary">
+                <span class="material-symbols-outlined">smart_toy</span>
+              </div>
+              <h4 class="font-headline text-xl font-bold text-primary">AI Tools</h4>
+            </div>
+            <ul class="space-y-4">
+              <li class="flex items-center gap-3 text-on-surface-variant group cursor-pointer">
+                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                <span class="group-hover:text-primary transition-colors">Approved school AI tools</span>
+              </li>
+              <li class="flex items-center gap-3 text-on-surface-variant group cursor-pointer">
+                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                <span class="group-hover:text-primary transition-colors">Personal AI tools</span>
+              </li>
+              <li class="flex items-center gap-3 text-on-surface-variant group cursor-pointer">
+                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                <span class="group-hover:text-primary transition-colors">AI citation guide</span>
+              </li>
+            </ul>
+          </a>
+
+          <a class="md:col-span-5 bg-surface-container p-8 rounded-xl flex flex-col justify-between transition-transform hover:-translate-y-1" href="pages/misc.html">
+            <div>
+              <h4 class="font-headline text-xl font-bold text-primary mb-2">Misc Resources</h4>
+              <p class="text-sm text-on-surface-variant mb-6">Additional pages for SAT preparation, Listening Corner, and Summer Programs.</p>
+            </div>
+            <div class="flex gap-4 flex-wrap">
+              <div class="bg-surface-container-highest px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest text-on-surface-variant">SAT</div>
+              <div class="bg-surface-container-highest px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest text-on-surface-variant">Listening Corner</div>
+              <div class="bg-surface-container-highest px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest text-on-surface-variant">Summer Programs</div>
+            </div>
+          </a>
+
+          <div class="md:col-span-3 bg-white p-8 rounded-xl border-l-4 border-secondary flex flex-col justify-center shadow-sm">
+            <h4 class="font-headline text-lg font-bold text-primary mb-1">Tutorials</h4>
+            <p class="text-xs text-secondary-container bg-secondary-container/10 px-2 py-1 rounded inline-block mb-4">Tuesday &amp; Thursday</p>
+            <p class="text-sm text-on-surface-variant mb-6">Book a tutorial for physics support, TOK feedback, or general academic help.</p>
+            <a class="w-full py-3 bg-surface-container-high text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all text-center" href="pages/meetings.html">
+              Book Tutorial
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row gap-16 items-center">
+          <div class="w-full md:w-1/2">
+            <div class="relative group">
+              <div class="absolute inset-0 signature-gradient rounded-xl rotate-3 group-hover:rotate-6 transition-transform"></div>
+              <img alt="Erick Loria Soto" class="relative z-10 w-full h-[500px] object-cover rounded-xl" src="Images/DSC04634.jpg">
+            </div>
+          </div>
+          <div class="w-full md:w-1/2">
+            <h2 class="font-headline text-4xl font-extrabold text-primary mb-6">Meet Erick Loria Soto</h2>
+            <div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+              <p>
+                I was born in Costa Rica but raised in Milwaukee, Wisconsin, which has given me a blend of cultures and experiences that I bring to my teaching and everyday life.
+              </p>
+              <p>
+                As an educator and lifelong learner, I have dedicated my career to teaching Physics, Astronomy, and related courses. My goal is to design learning experiences that are engaging, rigorous, and intellectually curious.
+              </p>
+              <p>
+                I hold a Bachelor's degree in Physics from the Universidad de Costa Rica and I am currently pursuing a Master's degree in Teaching in the Natural Sciences at Universidad Nacional in Costa Rica.
+              </p>
+              <p>
+                Outside the classroom, I have a deep interest in astronomy and technology. I enjoy travel, hiking, and time in nature, and I also help at a yoga retreat center in the Osa Peninsula.
+              </p>
+              <p>
+                <a class="text-primary font-semibold hover:underline" href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-8 pb-24">
+      <div class="max-w-7xl mx-auto glass-card rounded-[2rem] p-12 text-center border border-outline-variant/15 relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
+          <span class="material-symbols-outlined text-[10rem]">auto_awesome</span>
+        </div>
+        <h3 class="font-headline text-3xl font-bold text-primary mb-6">Need materials or a tutorial?</h3>
+        <p class="text-on-surface-variant max-w-2xl mx-auto mb-10">
+          Start in IB Physics, open the TOK page, check the AI tools, or book a tutorial directly if you need support.
+        </p>
+        <div class="flex justify-center gap-4 flex-wrap">
+          <a class="signature-gradient text-white px-10 py-4 rounded-xl font-bold shadow-lg shadow-primary/20" href="pages/resources.html">IB Physics</a>
+          <a class="bg-white text-primary px-10 py-4 rounded-xl font-bold border border-outline-variant" href="pages/meetings.html">Book Tutorials</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-50 border-t-0 mt-auto">
+    <div class="w-full px-8 py-12 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 md:gap-10">
+        <div class="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
+          <div class="text-lg font-bold text-slate-900">IB Physics &amp; TOK — UWC Costa Rica</div>
+          <div class="font-['Inter'] text-sm tracking-wide text-slate-500">Erick Loria Soto · <a class="hover:text-[#004099] transition-colors" href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></div>
+        </div>
+        <div class="font-['Inter'] text-sm tracking-wide text-slate-500 text-center md:text-right max-w-2xl">
+          <strong class="text-slate-700">Copyright 2026 Erick Loria Soto.</strong> All original site content, course materials, design, and writing are my own unless otherwise credited. Built with HTML, CSS, JavaScript, and GitHub Pages.
+        </div>
+      </div>
     </div>
-    <div class="home-about-copy">
-      <h2>Erick Loria Soto</h2>
-      <div class="home-about-role">Physics &amp; TOK Teacher · UWC Costa Rica</div>
-      <p>I was born in Costa Rica but raised in Milwaukee, Wisconsin, which has given me a blend of cultures and experiences that I bring to my teaching and everyday life.</p>
-      <p>As an educator and lifelong learner, I have dedicated my career to teaching Physics, Astronomy, and related courses. My goal is to design learning experiences that are engaging, rigorous, and intellectually curious.</p>
-      <p>I hold a Bachelor's degree in Physics from the Universidad de Costa Rica and I am currently pursuing a Master's degree in Teaching in the Natural Sciences at Universidad Nacional in Costa Rica.</p>
-      <p>Outside the classroom, I have a deep interest in astronomy and technology. I enjoy travel, hiking, and time in nature, and I also help at a yoga retreat center in the Osa Peninsula.</p>
-      <p><a href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></p>
-    </div>
-  </section>
-</main>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isExpanded));
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+  <script src="js/nav-dropdowns.js?v=20260321e"></script>
 </body>
 </html>

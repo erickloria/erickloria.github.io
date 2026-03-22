@@ -1,53 +1,433 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Listening Corner — Favorite Albums</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>Listening Corner | The Physics Lab</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary-fixed": "#001945",
+            "primary-fixed-dim": "#b0c6ff",
+            "on-primary-fixed-variant": "#04429b",
+            "on-error-container": "#93000a",
+            "tertiary": "#5b0050",
+            "on-background": "#1a1c1e",
+            "on-secondary-fixed": "#002117",
+            "surface-dim": "#d9dadc",
+            "secondary-fixed-dim": "#65dbb6",
+            "on-primary": "#ffffff",
+            "tertiary-fixed-dim": "#fface7",
+            "outline-variant": "#c3c6d4",
+            "on-surface": "#1a1c1e",
+            "secondary-fixed": "#82f8d1",
+            "inverse-on-surface": "#f0f0f3",
+            "outline": "#737783",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#434652",
+            "primary-container": "#004099",
+            "surface-container-low": "#f3f3f6",
+            "on-tertiary-fixed-variant": "#7d1a6e",
+            "surface-container": "#edeef0",
+            "primary": "#002b6c",
+            "inverse-surface": "#2f3133",
+            "inverse-primary": "#b0c6ff",
+            "error-container": "#ffdad6",
+            "primary-fixed": "#d9e2ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#e8e8ea",
+            "surface": "#f9f9fb",
+            "on-secondary": "#ffffff",
+            "tertiary-container": "#7b186c",
+            "surface-variant": "#e2e2e5",
+            "tertiary-fixed": "#ffd7f0",
+            "surface-container-highest": "#e2e2e5",
+            "on-tertiary-container": "#fe8be2",
+            "on-primary-container": "#92b1ff",
+            "error": "#ba1a1a",
+            "surface-tint": "#2d5bb4",
+            "background": "#f9f9fb",
+            "on-secondary-fixed-variant": "#00513e",
+            "secondary-container": "#82f8d1",
+            "on-error": "#ffffff",
+            "on-secondary-container": "#007259",
+            "surface-bright": "#f9f9fb",
+            "secondary": "#006c53",
+            "on-tertiary-fixed": "#3a0032"
+          },
+          fontFamily: {
+            "headline": ["Manrope", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+            "label": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "full": "9999px"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .blue-green-gradient {
+      background: linear-gradient(135deg, #004099 0%, #1DA381 100%);
+    }
+    .glass-panel {
+      backdrop-filter: blur(16px);
+      background: rgba(255, 255, 255, 0.7);
+    }
+    .listening-hero-shell {
+      background:
+        radial-gradient(circle at 12% 20%, rgba(130, 248, 209, 0.26), transparent 18%),
+        radial-gradient(circle at 84% 18%, rgba(255, 255, 255, 0.10), transparent 20%),
+        radial-gradient(circle at 78% 78%, rgba(91, 0, 80, 0.18), transparent 20%),
+        linear-gradient(135deg, #002b6c 0%, #004099 48%, #1DA381 100%);
+    }
+  </style>
 </head>
-<body>
-<script src="../js/layout.js?v=20260311b"></script>
-
-<div class="hero">
-  <div class="hero-ribbon"></div>
-  <div class="hero-circle-1"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">Personal Picks</div>
-    <h1>Listening Corner</h1>
-    <p>A personal collection of favorite albums, embedded directly from Spotify.</p>
-  </div>
-</div>
-
-<div class="page">
-  <div class="section">
-    <h2 class="section-title">Favorite Albums</h2>
-    <p class="section-desc">This section is not course content. It is a music corner for favorite albums, embedded so they can be opened directly in Spotify.</p>
-    <div class="callout callout-purple">
-      <span>Music</span>
-      <span>This page is for personal album recommendations, not physics or TOK resources.</span>
+<body class="bg-background text-on-background font-body">
+  <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm">
+    <div class="w-full px-8 py-4 max-w-7xl mx-auto flex items-center md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8">
+      <a class="text-xl font-extrabold tracking-tighter bg-gradient-to-r from-[#004099] to-[#1DA381] bg-clip-text text-transparent justify-self-start" href="../index.html">
+        The Physics Lab
+      </a>
+      <div class="hidden md:flex items-center gap-8 justify-self-center font-headline font-bold tracking-tight">
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="tok.html">TOK</a>
+        <a class="text-[#004099] font-bold border-b-2 border-[#1DA381] pb-1" href="misc.html">Resources</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="meetings.html">Meetings</a>
+      </div>
+      <div class="hidden md:flex justify-self-end">
+        <a class="bg-[#004099] text-white px-6 py-2.5 rounded-xl font-headline font-bold scale-95 active:scale-90 transition-transform" href="meetings.html">
+          Meetings
+        </a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden text-primary" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="material-symbols-outlined text-primary text-3xl">menu</span>
+      </button>
     </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Album Wall</h2>
-    <p class="section-desc">A rotating set of favorite albums. Open any embed in Spotify for the full album.</p>
-    <div class="grid grid-2">
-      <iframe title="Favorite album 1" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/5DksO6hOezz6mTfYOctZ6f?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <iframe title="Favorite album 2" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/2QJhJYgrwIL5C8x7FphmVk?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <iframe title="Favorite album 3" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/4jI9SU1GmpIVhHMuYZuvX7?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <iframe title="Favorite album 4" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/3SUEJULSGgBDG1j4GQhfYY?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <iframe title="Favorite album 5" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/661FeA95LRhOgZCJ3Y5u9A?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <iframe title="Favorite album 6" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/3hXBH2apQYcgAzJ4abv5Aj?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <iframe title="Favorite album 7" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/2pLYAv12XpOGIguLrVd7On?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <iframe title="Favorite album 8" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/5WulAOx9ilWy1h8UGZ1gkI?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <iframe title="Favorite album 9" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/2hnXyiBgYmjKm773tj7qm9?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <iframe title="Favorite album 10" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/48qd9sU3xqYJbKaxHCciJL?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <iframe title="Favorite album 11" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/20zS0R3OcV7IG9aTNujrPz?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <iframe title="Favorite album 12" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/59AeaIeAx6S2igYJFjltRE?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <iframe title="Favorite album 13" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/47pjW3XDPW99NShtkeewxl?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <div id="mobile-menu" class="hidden md:hidden px-8 pb-5 max-w-7xl mx-auto">
+      <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-4 flex flex-col gap-3 shadow-lg">
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="tok.html">TOK</a>
+        <a class="text-[#004099] font-bold" href="misc.html">Resources</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="meetings.html">Meetings</a>
+        <a class="bg-[#004099] text-white px-6 py-3 rounded-xl font-bold text-center transition-all active:scale-95 duration-150" href="meetings.html">
+          Meetings
+        </a>
+      </div>
     </div>
-  </div>
-</div>
+  </nav>
+
+  <main class="pt-20">
+    <section class="relative min-h-[716px] flex items-center overflow-hidden">
+      <div class="absolute inset-0 listening-hero-shell"></div>
+      <div class="absolute inset-0 blue-green-gradient opacity-40 mix-blend-multiply"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-8 w-full grid md:grid-cols-2 gap-12 items-center">
+        <div class="text-white">
+          <span class="inline-block py-1 px-3 bg-secondary rounded-full text-xs font-bold uppercase tracking-widest mb-6">Personal Picks</span>
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[4.75rem] font-headline font-extrabold tracking-tight mb-6 leading-[1.05] [text-wrap:balance]">
+            Listening Corner
+          </h1>
+          <p class="text-xl md:text-2xl font-light opacity-90 max-w-xl leading-relaxed mb-8">
+            Favorite albums from Spotify plus a few podcast recommendations in physics, science, and long-form conversation.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a class="bg-white text-primary px-8 py-4 rounded-xl font-headline font-extrabold flex items-center gap-2 hover:bg-surface-container transition-colors" href="#podcasts">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">podcasts</span>
+              <span>Open Podcasts</span>
+            </a>
+            <a class="bg-white/15 border border-white/20 text-white px-8 py-4 rounded-xl font-headline font-bold hover:bg-white/20 transition-colors" href="#albums">
+              Album Wall
+            </a>
+          </div>
+        </div>
+        <div class="hidden md:block relative">
+          <div class="glass-panel p-8 rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+            <div class="flex items-center justify-between gap-4 mb-6">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+                  <span class="material-symbols-outlined">graphic_eq</span>
+                </div>
+                <div>
+                  <h3 class="font-headline font-bold text-primary">Now Streaming</h3>
+                  <p class="text-xs text-on-surface-variant font-medium">Sean Carroll&apos;s Mindscape Podcast</p>
+                </div>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-[10px] font-bold uppercase tracking-widest">Podcast</span>
+            </div>
+            <p class="text-on-surface-variant leading-relaxed mb-6">
+              Long-form conversations on physics, cosmology, philosophy, and science.
+            </p>
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="rounded-xl bg-surface-container p-4">
+                <div class="text-2xl font-headline font-black text-primary mb-1">3</div>
+                <div class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Podcasts</div>
+              </div>
+              <div class="rounded-xl bg-surface-container p-4">
+                <div class="text-2xl font-headline font-black text-primary mb-1">13</div>
+                <div class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Spotify albums</div>
+              </div>
+            </div>
+            <a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="https://www.preposterousuniverse.com/podcast/" target="_blank" rel="noreferrer">
+              Open Podcast <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+          </div>
+          <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-secondary rounded-full opacity-20 blur-3xl"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 px-8 max-w-7xl mx-auto" id="podcasts">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <h2 class="text-4xl font-headline font-extrabold text-primary mb-4 tracking-tight">Academic Podcasts</h2>
+          <p class="text-on-surface-variant max-w-2xl">These are the podcast additions to the Listening Corner: long-form science and conversation alongside the existing music page.</p>
+        </div>
+        <div class="px-5 py-2 rounded-full bg-surface-container-high text-primary font-bold text-sm">3 podcast links</div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <a class="group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 border-none" href="https://www.preposterousuniverse.com/podcast/" target="_blank" rel="noreferrer">
+          <div class="relative h-48 overflow-hidden blue-green-gradient">
+            <div class="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20"></div>
+            <div class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Physics</div>
+            <div class="absolute inset-0 p-8 flex flex-col justify-end text-white">
+              <span class="material-symbols-outlined text-5xl mb-4">science</span>
+              <h4 class="text-2xl font-headline font-bold leading-tight">Sean Carroll&apos;s Mindscape Podcast</h4>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Long-form conversations on physics, cosmology, philosophy, and science.</p>
+            <div class="w-full py-3 rounded-xl bg-surface-container-high text-primary font-bold flex items-center justify-center gap-2 group-hover:bg-primary group-hover:text-white transition-all">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">open_in_new</span>
+              <span>Open Podcast</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500" href="https://lexfridman.com/podcast/" target="_blank" rel="noreferrer">
+          <div class="relative h-48 overflow-hidden bg-primary-container">
+            <div class="absolute top-4 right-4 bg-secondary-container text-on-secondary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase">Conversation</div>
+            <div class="absolute inset-0 p-8 flex flex-col justify-end text-white">
+              <span class="material-symbols-outlined text-5xl mb-4">mic</span>
+              <h4 class="text-2xl font-headline font-bold leading-tight">Lex Fridman Podcast</h4>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Long-form interviews spanning physics, math, AI, philosophy, and broader intellectual questions.</p>
+            <div class="w-full py-3 rounded-xl bg-surface-container-high text-primary font-bold flex items-center justify-center gap-2 group-hover:bg-primary group-hover:text-white transition-all">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">open_in_new</span>
+              <span>Open Podcast</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="group bg-surface-container-lowest rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500" href="https://podcasts.apple.com/us/podcast/physics-world-weekly-podcast/id1400686733" target="_blank" rel="noreferrer">
+          <div class="relative h-48 overflow-hidden bg-secondary">
+            <div class="absolute top-4 right-4 bg-white/15 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Weekly</div>
+            <div class="absolute inset-0 p-8 flex flex-col justify-end text-white">
+              <span class="material-symbols-outlined text-5xl mb-4">podcasts</span>
+              <h4 class="text-2xl font-headline font-bold leading-tight">Physics World Weekly</h4>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Physics news, research, and current discussions from the Physics World weekly podcast feed.</p>
+            <div class="w-full py-3 rounded-xl bg-surface-container-high text-primary font-bold flex items-center justify-center gap-2 group-hover:bg-primary group-hover:text-white transition-all">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">open_in_new</span>
+              <span>Open Podcast</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="bg-surface-container-low py-24">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-headline font-extrabold text-primary mb-4 tracking-tighter">Favorite Albums</h2>
+          <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+          <p class="text-on-surface-variant max-w-2xl mx-auto mt-6">The original music side of the page is still here: favorite albums embedded directly from Spotify.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-auto md:h-[600px] mb-12">
+          <div class="md:col-span-2 md:row-span-2 relative rounded-3xl overflow-hidden group">
+            <div class="w-full h-full blue-green-gradient p-10 flex flex-col justify-end">
+              <span class="text-secondary-fixed font-bold tracking-widest text-xs uppercase mb-4">Album Wall</span>
+              <h3 class="text-3xl md:text-4xl font-headline font-extrabold text-white mb-4">Favorite albums in one place</h3>
+              <p class="text-white/80 text-lg mb-6 max-w-md">This section is not course content. It is a music corner for favorite albums, embedded so they can be opened directly in Spotify.</p>
+              <div class="flex items-center gap-4">
+                <span class="text-white font-bold text-sm">13 EMBEDS</span>
+                <a class="w-12 h-12 rounded-full bg-white text-primary flex items-center justify-center shadow-lg hover:scale-110 transition-transform" href="#albums">
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">arrow_downward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="md:col-span-2 relative rounded-3xl overflow-hidden group bg-secondary-container">
+            <div class="absolute inset-0 p-8 flex flex-col justify-between">
+              <div class="flex justify-between items-start">
+                <h3 class="text-2xl font-headline font-bold text-on-secondary-container max-w-[220px]">Music first, podcasts added</h3>
+                <span class="bg-on-secondary-container/10 px-3 py-1 rounded-full text-[10px] font-bold text-on-secondary-container uppercase">Updated</span>
+              </div>
+              <div class="flex items-end justify-between gap-4">
+                <p class="text-on-secondary-container/80 text-sm max-w-[240px]">The page keeps the personal Spotify album wall and now also includes the three podcast links you asked for.</p>
+                <div class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center shadow-md">
+                  <span class="material-symbols-outlined text-sm">headphones</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="md:col-span-1 relative rounded-3xl overflow-hidden group bg-primary text-white">
+            <div class="absolute inset-0 p-6 flex flex-col justify-end">
+              <span class="material-symbols-outlined text-4xl mb-4">music_note</span>
+              <h4 class="font-headline font-bold text-lg">Spotify Albums</h4>
+            </div>
+          </div>
+          <div class="md:col-span-1 relative rounded-3xl overflow-hidden group bg-tertiary">
+            <div class="absolute inset-0 p-6 flex flex-col justify-end text-white">
+              <span class="material-symbols-outlined text-4xl mb-4">podcasts</span>
+              <h4 class="font-headline font-bold text-lg">Podcast Picks</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6" id="albums">
+          <div class="bg-white rounded-2xl p-4 editorial-shadow">
+            <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">Album 01</div>
+            <iframe title="Favorite album 1" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/5DksO6hOezz6mTfYOctZ6f?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="bg-white rounded-2xl p-4 editorial-shadow">
+            <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">Album 02</div>
+            <iframe title="Favorite album 2" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/2QJhJYgrwIL5C8x7FphmVk?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="bg-white rounded-2xl p-4 editorial-shadow">
+            <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">Album 03</div>
+            <iframe title="Favorite album 3" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/4jI9SU1GmpIVhHMuYZuvX7?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="bg-white rounded-2xl p-4 editorial-shadow">
+            <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">Album 04</div>
+            <iframe title="Favorite album 4" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/3SUEJULSGgBDG1j4GQhfYY?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="bg-white rounded-2xl p-4 editorial-shadow">
+            <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">Album 05</div>
+            <iframe title="Favorite album 5" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/661FeA95LRhOgZCJ3Y5u9A?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="bg-white rounded-2xl p-4 editorial-shadow">
+            <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">Album 06</div>
+            <iframe title="Favorite album 6" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/3hXBH2apQYcgAzJ4abv5Aj?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="bg-white rounded-2xl p-4 editorial-shadow">
+            <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">Album 07</div>
+            <iframe title="Favorite album 7" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/2pLYAv12XpOGIguLrVd7On?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="bg-white rounded-2xl p-4 editorial-shadow">
+            <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">Album 08</div>
+            <iframe title="Favorite album 8" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/5WulAOx9ilWy1h8UGZ1gkI?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="bg-white rounded-2xl p-4 editorial-shadow">
+            <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">Album 09</div>
+            <iframe title="Favorite album 9" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/2hnXyiBgYmjKm773tj7qm9?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="bg-white rounded-2xl p-4 editorial-shadow">
+            <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">Album 10</div>
+            <iframe title="Favorite album 10" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/48qd9sU3xqYJbKaxHCciJL?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="bg-white rounded-2xl p-4 editorial-shadow">
+            <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">Album 11</div>
+            <iframe title="Favorite album 11" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/20zS0R3OcV7IG9aTNujrPz?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="bg-white rounded-2xl p-4 editorial-shadow">
+            <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">Album 12</div>
+            <iframe title="Favorite album 12" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/59AeaIeAx6S2igYJFjltRE?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="bg-white rounded-2xl p-4 editorial-shadow xl:col-span-3">
+            <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">Album 13</div>
+            <iframe title="Favorite album 13" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/47pjW3XDPW99NShtkeewxl?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 max-w-7xl mx-auto px-8">
+      <div class="bg-primary-container rounded-[2rem] p-8 md:p-16 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-secondary opacity-20 blur-[100px] -mr-32 -mt-32"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-primary opacity-30 blur-[100px] -ml-32 -mb-32"></div>
+        <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-4xl font-headline font-extrabold text-on-primary-container mb-6 leading-tight">Personal music corner,<br>plus podcast additions</h2>
+            <p class="text-on-primary-container/80 text-lg mb-8 leading-relaxed">
+              This page is still the personal album wall from before, and now it also includes the three podcast recommendations you asked to add.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a class="px-6 py-3 rounded-xl bg-secondary text-white font-headline font-extrabold hover:bg-opacity-90 transition-all" href="#podcasts">Go to Podcasts</a>
+              <a class="px-6 py-3 rounded-xl bg-white/10 text-white border border-white/20 font-headline font-bold hover:bg-white/15 transition-colors" href="#albums">Go to Albums</a>
+            </div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl">
+            <h3 class="text-xl font-headline font-bold text-white mb-6">What is on the page now</h3>
+            <ul class="space-y-4 mb-2">
+              <li class="flex items-center text-white/90 text-sm">
+                <span class="material-symbols-outlined text-secondary mr-3">check_circle</span>
+                13 Spotify album embeds
+              </li>
+              <li class="flex items-center text-white/90 text-sm">
+                <span class="material-symbols-outlined text-secondary mr-3">check_circle</span>
+                Sean Carroll&apos;s Mindscape Podcast
+              </li>
+              <li class="flex items-center text-white/90 text-sm">
+                <span class="material-symbols-outlined text-secondary mr-3">check_circle</span>
+                Lex Fridman Podcast
+              </li>
+              <li class="flex items-center text-white/90 text-sm">
+                <span class="material-symbols-outlined text-secondary mr-3">check_circle</span>
+                Physics World Weekly
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-50 w-full mt-auto">
+    <div class="w-full px-8 py-12 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 md:gap-10">
+        <div class="flex flex-col gap-2 text-center md:text-left">
+          <div class="text-lg font-bold text-slate-900">IB Physics &amp; TOK — UWC Costa Rica</div>
+          <div class="font-['Inter'] text-sm tracking-wide text-slate-500">Erick Loria Soto · <a class="hover:text-[#004099] transition-colors" href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></div>
+        </div>
+        <div class="font-['Inter'] text-sm tracking-wide text-slate-500 text-center md:text-right max-w-2xl">
+          <strong class="text-slate-700">Copyright 2026 Erick Loria Soto.</strong> All original site content, course materials, design, and writing are my own unless otherwise credited. Built with HTML, CSS, JavaScript, and GitHub Pages.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isExpanded));
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+  <script src="../js/nav-dropdowns.js?v=20260321e"></script>
 </body>
 </html>

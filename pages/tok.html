@@ -1,39 +1,428 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Theory of Knowledge (TOK) — IB Physics &amp; TOK</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>The Art of Inquiry | Theory of Knowledge</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#e8e8ea",
+            "primary-fixed": "#d9e2ff",
+            "secondary-fixed-dim": "#65dbb6",
+            "on-secondary-fixed-variant": "#00513e",
+            "on-tertiary-container": "#fe8be2",
+            "on-tertiary": "#ffffff",
+            "on-primary-container": "#92b1ff",
+            "secondary-fixed": "#82f8d1",
+            "primary": "#002b6c",
+            "primary-fixed-dim": "#b0c6ff",
+            "on-tertiary-fixed-variant": "#7d1a6e",
+            "surface-container-low": "#f3f3f6",
+            "surface-container": "#edeef0",
+            "on-tertiary-fixed": "#3a0032",
+            "tertiary-fixed": "#ffd7f0",
+            "on-secondary-fixed": "#002117",
+            "on-error": "#ffffff",
+            "on-surface-variant": "#434652",
+            "secondary-container": "#82f8d1",
+            "tertiary-fixed-dim": "#fface7",
+            "error-container": "#ffdad6",
+            "tertiary": "#5b0050",
+            "on-primary": "#ffffff",
+            "inverse-surface": "#2f3133",
+            "primary-container": "#004099",
+            "surface-bright": "#f9f9fb",
+            "background": "#f9f9fb",
+            "on-background": "#1a1c1e",
+            "inverse-on-surface": "#f0f0f3",
+            "inverse-primary": "#b0c6ff",
+            "outline-variant": "#c3c6d4",
+            "surface-container-highest": "#e2e2e5",
+            "surface": "#f9f9fb",
+            "surface-dim": "#d9dadc",
+            "on-primary-fixed-variant": "#04429b",
+            "outline": "#737783",
+            "on-surface": "#1a1c1e",
+            "error": "#ba1a1a",
+            "surface-tint": "#2d5bb4",
+            "surface-variant": "#e2e2e5",
+            "on-secondary": "#ffffff",
+            "on-error-container": "#93000a",
+            "on-primary-fixed": "#001945",
+            "secondary": "#006c53",
+            "on-secondary-container": "#007259",
+            "tertiary-container": "#7b186c"
+          },
+          fontFamily: {
+            "headline": ["Manrope", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+            "label": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .signature-gradient {
+      background: linear-gradient(135deg, #004099 0%, #1DA381 100%);
+    }
+    .editorial-shadow {
+      box-shadow: 0 24px 48px -12px rgba(0, 43, 108, 0.08);
+    }
+    .tok-gradient-panel {
+      background:
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.26), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(130, 248, 209, 0.28), transparent 34%),
+        linear-gradient(135deg, #004099 0%, #1DA381 100%);
+    }
+    .tok-surface-panel {
+      background:
+        radial-gradient(circle at top right, rgba(0, 64, 153, 0.12), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(29, 163, 129, 0.16), transparent 32%),
+        linear-gradient(180deg, #f9f9fb 0%, #edeef0 100%);
+    }
+  </style>
 </head>
-<body>
-<script src="../js/layout.js?v=20260311b"></script>
-
-<div class="hero">
-  <div class="hero-ribbon"></div>
-  <div class="hero-circle-1"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">Resources</div>
-    <h1>Theory of Knowledge (TOK)</h1>
-    <p>Course materials and guidance for Theory of Knowledge, including the exhibition and essay components.</p>
-  </div>
-</div>
-
-<div class="page">
-  <div class="section">
-    <h2 class="section-title">TOK Course Resource</h2>
-    <p class="section-desc">Prompt dissection and argument support for Theory of Knowledge writing.</p>
-    <div class="grid grid-2">
-      <a class="link-card card-blue" href="tok-exhibition-guide.html">
-        <div class="card-icon icon-blue">TOK</div>
-        <div>
-          <div class="link-card-label">TOK Exhibition Guide</div>
-          <div class="link-card-desc">A planning guide for dissecting prompts, building arguments, and integrating objects into the exhibition.</div>
-        </div>
-        <span class="link-arrow">Open</span>
+<body class="bg-surface font-body text-on-surface">
+  <nav class="bg-white/80 backdrop-blur-xl shadow-sm sticky top-0 z-50">
+    <div class="w-full px-8 py-4 max-w-7xl mx-auto flex items-center md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8">
+      <a class="text-xl font-extrabold tracking-tighter bg-gradient-to-r from-[#004099] to-[#1DA381] bg-clip-text text-transparent justify-self-start" href="../index.html">
+        The Physics Lab
       </a>
+      <div class="hidden md:flex items-center gap-8 justify-self-center">
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="resources.html">IB Physics</a>
+        <a class="text-[#004099] font-bold border-b-2 border-[#1DA381] pb-1" href="tok.html">TOK</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="misc.html">Resources</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="meetings.html">Meetings</a>
+      </div>
+      <div class="hidden md:flex justify-self-end">
+        <a class="signature-gradient text-on-primary px-6 py-2.5 rounded-xl font-bold tracking-tight active:scale-95 duration-150 ease-in-out" href="meetings.html">
+          Meetings
+        </a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden text-primary" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="material-symbols-outlined text-primary text-3xl">menu</span>
+      </button>
     </div>
-  </div>
-</div>
+    <div id="mobile-menu" class="hidden md:hidden px-8 pb-5 max-w-7xl mx-auto">
+      <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-4 flex flex-col gap-3 shadow-lg">
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="resources.html">IB Physics</a>
+        <a class="text-[#004099] font-bold" href="tok.html">TOK</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="misc.html">Resources</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="meetings.html">Meetings</a>
+        <a class="signature-gradient text-white px-6 py-3 rounded-xl font-bold text-center transition-all active:scale-95 duration-150" href="meetings.html">
+          Meetings
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-8 py-16">
+    <header class="relative mb-32 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-7 z-10">
+        <span class="inline-block text-secondary font-bold tracking-widest text-xs uppercase mb-4 bg-secondary-fixed px-3 py-1 rounded-full">UWC Costa Rica</span>
+        <h1 class="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-extrabold tracking-tight text-primary leading-[1.05] mb-8 [text-wrap:balance]">
+          The Art of <span class="inline-block pr-[0.08em] text-transparent bg-clip-text signature-gradient">Inquiry.</span>
+        </h1>
+        <p class="text-on-surface-variant text-xl max-w-xl leading-relaxed">
+          Prompt dissection, argument scaffolding, object integration, and rubric-focused planning for Theory of Knowledge at UWC Costa Rica.
+        </p>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="aspect-[4/5] rounded-xl overflow-hidden editorial-shadow transform rotate-2 tok-gradient-panel">
+          <div class="h-full p-10 flex flex-col gap-6 text-white">
+            <div class="flex items-center justify-between text-xs font-bold tracking-[0.2em] uppercase text-white/80">
+              <span>Theory of Knowledge</span>
+              <span>2026</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined text-8xl mb-8 block text-white/90">psychology</span>
+              <div class="grid grid-cols-1 gap-3">
+                <div class="bg-white/15 backdrop-blur-sm rounded-xl px-4 py-3 text-sm font-semibold">Prompt -> claim -> argument -> example</div>
+                <div class="flex gap-3">
+                  <div class="bg-white/15 backdrop-blur-sm rounded-xl px-4 py-3 text-sm font-semibold">3 objects</div>
+                  <div class="bg-white/15 backdrop-blur-sm rounded-xl px-4 py-3 text-sm font-semibold">950 words</div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-auto bg-white/15 backdrop-blur-sm rounded-xl px-5 py-4">
+              <p class="text-sm font-semibold leading-relaxed text-white">Use precise TOK language: evidence, justification, perspective, bias, scope, and certainty.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="mb-32">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+        <h2 class="font-headline text-4xl font-bold tracking-tight text-primary">Prompt Dissection</h2>
+        <p class="text-on-surface-variant font-medium">Direct the prompt before you start drafting the commentary.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="md:col-span-2 bg-primary-container p-10 rounded-xl relative overflow-hidden flex flex-col justify-end min-h-[400px]">
+          <div class="absolute top-0 right-0 p-8 opacity-20">
+            <span class="material-symbols-outlined text-9xl text-white">psychology</span>
+          </div>
+          <div class="relative z-10">
+            <h3 class="text-white font-headline text-3xl font-bold mb-4">Direct the Prompt</h3>
+            <p class="text-on-primary-container text-lg mb-6 max-w-lg">Break it down, define key terms, contextualize it, clarify scope, anticipate tensions, and draft an initial stance before building the exhibition commentary.</p>
+            <a class="bg-white text-primary px-6 py-3 rounded-xl font-bold hover:bg-opacity-90 transition-all inline-flex" href="tok-exhibition-guide.html">Open Exhibition Guide</a>
+          </div>
+        </div>
+
+        <div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between">
+          <span class="material-symbols-outlined text-secondary text-4xl">lightbulb</span>
+          <div>
+            <h4 class="font-headline text-xl font-bold text-primary mb-2">Define Key Terms</h4>
+            <p class="text-on-surface-variant text-sm">Rewrite the prompt in your own words and give clear everyday and TOK-specific definitions to the central terms.</p>
+          </div>
+        </div>
+
+        <div class="bg-surface-container-high p-8 rounded-xl flex flex-col justify-between">
+          <span class="material-symbols-outlined text-primary text-4xl">rule</span>
+          <div>
+            <h4 class="font-headline text-xl font-bold text-primary mb-2">Clarify Scope</h4>
+            <p class="text-on-surface-variant text-sm">Decide whether the question applies to all knowledge or only certain domains, and where tensions of perspective may appear.</p>
+          </div>
+        </div>
+
+        <div class="md:col-span-2 bg-secondary-fixed p-8 rounded-xl flex flex-col md:flex-row items-center gap-8">
+          <div class="flex-1">
+            <h4 class="font-headline text-2xl font-bold text-on-secondary-fixed mb-2">Exhibition Planning</h4>
+            <p class="text-on-secondary-fixed-variant mb-4">Later, connect each example to three chosen objects and turn the scaffold into a focused commentary with clear real-world contexts.</p>
+            <div class="flex gap-2">
+              <span class="bg-white/50 px-3 py-1 rounded-full text-xs font-bold text-secondary">3 Objects</span>
+              <span class="bg-white/50 px-3 py-1 rounded-full text-xs font-bold text-secondary">950 Words</span>
+            </div>
+          </div>
+          <div class="w-full md:w-48 aspect-video bg-white/20 rounded-lg flex items-center justify-center">
+            <span class="material-symbols-outlined text-6xl text-secondary">gallery_thumbnail</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-32 bg-surface-container-low -mx-8 px-8 py-24">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <h2 class="font-headline text-4xl font-bold tracking-tight text-primary mb-6">Argument Scaffold</h2>
+            <p class="text-on-surface-variant text-lg mb-8">
+              Once the prompt is dissected, move into a clear claim-argument-example structure and justify how each object contributes to answering the selected prompt.
+            </p>
+            <div class="space-y-4">
+              <details class="group bg-white rounded-xl overflow-hidden transition-all duration-300">
+                <summary class="list-none p-6 flex justify-between items-center cursor-pointer font-bold text-primary">
+                  Claim
+                  <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-on-surface-variant text-sm leading-relaxed">
+                  Start with a direct answer to the prompt in one clear sentence so the commentary has a visible line of reasoning from the start.
+                </div>
+              </details>
+              <details class="group bg-white rounded-xl overflow-hidden transition-all duration-300">
+                <summary class="list-none p-6 flex justify-between items-center cursor-pointer font-bold text-primary">
+                  Argument
+                  <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-on-surface-variant text-sm leading-relaxed">
+                  Build reasoning grounded in TOK concepts, Areas of Knowledge, methods, and logic rather than only summary or description.
+                </div>
+              </details>
+              <details class="group bg-white rounded-xl overflow-hidden transition-all duration-300">
+                <summary class="list-none p-6 flex justify-between items-center cursor-pointer font-bold text-primary">
+                  Example
+                  <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-on-surface-variant text-sm leading-relaxed">
+                  Use a concrete case that shows the claim working in context, then align that example to one of the three exhibition objects.
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="space-y-6">
+            <div>
+              <h3 class="font-headline text-2xl font-bold tracking-tight text-primary mb-2">12 TOK Concepts</h3>
+              <p class="text-on-surface-variant leading-relaxed">Use these concepts to deepen your claims, examples, counterclaims, and reflections across the exhibition commentary.</p>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div class="min-h-[132px] bg-primary-container text-white rounded-xl flex items-end p-5 editorial-shadow">
+                <div>
+                  <span class="material-symbols-outlined text-3xl mb-3">fact_check</span>
+                  <p class="font-headline font-bold">Evidence</p>
+                </div>
+              </div>
+              <div class="min-h-[132px] bg-surface-container-highest rounded-xl flex items-end p-5 editorial-shadow">
+                <div>
+                  <span class="material-symbols-outlined text-3xl text-secondary mb-3">help_center</span>
+                  <p class="font-headline font-bold text-primary">Certainty</p>
+                </div>
+              </div>
+              <div class="min-h-[132px] bg-secondary text-white rounded-xl flex items-end p-5 editorial-shadow">
+                <div>
+                  <span class="material-symbols-outlined text-3xl mb-3">verified</span>
+                  <p class="font-headline font-bold">Truth</p>
+                </div>
+              </div>
+              <div class="min-h-[132px] bg-white rounded-xl flex items-end p-5 editorial-shadow">
+                <div>
+                  <span class="material-symbols-outlined text-3xl text-primary mb-3">visibility</span>
+                  <p class="font-headline font-bold text-primary">Interpretation</p>
+                </div>
+              </div>
+              <div class="min-h-[132px] bg-tertiary-container text-white rounded-xl flex items-end p-5 editorial-shadow">
+                <div>
+                  <span class="material-symbols-outlined text-3xl mb-3">bolt</span>
+                  <p class="font-headline font-bold">Power</p>
+                </div>
+              </div>
+              <div class="min-h-[132px] bg-surface-container-high rounded-xl flex items-end p-5 editorial-shadow">
+                <div>
+                  <span class="material-symbols-outlined text-3xl text-primary mb-3">balance</span>
+                  <p class="font-headline font-bold text-primary">Justification</p>
+                </div>
+              </div>
+              <div class="min-h-[132px] bg-surface-container-highest rounded-xl flex items-end p-5 editorial-shadow">
+                <div>
+                  <span class="material-symbols-outlined text-3xl text-secondary mb-3">menu_book</span>
+                  <p class="font-headline font-bold text-primary">Explanation</p>
+                </div>
+              </div>
+              <div class="min-h-[132px] bg-white rounded-xl flex items-end p-5 editorial-shadow">
+                <div>
+                  <span class="material-symbols-outlined text-3xl text-primary mb-3">center_focus_strong</span>
+                  <p class="font-headline font-bold text-primary">Objectivity</p>
+                </div>
+              </div>
+              <div class="min-h-[132px] bg-secondary-fixed rounded-xl flex items-end p-5 editorial-shadow">
+                <div>
+                  <span class="material-symbols-outlined text-3xl text-secondary mb-3">groups</span>
+                  <p class="font-headline font-bold text-on-secondary-fixed">Perspective</p>
+                </div>
+              </div>
+              <div class="min-h-[132px] bg-surface-container-high rounded-xl flex items-end p-5 editorial-shadow">
+                <div>
+                  <span class="material-symbols-outlined text-3xl text-primary mb-3">public</span>
+                  <p class="font-headline font-bold text-primary">Culture</p>
+                </div>
+              </div>
+              <div class="min-h-[132px] bg-surface-container-highest rounded-xl flex items-end p-5 editorial-shadow">
+                <div>
+                  <span class="material-symbols-outlined text-3xl text-secondary mb-3">gavel</span>
+                  <p class="font-headline font-bold text-primary">Values</p>
+                </div>
+              </div>
+              <div class="min-h-[132px] bg-primary-container text-white rounded-xl flex items-end p-5 editorial-shadow">
+                <div>
+                  <span class="material-symbols-outlined text-3xl mb-3">task_alt</span>
+                  <p class="font-headline font-bold">Responsibility</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-32">
+      <div class="relative">
+        <div class="absolute -top-12 -left-4 text-9xl font-extrabold text-surface-container opacity-50 z-0 select-none">PERSPECTIVES</div>
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-5">
+            <div class="rounded-xl overflow-hidden editorial-shadow transform -rotate-3 border-8 border-white tok-surface-panel aspect-[4/5]">
+              <div class="h-full p-8 flex flex-col justify-between">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold tracking-[0.2em] uppercase text-primary/70">Final Self-Check</span>
+                  <span class="material-symbols-outlined text-primary text-3xl">assignment_turned_in</span>
+                </div>
+                <div class="space-y-4">
+                  <div class="rounded-xl bg-white/80 px-5 py-4 text-sm font-semibold text-primary">Do all three objects have precise real-world contexts?</div>
+                  <div class="rounded-xl bg-white/80 px-5 py-4 text-sm font-semibold text-primary">Are the links to the prompt clear and convincing?</div>
+                  <div class="rounded-xl bg-white/80 px-5 py-4 text-sm font-semibold text-primary">Does each paragraph move from object to concept to implication?</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-7">
+            <h2 class="font-headline text-4xl font-bold tracking-tight text-primary mb-6">Scaffolding Perspectives</h2>
+            <p class="text-on-surface-variant text-lg mb-8 leading-relaxed">
+              Strong TOK writing acknowledges alternative perspectives, responds to counterclaims, and reflects on the assumptions that shape the final position.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="p-6 border-l-4 border-secondary bg-surface-container-lowest">
+                <h5 class="font-bold text-primary mb-2">Counterclaim</h5>
+                <p class="text-sm text-on-surface-variant">Recognize the strength of a reasonable counterclaim before responding to it. That usually makes the final position more credible.</p>
+              </div>
+              <div class="p-6 border-l-4 border-primary bg-surface-container-lowest">
+                <h5 class="font-bold text-primary mb-2">Reflection</h5>
+                <p class="text-sm text-on-surface-variant">Show self-awareness by identifying an assumption, bias, or perspective that complicated your original view.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-primary-container rounded-xl overflow-hidden relative p-12 md:p-24 text-center">
+      <div class="absolute inset-0 signature-gradient opacity-90"></div>
+      <div class="relative z-10 max-w-2xl mx-auto">
+        <h2 class="font-headline text-4xl md:text-5xl font-bold text-white mb-6">Ready to plan your exhibition?</h2>
+        <p class="text-on-primary-container text-xl mb-10">
+          Open the full TOK exhibition guide for the scaffold, rubric, and final self-check, or book a tutorial for direct feedback.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a class="bg-white text-primary px-10 py-4 rounded-xl font-bold text-lg hover:bg-surface-container transition-colors shadow-lg" href="tok-exhibition-guide.html">Open Exhibition Guide</a>
+          <a class="bg-transparent text-white border-2 border-white/30 px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors" href="meetings.html">Book Tutorial</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-50 w-full mt-auto">
+    <div class="w-full px-8 py-12 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 md:gap-10">
+        <div class="flex flex-col gap-2 text-center md:text-left">
+          <div class="text-lg font-bold text-slate-900">IB Physics &amp; TOK — UWC Costa Rica</div>
+          <div class="font-['Inter'] text-sm tracking-wide text-slate-500">Erick Loria Soto · <a class="hover:text-[#004099] transition-colors" href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></div>
+        </div>
+        <div class="font-['Inter'] text-sm tracking-wide text-slate-500 text-center md:text-right max-w-2xl">
+          <strong class="text-slate-700">Copyright 2026 Erick Loria Soto.</strong> All original site content, course materials, design, and writing are my own unless otherwise credited. Built with HTML, CSS, JavaScript, and GitHub Pages.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isExpanded));
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+  <script src="../js/nav-dropdowns.js?v=20260321e"></script>
 </body>
 </html>

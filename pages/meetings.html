@@ -1,164 +1,251 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book a Meeting — IB Physics &amp; TOK</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>Meetings | The Physics Lab</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-variant": "#e2e2e5",
+            "secondary-fixed-dim": "#65dbb6",
+            "primary-fixed": "#d9e2ff",
+            "surface-container-lowest": "#ffffff",
+            "on-surface": "#1a1c1e",
+            "on-tertiary-fixed-variant": "#7d1a6e",
+            "secondary-container": "#82f8d1",
+            "surface-tint": "#2d5bb4",
+            "primary-fixed-dim": "#b0c6ff",
+            "primary-container": "#004099",
+            "inverse-primary": "#b0c6ff",
+            "surface-dim": "#d9dadc",
+            "secondary-fixed": "#82f8d1",
+            "inverse-surface": "#2f3133",
+            "on-tertiary-fixed": "#3a0032",
+            "tertiary-fixed-dim": "#fface7",
+            "outline": "#737783",
+            "on-secondary-fixed": "#002117",
+            "tertiary-container": "#7b186c",
+            "on-tertiary": "#ffffff",
+            "surface-container": "#edeef0",
+            "background": "#f9f9fb",
+            "outline-variant": "#c3c6d4",
+            "on-primary-fixed": "#001945",
+            "tertiary": "#5b0050",
+            "secondary": "#006c53",
+            "on-secondary": "#ffffff",
+            "error-container": "#ffdad6",
+            "surface-container-low": "#f3f3f6",
+            "on-error-container": "#93000a",
+            "surface-container-highest": "#e2e2e5",
+            "tertiary-fixed": "#ffd7f0",
+            "inverse-on-surface": "#f0f0f3",
+            "on-primary-fixed-variant": "#04429b",
+            "error": "#ba1a1a",
+            "on-secondary-container": "#007259",
+            "on-primary-container": "#92b1ff",
+            "on-primary": "#ffffff",
+            "on-error": "#ffffff",
+            "on-secondary-fixed-variant": "#00513e",
+            "surface-container-high": "#e8e8ea",
+            "surface-bright": "#f9f9fb",
+            "primary": "#002b6c",
+            "on-surface-variant": "#434652",
+            "surface": "#f9f9fb",
+            "on-tertiary-container": "#fe8be2",
+            "on-background": "#1a1c1e"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          }
+        }
+      }
+    };
+  </script>
   <style>
-    .meetings-shell {
-      display: grid;
-      gap: 28px;
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     }
-    .meetings-intro {
-      background: linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(230,236,245,0.84) 100%);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: 0 22px 48px rgba(15, 33, 64, 0.10);
+    .signature-gradient {
+      background: linear-gradient(135deg, #004099 0%, #1DA381 100%);
+    }
+    .glass-panel {
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-    }
-    .meetings-intro h2 {
-      font-size: 28px;
-      line-height: 1.15;
-      color: var(--heading);
-      margin-bottom: 10px;
-    }
-    .meetings-intro p {
-      max-width: 760px;
-      color: var(--muted);
-      font-size: 15px;
-    }
-    .meetings-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 22px;
-      align-items: start;
-    }
-    .meetings-panel {
-      background: linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.80) 100%);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 24px;
-      box-shadow: 0 20px 44px rgba(15, 33, 64, 0.10);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-    }
-    .meetings-panel-primary {
-      background: linear-gradient(135deg, rgba(255,255,255,0.94) 0%, rgba(230,236,245,0.84) 100%);
-    }
-    .meetings-panel h3 {
-      font-size: 22px;
-      color: var(--heading);
-      margin-bottom: 6px;
-    }
-    .meetings-panel p {
-      color: var(--muted);
-      font-size: 14.5px;
-      line-height: 1.7;
-      margin-bottom: 18px;
-    }
-    .meetings-note {
-      background: var(--blue-10);
-      border: 1px solid var(--blue-25);
-      border-radius: 16px;
-      padding: 14px 16px;
-      color: var(--callout-blue-text);
-      font-size: 14px;
-      line-height: 1.6;
-      margin-bottom: 18px;
-    }
-    .meetings-panel .calendar-embed iframe {
-      height: 650px;
-    }
-    @media (prefers-color-scheme: dark) {
-      .meetings-intro,
-      .meetings-panel,
-      .meetings-panel-primary {
-        background: linear-gradient(180deg, rgba(18,28,46,0.92) 0%, rgba(18,28,46,0.76) 100%);
-      }
-    }
-    @media (max-width: 1024px) {
-      .meetings-shell {
-        gap: 22px;
-      }
-      .meetings-intro {
-        padding: 24px;
-      }
-      .meetings-intro h2 {
-        font-size: 24px;
-      }
-      .meetings-panel {
-        padding: 22px;
-      }
-      .meetings-panel h3 {
-        font-size: 20px;
-      }
-      .meetings-panel .calendar-embed iframe {
-        height: 560px;
-      }
-    }
-    @media (max-width: 900px) {
-      .meetings-intro {
-        padding: 22px;
-      }
-    }
-    @media (max-width: 768px) {
-      .meetings-shell {
-        gap: 18px;
-      }
-      .meetings-intro,
-      .meetings-panel {
-        padding: 18px;
-        border-radius: 22px;
-      }
-      .meetings-intro h2,
-      .meetings-panel h3 {
-        line-height: 1.1;
-      }
-      .meetings-intro p,
-      .meetings-panel p,
-      .meetings-note {
-        font-size: 14px;
-      }
-      .meetings-panel .calendar-embed iframe {
-        height: 440px;
-      }
+      background: rgba(255, 255, 255, 0.72);
     }
   </style>
 </head>
-<body>
-<script src="../js/layout.js?v=20260311b"></script>
-
-<div class="hero">
-  <div class="hero-ribbon"></div>
-  <div class="hero-circle-1"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">Appointments</div>
-    <h1>Book a Meeting</h1>
-    <p>Use the calendar below to schedule a meeting time.</p>
-  </div>
-</div>
-
-<div class="page">
-  <div class="meetings-shell">
-    <div class="meetings-intro">
-      <h2>Meetings and Availability</h2>
-      <p>Use this page to schedule time with me directly through the appointment scheduler below.</p>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col">
+  <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm shadow-blue-900/5">
+    <div class="w-full max-w-7xl mx-auto px-8 h-20 flex items-center md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8">
+      <a class="text-2xl font-extrabold bg-gradient-to-r from-[#004099] to-[#1DA381] bg-clip-text text-transparent font-headline tracking-tight justify-self-start" href="../index.html">
+        The Physics Lab
+      </a>
+      <nav class="hidden md:flex items-center gap-8 justify-self-center">
+        <a class="text-slate-600 hover:text-[#004099] transition-all duration-300 font-medium" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 hover:text-[#004099] transition-all duration-300 font-medium" href="tok.html">TOK</a>
+        <a class="text-slate-600 hover:text-[#004099] transition-all duration-300 font-medium" href="misc.html">Resources</a>
+        <a class="text-slate-600 hover:text-[#004099] transition-all duration-300 font-medium" href="ai-tools.html">AI Tools</a>
+        <a class="text-[#004099] border-b-2 border-[#1DA381] pb-1 font-semibold" href="meetings.html">Meetings</a>
+      </nav>
+      <div class="hidden md:flex justify-self-end">
+        <a class="signature-gradient text-white px-6 py-2 rounded-xl font-headline font-bold active:scale-95 transition-transform" href="meetings.html">
+          Meetings
+        </a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden text-primary justify-self-end" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="material-symbols-outlined text-primary text-3xl">menu</span>
+      </button>
     </div>
+    <div id="mobile-menu" class="hidden md:hidden px-8 pb-5 max-w-7xl mx-auto">
+      <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-4 flex flex-col gap-3 shadow-lg">
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="tok.html">TOK</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="misc.html">Resources</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="ai-tools.html">AI Tools</a>
+        <a class="text-[#004099] font-bold" href="meetings.html">Meetings</a>
+        <a class="signature-gradient text-white px-6 py-3 rounded-xl font-bold text-center transition-all active:scale-95 duration-150" href="meetings.html">
+          Meetings
+        </a>
+      </div>
+    </div>
+  </header>
 
-    <div class="meetings-grid">
-      <div class="meetings-panel meetings-panel-primary">
-        <h3>Book a Meeting</h3>
-        <p>Choose an available appointment slot below. This is the best option for office hours, quick questions, or planned one-to-one meetings.</p>
-        <div class="meetings-note">If the scheduler does not appear, use the direct link above to open it in a new tab.</div>
-        <div class="calendar-embed">
-          <iframe src="https://calendar.google.com/calendar/appointments/AcZssZ30mE65qXhSu3dgsjZ18lq192wTG6kcVGG0-2g=?gv=true" title="Google Calendar appointment scheduling" style="border:0;" width="100%" height="650" frameborder="0"></iframe>
+  <main class="flex-grow pt-32 pb-20 px-8 max-w-7xl mx-auto w-full">
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-24">
+      <div class="lg:col-span-7">
+        <span class="inline-block py-1 px-3 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-widest uppercase mb-6 font-label">
+          Appointments
+        </span>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-headline font-extrabold text-primary leading-[1.05] tracking-tight mb-8 [text-wrap:balance]">
+          Book a <span class="inline-block pr-[0.08em] bg-gradient-to-r from-[#004099] to-[#1DA381] bg-clip-text text-transparent">Tutorial</span>
+        </h1>
+        <p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+          Use the calendar below to schedule a tutorial. This page is for one-to-one appointments and subject tutorials.
+        </p>
+      </div>
+      <div class="lg:col-span-5 relative">
+        <div class="aspect-square rounded-xl overflow-hidden shadow-2xl shadow-blue-900/10 -rotate-2 transform hover:rotate-0 transition-transform duration-500">
+          <img alt="Erick Loria Soto" class="w-full h-full object-cover" src="../Images/DSC04634.jpg">
+        </div>
+        <div class="absolute -bottom-6 -left-6 glass-panel p-6 rounded-xl shadow-xl border border-white/20 max-w-[260px]">
+          <p class="font-headline font-bold text-primary text-lg">Erick Loria Soto</p>
+          <p class="text-sm text-on-surface-variant">Tutorials by appointment</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="md:col-span-1 space-y-8">
+        <section class="bg-surface-container-low p-8 rounded-xl">
+          <h3 class="font-headline font-bold text-xl text-primary mb-6 flex items-center gap-2">
+            <span class="material-symbols-outlined text-[#1DA381]">schedule</span>
+            Tutorials
+          </h3>
+          <ul class="space-y-4">
+            <li class="flex justify-between items-center pb-4 border-b border-outline-variant/20">
+              <span class="text-on-surface-variant font-medium">Days</span>
+              <span class="text-primary font-bold">Tuesday &amp; Thursday</span>
+            </li>
+            <li class="flex justify-between items-center pb-4 border-b border-outline-variant/20">
+              <span class="text-on-surface-variant font-medium">Time</span>
+              <span class="text-primary font-bold">2:00 PM - 4:00 PM</span>
+            </li>
+            <li class="flex justify-between items-center">
+              <span class="text-on-surface-variant font-medium">Format</span>
+              <span class="text-[#1DA381] font-bold">Appointment only</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="bg-primary p-8 rounded-xl text-white signature-gradient">
+          <h3 class="font-headline font-bold text-xl mb-4">Contact</h3>
+          <p class="text-blue-50/80 mb-6 leading-relaxed">
+            If you need help outside the scheduler, you can reach me directly by email.
+          </p>
+          <a class="flex items-center gap-3 bg-white/10 p-4 rounded-lg backdrop-blur-md text-sm font-medium hover:bg-white/15 transition-colors" href="mailto:erick.loria@uwccostarica.org">
+            <span class="material-symbols-outlined">mail</span>
+            erick.loria@uwccostarica.org
+          </a>
+        </section>
+      </div>
+
+      <div class="md:col-span-2 grid grid-cols-1 gap-8">
+        <div class="group bg-surface-container-highest p-8 rounded-xl flex flex-col md:flex-row justify-between items-center gap-8 hover:bg-white transition-all duration-500 shadow-sm hover:shadow-xl hover:shadow-blue-900/5 border border-transparent hover:border-outline-variant/20">
+          <div class="flex-grow">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="material-symbols-outlined text-[#1DA381]">school</span>
+              <span class="font-label text-xs font-bold uppercase tracking-widest text-[#1DA381]">Academic Support</span>
+            </div>
+            <h2 class="text-3xl font-headline font-extrabold text-primary mb-2">Tutorial Session</h2>
+            <p class="text-on-surface-variant max-w-xl">Choose an available appointment slot below. This is the best option for tutorials, quick questions, or planned one-to-one meetings.</p>
+            <div class="mt-6 flex items-center gap-4">
+              <span class="flex items-center gap-1 px-3 py-1 bg-white rounded-full text-sm font-bold text-primary shadow-sm">
+                <span class="material-symbols-outlined text-sm">event_available</span> Appointment booking
+              </span>
+            </div>
+          </div>
+          <a class="w-full md:w-auto signature-gradient text-white px-8 py-4 rounded-xl font-headline font-bold hover:scale-105 active:scale-95 transition-all shadow-lg shadow-blue-900/20 text-center" href="#scheduler">
+            Book Tutorial
+          </a>
+        </div>
+
+        <div class="p-6 bg-tertiary-fixed text-on-tertiary-fixed rounded-xl flex gap-4 items-start">
+          <span class="material-symbols-outlined mt-1">info</span>
+          <div>
+            <p class="font-bold mb-1">Scheduler Note</p>
+            <p class="text-sm opacity-80">If the scheduler does not appear below, use the appointment scheduler directly in a new tab or contact me by email.</p>
+          </div>
+        </div>
+
+        <section id="scheduler" class="bg-white rounded-[1.5rem] p-4 md:p-6 shadow-sm border border-outline-variant/20">
+          <iframe src="https://calendar.google.com/calendar/appointments/AcZssZ30mE65qXhSu3dgsjZ18lq192wTG6kcVGG0-2g=?gv=true" title="Google Calendar appointment scheduling" style="border:0;" width="100%" height="720" frameborder="0"></iframe>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-50 w-full mt-auto">
+    <div class="w-full px-8 py-12 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 md:gap-10">
+        <div class="flex flex-col gap-2 text-center md:text-left">
+          <div class="text-lg font-bold text-slate-900">IB Physics &amp; TOK — UWC Costa Rica</div>
+          <div class="font-['Inter'] text-sm tracking-wide text-slate-500">Erick Loria Soto · <a class="hover:text-[#004099] transition-colors" href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></div>
+        </div>
+        <div class="font-['Inter'] text-sm tracking-wide text-slate-500 text-center md:text-right max-w-2xl">
+          <strong class="text-slate-700">Copyright 2026 Erick Loria Soto.</strong> All original site content, course materials, design, and writing are my own unless otherwise credited. Built with HTML, CSS, JavaScript, and GitHub Pages.
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isExpanded));
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+  <script src="../js/nav-dropdowns.js?v=20260321e"></script>
 </body>
 </html>

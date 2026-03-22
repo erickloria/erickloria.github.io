@@ -1,72 +1,448 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IB Physics — UWC Costa Rica</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>IB Physics Course Overview | The Physics Lab</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#e8e8ea",
+            "primary-fixed": "#d9e2ff",
+            "secondary-fixed-dim": "#65dbb6",
+            "on-secondary-fixed-variant": "#00513e",
+            "on-tertiary-container": "#fe8be2",
+            "on-tertiary": "#ffffff",
+            "on-primary-container": "#92b1ff",
+            "secondary-fixed": "#82f8d1",
+            "primary": "#002b6c",
+            "primary-fixed-dim": "#b0c6ff",
+            "on-tertiary-fixed-variant": "#7d1a6e",
+            "surface-container-low": "#f3f3f6",
+            "surface-container": "#edeef0",
+            "on-tertiary-fixed": "#3a0032",
+            "tertiary-fixed": "#ffd7f0",
+            "on-secondary-fixed": "#002117",
+            "on-error": "#ffffff",
+            "on-surface-variant": "#434652",
+            "secondary-container": "#82f8d1",
+            "tertiary-fixed-dim": "#fface7",
+            "error-container": "#ffdad6",
+            "tertiary": "#5b0050",
+            "on-primary": "#ffffff",
+            "inverse-surface": "#2f3133",
+            "primary-container": "#004099",
+            "surface-bright": "#f9f9fb",
+            "background": "#f9f9fb",
+            "on-background": "#1a1c1e",
+            "inverse-on-surface": "#f0f0f3",
+            "inverse-primary": "#b0c6ff",
+            "outline-variant": "#c3c6d4",
+            "surface-container-highest": "#e2e2e5",
+            "surface": "#f9f9fb",
+            "surface-dim": "#d9dadc",
+            "on-primary-fixed-variant": "#04429b",
+            "outline": "#737783",
+            "on-surface": "#1a1c1e",
+            "error": "#ba1a1a",
+            "surface-tint": "#2d5bb4",
+            "surface-variant": "#e2e2e5",
+            "on-secondary": "#ffffff",
+            "on-error-container": "#93000a",
+            "on-primary-fixed": "#001945",
+            "secondary": "#006c53",
+            "on-secondary-container": "#007259",
+            "tertiary-container": "#7b186c"
+          },
+          fontFamily: {
+            "headline": ["Manrope", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+            "label": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .signature-gradient {
+      background: linear-gradient(135deg, #004099 0%, #1DA381 100%);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .editorial-shadow {
+      box-shadow: 0 24px 48px -12px rgba(0, 43, 108, 0.08);
+    }
+  </style>
 </head>
-<body>
-<script src="../js/layout.js?v=20260311b"></script>
-
-<div class="hero">
-  <div class="hero-ribbon"></div>
-  <div class="hero-circle-1"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">Course Materials</div>
-    <h1>IB Physics</h1>
-    <p>Core sections for the Physics course, including materials, assessments, and support resources.</p>
-  </div>
-</div>
-
-<div class="page">
-  <div class="section">
-    <h2 class="section-title">Physics Sections</h2>
-    <p class="section-desc">Core course pages for day-to-day work, assessments, and reference materials.</p>
-    <div class="grid">
-      <a class="card card-green" href="book-hw.html">
-        <div class="card-icon icon-green">Book</div>
-        <div class="card-title">Book &amp; Homework</div>
-        <div class="card-desc">Textbook chapters, reading assignments, and problem sets.</div>
+<body class="bg-surface font-body text-on-surface">
+  <nav class="bg-white/80 backdrop-blur-xl shadow-sm sticky top-0 z-50">
+    <div class="w-full px-8 py-4 max-w-7xl mx-auto flex items-center md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8">
+      <a class="text-xl font-extrabold tracking-tighter bg-gradient-to-r from-[#004099] to-[#1DA381] bg-clip-text text-transparent justify-self-start" href="../index.html">
+        The Physics Lab
       </a>
-
-      <a class="card card-orange" href="labs.html">
-        <div class="card-icon icon-orange">Lab</div>
-        <div class="card-title">Labs</div>
-        <div class="card-desc">Lab guides, data collection sheets, and Logger Pro analysis files.</div>
-      </a>
-
-      <a class="card card-purple" href="presentations.html">
-        <div class="card-icon icon-purple">Deck</div>
-        <div class="card-title">Presentations</div>
-        <div class="card-desc">Slide decks and visual summaries for each unit.</div>
-      </a>
-
-      <a class="card card-blue" href="extended-essay.html">
-        <div class="card-icon icon-blue">EE</div>
-        <div class="card-title">Extended Essay</div>
-        <div class="card-desc">EE guidance, topic ideas, and support for Group 4 Physics essays.</div>
-      </a>
-
-      <a class="card card-green" href="internal-assessment.html">
-        <div class="card-icon icon-green">IA</div>
-        <div class="card-title">Internal Assessment</div>
-        <div class="card-desc">IA structure, rubrics, timeline, and example investigations.</div>
-      </a>
-
-      <a class="card card-green" href="tools.html">
-        <div class="card-icon icon-green">Tool</div>
-        <div class="card-title">Course Tools</div>
-        <div class="card-desc">Core class platforms, graphing resources, and LaTeX writing tools.</div>
-      </a>
-
-      <a class="card card-purple" href="summer-programs.html">
-        <div class="card-icon icon-purple">Summer</div>
-        <div class="card-title">Summer Programs</div>
-        <div class="card-desc">Science, research, and university opportunities worth exploring.</div>
-      </a>
+      <div class="hidden md:flex items-center gap-8 justify-self-center">
+        <a class="text-[#004099] font-bold border-b-2 border-[#1DA381] pb-1" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="tok.html">TOK</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="misc.html">Resources</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="meetings.html">Meetings</a>
+      </div>
+      <div class="hidden md:flex justify-self-end">
+        <a class="signature-gradient text-white px-6 py-2.5 rounded-xl font-bold tracking-tight active:scale-95 duration-150 ease-in-out" href="meetings.html">
+          Meetings
+        </a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden text-primary" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="material-symbols-outlined text-primary text-3xl">menu</span>
+      </button>
     </div>
-  </div>
-</div>
+    <div id="mobile-menu" class="hidden md:hidden px-8 pb-5 max-w-7xl mx-auto">
+      <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-4 flex flex-col gap-3 shadow-lg">
+        <a class="text-[#004099] font-bold" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="tok.html">TOK</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="misc.html">Resources</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="meetings.html">Meetings</a>
+        <a class="signature-gradient text-white px-6 py-3 rounded-xl font-bold text-center transition-all active:scale-95 duration-150" href="meetings.html">
+          Meetings
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-8 py-16">
+    <header class="relative mb-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="lg:col-span-7 z-10">
+        <span class="inline-block text-secondary font-bold tracking-widest text-xs uppercase mb-4 bg-secondary-fixed px-3 py-1 rounded-full">UWC Costa Rica | Academic Year 26-28</span>
+        <h1 class="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-extrabold tracking-tight text-primary leading-[1.05] mb-8 [text-wrap:balance]">
+          IB Physics <span class="inline-block pr-[0.08em] text-transparent bg-clip-text signature-gradient">Course Overview</span>
+        </h1>
+        <p class="text-on-surface-variant text-xl max-w-3xl leading-relaxed">
+          International Baccalaureate Diploma Programme | UWC Costa Rica
+        </p>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-surface-container rounded-xl p-6">
+            <div class="text-xs font-bold tracking-[0.18em] uppercase text-secondary mb-2">Level</div>
+            <div class="font-headline text-2xl font-bold text-primary">HL / SL</div>
+          </div>
+          <div class="bg-surface-container rounded-xl p-6">
+            <div class="text-xs font-bold tracking-[0.18em] uppercase text-secondary mb-2">Blocks</div>
+            <div class="font-headline text-2xl font-bold text-primary">A, B, D, E, and F</div>
+          </div>
+          <div class="bg-surface-container rounded-xl p-6">
+            <div class="text-xs font-bold tracking-[0.18em] uppercase text-secondary mb-2">Teacher</div>
+            <div class="font-headline text-2xl font-bold text-primary">Erick Loria Soto</div>
+          </div>
+          <div class="bg-surface-container rounded-xl p-6">
+            <div class="text-xs font-bold tracking-[0.18em] uppercase text-secondary mb-2">Classroom</div>
+            <div class="font-headline text-2xl font-bold text-primary">14</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="mb-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-surface-container rounded-[2rem] p-10">
+          <h2 class="font-headline text-4xl font-bold tracking-tight text-primary mb-6">Higher Level (HL)</h2>
+          <div class="space-y-4 text-on-surface-variant leading-relaxed">
+            <p>3 lessons / wk</p>
+            <p>Covers all core topics + additional HL content</p>
+            <p>Recommended for students pursuing Physics, Engineering, or Medicine</p>
+            <p>2 written exams + Internal Assessment (IA)</p>
+          </div>
+        </div>
+        <div class="bg-primary-container text-white rounded-[2rem] p-10">
+          <h2 class="font-headline text-4xl font-bold tracking-tight mb-6">Standard Level (SL)</h2>
+          <div class="space-y-4 text-on-primary-container leading-relaxed">
+            <p>2 lessons / wk</p>
+            <p>Covers all core topics</p>
+            <p>Suitable for students with a general science interest</p>
+            <p>2 written exams + Internal Assessment (IA)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-20">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
+        <div>
+          <h2 class="font-headline text-4xl font-bold tracking-tight text-primary">Course Topics</h2>
+          <p class="text-on-surface-variant mt-3 max-w-3xl">The IB Physics syllabus is organized into core topics.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <section class="bg-surface-container rounded-xl p-8">
+          <div class="text-xs font-bold tracking-[0.18em] uppercase text-secondary mb-3">Unit A</div>
+          <h3 class="font-headline text-2xl font-bold text-primary mb-4">Space, Time, and Motion</h3>
+          <p class="text-on-surface-variant leading-relaxed">Explores how objects move and interact through Newton's laws, covering force, energy, momentum, and the limits of classical theory at high speeds and small scales.</p>
+        </section>
+        <section class="bg-surface-container rounded-xl p-8">
+          <div class="text-xs font-bold tracking-[0.18em] uppercase text-secondary mb-3">Unit B</div>
+          <h3 class="font-headline text-2xl font-bold text-primary mb-4">Particulate Nature of Matter</h3>
+          <p class="text-on-surface-variant leading-relaxed">Studies matter as particles in motion to explain heat, gas behavior, thermodynamic limits, and how particle behavior connects to electric circuits.</p>
+        </section>
+        <section class="bg-surface-container rounded-xl p-8">
+          <div class="text-xs font-bold tracking-[0.18em] uppercase text-secondary mb-3">Unit C</div>
+          <h3 class="font-headline text-2xl font-bold text-primary mb-4">Wave Behavior</h3>
+          <p class="text-on-surface-variant leading-relaxed">Investigates how waves, from sound to light, arise from oscillations, focusing on interference as the defining feature of wave behavior and the doorway to quantum theory.</p>
+        </section>
+        <section class="bg-surface-container rounded-xl p-8">
+          <div class="text-xs font-bold tracking-[0.18em] uppercase text-secondary mb-3">Unit D</div>
+          <h3 class="font-headline text-2xl font-bold text-primary mb-4">Fields</h3>
+          <p class="text-on-surface-variant leading-relaxed">Examines how masses and charges create gravitational and electric fields that act across space, culminating in Maxwell's unification of electromagnetism and Einstein's geometric view of gravity.</p>
+        </section>
+        <section class="bg-surface-container rounded-xl p-8">
+          <div class="text-xs font-bold tracking-[0.18em] uppercase text-secondary mb-3">Unit E</div>
+          <h3 class="font-headline text-2xl font-bold text-primary mb-4">Quantum and Nuclear Physics</h3>
+          <p class="text-on-surface-variant leading-relaxed">Explores the discrete, probabilistic world of atoms and nuclei: wave-particle duality, radioactivity, nuclear forces, fission, and fusion, and their connection to the origin of the universe.</p>
+        </section>
+        <section class="signature-gradient text-white rounded-xl p-8">
+          <div class="text-xs font-bold tracking-[0.18em] uppercase text-white/75 mb-3">IA</div>
+          <h3 class="font-headline text-2xl font-bold mb-4">Internal Assessment</h3>
+          <p class="text-on-primary-container leading-relaxed">Individual investigation (scientific inquiry).</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="mb-20 bg-surface-container-low -mx-8 px-8 py-24">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <section class="lg:col-span-7 bg-white rounded-[2rem] p-10">
+            <h2 class="font-headline text-4xl font-bold tracking-tight text-primary mb-8">Assessment</h2>
+            <div class="space-y-8">
+              <div class="bg-surface-container rounded-xl p-6">
+                <div class="text-xs font-bold tracking-[0.18em] uppercase text-secondary mb-2">External Assessment (80%)</div>
+                <p class="text-on-surface-variant leading-relaxed mb-4">These are exams taken at the end of the 2 years in May.</p>
+                <div class="space-y-2 text-on-surface-variant">
+                  <p><strong class="text-primary">Paper 1 (36%)</strong></p>
+                  <p>Paper 1A: Multiple-choice questions</p>
+                  <p>Paper 1B: Data Based Questions</p>
+                  <p><strong class="text-primary">Paper 2 (44%)</strong> — Short-answer &amp; extended response</p>
+                </div>
+              </div>
+              <div class="bg-surface-container rounded-xl p-6">
+                <div class="text-xs font-bold tracking-[0.18em] uppercase text-secondary mb-2">Internal Assessment (20%)</div>
+                <p class="text-on-surface-variant leading-relaxed mb-4">Individual scientific investigation designed and conducted by the student.</p>
+                <div class="space-y-2 text-on-surface-variant">
+                  <p>3000 words</p>
+                  <p>Internally marked, externally moderated</p>
+                  <p>Focus: Research Design, Data Analysis, Conclusion, Evaluation</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="lg:col-span-5 bg-primary-container text-white rounded-[2rem] p-10">
+            <h2 class="font-headline text-4xl font-bold tracking-tight mb-8">Course Pages</h2>
+            <div class="space-y-4">
+              <a class="flex items-center justify-between gap-4 bg-white/10 rounded-xl px-5 py-4 transition-colors hover:bg-white/15" href="book-hw.html">
+                <span>Book &amp; Homework</span>
+                <span class="material-symbols-outlined">arrow_outward</span>
+              </a>
+              <a class="flex items-center justify-between gap-4 bg-white/10 rounded-xl px-5 py-4 transition-colors hover:bg-white/15" href="labs.html">
+                <span>Labs</span>
+                <span class="material-symbols-outlined">arrow_outward</span>
+              </a>
+              <a class="flex items-center justify-between gap-4 bg-white/10 rounded-xl px-5 py-4 transition-colors hover:bg-white/15" href="presentations.html">
+                <span>Presentations</span>
+                <span class="material-symbols-outlined">arrow_outward</span>
+              </a>
+              <a class="flex items-center justify-between gap-4 bg-white/10 rounded-xl px-5 py-4 transition-colors hover:bg-white/15" href="internal-assessment.html">
+                <span>Internal Assessment</span>
+                <span class="material-symbols-outlined">arrow_outward</span>
+              </a>
+              <a class="flex items-center justify-between gap-4 bg-white/10 rounded-xl px-5 py-4 transition-colors hover:bg-white/15" href="extended-essay.html">
+                <span>Extended Essay</span>
+                <span class="material-symbols-outlined">arrow_outward</span>
+              </a>
+              <a class="flex items-center justify-between gap-4 bg-white/10 rounded-xl px-5 py-4 transition-colors hover:bg-white/15" href="tools.html">
+                <span>Course Tools</span>
+                <span class="material-symbols-outlined">arrow_outward</span>
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-20">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <section class="bg-surface-container rounded-[2rem] p-10">
+          <h2 class="font-headline text-4xl font-bold tracking-tight text-primary mb-8">Semester Overview</h2>
+          <div class="space-y-6">
+            <div class="bg-surface-container-lowest rounded-xl p-6">
+              <div class="text-xs font-bold tracking-[0.18em] uppercase text-secondary mb-3">Year 1 | Classical Physics</div>
+              <div class="space-y-3 text-on-surface-variant leading-relaxed">
+                <p><strong class="text-primary">Semester 1</strong> — Unit A: Space, Time, and Motion</p>
+                <p>During this semester we develop important lab skills necessary for working on the internal assessment.</p>
+                <p><strong class="text-primary">Semester 2</strong> — Unit B: Particulate Nature of Matter</p>
+                <p>Unit C: Wave Behavior [Part 1]</p>
+                <p>Mock IA</p>
+                <p>Collaborative Science Project</p>
+              </div>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-6">
+              <div class="text-xs font-bold tracking-[0.18em] uppercase text-secondary mb-3">Year 2 | Modern Physics</div>
+              <div class="space-y-3 text-on-surface-variant leading-relaxed">
+                <p><strong class="text-primary">Semester 3</strong> — Unit C: Wave Behavior [Part 2]</p>
+                <p>Unit D: Fields</p>
+                <p>Official IA</p>
+                <p><strong class="text-primary">Semester 4</strong> — Unit E: Nuclear and Quantum Physics</p>
+                <p>Mock exams</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-surface-container rounded-[2rem] p-10">
+          <h2 class="font-headline text-4xl font-bold tracking-tight text-primary mb-8">Important Dates</h2>
+          <div class="space-y-4">
+            <div class="bg-surface-container-lowest rounded-xl p-5">
+              <div class="text-sm font-bold text-primary">August, 2026</div>
+              <div class="text-sm text-on-surface-variant mt-1">First Day of Classes Year 1 / Course Introduction</div>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-5">
+              <div class="text-sm font-bold text-primary">December, 2026</div>
+              <div class="text-sm text-on-surface-variant mt-1">Semester Final (Unit A)</div>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-5">
+              <div class="text-sm font-bold text-primary">March, 2027</div>
+              <div class="text-sm text-on-surface-variant mt-1">Unit B Test</div>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-5">
+              <div class="text-sm font-bold text-primary">May, 2027</div>
+              <div class="text-sm text-on-surface-variant mt-1">Year 1 Final Exam (Units A, B, and C)</div>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-5">
+              <div class="text-sm font-bold text-primary">May, 2027</div>
+              <div class="text-sm text-on-surface-variant mt-1">Collaborative Science Project</div>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-5">
+              <div class="text-sm font-bold text-primary">May, 2027</div>
+              <div class="text-sm text-on-surface-variant mt-1">Internal Assessment: Topic Proposal Due</div>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-5">
+              <div class="text-sm font-bold text-primary">August, 2027</div>
+              <div class="text-sm text-on-surface-variant mt-1">First Day of Classes Year 2</div>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-5">
+              <div class="text-sm font-bold text-primary">October, 2027</div>
+              <div class="text-sm text-on-surface-variant mt-1">Year 2 Midterm Exam (Units A, B, C, and D)</div>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-5">
+              <div class="text-sm font-bold text-primary">Nov 30, 2027</div>
+              <div class="text-sm text-on-surface-variant mt-1">Internal Assessment: First Draft Due</div>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-5">
+              <div class="text-sm font-bold text-primary">Jan 31, 2028</div>
+              <div class="text-sm text-on-surface-variant mt-1">Internal Assessment: Final Submission</div>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-5">
+              <div class="text-sm font-bold text-primary">Feb/March 28, 2028</div>
+              <div class="text-sm text-on-surface-variant mt-1">Mock Paper 1 &amp; 2 (Everything covered up to this moment)</div>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-5">
+              <div class="text-sm font-bold text-primary">May, 2028</div>
+              <div class="text-sm text-on-surface-variant mt-1">IB Physics Paper 1 (HL &amp; SL)</div>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-5">
+              <div class="text-sm font-bold text-primary">May, 2028</div>
+              <div class="text-sm text-on-surface-variant mt-1">IB Physics Paper 2 (HL &amp; SL)</div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <section class="lg:col-span-4 bg-surface-container rounded-[2rem] p-10">
+          <h2 class="font-headline text-3xl font-bold tracking-tight text-primary mb-6">Classroom Expectations</h2>
+          <div class="space-y-4 text-on-surface-variant leading-relaxed">
+            <p>Come prepared with your notebook and textbook</p>
+            <p>Participate actively in discussions and labs</p>
+            <p>Ask questions: curiosity is your best tool</p>
+            <p>Collaborate respectfully with classmates</p>
+          </div>
+        </section>
+        <section class="lg:col-span-4 bg-surface-container rounded-[2rem] p-10">
+          <h2 class="font-headline text-3xl font-bold tracking-tight text-primary mb-6">Required Resources</h2>
+          <div class="space-y-4 text-on-surface-variant leading-relaxed">
+            <p>IB Physics Textbook: [Tsokos, 2023]</p>
+            <p>Kognity Textbook</p>
+            <p>Scientific calculator (approved IB model)</p>
+            <p>Computer</p>
+            <p>IB Physics Data Booklet (provided)</p>
+            <p>Vernier Software (provided)</p>
+          </div>
+        </section>
+        <section class="lg:col-span-4 signature-gradient text-white rounded-[2rem] p-10">
+          <h2 class="font-headline text-3xl font-bold tracking-tight mb-6">Contact &amp; Tutorials</h2>
+          <div class="space-y-5 text-on-primary-container leading-relaxed">
+            <p><strong class="text-white">Email:</strong> <a class="text-white underline decoration-white/40 underline-offset-4" href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></p>
+            <p><strong class="text-white">1-1 Tutorial:</strong> Appointments</p>
+            <p><strong class="text-white">Subject Tutorials:</strong> Appointment only</p>
+            <p><strong class="text-white">Days:</strong> Tuesdays &amp; Thursdays</p>
+            <p><strong class="text-white">Time:</strong> 2:00 PM - 4:00 PM</p>
+            <div class="pt-4">
+              <a class="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-xl font-bold" href="meetings.html">
+                Open Meetings
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-50 w-full mt-auto">
+    <div class="w-full px-8 py-12 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 md:gap-10">
+        <div class="flex flex-col gap-2 text-center md:text-left">
+          <div class="text-lg font-bold text-slate-900">IB Physics &amp; TOK — UWC Costa Rica</div>
+          <div class="font-['Inter'] text-sm tracking-wide text-slate-500">Erick Loria Soto · <a class="hover:text-[#004099] transition-colors" href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></div>
+        </div>
+        <div class="font-['Inter'] text-sm tracking-wide text-slate-500 text-center md:text-right max-w-2xl">
+          <strong class="text-slate-700">Copyright 2026 Erick Loria Soto.</strong> All original site content, course materials, design, and writing are my own unless otherwise credited. Built with HTML, CSS, JavaScript, and GitHub Pages.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isExpanded));
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+  <script src="../js/nav-dropdowns.js?v=20260321e"></script>
 </body>
 </html>

@@ -1,84 +1,395 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Presentations — IB Physics &amp; TOK</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>Presentations | The Physics Lab</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary-fixed": "#ffd7f0",
+            "surface-tint": "#2d5bb4",
+            "on-secondary-fixed-variant": "#00513e",
+            "surface-container": "#edeef0",
+            "outline-variant": "#c3c6d4",
+            "primary-fixed-dim": "#b0c6ff",
+            "on-error": "#ffffff",
+            "inverse-surface": "#2f3133",
+            "on-tertiary-fixed-variant": "#7d1a6e",
+            "on-tertiary-container": "#fe8be2",
+            "on-primary": "#ffffff",
+            "surface": "#f9f9fb",
+            "secondary-container": "#82f8d1",
+            "inverse-on-surface": "#f0f0f3",
+            "error": "#ba1a1a",
+            "on-tertiary": "#ffffff",
+            "surface-container-high": "#e8e8ea",
+            "secondary-fixed": "#82f8d1",
+            "on-secondary-fixed": "#002117",
+            "on-secondary-container": "#007259",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed-variant": "#04429b",
+            "background": "#f9f9fb",
+            "primary": "#002b6c",
+            "tertiary-container": "#7b186c",
+            "on-error-container": "#93000a",
+            "surface-variant": "#e2e2e5",
+            "secondary-fixed-dim": "#65dbb6",
+            "surface-dim": "#d9dadc",
+            "error-container": "#ffdad6",
+            "primary-fixed": "#d9e2ff",
+            "on-primary-container": "#92b1ff",
+            "tertiary": "#5b0050",
+            "on-tertiary-fixed": "#3a0032",
+            "secondary": "#006c53",
+            "on-surface-variant": "#434652",
+            "surface-container-lowest": "#ffffff",
+            "on-background": "#1a1c1e",
+            "inverse-primary": "#b0c6ff",
+            "surface-bright": "#f9f9fb",
+            "on-surface": "#1a1c1e",
+            "outline": "#737783",
+            "tertiary-fixed-dim": "#fface7",
+            "surface-container-low": "#f3f3f6",
+            "surface-container-highest": "#e2e2e5",
+            "primary-container": "#004099",
+            "on-primary-fixed": "#001945"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .blue-to-green-gradient {
+      background: linear-gradient(135deg, #004099 0%, #1DA381 100%);
+    }
+    .glass-effect {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .keynote-logo-shell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3.25rem;
+      height: 3.25rem;
+      flex-shrink: 0;
+      border-radius: 1rem;
+      background: rgba(255, 255, 255, 0.22);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+      overflow: hidden;
+    }
+    .keynote-logo-shell img {
+      width: 2.3rem;
+      height: 2.3rem;
+      object-fit: contain;
+    }
+  </style>
 </head>
-<body>
-<script src="../js/layout.js?v=20260311b"></script>
-
-<div class="hero">
-  <div class="hero-ribbon"></div>
-  <div class="hero-circle-1"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">Resources</div>
-    <h1>Presentations</h1>
-    <p>Slide decks and visual summaries for each IB Physics unit.</p>
-  </div>
-</div>
-
-<div class="page">
-  <div class="section">
-    <h2 class="section-title">Unit Slide Decks</h2>
-    <p class="section-desc">These presentation decks are shared in Apple Keynote via iCloud. Use them for review and reference alongside your class notes and worked examples.</p>
-    <div class="grid grid-2">
-      <a class="link-card card-blue" href="https://www.icloud.com/keynote/0a6RecvMN9tlz7hMrH2dJWF3w#(UWC)_Units,_measurement,_uncertainties_&_vectors" target="_blank">
-        <div class="card-icon icon-blue">Deck</div>
-        <div>
-          <div class="link-card-label">Units, Measurement, Uncertainties &amp; Vectors</div>
-          <div class="link-card-desc">Foundational methods, conventions, and vector treatment for the course.</div>
-        </div>
-        <span class="link-arrow">Open</span>
+<body class="bg-surface font-body text-on-surface">
+  <nav class="bg-white/80 backdrop-blur-xl shadow-sm sticky top-0 z-50">
+    <div class="w-full px-8 py-4 max-w-7xl mx-auto flex items-center md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8">
+      <a class="text-xl font-extrabold tracking-tighter bg-gradient-to-r from-[#004099] to-[#1DA381] bg-clip-text text-transparent justify-self-start" href="../index.html">
+        The Physics Lab
       </a>
-
-      <a class="link-card card-blue" href="https://www.icloud.com/keynote/09fLx_gEAhavAp03AQpU_C6fg#(UWC)_Space,_time,_and_motion" target="_blank">
-        <div class="card-icon icon-blue">Deck</div>
-        <div>
-          <div class="link-card-label">Space, Time, and Motion</div>
-          <div class="link-card-desc">Kinematics, graphical interpretation, and motion analysis.</div>
-        </div>
-        <span class="link-arrow">Open</span>
-      </a>
-
-      <a class="link-card card-green" href="https://www.icloud.com/keynote/0c1VPm1PUqV-u_LBYnbTv5VTA#(UWC)_Particulate_Nature_of_Matter" target="_blank">
-        <div class="card-icon icon-green">Deck</div>
-        <div>
-          <div class="link-card-label">Particulate Nature of Matter</div>
-          <div class="link-card-desc">Particle models, thermal behavior, and matter at the microscopic level.</div>
-        </div>
-        <span class="link-arrow">Open</span>
-      </a>
-
-      <a class="link-card card-purple" href="https://www.icloud.com/keynote/081979RAesD9a_9ifaBSB-Kdg#(UWC)_Wave_behaviour" target="_blank">
-        <div class="card-icon icon-purple">Deck</div>
-        <div>
-          <div class="link-card-label">Wave Behaviour</div>
-          <div class="link-card-desc">Core wave properties, interference, and physical interpretation.</div>
-        </div>
-        <span class="link-arrow">Open</span>
-      </a>
-
-      <a class="link-card card-orange" href="https://www.icloud.com/keynote/09biFu_ujhBzJ-h96n4gQkl8g#(UWC)_Fields" target="_blank">
-        <div class="card-icon icon-orange">Deck</div>
-        <div>
-          <div class="link-card-label">Fields</div>
-          <div class="link-card-desc">Gravitational, electric, and magnetic field models and applications.</div>
-        </div>
-        <span class="link-arrow">Open</span>
-      </a>
-
-      <a class="link-card card-red" href="https://www.icloud.com/keynote/02apN7hOlJKPAq1wcfp__35ug#(UWC)_Nuclear_and_Quantum_Physics" target="_blank">
-        <div class="card-icon icon-red">Deck</div>
-        <div>
-          <div class="link-card-label">Nuclear and Quantum Physics</div>
-          <div class="link-card-desc">Models of the atom, nuclear processes, and quantum ideas.</div>
-        </div>
-        <span class="link-arrow">Open</span>
-      </a>
+      <div class="hidden md:flex items-center gap-8 justify-self-center">
+        <a class="text-[#004099] font-bold border-b-2 border-[#1DA381] pb-1" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="tok.html">TOK</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="misc.html">Resources</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="meetings.html">Meetings</a>
+      </div>
+      <div class="hidden md:flex justify-self-end">
+        <a class="blue-to-green-gradient text-white px-6 py-2.5 rounded-xl font-bold tracking-tight active:scale-95 duration-150 ease-in-out" href="meetings.html">
+          Meetings
+        </a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden text-primary" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="material-symbols-outlined text-primary text-3xl">menu</span>
+      </button>
     </div>
-  </div>
-</div>
+    <div id="mobile-menu" class="hidden md:hidden px-8 pb-5 max-w-7xl mx-auto">
+      <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-4 flex flex-col gap-3 shadow-lg">
+        <a class="text-[#004099] font-bold" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="tok.html">TOK</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="misc.html">Resources</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="meetings.html">Meetings</a>
+        <a class="blue-to-green-gradient text-white px-6 py-3 rounded-xl font-bold text-center transition-all active:scale-95 duration-150" href="meetings.html">
+          Meetings
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-8 pb-20">
+    <section class="relative px-8 md:px-12 py-16 md:py-24 overflow-hidden">
+      <div class="absolute inset-0 blue-to-green-gradient opacity-10"></div>
+      <div class="absolute -right-20 top-0 w-96 h-96 bg-secondary-container/20 rounded-full blur-3xl"></div>
+      <div class="relative max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1 space-y-6">
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-widest font-label">Academic Repository</span>
+          <h1 class="text-5xl md:text-7xl font-extrabold font-headline tracking-tighter text-primary leading-none">Presentations</h1>
+          <p class="text-lg md:text-xl text-on-surface-variant max-w-3xl leading-relaxed">
+            Slide decks and visual summaries for each IB Physics unit. These presentation decks are shared in Apple Keynote via iCloud for review and reference alongside class notes and worked examples.
+          </p>
+        </div>
+        <div class="flex-1 md:px-4 lg:px-8">
+          <div class="w-full max-w-lg ml-auto rounded-xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 blue-to-green-gradient p-8 md:p-10 text-white">
+            <div class="flex min-h-[28rem] flex-col gap-6">
+              <div class="flex flex-wrap items-center justify-between gap-3 text-sm font-bold tracking-[0.18em] uppercase text-white/80">
+                <span>IB Physics</span>
+                <span>6 Decks</span>
+              </div>
+              <div class="space-y-4">
+                <div class="rounded-2xl bg-white/15 p-5 glass-effect">
+                  <div class="text-4xl font-headline font-black mb-1">6</div>
+                  <div class="text-sm uppercase tracking-[0.18em] text-white/80">Unit Decks</div>
+                </div>
+                <div class="rounded-2xl bg-white/15 p-5 glass-effect">
+                  <div class="flex items-start gap-4">
+                    <div class="keynote-logo-shell">
+                      <img src="../Images/02ab39bd92508a666c49fd60df2f957f.png" alt="Apple Keynote logo">
+                    </div>
+                    <div>
+                      <div class="font-headline font-bold text-lg mb-1">Apple Keynote via iCloud</div>
+                      <div class="text-sm text-white/80">Open each deck directly in the browser for review and reference.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-auto rounded-2xl bg-white/15 p-5 glass-effect">
+                <div class="flex items-center gap-4">
+                  <div class="bg-white/20 p-3 rounded-lg text-white">
+                    <span class="material-symbols-outlined">slideshow</span>
+                  </div>
+                  <div>
+                    <p class="text-sm font-bold">Visual Summaries</p>
+                    <p class="text-xs text-white/80">Use with notes and worked examples</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-8 md:px-12 mb-12">
+      <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-6 p-6 bg-surface-container-low rounded-xl">
+        <div class="flex flex-wrap gap-3">
+          <span class="px-6 py-2 rounded-full bg-primary text-white font-semibold text-sm">All Decks</span>
+          <span class="px-6 py-2 rounded-full bg-surface-container-highest text-on-surface-variant font-semibold text-sm">Apple Keynote</span>
+          <span class="px-6 py-2 rounded-full bg-surface-container-highest text-on-surface-variant font-semibold text-sm">IB Physics</span>
+          <span class="px-6 py-2 rounded-full bg-surface-container-highest text-on-surface-variant font-semibold text-sm">iCloud Access</span>
+        </div>
+        <div class="text-sm text-on-surface-variant font-medium">
+          6 slide decks currently available
+        </div>
+      </div>
+    </section>
+
+    <section class="px-8 md:px-12 mb-20 max-w-7xl mx-auto">
+      <div class="flex items-baseline gap-4 mb-8">
+        <h2 class="text-3xl font-bold font-headline text-primary">IB Physics</h2>
+        <div class="h-[2px] flex-grow bg-surface-container-highest"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <a class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col" href="https://www.icloud.com/keynote/0a6RecvMN9tlz7hMrH2dJWF3w#(UWC)_Units,_measurement,_uncertainties_&_vectors" target="_blank" rel="noreferrer">
+          <div class="h-56 relative overflow-hidden bg-white p-3 flex items-center justify-center">
+            <img class="max-w-full max-h-full object-contain object-center rounded-lg shadow-sm" src="../Images/units-measurement-uncertainties-vectors-cover.png" alt="Units, Measurement, Uncertainties and Vectors presentation cover">
+          </div>
+          <div class="p-6 flex-grow">
+            <h3 class="text-xl font-bold mb-2 group-hover:text-secondary transition-colors">Units, Measurement, Uncertainties &amp; Vectors</h3>
+            <p class="text-sm text-on-surface-variant mb-6">Foundational methods, conventions, and vector treatment for the course.</p>
+            <div class="w-full py-2.5 rounded-lg blue-to-green-gradient text-white font-bold text-sm flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-sm">slideshow</span> Open Deck
+            </div>
+          </div>
+        </a>
+
+        <a class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col" href="https://www.icloud.com/keynote/09fLx_gEAhavAp03AQpU_C6fg#(UWC)_Space,_time,_and_motion" target="_blank" rel="noreferrer">
+          <div class="h-56 relative overflow-hidden bg-white p-3 flex items-center justify-center">
+            <img class="max-w-full max-h-full object-contain object-center rounded-lg shadow-sm" src="../Images/space-time-motion-cover.png" alt="Space, Time, and Motion presentation cover">
+          </div>
+          <div class="p-6 flex-grow">
+            <h3 class="text-xl font-bold mb-2 group-hover:text-secondary transition-colors">Space, Time, and Motion</h3>
+            <p class="text-sm text-on-surface-variant mb-6">Kinematics, graphical interpretation, and motion analysis.</p>
+            <div class="w-full py-2.5 rounded-lg blue-to-green-gradient text-white font-bold text-sm flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-sm">slideshow</span> Open Deck
+            </div>
+          </div>
+        </a>
+
+        <a class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col" href="https://www.icloud.com/keynote/0c1VPm1PUqV-u_LBYnbTv5VTA#(UWC)_Particulate_Nature_of_Matter" target="_blank" rel="noreferrer">
+          <div class="h-56 relative overflow-hidden bg-white p-3 flex items-center justify-center">
+            <img class="max-w-full max-h-full object-contain object-center rounded-lg shadow-sm" src="../Images/particulate-nature-of-matter-cover.png" alt="Particulate Nature of Matter presentation cover">
+          </div>
+          <div class="p-6 flex-grow">
+            <h3 class="text-xl font-bold mb-2 group-hover:text-secondary transition-colors">Particulate Nature of Matter</h3>
+            <p class="text-sm text-on-surface-variant mb-6">Particle models, thermal behavior, and matter at the microscopic level.</p>
+            <div class="w-full py-2.5 rounded-lg blue-to-green-gradient text-white font-bold text-sm flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-sm">slideshow</span> Open Deck
+            </div>
+          </div>
+        </a>
+
+        <a class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col" href="https://www.icloud.com/keynote/081979RAesD9a_9ifaBSB-Kdg#(UWC)_Wave_behaviour" target="_blank" rel="noreferrer">
+          <div class="h-56 relative overflow-hidden bg-white p-3 flex items-center justify-center">
+            <img class="max-w-full max-h-full object-contain object-center rounded-lg shadow-sm" src="../Images/wave-behaviour-cover.png" alt="Wave Behaviour presentation cover">
+          </div>
+          <div class="p-6 flex-grow">
+            <h3 class="text-xl font-bold mb-2 group-hover:text-secondary transition-colors">Wave Behaviour</h3>
+            <p class="text-sm text-on-surface-variant mb-6">Core wave properties, interference, and physical interpretation.</p>
+            <div class="w-full py-2.5 rounded-lg blue-to-green-gradient text-white font-bold text-sm flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-sm">slideshow</span> Open Deck
+            </div>
+          </div>
+        </a>
+
+        <a class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col" href="https://www.icloud.com/keynote/09biFu_ujhBzJ-h96n4gQkl8g#(UWC)_Fields" target="_blank" rel="noreferrer">
+          <div class="h-56 relative overflow-hidden bg-white p-3 flex items-center justify-center">
+            <img class="max-w-full max-h-full object-contain object-center rounded-lg shadow-sm" src="../Images/fields-cover.png" alt="Fields presentation cover">
+          </div>
+          <div class="p-6 flex-grow">
+            <h3 class="text-xl font-bold mb-2 group-hover:text-secondary transition-colors">Fields</h3>
+            <p class="text-sm text-on-surface-variant mb-6">Gravitational, electric, and magnetic field models and applications.</p>
+            <div class="w-full py-2.5 rounded-lg blue-to-green-gradient text-white font-bold text-sm flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-sm">slideshow</span> Open Deck
+            </div>
+          </div>
+        </a>
+
+        <a class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col" href="https://www.icloud.com/keynote/02apN7hOlJKPAq1wcfp__35ug#(UWC)_Nuclear_and_Quantum_Physics" target="_blank" rel="noreferrer">
+          <div class="h-56 relative overflow-hidden bg-white p-3 flex items-center justify-center">
+            <img class="max-w-full max-h-full object-contain object-center rounded-lg shadow-sm" src="../Images/nuclear-and-quantum-physics-cover.png" alt="Nuclear and Quantum Physics presentation cover">
+          </div>
+          <div class="p-6 flex-grow">
+            <h3 class="text-xl font-bold mb-2 group-hover:text-secondary transition-colors">Nuclear and Quantum Physics</h3>
+            <p class="text-sm text-on-surface-variant mb-6">Models of the atom, nuclear processes, and quantum ideas.</p>
+            <div class="w-full py-2.5 rounded-lg blue-to-green-gradient text-white font-bold text-sm flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-sm">slideshow</span> Open Deck
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="px-8 md:px-12 mb-20 max-w-7xl mx-auto">
+      <div class="flex items-baseline gap-4 mb-8">
+        <h2 class="text-3xl font-bold font-headline text-primary">Related Course Pages</h2>
+        <div class="h-[2px] flex-grow bg-surface-container-highest"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <div class="md:col-span-8 bg-white rounded-2xl p-8 flex flex-col md:flex-row gap-8 relative overflow-hidden group">
+          <div class="absolute inset-0 bg-secondary-container/10 group-hover:bg-secondary-container/20 transition-colors"></div>
+          <div class="relative z-10 flex-1 flex flex-col justify-center">
+            <span class="text-secondary font-bold text-xs uppercase tracking-widest mb-2">Use With</span>
+            <h3 class="text-4xl font-extrabold text-primary mb-4 leading-tight">Class Notes and Worked Examples</h3>
+            <p class="text-on-surface-variant mb-8 max-w-xl">These decks are shared for review and reference alongside your class notes, worked examples, lab writeups, and other course pages.</p>
+            <div class="flex flex-wrap gap-4">
+              <a class="px-8 py-3 rounded-full blue-to-green-gradient text-white font-bold shadow-lg" href="book-hw.html">Book &amp; Homework</a>
+              <a class="px-8 py-3 rounded-full bg-surface-container-high text-primary font-bold" href="labs.html">Labs</a>
+            </div>
+          </div>
+          <div class="relative z-10 flex-1">
+            <div class="h-full min-h-[240px] rounded-xl bg-surface-container-high p-6 grid grid-cols-2 gap-4">
+              <a class="bg-white rounded-xl p-5 shadow-sm flex flex-col justify-between hover:shadow-md transition-all" href="internal-assessment.html">
+                <span class="material-symbols-outlined text-primary text-3xl">biotech</span>
+                <span class="font-bold text-primary">Internal Assessment</span>
+              </a>
+              <a class="bg-white rounded-xl p-5 shadow-sm flex flex-col justify-between hover:shadow-md transition-all" href="extended-essay.html">
+                <span class="material-symbols-outlined text-primary text-3xl">article</span>
+                <span class="font-bold text-primary">Extended Essay</span>
+              </a>
+              <a class="bg-white rounded-xl p-5 shadow-sm flex flex-col justify-between hover:shadow-md transition-all" href="tools.html">
+                <span class="material-symbols-outlined text-primary text-3xl">construction</span>
+                <span class="font-bold text-primary">Course Tools</span>
+              </a>
+              <a class="bg-white rounded-xl p-5 shadow-sm flex flex-col justify-between hover:shadow-md transition-all" href="resources.html">
+                <span class="material-symbols-outlined text-primary text-3xl">menu_book</span>
+                <span class="font-bold text-primary">Physics Overview</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-4 bg-primary text-white rounded-2xl p-8 flex flex-col justify-between relative group overflow-hidden">
+          <span class="material-symbols-outlined text-8xl absolute -right-4 -bottom-4 text-white/10 group-hover:scale-110 transition-transform">cloud_sync</span>
+          <div class="relative z-10">
+            <h3 class="text-2xl font-bold mb-2">Deck Access</h3>
+            <p class="text-primary-fixed text-sm">All current presentation links open in Apple Keynote via iCloud.</p>
+          </div>
+          <div class="relative z-10 mt-8 space-y-3 text-sm text-white/85">
+            <p>Format: browser-based Keynote links</p>
+            <p>Current scope: 6 unit decks</p>
+            <p>Use: review and reference</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-8 md:px-12 max-w-7xl mx-auto">
+      <div class="blue-to-green-gradient rounded-3xl p-12 text-center text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-extrabold mb-4 font-headline">Need Help Reviewing a Unit?</h2>
+          <p class="text-white/80 mb-8">Use the presentation decks together with the course pages, or book a tutorial if you want support with a specific topic.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a class="px-8 py-3 rounded-full bg-white text-primary font-bold hover:bg-secondary-container hover:text-on-secondary-container transition-all" href="meetings.html">Book Tutorial</a>
+            <a class="px-8 py-3 rounded-full bg-white/15 border border-white/20 text-white font-bold hover:bg-white/20 transition-all" href="resources.html">Open Physics Page</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-50 w-full mt-auto">
+    <div class="w-full px-8 py-12 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 md:gap-10">
+        <div class="flex flex-col gap-2 text-center md:text-left">
+          <div class="text-lg font-bold text-slate-900">IB Physics &amp; TOK — UWC Costa Rica</div>
+          <div class="font-['Inter'] text-sm tracking-wide text-slate-500">Erick Loria Soto · <a class="hover:text-[#004099] transition-colors" href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></div>
+        </div>
+        <div class="font-['Inter'] text-sm tracking-wide text-slate-500 text-center md:text-right max-w-2xl">
+          <strong class="text-slate-700">Copyright 2026 Erick Loria Soto.</strong> All original site content, course materials, design, and writing are my own unless otherwise credited. Built with HTML, CSS, JavaScript, and GitHub Pages.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isExpanded));
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+  <script src="../js/nav-dropdowns.js?v=20260321e"></script>
 </body>
 </html>

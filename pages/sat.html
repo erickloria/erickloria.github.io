@@ -1,86 +1,426 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAT Preparation — IB Physics &amp; TOK</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>SAT Preparation | The Physics Lab</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary-fixed": "#001945",
+            "primary-fixed-dim": "#b0c6ff",
+            "on-primary-fixed-variant": "#04429b",
+            "on-error-container": "#93000a",
+            "tertiary": "#5b0050",
+            "on-background": "#1a1c1e",
+            "on-secondary-fixed": "#002117",
+            "surface-dim": "#d9dadc",
+            "secondary-fixed-dim": "#65dbb6",
+            "on-primary": "#ffffff",
+            "tertiary-fixed-dim": "#fface7",
+            "outline-variant": "#c3c6d4",
+            "on-surface": "#1a1c1e",
+            "secondary-fixed": "#82f8d1",
+            "inverse-on-surface": "#f0f0f3",
+            "outline": "#737783",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#434652",
+            "primary-container": "#004099",
+            "surface-container-low": "#f3f3f6",
+            "on-tertiary-fixed-variant": "#7d1a6e",
+            "surface-container": "#edeef0",
+            "primary": "#002b6c",
+            "inverse-surface": "#2f3133",
+            "inverse-primary": "#b0c6ff",
+            "error-container": "#ffdad6",
+            "primary-fixed": "#d9e2ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#e8e8ea",
+            "surface": "#f9f9fb",
+            "on-secondary": "#ffffff",
+            "tertiary-container": "#7b186c",
+            "surface-variant": "#e2e2e5",
+            "tertiary-fixed": "#ffd7f0",
+            "surface-container-highest": "#e2e2e5",
+            "on-tertiary-container": "#fe8be2",
+            "on-primary-container": "#92b1ff",
+            "error": "#ba1a1a",
+            "surface-tint": "#2d5bb4",
+            "background": "#f9f9fb",
+            "on-secondary-fixed-variant": "#00513e",
+            "secondary-container": "#82f8d1",
+            "on-error": "#ffffff",
+            "on-secondary-container": "#007259",
+            "surface-bright": "#f9f9fb",
+            "secondary": "#006c53",
+            "on-tertiary-fixed": "#3a0032"
+          },
+          fontFamily: {
+            "headline": ["Manrope", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+            "label": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .signature-gradient {
+      background: linear-gradient(135deg, #004099 0%, #1DA381 100%);
+    }
+    .bg-brand-gradient {
+      background: linear-gradient(135deg, #004099 0%, #1DA381 100%);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+    .editorial-shadow {
+      box-shadow: 0 24px 48px -12px rgba(0, 43, 108, 0.08);
+    }
+  </style>
 </head>
-<body>
-<script src="../js/layout.js?v=20260311b"></script>
+<body class="bg-background font-body text-on-background">
+  <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+    <nav class="w-full px-8 py-4 max-w-7xl mx-auto flex items-center md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8">
+      <a class="text-xl font-extrabold bg-gradient-to-r from-[#004099] to-[#1DA381] bg-clip-text text-transparent font-headline tracking-tight justify-self-start" href="../index.html">
+        The Physics Lab
+      </a>
+      <div class="hidden md:flex items-center gap-8 justify-self-center">
+        <a class="text-slate-600 hover:text-[#004099] transition-colors font-bold" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 hover:text-[#004099] transition-colors font-bold" href="tok.html">TOK</a>
+        <a class="text-[#004099] border-b-2 border-[#1DA381] pb-1 font-semibold" href="misc.html">Resources</a>
+        <a class="text-slate-600 hover:text-[#004099] transition-colors font-bold" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 hover:text-[#004099] transition-colors font-bold" href="meetings.html">Meetings</a>
+      </div>
+      <div class="hidden md:flex justify-self-end">
+        <a class="signature-gradient text-white px-6 py-2 rounded-xl font-headline font-bold active:scale-95 transition-transform" href="meetings.html">
+          Meetings
+        </a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden text-primary" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="material-symbols-outlined text-primary text-3xl">menu</span>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden px-8 pb-5 max-w-7xl mx-auto">
+      <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-4 flex flex-col gap-3 shadow-lg">
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="tok.html">TOK</a>
+        <a class="text-[#004099] font-bold" href="misc.html">Resources</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="meetings.html">Meetings</a>
+        <a class="signature-gradient text-white px-6 py-3 rounded-xl font-bold text-center transition-all active:scale-95 duration-150" href="meetings.html">
+          Meetings
+        </a>
+      </div>
+    </div>
+  </header>
 
-<div class="hero">
-  <div class="hero-ribbon"></div>
-  <div class="hero-circle-1"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">Resources</div>
-    <h1>SAT Preparation</h1>
-    <p>SAT Math and Science preparation materials for students applying to US universities.</p>
-  </div>
-</div>
+  <main class="pt-12 pb-12 px-8 max-w-7xl mx-auto">
+    <section class="relative overflow-hidden rounded-[2rem] bg-brand-gradient text-white p-10 md:p-14 mb-16 editorial-shadow">
+      <div class="absolute -right-20 -top-16 h-72 w-72 rounded-full bg-white/10 blur-3xl"></div>
+      <div class="absolute right-12 bottom-0 h-56 w-56 rounded-full bg-secondary/20 blur-3xl"></div>
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7">
+          <span class="inline-block py-1 px-3 rounded-full bg-white/20 backdrop-blur-md text-xs font-bold tracking-widest uppercase mb-6 font-label">
+            US University Admissions
+          </span>
+          <h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tight mb-6 [text-wrap:balance]">
+            SAT Preparation
+          </h1>
+          <p class="text-lg md:text-xl text-white/90 leading-relaxed mb-8 max-w-3xl">
+            SAT Math and Science preparation materials for students applying to universities in the United States, with an emphasis on official practice, digital test readiness, and strategy support.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a class="bg-white text-primary px-8 py-4 rounded-xl font-bold transition-all hover:-translate-y-0.5 shadow-lg" href="https://drive.google.com/drive/folders/1LRX86yPDLIuE-F8AHopr_Mqs_Wky9CuY?usp=sharing" target="_blank" rel="noreferrer">
+              Official Exams Folder
+            </a>
+            <a class="bg-white/15 border border-white/20 text-white px-8 py-4 rounded-xl font-bold transition-colors hover:bg-white/20" href="meetings.html">
+              Book SAT Support
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="glass-card rounded-[1.75rem] p-7 md:p-8 text-on-surface editorial-shadow">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center">
+                <span class="material-symbols-outlined">school</span>
+              </div>
+              <div>
+                <div class="font-headline font-bold text-xl text-primary">Official-First Approach</div>
+                <div class="text-sm text-on-surface-variant">College Board materials over third-party drills</div>
+              </div>
+            </div>
+            <p class="text-on-surface-variant leading-relaxed mb-6">
+              Focus on official College Board materials first. For Costa Rica, I only recommend taking the SAT at the British School.
+            </p>
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="rounded-2xl bg-surface-container-low p-5">
+                <div class="text-3xl font-headline font-black text-primary mb-1">5</div>
+                <div class="text-xs font-bold uppercase tracking-[0.18em] text-on-surface-variant">Years tutoring</div>
+              </div>
+              <div class="rounded-2xl bg-surface-container-low p-5">
+                <div class="text-sm font-headline font-black text-primary mb-1">British School</div>
+                <div class="text-xs font-bold uppercase tracking-[0.18em] text-on-surface-variant">Costa Rica test site</div>
+              </div>
+            </div>
+            <div class="rounded-2xl bg-surface-container-low p-5">
+              <div class="flex items-start gap-4">
+                <div class="w-11 h-11 rounded-xl bg-secondary-container flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-secondary">devices</span>
+                </div>
+                <div>
+                  <div class="font-headline font-bold text-lg text-primary mb-1">Digital SAT Setup</div>
+                  <div class="text-sm text-on-surface-variant leading-relaxed">
+                    Bluebook is the exam app, and Desmos is the official SAT calculator. Both should be part of your preparation routine.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="page">
-  <div class="section">
-    <h2 class="section-title">SAT Resources</h2>
-    <p class="section-desc">The SAT is relevant for students applying to universities in the United States. Physics content overlaps heavily with the SAT Math section, particularly algebra, problem-solving, and data analysis.</p>
-    <div class="callout callout-orange">
-      <span>SAT</span>
-      <span>Focus on official College Board materials first. In Costa Rica, I only recommend taking the SAT at the British School.</span>
-    </div>
-    <div class="callout callout-green">
-      <span>Support</span>
-      <span>I have worked as an SAT tutor for 5 years and can help anyone who needs tips, strategy, or support with preparation.</span>
-    </div>
-    <div class="grid grid-2">
-      <a class="link-card card-orange" href="https://drive.google.com/drive/folders/1LRX86yPDLIuE-F8AHopr_Mqs_Wky9CuY?usp=sharing" target="_blank">
-        <div class="card-icon icon-orange">SAT</div>
-        <div>
-          <div class="link-card-label">Official SAT Exams Folder</div>
-          <div class="link-card-desc">Official exams and College Board practice materials collected in one folder</div>
-        </div>
-        <span class="link-arrow">Open</span>
-      </a>
-      <a class="link-card card-orange" href="https://bluebook.collegeboard.org/students/download-bluebook" target="_blank">
-        <div class="card-icon icon-orange">App</div>
-        <div>
-          <div class="link-card-label">Download Bluebook</div>
-          <div class="link-card-desc">Bluebook is the app used to take the digital SAT</div>
-        </div>
-        <span class="link-arrow">Open</span>
-      </a>
-      <a class="link-card card-orange" href="https://www.collegeboard.org" target="_blank">
-        <div class="card-icon icon-orange">SAT</div>
-        <div>
-          <div class="link-card-label">College Board SAT</div>
-          <div class="link-card-desc">Official SAT registration, practice tests, and score reports</div>
-        </div>
-        <span class="link-arrow">Open</span>
-      </a>
-      <a class="link-card card-orange" href="https://satsuiteeducatorquestionbank.collegeboard.org/digital/search" target="_blank">
-        <div class="card-icon icon-orange">QB</div>
-        <div>
-          <div class="link-card-label">SAT Question Bank</div>
-          <div class="link-card-desc">Create topic-based worksheets using official College Board question bank items</div>
-        </div>
-        <span class="link-arrow">Open</span>
-      </a>
-      <a class="link-card card-orange" href="https://www.desmos.com" target="_blank">
-        <div class="brand-logo brand-logo-wide"><img src="../Images/high-resolution-desmos-logo-vector-svg-ai-file-included-v0-8l1kzoyzqyd61.png.webp" alt="Desmos logo"></div>
-        <div>
-          <div class="link-card-label">Desmos</div>
-          <div class="link-card-desc">Desmos is the official calculator for the SAT and is partnered with both the College Board and the IB.</div>
-        </div>
-        <span class="link-arrow">Open</span>
-      </a>
-    </div>
-  </div>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-8 space-y-16">
+        <section>
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div>
+              <h2 class="text-3xl font-headline font-extrabold text-primary mb-2">Official Resources</h2>
+              <p class="text-on-surface-variant max-w-2xl">
+                Start with the official digital SAT tools and College Board material, then use Desmos as part of your math workflow.
+              </p>
+            </div>
+            <div class="inline-flex items-center gap-2 text-secondary font-bold">
+              <span class="material-symbols-outlined">verified</span>
+              College Board first
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a class="bg-surface-container-lowest rounded-2xl p-8 shadow-sm hover:-translate-y-1 transition-transform border border-outline-variant/15" href="https://drive.google.com/drive/folders/1LRX86yPDLIuE-F8AHopr_Mqs_Wky9CuY?usp=sharing" target="_blank" rel="noreferrer">
+              <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-6 text-white">
+                <span class="material-symbols-outlined">folder</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3 font-headline text-primary">Official SAT Exams Folder</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Official exams and College Board practice materials collected in one folder.</p>
+              <div class="text-primary font-bold flex items-center gap-1">
+                Open folder <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </div>
+            </a>
 
-  <div class="section">
-    <div class="callout callout-blue">
-      <span>Note</span>
-      <span>I do not recommend Khan Academy SAT exercises as a main preparation source because I do not think they are representative enough of the real SAT.</span>
+            <a class="bg-surface-container-lowest rounded-2xl p-8 shadow-sm hover:-translate-y-1 transition-transform border border-outline-variant/15" href="https://bluebook.collegeboard.org/students/download-bluebook" target="_blank" rel="noreferrer">
+              <div class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center mb-6 text-white">
+                <span class="material-symbols-outlined">tablet_mac</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3 font-headline text-primary">Bluebook</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Bluebook is the app used to take the digital SAT, so preparation should include practicing in the same environment.</p>
+              <div class="text-secondary font-bold flex items-center gap-1">
+                Download Bluebook <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </div>
+            </a>
+
+            <a class="bg-surface-container-lowest rounded-2xl p-8 shadow-sm hover:-translate-y-1 transition-transform border border-outline-variant/15" href="https://www.collegeboard.org" target="_blank" rel="noreferrer">
+              <div class="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center mb-6 text-white">
+                <span class="material-symbols-outlined">school</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3 font-headline text-primary">College Board SAT</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Official SAT registration, practice tests, and score reports from the source that sets the exam.</p>
+              <div class="text-primary font-bold flex items-center gap-1">
+                Open site <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </div>
+            </a>
+
+            <a class="bg-surface-container-lowest rounded-2xl p-8 shadow-sm hover:-translate-y-1 transition-transform border border-outline-variant/15" href="https://satsuiteeducatorquestionbank.collegeboard.org/digital/search" target="_blank" rel="noreferrer">
+              <div class="w-12 h-12 bg-tertiary-container rounded-xl flex items-center justify-center mb-6 text-white">
+                <span class="material-symbols-outlined">quiz</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3 font-headline text-primary">SAT Question Bank</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Create topic-based worksheets using official College Board question bank items.</p>
+              <div class="text-tertiary-container font-bold flex items-center gap-1">
+                Open bank <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </div>
+            </a>
+
+            <a class="md:col-span-2 bg-surface-container-lowest rounded-2xl p-8 shadow-sm hover:-translate-y-1 transition-transform border border-outline-variant/15" href="https://www.desmos.com" target="_blank" rel="noreferrer">
+              <div class="flex flex-col sm:flex-row sm:items-start gap-6">
+                <div class="w-16 h-16 rounded-2xl bg-surface-container-low flex items-center justify-center flex-shrink-0">
+                  <img class="w-10 h-10 object-contain" src="../Images/high-resolution-desmos-logo-vector-svg-ai-file-included-v0-8l1kzoyzqyd61.png.webp" alt="Desmos logo">
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-bold mb-3 font-headline text-primary">Desmos</h3>
+                  <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Desmos is the official calculator for the SAT and is partnered with both the College Board and the IB.</p>
+                  <div class="text-primary font-bold flex items-center gap-1">
+                    Open Desmos <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-3xl font-headline font-extrabold text-primary mb-8">Preparation Guidance</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-surface-container rounded-2xl p-8">
+              <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-6 text-white">
+                <span class="material-symbols-outlined">fact_check</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3 font-headline">Official Materials</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed">
+                Use official College Board exams and the question bank as your main preparation source before adding anything else.
+              </p>
+            </div>
+            <div class="bg-surface-container rounded-2xl p-8">
+              <div class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center mb-6 text-white">
+                <span class="material-symbols-outlined">location_on</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3 font-headline">Costa Rica Test Center</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed">
+                In Costa Rica, I only recommend taking the SAT at the British School.
+              </p>
+            </div>
+            <div class="bg-surface-container rounded-2xl p-8">
+              <div class="w-12 h-12 bg-tertiary-container rounded-xl flex items-center justify-center mb-6 text-white">
+                <span class="material-symbols-outlined">warning</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3 font-headline">Khan Academy Note</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed">
+                I do not recommend Khan Academy SAT exercises as a main preparation source because I do not think they are representative enough of the real SAT.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside class="lg:col-span-4 space-y-8">
+        <div class="bg-primary rounded-[2rem] p-8 text-white editorial-shadow">
+          <h3 class="text-2xl font-headline font-bold mb-6">Core Tools</h3>
+          <div class="space-y-4">
+            <a class="bg-white/10 hover:bg-white/20 p-4 rounded-xl flex items-center justify-between transition-colors group" href="https://bluebook.collegeboard.org/students/download-bluebook" target="_blank" rel="noreferrer">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined">tablet_mac</span>
+                <span class="font-medium">Bluebook</span>
+              </div>
+              <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+            <a class="bg-white/10 hover:bg-white/20 p-4 rounded-xl flex items-center justify-between transition-colors group" href="https://satsuiteeducatorquestionbank.collegeboard.org/digital/search" target="_blank" rel="noreferrer">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined">quiz</span>
+                <span class="font-medium">Question Bank</span>
+              </div>
+              <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+            <a class="bg-white/10 hover:bg-white/20 p-4 rounded-xl flex items-center justify-between transition-colors group" href="https://www.desmos.com" target="_blank" rel="noreferrer">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined">calculate</span>
+                <span class="font-medium">Desmos</span>
+              </div>
+              <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+          </div>
+          <a class="block w-full mt-8 bg-secondary py-4 rounded-xl font-bold text-center shadow-lg shadow-black/20 hover:bg-secondary/90 transition-colors" href="https://www.collegeboard.org" target="_blank" rel="noreferrer">
+            Open College Board
+          </a>
+        </div>
+
+        <div class="bg-surface-container-high rounded-[2rem] p-8 editorial-shadow">
+          <h3 class="text-xl font-headline font-bold text-primary mb-4">Support</h3>
+          <p class="text-on-surface-variant leading-relaxed mb-6">
+            I have worked as an SAT tutor for 5 years and can help anyone who needs tips, strategy, or support with preparation.
+          </p>
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-secondary">check_circle</span>
+              <span>Strategy for digital SAT practice and pacing.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-secondary">check_circle</span>
+              <span>Advice on official materials, Bluebook, and Desmos.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-secondary">check_circle</span>
+              <span>One-on-one help through the meetings page.</span>
+            </li>
+          </ul>
+          <a class="inline-flex mt-8 bg-white text-primary px-6 py-3 rounded-xl font-bold hover:bg-surface-container transition-colors" href="meetings.html">
+            Book a Tutorial
+          </a>
+        </div>
+
+        <div class="signature-gradient rounded-[2rem] p-8 text-white editorial-shadow">
+          <h3 class="text-xl font-headline font-bold mb-4">Best Use of This Page</h3>
+          <div class="space-y-4 text-sm text-white/90">
+            <div class="rounded-2xl bg-white/10 p-4">Start with the official exams folder and College Board site.</div>
+            <div class="rounded-2xl bg-white/10 p-4">Practice in Bluebook so the test format feels familiar.</div>
+            <div class="rounded-2xl bg-white/10 p-4">Use Desmos confidently, since it is the official SAT calculator.</div>
+          </div>
+        </div>
+      </aside>
     </div>
-  </div>
-</div>
+
+    <section class="mt-20 rounded-[2rem] signature-gradient text-white p-10 md:p-14 editorial-shadow">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl md:text-4xl font-headline font-extrabold mb-3">Need personalized SAT help?</h2>
+          <p class="text-white/85 leading-relaxed">
+            Use the official resources here first, then book a session if you want help with strategy, pacing, or planning your preparation.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-4">
+          <a class="bg-white text-primary px-6 py-3 rounded-xl font-bold hover:bg-surface-container transition-colors" href="https://drive.google.com/drive/folders/1LRX86yPDLIuE-F8AHopr_Mqs_Wky9CuY?usp=sharing" target="_blank" rel="noreferrer">
+            Open SAT Folder
+          </a>
+          <a class="bg-white/15 border border-white/20 text-white px-6 py-3 rounded-xl font-bold hover:bg-white/20 transition-colors" href="meetings.html">
+            Meetings
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-50 w-full mt-auto">
+    <div class="w-full px-8 py-12 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 md:gap-10">
+        <div class="flex flex-col gap-2 text-center md:text-left">
+          <div class="text-lg font-bold text-slate-900">IB Physics &amp; TOK — UWC Costa Rica</div>
+          <div class="font-['Inter'] text-sm tracking-wide text-slate-500">Erick Loria Soto · <a class="hover:text-[#004099] transition-colors" href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></div>
+        </div>
+        <div class="font-['Inter'] text-sm tracking-wide text-slate-500 text-center md:text-right max-w-2xl">
+          <strong class="text-slate-700">Copyright 2026 Erick Loria Soto.</strong> All original site content, course materials, design, and writing are my own unless otherwise credited. Built with HTML, CSS, JavaScript, and GitHub Pages.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isExpanded));
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+  <script src="../js/nav-dropdowns.js?v=20260321e"></script>
 </body>
 </html>

@@ -213,94 +213,108 @@ The following example topics are useful models of focused questions, clear metho
 - [How does increasing the sand mass relative to the cement mass in a cement-sand mixture affect its thermal conductivity?](https://www.clastify.com/ee/physics/6878efed3e303f497e5378ed?ref=692475b063ba29ac79d04694)
 - [To what extent do the properties of Delta Cephei compare to those of the Sun?](https://www.clastify.com/ee/physics/657de9fba8d6c041e5b48214?ref=692475b063ba29ac79d04694)
 
-## 5. IB Physics EE Criteria (A-E) Overview
+## 5. Extended Essay Assessment Overview
 
-The Extended Essay is assessed using five criteria. The summaries below are written for students and adapted to the Physics context.
+The assessment guide separates the EE into formative preparation for the reflection and progress form (RPF) and summative assessment of the essay itself plus the reflective statement on the RPF.
 
-### 5.1 Criterion A: Focus and Method
+The current rubric uses five criteria:
 
-**IB focus (sciences):**  
-The research question should drive the method, and the method should produce scientific data that supports a logical response.
+- Criterion A: Framework for the essay
+- Criterion B: Knowledge and understanding
+- Criterion C: Analysis and line of argument
+- Criterion D: Discussion and evaluation
+- Criterion E: Reflection
 
-**What this means for you:**  
-Your research question must be specific, measurable, and clearly about Physics. The method must produce data that directly addresses that question.
+Criteria A, B, C, and D apply to the essay as a whole. Criterion E applies only to the reflective statement on the RPF.
+
+The guide also uses a **best-fit** approach. That means the essay is judged by the markband that best matches the overall balance of the work. Examiners also use **positive marking**: they award credit for what is clearly present and done well, rather than focusing mainly on omissions.
+
+### 5.1 Criterion A: Framework for the Essay
+
+**Guiding question:**  
+Do the research question, research methods, and structural conventions followed provide an effective framework for the essay?
+
+**What this means for you in Physics:**  
+Your research question should be relevant, clear, and realistically answerable within the scope of a Physics EE. The method should be suitable for the question, and the structure should help the examiner follow the logic of the investigation.
 
 **Best-practice checklist**
 
-- The research question contains a clear independent variable and dependent variable when appropriate.
-- The topic is feasible with available time, equipment, or accessible secondary data.
-- The method is replicable.
-- You understand and own the procedure rather than merely copying it.
-- Data tables, diagrams, and graphs are labelled clearly, and key sample calculations include uncertainties.
+- The research question is narrow enough for a 4,000-word scientific investigation.
+- The question is clearly rooted in Physics, not just in a general science topic.
+- The method produces evidence that can actually answer the question.
+- The structure supports communication: title, question, theory, method, analysis, conclusion, references.
+- Data tables, graphs, and diagrams are integrated to support the investigation instead of being decorative.
 
 > **Rubric Link**  
-> A focused question supports stronger data analysis and stronger critical evaluation. A vague question weakens the entire essay.
+> A stronger framework makes the rest of the essay easier to reward because the question, method, and structure are pulling in the same direction.
 
 ### 5.2 Criterion B: Knowledge and Understanding
 
-**IB focus (sciences):**  
-You must demonstrate knowledge and understanding by exploring the relevant processes and theories with clear terminology.
+**Guiding question:**  
+Does the student demonstrate knowledge and understanding of the subject matter being used in the research?
 
-**What this means for you:**  
-Your essay should show that you understand the Physics behind the topic. Laws, principles, and equations should be explained accurately and applied to your specific investigation.
-
-**Best-practice checklist**
-
-- The theory section is tightly linked to the research question and method.
-- All equations are defined clearly and symbols are explained.
-- Assumptions and approximations are stated explicitly.
-- Generic textbook summaries that are not used later are avoided.
-
-### 5.3 Criterion C: Critical Thinking
-
-**IB focus (sciences):**  
-Analysis should follow accepted scientific processes and address the research question directly. In a secondary-data essay, the analysis must be your own.
-
-**What this means for you:**  
-You must do more than describe results. Use graphs, fits, calculations, and comparisons with theory to build an argument that answers the research question.
+**What this means for you in Physics:**  
+The essay should show accurate use of Physics ideas, equations, terminology, and concepts. Background theory should not sit in isolation; it should actively support the method, analysis, and interpretation.
 
 **Best-practice checklist**
 
+- Relevant research materials establish the scientific background of the essay.
+- Theory is chosen because it is needed for the investigation, not because it looks impressive.
+- Equations are defined clearly and symbols are explained.
+- Terminology is accurate and used consistently.
+- Concepts are applied to the specific investigation rather than summarized generically.
+
+### 5.3 Criterion C: Analysis and Line of Argument
+
+**Guiding question:**  
+Does the student analyse the information presented in the essay and produce a coherent line of argument?
+
+**What this means for you in Physics:**  
+The essay must move beyond description. Graphs, fits, calculations, comparisons with theory, and uncertainty-aware reasoning should build a clear line of argument from the research question to the conclusion.
+
+**Best-practice checklist**
+
+- Analysis is doing real work, not just restating the data.
 - Graphs are used to test models meaningfully.
 - Sample calculations are shown clearly, including uncertainty propagation where relevant.
-- Slopes, intercepts, or curvature are linked to physical quantities.
-- Anomalies are identified and explained using plausible physics.
+- Slopes, intercepts, trends, or deviations are interpreted as physical quantities or mechanisms.
 - Secondary-data analysis is clearly your own.
-- If the data cannot fully answer the question, unresolved issues and concrete improvements are stated explicitly.
+- The conclusion grows logically from the findings instead of appearing suddenly at the end.
 
 > **Highlight**  
-> If the reader could remove all your numbers, graphs, and equations and still understand the essay in the same way, then the analysis is not doing enough work.
+> If the essay would read almost the same after removing the numbers, graphs, and equations, then the analysis is not carrying enough of the argument.
 
 ### 5.4 Criterion D: Discussion and Evaluation
 
-**IB focus (sciences):**  
-The discussion should be critical, situated in a scientific context, and always linked to the research question. The conclusion should be a supported synthesis rather than a repetition of results.
+**Guiding question:**  
+Does the student discuss the findings and evaluate the essay?
 
-**What this means for you:**  
-Your discussion must explain what the results mean, how convincing they are, and how limitations affect the strength of your conclusion.
+**What this means for you in Physics:**  
+The discussion should explain the significance of the findings and support that discussion with evidence. The evaluation should address how effective the essay is, including strengths, weaknesses, and the consequences of limitations.
 
 **Best-practice checklist**
 
-- Discussion paragraphs always connect back to the research question and the underlying Physics.
-- Sources are used to support or challenge the conclusion.
-- The conclusion synthesises the findings instead of repeating every result.
-- The evaluation identifies the most important limitations and explains their likely effects.
-- Clear distinctions are made between well-supported claims and speculation.
+- Discussion paragraphs connect the results back to the research question.
+- Claims are supported by data, theory, or relevant sources.
+- The conclusion synthesises the findings instead of repeating every result in order.
+- Important limitations are identified and their likely effects are explained.
+- Evaluation is specific about what worked, what did not, and what that means for the strength of the conclusion.
 
-### 5.5 Criterion E: Engagement
+### 5.5 Criterion E: Reflection
 
-**IB focus (sciences):**  
-Criterion E is shown through reflection, especially in the RPPF and the viva voce.
+**Guiding question:**  
+Does the student evaluate the effect of the extended essay learning experience on them as a learner?
 
-**What this means for you:**  
-You should show how you personally engaged with the research process: how decisions were made, problems were solved, and the research question evolved.
+**What this means for you in Physics:**  
+Criterion E is shown in the reflective statement on the RPF. It should show how your thinking changed, how decisions were made, and how the process affected your growth as a learner and researcher.
 
 **Best-practice checklist**
 
 - You describe specific decisions and why they were made.
 - You reflect honestly on what did not work and how you responded.
-- You connect your experience to bigger ideas about how Physics is done, including modelling, uncertainty, simplification, and iteration.
-- You avoid generic statements that do not include real detail.
+- You show how the project changed your understanding of modelling, uncertainty, simplification, or scientific decision-making.
+- You include real examples rather than generic statements about working hard.
+- You make the transfer of learning visible: what you would carry into future scientific work.
 
 > **Rubric Link**  
-> Use the criteria as a self-check while drafting. After each major section, ask whether an examiner who does not know you or your project could clearly see the evidence for that criterion.
+> Use the criteria as a self-check while drafting, but remember the assessment guide awards the markband that best fits the whole performance rather than demanding perfection in every line of the rubric.

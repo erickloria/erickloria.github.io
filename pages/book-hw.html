@@ -1,290 +1,546 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book & Homework — IB Physics &amp; TOK</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>Book &amp; Homework | The Physics Lab</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-error": "#ffffff",
+            "tertiary-container": "#7b186c",
+            "on-surface-variant": "#434652",
+            "inverse-surface": "#2f3133",
+            "primary-fixed": "#d9e2ff",
+            "tertiary-fixed": "#ffd7f0",
+            "secondary-fixed-dim": "#65dbb6",
+            "tertiary-fixed-dim": "#fface7",
+            "surface-container": "#edeef0",
+            "secondary-container": "#82f8d1",
+            "surface-variant": "#e2e2e5",
+            "on-primary": "#ffffff",
+            "primary-container": "#004099",
+            "on-secondary-fixed": "#002117",
+            "outline-variant": "#c3c6d4",
+            "on-primary-fixed": "#001945",
+            "surface-dim": "#d9dadc",
+            "surface-bright": "#f9f9fb",
+            "inverse-primary": "#b0c6ff",
+            "on-tertiary-container": "#fe8be2",
+            "surface-container-low": "#f3f3f6",
+            "on-background": "#1a1c1e",
+            "on-primary-fixed-variant": "#04429b",
+            "surface-tint": "#2d5bb4",
+            "outline": "#737783",
+            "error-container": "#ffdad6",
+            "on-tertiary-fixed-variant": "#7d1a6e",
+            "on-secondary-fixed-variant": "#00513e",
+            "on-secondary": "#ffffff",
+            "background": "#f9f9fb",
+            "on-surface": "#1a1c1e",
+            "on-secondary-container": "#007259",
+            "tertiary": "#5b0050",
+            "surface-container-highest": "#e2e2e5",
+            "secondary": "#006c53",
+            "primary": "#002b6c",
+            "on-error-container": "#93000a",
+            "surface": "#f9f9fb",
+            "secondary-fixed": "#82f8d1",
+            "on-tertiary": "#ffffff",
+            "surface-container-high": "#e8e8ea",
+            "surface-container-lowest": "#ffffff",
+            "primary-fixed-dim": "#b0c6ff",
+            "on-tertiary-fixed": "#3a0032",
+            "on-primary-container": "#92b1ff",
+            "error": "#ba1a1a",
+            "inverse-on-surface": "#f0f0f3"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          }
+        }
+      }
+    };
+  </script>
   <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .blue-to-green-gradient {
+      background: linear-gradient(135deg, #004099 0%, #1DA381 100%);
+    }
+    .editorial-shadow {
+      box-shadow: 0 24px 48px -12px rgba(0, 43, 108, 0.08);
+    }
     .chapter-breakdown {
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
     .chapter-breakdown div {
-      color: var(--muted);
+      color: #434652;
       font-size: 14px;
       line-height: 1.65;
-      padding-top: 10px;
-      border-top: 1px solid rgba(127, 160, 204, 0.18);
-    }
-    .chapter-breakdown div:first-child {
-      padding-top: 0;
-      border-top: 0;
+      padding: 10px 12px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.78);
     }
     .chapter-breakdown strong {
-      color: var(--text);
-      font-weight: 600;
-    }
-    .exercise-grid .card-title {
-      margin-bottom: 12px;
-      font-size: 18px;
+      color: #1a1c1e;
+      font-weight: 700;
     }
     .chapter-breakdown div,
-    .chapter-breakdown strong,
-    .link-card-label,
-    .link-card-desc {
+    .chapter-breakdown strong {
       overflow-wrap: anywhere;
     }
-    @media (max-width: 1024px) {
-      .exercise-grid {
-        gap: 18px;
-      }
-      .exercise-grid .card {
-        padding: 22px;
-      }
-      .exercise-grid .card-title {
-        font-size: 20px;
-        margin-bottom: 14px;
-      }
-      .chapter-breakdown div {
-        font-size: 14px;
-        line-height: 1.7;
-      }
-    }
     @media (max-width: 768px) {
-      .exercise-grid .card {
-        padding: 18px;
-      }
-      .exercise-grid .card-title {
-        font-size: 18px;
-        margin-bottom: 12px;
-      }
-      .chapter-breakdown {
-        gap: 8px;
-      }
       .chapter-breakdown div {
         font-size: 13.5px;
         line-height: 1.65;
-        padding-top: 8px;
-      }
-    }
-    @media (prefers-color-scheme: dark) {
-      .chapter-breakdown div {
-        border-top-color: rgba(127, 160, 204, 0.14);
+        padding: 9px 11px;
       }
     }
   </style>
 </head>
-<body>
-<script src="../js/layout.js?v=20260311b"></script>
-
-<div class="hero">
-  <div class="hero-ribbon"></div>
-  <div class="hero-circle-1"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">Resources</div>
-    <h1>Book & Homework</h1>
-    <p>Textbook chapters, reading assignments, and problem sets for each unit.</p>
-  </div>
-</div>
-
-<div class="page">
-  <div class="section">
-    <h2 class="section-title">Core Study Materials</h2>
-    <p class="section-desc">The main textbook materials for the course are collected here. The coursebook PDF is large and may take some time to download on the school network during peak hours.</p>
-    <div class="grid grid-2">
-      <a class="link-card card-green" href="https://kognity.com" target="_blank">
-        <div class="brand-logo brand-logo-wide"><img src="../Images/Kognity_full_logo_GREEN-RGB.png" alt="Kognity logo"></div>
-        <div>
-          <div class="link-card-label">Kognity</div>
-          <div class="link-card-desc">Use Kognity for textbook reading, guided practice, and assigned digital work</div>
-        </div>
-        <span class="link-arrow">Open</span>
+<body class="bg-background text-on-background font-body selection:bg-secondary-container">
+  <nav class="bg-white/80 backdrop-blur-xl shadow-sm sticky top-0 z-50">
+    <div class="w-full px-8 py-4 max-w-7xl mx-auto flex items-center md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8">
+      <a class="text-xl font-extrabold tracking-tighter bg-gradient-to-r from-[#004099] to-[#1DA381] bg-clip-text text-transparent justify-self-start" href="../index.html">
+        The Physics Lab
       </a>
-      <a class="link-card card-blue" href="https://drive.google.com/file/d/1xsRz1-3hxK2Ob-zYIE9v1hycgcB51a29/view" target="_blank">
-        <div class="card-icon icon-blue">Book</div>
-        <div>
-          <div class="link-card-label">Coursebook PDF</div>
-          <div class="link-card-desc">Download the full coursebook in PDF format</div>
-        </div>
-        <span class="link-arrow">Open</span>
-      </a>
-      <a class="link-card card-green" href="https://drive.google.com/file/d/1eSuiPe17B2_m0KKA51MgiOUzxwD41nvH/view" target="_blank">
-        <div class="card-icon icon-green">Key</div>
-        <div>
-          <div class="link-card-label">Answer Key</div>
-          <div class="link-card-desc">Use only after attempting the recommended problems</div>
-        </div>
-        <span class="link-arrow">Open</span>
-      </a>
+      <div class="hidden md:flex items-center gap-8 justify-self-center">
+        <a class="text-[#004099] font-bold border-b-2 border-[#1DA381] pb-1" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="tok.html">TOK</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="misc.html">Resources</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="meetings.html">Meetings</a>
+      </div>
+      <div class="hidden md:flex justify-self-end">
+        <a class="blue-to-green-gradient text-white px-6 py-2.5 rounded-xl font-bold tracking-tight active:scale-95 duration-150 ease-in-out" href="meetings.html">
+          Meetings
+        </a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden text-primary" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="material-symbols-outlined text-primary text-3xl">menu</span>
+      </button>
     </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Recommended Book Exercises</h2>
-    <p class="section-desc">Additional practice problems from the textbook, organized by chapter and section.</p>
-    <div class="grid grid-2 exercise-grid">
-      <div class="card card-blue">
-        <div class="card-title">Chapter 1</div>
-        <div class="chapter-breakdown">
-          <div><strong>1.1 Displacement, distance, speed and velocity:</strong> 1-4</div>
-          <div><strong>1.2 Uniformly accelerated motion:</strong> 5, 6, 7, 10, 12, 14, 15, 18</div>
-          <div><strong>1.3 Graphs of Motion:</strong> 19-24</div>
-          <div><strong>1.4 Projectile Motion:</strong> 29, 30, 33, 34, 35, 37</div>
-        </div>
-      </div>
-      <div class="card card-blue">
-        <div class="card-title">Chapter 2</div>
-        <div class="chapter-breakdown">
-          <div><strong>2.1 Forces and their directions:</strong> 1-14</div>
-          <div><strong>2.2 Newton's Laws:</strong> 15, 17, 20, 21, 23, 24, 27, 28, 29, 30, 31</div>
-          <div><strong>2.3 Circular Motion:</strong> 33, 35, 36, 37, 39, 43, 44</div>
-        </div>
-      </div>
-      <div class="card card-blue">
-        <div class="card-title">Chapter 3</div>
-        <div class="chapter-breakdown">
-          <div><strong>Worked examples:</strong> pages 72-77</div>
-          <div><strong>3.1 Work:</strong> 1-21</div>
-          <div><strong>3.2 Conservation of energy:</strong> 22-26</div>
-          <div><strong>3.3 Power and efficiency:</strong> 32-37</div>
-        </div>
-      </div>
-      <div class="card card-blue">
-        <div class="card-title">Chapter 4</div>
-        <div class="chapter-breakdown">
-          <div><strong>4.1 Newton's Laws:</strong> 1, 2, 4</div>
-          <div><strong>4.2 Impulse and force-time graphs:</strong> 6, 7, 8, 9, 10</div>
-          <div><strong>4.3 Conservation of Momentum:</strong> 11</div>
-          <div><strong>4.4 Kinetic Energy and Momentum:</strong> 12-18, 20-23</div>
-          <div><strong>4.5 Two dimensional collisions:</strong> all</div>
-        </div>
-      </div>
-      <div class="card card-green">
-        <div class="card-title">Chapter 7</div>
-        <div class="chapter-breakdown">
-          <div><strong>7.1 Particles, temperature and energy:</strong> 2, 7</div>
-          <div><strong>7.2 Specific Heat Capacity and change of phase:</strong> 9, 12, 14, 16, 20, 21</div>
-          <div><strong>7.3 Thermal Energy Transfer:</strong> 23, 24, 31, 32, 34, 36, 37, 41, 43, 48, 50, 54</div>
-        </div>
-      </div>
-      <div class="card card-green">
-        <div class="card-title">Chapter 8</div>
-        <div class="chapter-breakdown">
-          <div><strong>8.1 Radiation from real bodies:</strong> 1-5</div>
-          <div><strong>8.2 Energy Balance of the Earth:</strong> 6, 7, 8, 13, 19</div>
-        </div>
-      </div>
-      <div class="card card-green">
-        <div class="card-title">Chapter 9</div>
-        <div class="chapter-breakdown">
-          <div><strong>9.1 Moles, molar mass, and the Avogadro constant:</strong> 3, 5, 9</div>
-          <div><strong>9.2 Ideal Gas:</strong> 10, 12, 15, 16, 17, 20</div>
-          <div><strong>9.3 The Boltzmann Equation:</strong> 23, 24, 26, 29, 32</div>
-        </div>
-      </div>
-      <div class="card card-green">
-        <div class="card-title">Chapter 10</div>
-        <div class="chapter-breakdown">
-          <div><strong>10.1 Internal Energy:</strong> 1, 3, 5, 7</div>
-          <div><strong>10.2 The First Law of Thermodynamics:</strong> 8, 10, 13, 16, 20, 23, 22 (demonstration problem), 24</div>
-          <div><strong>10.3 The Second Law of Thermodynamics:</strong> 28, 30, 32</div>
-          <div><strong>10.4 Heat Engines:</strong> 33, 35, 39, 40, 42</div>
-        </div>
-      </div>
-      <div class="card card-green">
-        <div class="card-title">Chapter 11</div>
-        <div class="chapter-breakdown">
-          <div><strong>11.1 Potential difference, current and resistance:</strong> 1-6, 8-19</div>
-          <div><strong>11.2 Voltage, power, and EMF:</strong> 20-29</div>
-          <div><strong>11.3 Resistors in Electric Circuits:</strong> 32, 33, 34, 35, 37, 38, 39, 40, 41, 42, 43, 44, 46, 47</div>
-          <div><strong>11.4 Terminal potential difference and the potential divider:</strong> 48, 50, 51, 52, 53, 54, 55</div>
-        </div>
-      </div>
-      <div class="card card-orange">
-        <div class="card-title">Chapter 12</div>
-        <div class="chapter-breakdown">
-          <div><strong>12.1 Simple Harmonic Motion:</strong> 5, 6, 7, 9, 10, 13, 14</div>
-          <div><strong>12.2 Details of simple harmonic motion [HL]:</strong> 16, 19, 22, 24, 25, 28, 30</div>
-          <div><strong>12.3 and 12.4 Energy in simple harmonic motion:</strong> 34, 36, 38</div>
-        </div>
-      </div>
-      <div class="card card-orange">
-        <div class="card-title">Chapter 13</div>
-        <div class="chapter-breakdown">
-          <div><strong>13.1 Mechanical pulses and waves:</strong> 5, 6</div>
-          <div><strong>13.2 Transverse and longitudinal waves:</strong> 11, 14, 16</div>
-          <div><strong>13.3 Electromagnetic waves:</strong> 19</div>
-        </div>
-      </div>
-      <div class="card card-orange">
-        <div class="card-title">Chapter 14</div>
-        <div class="chapter-breakdown">
-          <div><strong>14.1 Reflection and Refraction:</strong> 2, 5, 6, 7, 9, 11, 12</div>
-          <div><strong>14.3 Diffraction and Interference:</strong> 20, 21, 24, 27, 31, 34</div>
-          <div><strong>14.4 Single Slit Interference:</strong> 35, 37, 38</div>
-          <div><strong>14.5 Multiple Slits:</strong> 40, 41, 42, 44, 46</div>
-        </div>
-      </div>
-      <div class="card card-orange">
-        <div class="card-title">Chapter 15</div>
-        <div class="chapter-breakdown">
-          <div><strong>15.1-15.3 Standing Waves:</strong> 6, 8, 9, 10, 12, 13, 14, 15, 17, 19, 20</div>
-          <div><strong>15.4 Resonance and Damping:</strong> 25, 26, 27, 28</div>
-        </div>
-      </div>
-      <div class="card card-orange">
-        <div class="card-title">Chapter 16</div>
-        <div class="chapter-breakdown">
-          <div><strong>Recommended exercises:</strong> all of them</div>
-        </div>
-      </div>
-      <div class="card card-purple">
-        <div class="card-title">Chapter 17</div>
-        <div class="chapter-breakdown">
-          <div><strong>17.1 Newton's law of gravitation:</strong> 2, 3, 5 (very similar to P1 problems), 7, 11, 13, 17</div>
-          <div><strong>HL 17.2 Gravitational potential and energy:</strong> 19, 21, 23, 25, 26</div>
-          <div><strong>HL 17.3 Motion in a gravitational field:</strong> 29, 31, 32, 34, 35, 39, 40</div>
-        </div>
-      </div>
-      <div class="card card-purple">
-        <div class="card-title">Chapter 18</div>
-        <div class="chapter-breakdown">
-          <div><strong>18.1 Electric charge, force and field:</strong> 2, 3, 5 (very similar to P1 problems), 7, 11, 13</div>
-          <div><strong>18.2 Magnetic field and force:</strong> 17, 19, 21, 23, 25, 26, 29, 31, 32, 34, 35</div>
-          <div><strong>18.3 Electric potential and electric potential energy:</strong> 39, 40, 42, 44, 45, 46, 48, 49, 51, 53, 54, 55</div>
-        </div>
-      </div>
-      <div class="card card-purple">
-        <div class="card-title">Chapter 19</div>
-        <div class="chapter-breakdown">
-          <div><strong>Recommended exercises:</strong> all</div>
-        </div>
-      </div>
-      <div class="card card-purple">
-        <div class="card-title">Chapter 20</div>
-        <div class="chapter-breakdown">
-          <div><strong>Recommended exercises:</strong> all</div>
-        </div>
-      </div>
-      <div class="card card-purple">
-        <div class="card-title">Chapter 21</div>
-        <div class="chapter-breakdown">
-          <div><strong>21.1 The structure of the atom:</strong> 6, 7, 10, 11, 12</div>
-          <div><strong>21.2 Quantization of angular momentum [HL]:</strong> 13, 14, 15, 18, 19, 22 (optional)</div>
-        </div>
+    <div id="mobile-menu" class="hidden md:hidden px-8 pb-5 max-w-7xl mx-auto">
+      <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-4 flex flex-col gap-3 shadow-lg">
+        <a class="text-[#004099] font-bold" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="tok.html">TOK</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="misc.html">Resources</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="meetings.html">Meetings</a>
+        <a class="blue-to-green-gradient text-white px-6 py-3 rounded-xl font-bold text-center transition-all active:scale-95 duration-150" href="meetings.html">
+          Meetings
+        </a>
       </div>
     </div>
-  </div>
+  </nav>
 
-  <div class="section">
-    <h2 class="section-title">Answer Key Guidance</h2>
-    <div class="callout callout-green">
-      <span>Guidance</span>
-      <span>It is strongly recommended that you attempt each problem before checking the answer key. Regular practice is essential in the natural sciences, and problem solving makes up 80% of the final IB Physics grade.</span>
+  <main>
+    <section class="relative overflow-hidden bg-surface-container-lowest py-24 px-8">
+      <div class="absolute -right-24 top-0 w-96 h-96 bg-secondary-container/20 rounded-full blur-3xl"></div>
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 z-10">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label text-xs font-bold tracking-widest uppercase mb-6">Course Portal</span>
+          <h1 class="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary tracking-tight leading-[1.05] mb-6 [text-wrap:balance]">
+            Book &amp; <span class="inline-block pr-[0.08em] bg-gradient-to-r from-[#004099] to-[#1DA381] bg-clip-text text-transparent italic">Homework</span>
+          </h1>
+          <p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed mb-10 font-medium">
+            Textbook chapters, reading assignments, and problem sets for each unit. Access the main course materials and the full set of recommended textbook exercises in one place.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a class="px-8 py-4 bg-primary text-on-primary rounded-xl font-bold flex items-center gap-2 hover:opacity-90 transition-all" href="#homework">
+              View Homework <span class="material-symbols-outlined">arrow_downward</span>
+            </a>
+            <a class="px-8 py-4 bg-surface-container-high text-primary rounded-xl font-bold hover:bg-surface-container-highest transition-all" href="#textbook">
+              Open Textbook
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="blue-to-green-gradient min-h-[28rem] rounded-3xl overflow-hidden editorial-shadow transform rotate-3 relative z-0 p-8 md:p-10 text-white">
+            <div class="flex min-h-full flex-col gap-5">
+              <div class="flex items-center justify-between text-sm font-bold tracking-[0.18em] uppercase text-white/80">
+                <span>IB Physics</span>
+                <span>Digital Hub</span>
+              </div>
+              <div class="space-y-4">
+                <div class="rounded-2xl bg-white/15 p-5">
+                  <img class="h-8 object-contain mb-4" src="../Images/Kognity_full_logo_GREEN-RGB.png" alt="Kognity logo">
+                  <p class="text-sm text-white/80">Reading, guided practice, and assigned digital work.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="rounded-2xl bg-white/15 p-5">
+                    <div class="text-3xl font-headline font-black mb-1">3</div>
+                    <div class="text-xs uppercase tracking-[0.18em] text-white/80">Core materials</div>
+                  </div>
+                  <div class="rounded-2xl bg-white/15 p-5">
+                    <div class="text-3xl font-headline font-black mb-1">19</div>
+                    <div class="text-xs uppercase tracking-[0.18em] text-white/80">Chapter sections</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-auto rounded-2xl bg-white/15 p-5">
+                <p class="font-headline font-bold text-sm mb-2">Answer Key Guidance</p>
+                <p class="text-xs text-white/85">Attempt each problem before checking the answer key.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 px-8 max-w-7xl mx-auto" id="textbook">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2 bg-surface-container-low rounded-[2rem] p-8 md:p-12 relative overflow-hidden flex flex-col md:flex-row gap-12">
+          <div class="md:w-1/2 z-10">
+            <h2 class="font-headline text-3xl font-extrabold text-primary mb-4 leading-tight">Core Study Materials</h2>
+            <p class="text-on-surface-variant mb-4 leading-relaxed">
+              The main textbook materials for the course are collected here.
+            </p>
+            <p class="text-on-surface-variant mb-8 leading-relaxed">
+              The coursebook PDF is large and may take some time to download on the school network during peak hours.
+            </p>
+            <div class="flex flex-col gap-4">
+              <a class="w-full py-4 bg-primary text-on-primary rounded-xl font-bold flex justify-center items-center gap-3 hover:opacity-90 transition-all" href="https://kognity.com" target="_blank" rel="noreferrer">
+                <span class="material-symbols-outlined">auto_stories</span> Open Kognity
+              </a>
+              <a class="w-full py-4 bg-white text-primary font-bold rounded-xl flex justify-center items-center gap-3 border border-outline-variant/20 hover:bg-surface-container-lowest transition-all" href="https://drive.google.com/file/d/1xsRz1-3hxK2Ob-zYIE9v1hycgcB51a29/view" target="_blank" rel="noreferrer">
+                <span class="material-symbols-outlined">download</span> Coursebook PDF
+              </a>
+              <a class="w-full py-4 bg-white text-primary font-bold rounded-xl flex justify-center items-center gap-3 border border-outline-variant/20 hover:bg-surface-container-lowest transition-all" href="https://drive.google.com/file/d/1eSuiPe17B2_m0KKA51MgiOUzxwD41nvH/view" target="_blank" rel="noreferrer">
+                <span class="material-symbols-outlined">key</span> Answer Key
+              </a>
+            </div>
+          </div>
+          <div class="md:w-1/2 flex items-center justify-center relative">
+            <div class="w-72 max-w-full rounded-[2rem] bg-white shadow-2xl border border-outline-variant/15 p-8">
+              <div class="rounded-2xl bg-surface-container-low p-6 mb-6 flex items-center justify-center">
+                <img class="h-10 object-contain" src="../Images/Kognity_full_logo_GREEN-RGB.png" alt="Kognity logo">
+              </div>
+              <div class="space-y-4 text-on-surface-variant">
+                <div class="rounded-xl bg-surface-container-low px-4 py-3">
+                  <p class="font-bold text-primary mb-1">Kognity</p>
+                  <p class="text-sm">Use Kognity for textbook reading, guided practice, and assigned digital work.</p>
+                </div>
+                <div class="rounded-xl bg-surface-container-low px-4 py-3">
+                  <p class="font-bold text-primary mb-1">Coursebook PDF</p>
+                  <p class="text-sm">Download the full coursebook in PDF format.</p>
+                </div>
+                <div class="rounded-xl bg-surface-container-low px-4 py-3">
+                  <p class="font-bold text-primary mb-1">Answer Key</p>
+                  <p class="text-sm">Use only after attempting the recommended problems.</p>
+                </div>
+              </div>
+            </div>
+            <div class="absolute -right-20 -bottom-20 opacity-10">
+              <span class="material-symbols-outlined text-[280px] text-primary">menu_book</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-surface-container-highest rounded-[2rem] p-8 flex flex-col justify-between">
+          <div>
+            <h3 class="font-headline text-2xl font-extrabold text-primary mb-6">Quick Resources</h3>
+            <div class="space-y-4">
+              <a class="group flex items-center justify-between p-4 bg-white rounded-xl transition-all hover:translate-x-2" href="https://kognity.com" target="_blank" rel="noreferrer">
+                <div class="flex items-center gap-4">
+                  <span class="material-symbols-outlined text-secondary">auto_stories</span>
+                  <span class="font-bold text-primary">Kognity</span>
+                </div>
+                <span class="material-symbols-outlined text-slate-400">chevron_right</span>
+              </a>
+              <a class="group flex items-center justify-between p-4 bg-white rounded-xl transition-all hover:translate-x-2" href="https://drive.google.com/file/d/1xsRz1-3hxK2Ob-zYIE9v1hycgcB51a29/view" target="_blank" rel="noreferrer">
+                <div class="flex items-center gap-4">
+                  <span class="material-symbols-outlined text-secondary">menu_book</span>
+                  <span class="font-bold text-primary">Coursebook PDF</span>
+                </div>
+                <span class="material-symbols-outlined text-slate-400">chevron_right</span>
+              </a>
+              <a class="group flex items-center justify-between p-4 bg-white rounded-xl transition-all hover:translate-x-2" href="https://drive.google.com/file/d/1eSuiPe17B2_m0KKA51MgiOUzxwD41nvH/view" target="_blank" rel="noreferrer">
+                <div class="flex items-center gap-4">
+                  <span class="material-symbols-outlined text-secondary">key</span>
+                  <span class="font-bold text-primary">Answer Key</span>
+                </div>
+                <span class="material-symbols-outlined text-slate-400">chevron_right</span>
+              </a>
+            </div>
+          </div>
+          <div class="mt-12 p-6 bg-primary-container rounded-2xl">
+            <p class="text-on-primary-container text-xs font-bold uppercase tracking-widest mb-2">Need Support?</p>
+            <p class="text-on-primary-container/80 text-sm mb-4">Use the meetings page to book a tutorial if you want help with the textbook or recommended exercises.</p>
+            <a class="text-secondary-fixed font-bold text-sm flex items-center gap-2" href="meetings.html">
+              Open Meetings <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 px-8 bg-surface-container-low" id="homework">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+          <div>
+            <h2 class="font-headline text-4xl font-extrabold text-primary mb-4">Recommended Book Exercises</h2>
+            <p class="text-on-surface-variant max-w-3xl">Additional practice problems from the textbook, organized by chapter and section.</p>
+          </div>
+          <div class="px-6 py-2 rounded-full bg-primary text-on-primary font-bold text-sm">19 chapter sections</div>
+        </div>
+
+        <div class="bg-white rounded-[2rem] p-6 md:p-8 editorial-shadow">
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <div class="rounded-[1.5rem] bg-primary-fixed p-6">
+              <div class="text-2xl font-headline font-extrabold text-primary mb-4">Chapter 1</div>
+              <div class="chapter-breakdown">
+                <div><strong>1.1 Displacement, distance, speed and velocity:</strong> 1-4</div>
+                <div><strong>1.2 Uniformly accelerated motion:</strong> 5, 6, 7, 10, 12, 14, 15, 18</div>
+                <div><strong>1.3 Graphs of Motion:</strong> 19-24</div>
+                <div><strong>1.4 Projectile Motion:</strong> 29, 30, 33, 34, 35, 37</div>
+              </div>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-primary-fixed p-6">
+              <div class="text-2xl font-headline font-extrabold text-primary mb-4">Chapter 2</div>
+              <div class="chapter-breakdown">
+                <div><strong>2.1 Forces and their directions:</strong> 1-14</div>
+                <div><strong>2.2 Newton's Laws:</strong> 15, 17, 20, 21, 23, 24, 27, 28, 29, 30, 31</div>
+                <div><strong>2.3 Circular Motion:</strong> 33, 35, 36, 37, 39, 43, 44</div>
+              </div>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-primary-fixed p-6">
+              <div class="text-2xl font-headline font-extrabold text-primary mb-4">Chapter 3</div>
+              <div class="chapter-breakdown">
+                <div><strong>Worked examples:</strong> pages 72-77</div>
+                <div><strong>3.1 Work:</strong> 1-21</div>
+                <div><strong>3.2 Conservation of energy:</strong> 22-26</div>
+                <div><strong>3.3 Power and efficiency:</strong> 32-37</div>
+              </div>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-primary-fixed p-6">
+              <div class="text-2xl font-headline font-extrabold text-primary mb-4">Chapter 4</div>
+              <div class="chapter-breakdown">
+                <div><strong>4.1 Newton's Laws:</strong> 1, 2, 4</div>
+                <div><strong>4.2 Impulse and force-time graphs:</strong> 6, 7, 8, 9, 10</div>
+                <div><strong>4.3 Conservation of Momentum:</strong> 11</div>
+                <div><strong>4.4 Kinetic Energy and Momentum:</strong> 12-18, 20-23</div>
+                <div><strong>4.5 Two dimensional collisions:</strong> all</div>
+              </div>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-secondary-container/45 p-6">
+              <div class="text-2xl font-headline font-extrabold text-primary mb-4">Chapter 7</div>
+              <div class="chapter-breakdown">
+                <div><strong>7.1 Particles, temperature and energy:</strong> 2, 7</div>
+                <div><strong>7.2 Specific Heat Capacity and change of phase:</strong> 9, 12, 14, 16, 20, 21</div>
+                <div><strong>7.3 Thermal Energy Transfer:</strong> 23, 24, 31, 32, 34, 36, 37, 41, 43, 48, 50, 54</div>
+              </div>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-secondary-container/45 p-6">
+              <div class="text-2xl font-headline font-extrabold text-primary mb-4">Chapter 8</div>
+              <div class="chapter-breakdown">
+                <div><strong>8.1 Radiation from real bodies:</strong> 1-5</div>
+                <div><strong>8.2 Energy Balance of the Earth:</strong> 6, 7, 8, 13, 19</div>
+              </div>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-secondary-container/45 p-6">
+              <div class="text-2xl font-headline font-extrabold text-primary mb-4">Chapter 9</div>
+              <div class="chapter-breakdown">
+                <div><strong>9.1 Moles, molar mass, and the Avogadro constant:</strong> 3, 5, 9</div>
+                <div><strong>9.2 Ideal Gas:</strong> 10, 12, 15, 16, 17, 20</div>
+                <div><strong>9.3 The Boltzmann Equation:</strong> 23, 24, 26, 29, 32</div>
+              </div>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-secondary-container/45 p-6">
+              <div class="text-2xl font-headline font-extrabold text-primary mb-4">Chapter 10</div>
+              <div class="chapter-breakdown">
+                <div><strong>10.1 Internal Energy:</strong> 1, 3, 5, 7</div>
+                <div><strong>10.2 The First Law of Thermodynamics:</strong> 8, 10, 13, 16, 20, 23, 22 (demonstration problem), 24</div>
+                <div><strong>10.3 The Second Law of Thermodynamics:</strong> 28, 30, 32</div>
+                <div><strong>10.4 Heat Engines:</strong> 33, 35, 39, 40, 42</div>
+              </div>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-secondary-container/45 p-6">
+              <div class="text-2xl font-headline font-extrabold text-primary mb-4">Chapter 11</div>
+              <div class="chapter-breakdown">
+                <div><strong>11.1 Potential difference, current and resistance:</strong> 1-6, 8-19</div>
+                <div><strong>11.2 Voltage, power, and EMF:</strong> 20-29</div>
+                <div><strong>11.3 Resistors in Electric Circuits:</strong> 32, 33, 34, 35, 37, 38, 39, 40, 41, 42, 43, 44, 46, 47</div>
+                <div><strong>11.4 Terminal potential difference and the potential divider:</strong> 48, 50, 51, 52, 53, 54, 55</div>
+              </div>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-orange-50 p-6">
+              <div class="text-2xl font-headline font-extrabold text-primary mb-4">Chapter 12</div>
+              <div class="chapter-breakdown">
+                <div><strong>12.1 Simple Harmonic Motion:</strong> 5, 6, 7, 9, 10, 13, 14</div>
+                <div><strong>12.2 Details of simple harmonic motion [HL]:</strong> 16, 19, 22, 24, 25, 28, 30</div>
+                <div><strong>12.3 and 12.4 Energy in simple harmonic motion:</strong> 34, 36, 38</div>
+              </div>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-orange-50 p-6">
+              <div class="text-2xl font-headline font-extrabold text-primary mb-4">Chapter 13</div>
+              <div class="chapter-breakdown">
+                <div><strong>13.1 Mechanical pulses and waves:</strong> 5, 6</div>
+                <div><strong>13.2 Transverse and longitudinal waves:</strong> 11, 14, 16</div>
+                <div><strong>13.3 Electromagnetic waves:</strong> 19</div>
+              </div>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-orange-50 p-6">
+              <div class="text-2xl font-headline font-extrabold text-primary mb-4">Chapter 14</div>
+              <div class="chapter-breakdown">
+                <div><strong>14.1 Reflection and Refraction:</strong> 2, 5, 6, 7, 9, 11, 12</div>
+                <div><strong>14.3 Diffraction and Interference:</strong> 20, 21, 24, 27, 31, 34</div>
+                <div><strong>14.4 Single Slit Interference:</strong> 35, 37, 38</div>
+                <div><strong>14.5 Multiple Slits:</strong> 40, 41, 42, 44, 46</div>
+              </div>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-orange-50 p-6">
+              <div class="text-2xl font-headline font-extrabold text-primary mb-4">Chapter 15</div>
+              <div class="chapter-breakdown">
+                <div><strong>15.1-15.3 Standing Waves:</strong> 6, 8, 9, 10, 12, 13, 14, 15, 17, 19, 20</div>
+                <div><strong>15.4 Resonance and Damping:</strong> 25, 26, 27, 28</div>
+              </div>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-orange-50 p-6">
+              <div class="text-2xl font-headline font-extrabold text-primary mb-4">Chapter 16</div>
+              <div class="chapter-breakdown">
+                <div><strong>Recommended exercises:</strong> all of them</div>
+              </div>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-tertiary-fixed/60 p-6">
+              <div class="text-2xl font-headline font-extrabold text-primary mb-4">Chapter 17</div>
+              <div class="chapter-breakdown">
+                <div><strong>17.1 Newton's law of gravitation:</strong> 2, 3, 5 (very similar to P1 problems), 7, 11, 13, 17</div>
+                <div><strong>HL 17.2 Gravitational potential and energy:</strong> 19, 21, 23, 25, 26</div>
+                <div><strong>HL 17.3 Motion in a gravitational field:</strong> 29, 31, 32, 34, 35, 39, 40</div>
+              </div>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-tertiary-fixed/60 p-6">
+              <div class="text-2xl font-headline font-extrabold text-primary mb-4">Chapter 18</div>
+              <div class="chapter-breakdown">
+                <div><strong>18.1 Electric charge, force and field:</strong> 2, 3, 5 (very similar to P1 problems), 7, 11, 13</div>
+                <div><strong>18.2 Magnetic field and force:</strong> 17, 19, 21, 23, 25, 26, 29, 31, 32, 34, 35</div>
+                <div><strong>18.3 Electric potential and electric potential energy:</strong> 39, 40, 42, 44, 45, 46, 48, 49, 51, 53, 54, 55</div>
+              </div>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-tertiary-fixed/60 p-6">
+              <div class="text-2xl font-headline font-extrabold text-primary mb-4">Chapter 19</div>
+              <div class="chapter-breakdown">
+                <div><strong>Recommended exercises:</strong> all</div>
+              </div>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-tertiary-fixed/60 p-6">
+              <div class="text-2xl font-headline font-extrabold text-primary mb-4">Chapter 20</div>
+              <div class="chapter-breakdown">
+                <div><strong>Recommended exercises:</strong> all</div>
+              </div>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-tertiary-fixed/60 p-6">
+              <div class="text-2xl font-headline font-extrabold text-primary mb-4">Chapter 21</div>
+              <div class="chapter-breakdown">
+                <div><strong>21.1 The structure of the atom:</strong> 6, 7, 10, 11, 12</div>
+                <div><strong>21.2 Quantization of angular momentum [HL]:</strong> 13, 14, 15, 18, 19, 22 (optional)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 px-8 max-w-7xl mx-auto overflow-hidden">
+      <div class="blue-to-green-gradient rounded-[3rem] p-12 md:p-16 relative text-white flex flex-col md:flex-row items-center gap-12">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-secondary-fixed/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div class="md:w-3/5 z-10">
+          <h2 class="font-headline text-4xl md:text-5xl font-extrabold mb-8 leading-tight">Attempt the Problems <span class="text-secondary-fixed">First</span>.</h2>
+          <p class="text-lg text-primary-fixed mb-10 max-w-2xl">It is strongly recommended that you attempt each problem before checking the answer key. Regular practice is essential in the natural sciences, and problem solving makes up 80% of the final IB Physics grade.</p>
+          <div class="flex flex-wrap gap-4">
+            <a class="px-8 py-4 bg-white text-primary rounded-2xl font-bold text-lg hover:bg-surface-container transition-all flex items-center gap-3" href="https://drive.google.com/file/d/1eSuiPe17B2_m0KKA51MgiOUzxwD41nvH/view" target="_blank" rel="noreferrer">
+              Open Answer Key <span class="material-symbols-outlined">key</span>
+            </a>
+            <a class="px-8 py-4 bg-white/15 border border-white/20 text-white rounded-2xl font-bold text-lg hover:bg-white/20 transition-all flex items-center gap-3" href="meetings.html">
+              Book Tutorial <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+        <div class="md:w-2/5 relative">
+          <div class="rounded-3xl bg-white/10 backdrop-blur-md p-8 border border-white/15">
+            <div class="space-y-4 text-white/90">
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined">menu_book</span>
+                <p class="text-sm">Use the textbook and Kognity together for reading, guided practice, and assigned digital work.</p>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined">functions</span>
+                <p class="text-sm">Work through the recommended chapter problems before checking solutions.</p>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined">school</span>
+                <p class="text-sm">Use the meetings page if you want help with a chapter, section, or problem set.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-50 w-full mt-auto">
+    <div class="w-full px-8 py-12 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 md:gap-10">
+        <div class="flex flex-col gap-2 text-center md:text-left">
+          <div class="text-lg font-bold text-slate-900">IB Physics &amp; TOK — UWC Costa Rica</div>
+          <div class="font-['Inter'] text-sm tracking-wide text-slate-500">Erick Loria Soto · <a class="hover:text-[#004099] transition-colors" href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></div>
+        </div>
+        <div class="font-['Inter'] text-sm tracking-wide text-slate-500 text-center md:text-right max-w-2xl">
+          <strong class="text-slate-700">Copyright 2026 Erick Loria Soto.</strong> All original site content, course materials, design, and writing are my own unless otherwise credited. Built with HTML, CSS, JavaScript, and GitHub Pages.
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isExpanded));
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+  <script src="../js/nav-dropdowns.js?v=20260321e"></script>
 </body>
 </html>

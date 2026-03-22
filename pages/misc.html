@@ -1,48 +1,329 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Misc — IB Physics &amp; TOK</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>Misc Resources | The Physics Lab</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#e8e8ea",
+            "primary-fixed": "#d9e2ff",
+            "secondary-fixed-dim": "#65dbb6",
+            "on-secondary-fixed-variant": "#00513e",
+            "on-tertiary-container": "#fe8be2",
+            "on-tertiary": "#ffffff",
+            "on-primary-container": "#92b1ff",
+            "secondary-fixed": "#82f8d1",
+            "primary": "#002b6c",
+            "primary-fixed-dim": "#b0c6ff",
+            "on-tertiary-fixed-variant": "#7d1a6e",
+            "surface-container-low": "#f3f3f6",
+            "surface-container": "#edeef0",
+            "on-tertiary-fixed": "#3a0032",
+            "tertiary-fixed": "#ffd7f0",
+            "on-secondary-fixed": "#002117",
+            "on-error": "#ffffff",
+            "on-surface-variant": "#434652",
+            "secondary-container": "#82f8d1",
+            "tertiary-fixed-dim": "#fface7",
+            "error-container": "#ffdad6",
+            "tertiary": "#5b0050",
+            "on-primary": "#ffffff",
+            "inverse-surface": "#2f3133",
+            "primary-container": "#004099",
+            "surface-bright": "#f9f9fb",
+            "background": "#f9f9fb",
+            "on-background": "#1a1c1e",
+            "inverse-on-surface": "#f0f0f3",
+            "inverse-primary": "#b0c6ff",
+            "outline-variant": "#c3c6d4",
+            "surface-container-highest": "#e2e2e5",
+            "surface": "#f9f9fb",
+            "surface-dim": "#d9dadc",
+            "on-primary-fixed-variant": "#04429b",
+            "outline": "#737783",
+            "on-surface": "#1a1c1e",
+            "error": "#ba1a1a",
+            "surface-tint": "#2d5bb4",
+            "surface-variant": "#e2e2e5",
+            "on-secondary": "#ffffff",
+            "on-error-container": "#93000a",
+            "on-primary-fixed": "#001945",
+            "secondary": "#006c53",
+            "on-secondary-container": "#007259",
+            "tertiary-container": "#7b186c"
+          },
+          fontFamily: {
+            "headline": ["Manrope", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+            "label": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .signature-gradient {
+      background: linear-gradient(135deg, #004099 0%, #1DA381 100%);
+    }
+    .editorial-gradient {
+      background: linear-gradient(135deg, #004099 0%, #1DA381 100%);
+    }
+    .editorial-shadow {
+      box-shadow: 0 24px 48px -12px rgba(0, 43, 108, 0.08);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+  </style>
 </head>
-<body>
-<script src="../js/layout.js?v=20260311b"></script>
-
-<div class="hero">
-  <div class="hero-ribbon"></div>
-  <div class="hero-circle-1"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">Additional Resources</div>
-    <h1>Misc</h1>
-    <p>Additional materials and opportunities, including SAT preparation, listening resources, and summer programs.</p>
-  </div>
-</div>
-
-<div class="page">
-  <div class="section">
-    <h2 class="section-title">Additional Resources</h2>
-    <p class="section-desc">Supplementary pages for academic enrichment, preparation, and opportunities beyond the core course sections.</p>
-    <div class="grid">
-      <a class="card card-purple" href="listening-corner.html">
-        <div class="card-icon icon-purple">Audio</div>
-        <div class="card-title">Listening Corner</div>
-        <div class="card-desc">Podcasts, talks, and audio resources for science learning.</div>
+<body class="bg-surface font-body text-on-surface">
+  <nav class="bg-white/80 backdrop-blur-xl shadow-sm sticky top-0 z-50">
+    <div class="w-full px-8 py-4 max-w-7xl mx-auto flex items-center md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8">
+      <a class="text-xl font-extrabold tracking-tighter bg-gradient-to-r from-[#004099] to-[#1DA381] bg-clip-text text-transparent justify-self-start" href="../index.html">
+        The Physics Lab
       </a>
-
-      <a class="card card-green" href="sat.html">
-        <div class="card-icon icon-green">SAT</div>
-        <div class="card-title">SAT Preparation</div>
-        <div class="card-desc">SAT math and science practice materials and review support.</div>
-      </a>
-
-      <a class="card card-orange" href="summer-programs.html">
-        <div class="card-icon icon-orange">Summer</div>
-        <div class="card-title">Summer Programs</div>
-        <div class="card-desc">Science, research, and university opportunities worth exploring.</div>
-      </a>
+      <div class="hidden md:flex items-center gap-8 justify-self-center">
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="tok.html">TOK</a>
+        <a class="text-[#004099] font-bold border-b-2 border-[#1DA381] pb-1" href="misc.html">Resources</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="meetings.html">Meetings</a>
+      </div>
+      <div class="hidden md:flex justify-self-end">
+        <a class="signature-gradient text-on-primary px-6 py-2.5 rounded-xl font-bold tracking-tight active:scale-95 duration-150 ease-in-out" href="meetings.html">
+          Meetings
+        </a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden text-primary" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="material-symbols-outlined text-primary text-3xl">menu</span>
+      </button>
     </div>
-  </div>
-</div>
+    <div id="mobile-menu" class="hidden md:hidden px-8 pb-5 max-w-7xl mx-auto">
+      <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-4 flex flex-col gap-3 shadow-lg">
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="tok.html">TOK</a>
+        <a class="text-[#004099] font-bold" href="misc.html">Resources</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-bold hover:text-[#004099] transition-colors" href="meetings.html">Meetings</a>
+        <a class="signature-gradient text-white px-6 py-3 rounded-xl font-bold text-center transition-all active:scale-95 duration-150" href="meetings.html">
+          Meetings
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-8 py-12">
+    <header class="mb-20 relative">
+      <div class="absolute -top-12 -left-12 w-64 h-64 editorial-gradient opacity-10 rounded-full blur-3xl"></div>
+      <div class="relative z-10">
+        <span class="font-label text-xs font-bold tracking-[0.2em] uppercase text-secondary mb-4 block">Additional Resources</span>
+        <h1 class="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-[4.75rem] font-extrabold tracking-tight text-on-surface leading-[1.05] [text-wrap:balance]">
+          Misc <span class="inline-block pr-[0.08em] text-primary-container">Resources</span>
+        </h1>
+        <p class="mt-8 text-on-surface-variant text-lg max-w-2xl font-body leading-relaxed">
+          Additional materials and opportunities, including SAT preparation, listening resources, and summer programs.
+        </p>
+      </div>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
+      <section class="md:col-span-7 bg-surface-container rounded-[2rem] p-10 relative overflow-hidden group">
+        <div class="relative z-10">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="p-3 bg-primary rounded-xl text-on-primary">
+              <span class="material-symbols-outlined">school</span>
+            </div>
+            <h2 class="font-headline text-3xl font-bold tracking-tight">SAT Preparation</h2>
+          </div>
+          <p class="text-on-surface-variant mb-8 max-w-2xl">
+            The SAT is relevant for students applying to universities in the United States. Physics content overlaps heavily with the SAT Math section, particularly algebra, problem-solving, and data analysis.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-surface-container-lowest p-6 rounded-2xl editorial-shadow">
+              <span class="material-symbols-outlined text-secondary mb-2">folder</span>
+              <h3 class="font-bold text-lg block">Official SAT Exams Folder</h3>
+              <p class="text-sm text-on-surface-variant mt-1">Official exams and College Board practice materials collected in one folder.</p>
+            </div>
+            <div class="bg-surface-container-lowest p-6 rounded-2xl editorial-shadow">
+              <span class="material-symbols-outlined text-primary mb-2">tablet_mac</span>
+              <h3 class="font-bold text-lg block">Bluebook</h3>
+              <p class="text-sm text-on-surface-variant mt-1">Bluebook is the app used to take the digital SAT.</p>
+            </div>
+          </div>
+          <a class="inline-flex items-center gap-2 font-bold text-secondary mt-8 hover:gap-4 transition-all" href="sat.html">
+            Open SAT Page <span class="material-symbols-outlined">trending_flat</span>
+          </a>
+        </div>
+        <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-secondary/5 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-700"></div>
+      </section>
+
+      <section class="md:col-span-5 bg-primary-container text-on-primary rounded-[2rem] p-10 flex flex-col justify-between overflow-hidden relative">
+        <div class="relative z-10">
+          <span class="material-symbols-outlined text-4xl mb-6 opacity-80">travel_explore</span>
+          <h2 class="font-headline text-4xl font-extrabold tracking-tight mb-4">Summer <br>Programs</h2>
+          <p class="text-on-primary-container text-opacity-90 leading-relaxed mb-8">
+            Programs worth exploring if you are looking for science, research, engineering, or university-level enrichment over the break.
+          </p>
+        </div>
+        <div class="relative z-10 mt-auto">
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center gap-3 text-sm border-b border-white/10 pb-2">
+              <span class="material-symbols-outlined text-xs">arrow_forward</span> Haus der Astronomie Summer Internship
+            </li>
+            <li class="flex items-center gap-3 text-sm border-b border-white/10 pb-2">
+              <span class="material-symbols-outlined text-xs">arrow_forward</span> Summer Science Program
+            </li>
+            <li class="flex items-center gap-3 text-sm border-b border-white/10 pb-2">
+              <span class="material-symbols-outlined text-xs">arrow_forward</span> UC Santa Cruz Summer Internship Program
+            </li>
+          </ul>
+          <a class="inline-flex items-center gap-2 font-bold hover:gap-4 transition-all" href="summer-programs.html">
+            Open Summer Programs <span class="material-symbols-outlined">trending_flat</span>
+          </a>
+        </div>
+        <div class="absolute top-0 right-0 p-8 opacity-10">
+          <span class="material-symbols-outlined text-[12rem]">explore</span>
+        </div>
+      </section>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section class="bg-surface-container-low rounded-[2rem] p-10 border border-outline-variant/15">
+        <div class="flex items-center justify-between mb-10">
+          <div>
+            <h2 class="font-headline text-3xl font-bold tracking-tight mb-2">Listening Corner</h2>
+            <p class="text-on-surface-variant text-sm">Favorite albums embedded directly from Spotify.</p>
+          </div>
+          <span class="material-symbols-outlined text-4xl text-outline">headphones</span>
+        </div>
+        <div class="space-y-4">
+          <a class="flex items-center gap-6 p-4 bg-surface rounded-xl hover:bg-surface-container-high transition-colors cursor-pointer group" href="listening-corner.html">
+            <div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center font-bold text-primary group-hover:bg-primary group-hover:text-on-primary transition-all">
+              Mix
+            </div>
+            <div class="flex-1">
+              <h4 class="font-bold">Favorite Albums</h4>
+              <p class="text-xs text-on-surface-variant">A personal collection of favorite albums, embedded directly from Spotify.</p>
+            </div>
+            <span class="material-symbols-outlined text-on-surface-variant">arrow_outward</span>
+          </a>
+          <a class="flex items-center gap-6 p-4 bg-surface rounded-xl hover:bg-surface-container-high transition-colors cursor-pointer group" href="listening-corner.html">
+            <div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center font-bold text-primary group-hover:bg-primary group-hover:text-on-primary transition-all">
+              Wall
+            </div>
+            <div class="flex-1">
+              <h4 class="font-bold">Album Wall</h4>
+              <p class="text-xs text-on-surface-variant">Open any embed in Spotify for the full album.</p>
+            </div>
+            <span class="material-symbols-outlined text-on-surface-variant">arrow_outward</span>
+          </a>
+          <div class="flex items-center gap-6 p-4 bg-surface rounded-xl">
+            <div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center font-bold text-primary">
+              Note
+            </div>
+            <div class="flex-1">
+              <h4 class="font-bold">Personal Picks</h4>
+              <p class="text-xs text-on-surface-variant">This section is not course content. It is a music corner for favorite albums.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-surface-container-lowest rounded-[2rem] p-10 shadow-sm relative border border-outline-variant/10">
+        <h2 class="font-headline text-3xl font-bold tracking-tight mb-4">Additional Resources</h2>
+        <p class="text-on-surface-variant mb-8">Supplementary pages for academic enrichment, preparation, and opportunities beyond the core course sections.</p>
+        <div class="space-y-4">
+          <a class="block w-full bg-surface-container-low rounded-xl p-5 hover:bg-surface-container-high transition-colors" href="sat.html">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <div class="font-bold text-primary">SAT Resources</div>
+                <div class="text-sm text-on-surface-variant mt-1">SAT Math and Science preparation materials for students applying to US universities.</div>
+              </div>
+              <span class="material-symbols-outlined text-primary">arrow_forward</span>
+            </div>
+          </a>
+          <a class="block w-full bg-surface-container-low rounded-xl p-5 hover:bg-surface-container-high transition-colors" href="listening-corner.html">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <div class="font-bold text-primary">Favorite Albums</div>
+                <div class="text-sm text-on-surface-variant mt-1">A personal collection of favorite albums, embedded directly from Spotify.</div>
+              </div>
+              <span class="material-symbols-outlined text-primary">arrow_forward</span>
+            </div>
+          </a>
+          <a class="block w-full bg-surface-container-low rounded-xl p-5 hover:bg-surface-container-high transition-colors" href="summer-programs.html">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <div class="font-bold text-primary">Programs to Look Into</div>
+                <div class="text-sm text-on-surface-variant mt-1">Programs worth exploring if you are looking for science, research, engineering, or university-level enrichment over the break.</div>
+              </div>
+              <span class="material-symbols-outlined text-primary">arrow_forward</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <section class="mt-24 mb-12 relative rounded-[3rem] overflow-hidden editorial-gradient">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#002b6c]/85 to-transparent"></div>
+      <div class="relative z-10 p-12 md:p-16 text-on-primary">
+        <h3 class="font-headline text-4xl font-extrabold mb-3">Beyond the Core Course Sections</h3>
+        <p class="max-w-2xl opacity-90 leading-relaxed mb-8">Additional materials and opportunities, including SAT preparation, listening resources, and summer programs.</p>
+        <div class="flex flex-wrap gap-4">
+          <a class="bg-white text-primary px-6 py-3 rounded-xl font-bold hover:bg-surface-container transition-colors" href="sat.html">SAT Preparation</a>
+          <a class="bg-white/15 backdrop-blur-md text-white border border-white/20 px-6 py-3 rounded-xl font-bold hover:bg-white/20 transition-colors" href="listening-corner.html">Listening Corner</a>
+          <a class="bg-white/15 backdrop-blur-md text-white border border-white/20 px-6 py-3 rounded-xl font-bold hover:bg-white/20 transition-colors" href="summer-programs.html">Summer Programs</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-50 w-full mt-auto">
+    <div class="w-full px-8 py-12 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 md:gap-10">
+        <div class="flex flex-col gap-2 text-center md:text-left">
+          <div class="text-lg font-bold text-slate-900">IB Physics &amp; TOK — UWC Costa Rica</div>
+          <div class="font-['Inter'] text-sm tracking-wide text-slate-500">Erick Loria Soto · <a class="hover:text-[#004099] transition-colors" href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></div>
+        </div>
+        <div class="font-['Inter'] text-sm tracking-wide text-slate-500 text-center md:text-right max-w-2xl">
+          <strong class="text-slate-700">Copyright 2026 Erick Loria Soto.</strong> All original site content, course materials, design, and writing are my own unless otherwise credited. Built with HTML, CSS, JavaScript, and GitHub Pages.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isExpanded));
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+  <script src="../js/nav-dropdowns.js?v=20260321e"></script>
 </body>
 </html>

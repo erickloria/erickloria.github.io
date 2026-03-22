@@ -1,100 +1,355 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Course Tools — IB Physics &amp; TOK</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <style>
-    .badge-tools{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;background:var(--blue-10);color:var(--action-text);border:1.5px solid var(--action-border);}
-    .tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin-bottom:40px;}
-    .tool-card{background:linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.78) 100%);border:1px solid var(--border);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:12px;box-shadow:0 18px 40px rgba(15,33,64,.08);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:box-shadow .2s,transform .2s;border-left-width:4px;}
-    .tool-card:hover{box-shadow:0 22px 48px rgba(15,33,64,.12);transform:translateY(-2px);}
-    .tool-card-primary{border-left:4px solid var(--blue);}
-    .tool-card-secondary{border-left:4px solid var(--green);}
-    .tool-top{display:flex;align-items:center;justify-content:space-between;gap:12px;}
-    .tool-meta{flex:1;min-width:0;}
-    .tool-name{font-weight:600;font-size:15.5px;color:var(--text);margin-bottom:2px;}
-    .tool-type{font-size:12px;color:var(--muted);}
-    .tool-link{font-size:12px;font-weight:600;color:var(--action-text);text-decoration:none;white-space:nowrap;padding:4px 10px;border:1.5px solid var(--action-border);border-radius:6px;transition:background .15s;flex-shrink:0;background:var(--card);}
-    .tool-link:hover{background:var(--action-fill);}
-    .tool-desc{font-size:14px;color:var(--muted);line-height:1.65;}
-    .tags{display:flex;flex-wrap:wrap;gap:5px;}
-    .tag{font-size:11.5px;font-weight:600;padding:3px 10px;border-radius:100px;}
-    .tag-blue{background:var(--blue-10);color:var(--action-text);}
-    .tag-green{background:var(--green-10);color:var(--badge-green-text);}
-    .tag-purple{background:var(--purple-10);color:var(--purple);}
-    .tag-orange{background:var(--orange-10);color:var(--badge-orange-text);}
-    @media (prefers-color-scheme: dark) {
-      .tool-card {
-        background:linear-gradient(180deg, rgba(18,28,46,0.92) 0%, rgba(18,28,46,0.76) 100%);
+  <title>Course Tools | The Physics Lab</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-fixed": "#3a0032",
+            "secondary": "#006c53",
+            "surface-bright": "#f9f9fb",
+            "on-secondary-container": "#007259",
+            "secondary-container": "#82f8d1",
+            "on-error": "#ffffff",
+            "on-secondary-fixed-variant": "#00513e",
+            "surface-tint": "#2d5bb4",
+            "background": "#f9f9fb",
+            "error": "#ba1a1a",
+            "on-tertiary-container": "#fe8be2",
+            "on-primary-container": "#92b1ff",
+            "tertiary-fixed": "#ffd7f0",
+            "surface-container-highest": "#e2e2e5",
+            "tertiary-container": "#7b186c",
+            "surface-variant": "#e2e2e5",
+            "on-secondary": "#ffffff",
+            "surface": "#f9f9fb",
+            "surface-container-high": "#e8e8ea",
+            "surface-container-lowest": "#ffffff",
+            "primary-fixed": "#d9e2ff",
+            "error-container": "#ffdad6",
+            "surface-container": "#edeef0",
+            "primary": "#002b6c",
+            "inverse-surface": "#2f3133",
+            "inverse-primary": "#b0c6ff",
+            "surface-container-low": "#f3f3f6",
+            "on-tertiary-fixed-variant": "#7d1a6e",
+            "primary-container": "#004099",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#434652",
+            "outline": "#737783",
+            "inverse-on-surface": "#f0f0f3",
+            "secondary-fixed": "#82f8d1",
+            "on-surface": "#1a1c1e",
+            "tertiary-fixed-dim": "#fface7",
+            "outline-variant": "#c3c6d4",
+            "on-primary": "#ffffff",
+            "surface-dim": "#d9dadc",
+            "secondary-fixed-dim": "#65dbb6",
+            "on-secondary-fixed": "#002117",
+            "on-background": "#1a1c1e",
+            "tertiary": "#5b0050",
+            "primary-fixed-dim": "#b0c6ff",
+            "on-primary-fixed-variant": "#04429b",
+            "on-error-container": "#93000a",
+            "on-primary-fixed": "#001945"
+          },
+          fontFamily: {
+            "headline": ["Manrope", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+            "label": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          }
+        }
       }
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .signature-gradient {
+      background: linear-gradient(135deg, #004099 0%, #1DA381 100%);
+    }
+    .editorial-shadow {
+      box-shadow: 0 24px 48px -12px rgba(0, 43, 108, 0.08);
+    }
+    .tool-tile {
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+    .tool-tile:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 34px -16px rgba(0, 43, 108, 0.18);
+    }
+    .logo-shell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 3.25rem;
+      width: 3.25rem;
+      border-radius: 1rem;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: inset 0 0 0 1px rgba(195, 198, 212, 0.4);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .logo-shell img {
+      max-width: 2.5rem;
+      max-height: 2.5rem;
+      object-fit: contain;
+    }
+    .logo-shell-wide img {
+      max-width: 2.8rem;
+      max-height: 2rem;
     }
   </style>
 </head>
-<body>
-<script src="../js/layout.js?v=20260311b"></script>
-<div class="hero">
-  <div class="hero-ribbon"></div><div class="hero-circle-1"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">Course Materials</div>
-    <h1>Course Tools</h1>
-    <p>The main platforms used for labs, graphing, reading, problem solving, and professional scientific writing.</p>
-  </div>
-</div>
-<div class="page">
-  <div class="section">
-    <div class="badge-tools">Core Platforms</div>
-    <h2 class="section-title">Tools Used Across the Course</h2>
-    <p class="section-desc">These are the main tools used in class for lab work, homework, graphing, simulations, and checking calculations.</p>
-    <div class="tool-grid">
-      <div class="tool-card tool-card-primary">
-        <div class="tool-top"><div class="brand-logo brand-logo-wide"><img src="../Images/Vernier_Logo-06.webp" alt="Vernier logo"></div><div class="tool-meta"><div class="tool-name">Logger Pro</div><div class="tool-type">Data Collection and Analysis</div></div><a class="tool-link" href="https://drive.google.com/drive/folders/1ZUqJ2HXcGLWeInikXTjZOQTGobHFUsjq?usp=sharing" target="_blank">Visit</a></div>
-        <div class="tool-desc">Primary software for data collection, graphing, and analysis in laboratory work.</div>
-        <div class="tags"><span class="tag tag-blue">Labs</span><span class="tag tag-green">Graphing</span><span class="tag tag-orange">Analysis</span></div>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col">
+  <nav class="bg-white/80 backdrop-blur-xl shadow-sm sticky top-0 z-50">
+    <div class="w-full px-8 py-4 max-w-7xl mx-auto flex items-center md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8">
+      <a class="text-xl font-extrabold tracking-tighter bg-gradient-to-r from-[#004099] to-[#1DA381] bg-clip-text text-transparent justify-self-start" href="../index.html">
+        The Physics Lab
+      </a>
+      <div class="hidden md:flex items-center gap-8 justify-self-center">
+        <a class="text-[#004099] font-bold border-b-2 border-[#1DA381] pb-1" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="tok.html">TOK</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="misc.html">Resources</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="meetings.html">Meetings</a>
       </div>
-      <div class="tool-card tool-card-primary">
-        <div class="tool-top"><div class="brand-logo brand-logo-wide"><img src="../Images/Kognity_full_logo_GREEN-RGB.png" alt="Kognity logo"></div><div class="tool-meta"><div class="tool-name">Kognity</div><div class="tool-type">Digital Textbook</div></div><a class="tool-link" href="https://kognity.com" target="_blank">Visit</a></div>
-        <div class="tool-desc">Main textbook platform for reading, homework, and guided practice.</div>
-        <div class="tags"><span class="tag tag-green">Textbook</span><span class="tag tag-blue">Practice</span></div>
+      <div class="hidden md:flex justify-self-end">
+        <a class="signature-gradient text-white px-6 py-2.5 rounded-xl font-bold tracking-tight active:scale-95 duration-150 ease-in-out" href="meetings.html">
+          Meetings
+        </a>
       </div>
-      <div class="tool-card tool-card-primary">
-        <div class="tool-top"><div class="brand-logo"><img src="../Images/images-9.jpeg" alt="Wolfram Alpha logo"></div><div class="tool-meta"><div class="tool-name">Wolfram Alpha</div><div class="tool-type">Calculator and Solver</div></div><a class="tool-link" href="https://www.wolframalpha.com" target="_blank">Visit</a></div>
-        <div class="tool-desc">Useful for checking calculations, algebraic manipulation, and equation solving.</div>
-        <div class="tags"><span class="tag tag-blue">Math</span><span class="tag tag-purple">Checking work</span></div>
-      </div>
-      <div class="tool-card tool-card-primary">
-        <div class="tool-top"><div class="tool-meta"><div class="tool-name">oPhysics</div><div class="tool-type">Physics Simulations</div></div><a class="tool-link" href="https://ophysics.com" target="_blank">Visit</a></div>
-        <div class="tool-desc">Interactive simulations for visualizing physical ideas and testing variables.</div>
-        <div class="tags"><span class="tag tag-orange">Simulations</span><span class="tag tag-blue">Concepts</span></div>
-      </div>
-      <div class="tool-card tool-card-primary">
-        <div class="tool-top"><div class="brand-logo brand-logo-wide"><img src="../Images/high-resolution-desmos-logo-vector-svg-ai-file-included-v0-8l1kzoyzqyd61.png.webp" alt="Desmos logo"></div><div class="tool-meta"><div class="tool-name">Desmos</div><div class="tool-type">Graphing Calculator</div></div><a class="tool-link" href="https://www.desmos.com" target="_blank">Visit</a></div>
-        <div class="tool-desc">Fast graphing and function visualization for classwork and data analysis.</div>
-        <div class="tags"><span class="tag tag-green">Graphing</span><span class="tag tag-blue">Functions</span></div>
+      <button id="mobile-menu-button" class="md:hidden text-primary" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="material-symbols-outlined text-primary text-3xl">menu</span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-8 pb-5 max-w-7xl mx-auto">
+      <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-4 flex flex-col gap-3 shadow-lg">
+        <a class="text-[#004099] font-bold" href="resources.html">IB Physics</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="tok.html">TOK</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="misc.html">Resources</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="ai-tools.html">AI Tools</a>
+        <a class="text-slate-600 font-medium hover:text-[#004099] transition-colors" href="meetings.html">Meetings</a>
+        <a class="signature-gradient text-white px-6 py-3 rounded-xl font-bold text-center transition-all active:scale-95 duration-150" href="meetings.html">
+          Meetings
+        </a>
       </div>
     </div>
-  </div>
+  </nav>
 
-  <div class="section">
-    <div class="badge-tools">LaTeX</div>
-    <h2 class="section-title">Scientific Writing Tools</h2>
-    <p class="section-desc">LaTeX is the standard for clean scientific and mathematical writing, and it is worth learning early.</p>
-    <div class="callout callout-blue" style="margin-bottom:24px;"><div class="brand-logo brand-logo-tall"><img src="../Images/LaTeX_logo.svg.png" alt="LaTeX logo"></div><span>All of my exams, documents, pages, images, and course materials are written in LaTeX.</span></div>
-    <div class="tool-grid">
-      <div class="tool-card tool-card-secondary">
-        <div class="tool-top"><div class="brand-logo brand-logo-wide"><img src="../Images/overleaf-logo-primary.jpg" alt="Overleaf logo"></div><div class="tool-meta"><div class="tool-name">Overleaf</div><div class="tool-type">Collaborative LaTeX Editor</div></div><a class="tool-link" href="https://www.overleaf.com" target="_blank">Visit</a></div>
-        <div class="tool-desc">The established standard for collaborative LaTeX writing in universities and research environments.</div>
-        <div class="tags"><span class="tag tag-blue">LaTeX</span><span class="tag tag-green">Collaboration</span><span class="tag tag-orange">Academic writing</span></div>
+  <main class="flex-1">
+    <section class="relative py-24 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-8 relative z-10">
+        <div class="max-w-3xl">
+          <span class="font-label text-xs font-bold text-secondary uppercase tracking-[0.2em] mb-4 block">Student Resources</span>
+          <h1 class="text-6xl md:text-7xl font-headline font-extrabold text-primary leading-tight mb-6 tracking-tighter">
+            Academic Course <span class="bg-gradient-to-r from-[#004099] to-[#1DA381] bg-clip-text text-transparent">Tools</span>
+          </h1>
+          <p class="text-xl text-on-surface-variant leading-relaxed mb-10 font-medium max-w-2xl">
+            The main platforms used across the course for lab work, graphing, simulations, homework, and scientific writing: Logger Pro, Kognity, Wolfram Alpha, oPhysics, Desmos, Overleaf, and Prism.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a class="signature-gradient text-white px-8 py-4 rounded-xl font-bold hover:scale-[1.01] active:scale-95 transition-transform" href="#tool-grid">Browse Tools</a>
+            <a class="bg-surface-container-high text-primary px-8 py-4 rounded-xl font-bold hover:bg-surface-container-highest transition-colors" href="ai-tools.html">Open AI Tools</a>
+          </div>
+        </div>
       </div>
-      <div class="tool-card tool-card-secondary">
-        <div class="tool-top"><div class="tool-meta"><div class="tool-name">Prism</div><div class="tool-type">OpenAI LaTeX Workspace</div></div><a class="tool-link" href="https://openai.com/prism/" target="_blank">Visit</a></div>
-        <div class="tool-desc">A newer LaTeX-focused writing tool that supports drafting, editing, formatting, citations, and scientific writing workflows.</div>
-        <div class="tags"><span class="tag tag-blue">LaTeX</span><span class="tag tag-purple">Drafting</span><span class="tag tag-green">Formatting</span></div>
+      <div class="absolute top-0 right-0 w-1/2 h-full bg-surface-container-low -z-0 skew-x-12 translate-x-24"></div>
+      <div class="absolute top-12 right-24 w-64 h-64 signature-gradient opacity-10 rounded-full blur-3xl"></div>
+    </section>
+
+    <section id="tool-grid" class="pb-24 px-8 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="md:col-span-8 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-6">
+              <span class="material-symbols-outlined text-secondary text-3xl">school</span>
+              <h2 class="text-2xl font-headline font-extrabold text-primary">Core Physics Platforms</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <a class="tool-tile bg-surface-container-lowest p-6 rounded-lg border border-transparent hover:border-outline-variant/30" href="https://drive.google.com/drive/folders/1ZUqJ2HXcGLWeInikXTjZOQTGobHFUsjq?usp=sharing" target="_blank" rel="noreferrer">
+                <div class="logo-shell logo-shell-wide mb-4">
+                  <img src="../Images/Vernier_Logo-06.webp" alt="Vernier logo">
+                </div>
+                <h3 class="font-headline font-bold text-lg mb-2">Logger Pro</h3>
+                <p class="text-sm text-on-surface-variant mb-6">Primary software for data collection, graphing, and analysis in laboratory work.</p>
+                <span class="text-secondary font-bold text-sm flex items-center gap-2">Open Folder <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+              </a>
+              <a class="tool-tile bg-surface-container-lowest p-6 rounded-lg border border-transparent hover:border-outline-variant/30" href="https://kognity.com" target="_blank" rel="noreferrer">
+                <div class="logo-shell logo-shell-wide mb-4">
+                  <img src="../Images/Kognity_full_logo_GREEN-RGB.png" alt="Kognity logo">
+                </div>
+                <h3 class="font-headline font-bold text-lg mb-2">Kognity</h3>
+                <p class="text-sm text-on-surface-variant mb-6">Main textbook platform for reading, homework, and guided practice.</p>
+                <span class="text-secondary font-bold text-sm flex items-center gap-2">Visit <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+              </a>
+              <a class="tool-tile bg-surface-container-lowest p-6 rounded-lg border border-transparent hover:border-outline-variant/30" href="https://www.desmos.com" target="_blank" rel="noreferrer">
+                <div class="logo-shell logo-shell-wide mb-4">
+                  <img src="../Images/high-resolution-desmos-logo-vector-svg-ai-file-included-v0-8l1kzoyzqyd61.png.webp" alt="Desmos logo">
+                </div>
+                <h3 class="font-headline font-bold text-lg mb-2">Desmos</h3>
+                <p class="text-sm text-on-surface-variant mb-6">Fast graphing and function visualization for classwork and data analysis.</p>
+                <span class="text-secondary font-bold text-sm flex items-center gap-2">Visit <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-4 signature-gradient rounded-xl p-8 text-white flex flex-col justify-between relative overflow-hidden">
+          <div class="relative z-10">
+            <span class="material-symbols-outlined text-4xl mb-6 opacity-80" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+            <h2 class="text-3xl font-headline font-extrabold mb-4">AI &amp; Citation</h2>
+            <p class="text-white/80 font-medium mb-8">Use the site’s AI guidance pages for approved school use, citation expectations, and personal-use boundaries.</p>
+            <div class="space-y-4">
+              <a class="flex items-center justify-between p-4 bg-white/10 backdrop-blur-md rounded-lg hover:bg-white/20 transition-all" href="ai-tools.html">
+                <span class="font-bold">AI Tools</span>
+                <span class="material-symbols-outlined">bolt</span>
+              </a>
+              <a class="flex items-center justify-between p-4 bg-white/10 backdrop-blur-md rounded-lg hover:bg-white/20 transition-all" href="ai-citation-guide.html">
+                <span class="font-bold">AI Citation Guide</span>
+                <span class="material-symbols-outlined">gavel</span>
+              </a>
+            </div>
+          </div>
+          <div class="absolute -bottom-8 -right-8 opacity-10">
+            <span class="material-symbols-outlined text-[12rem]">psychology</span>
+          </div>
+        </div>
+
+        <div class="md:col-span-5 bg-surface-container rounded-xl p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-6">
+              <span class="material-symbols-outlined text-secondary text-3xl">model_training</span>
+              <h2 class="text-2xl font-headline font-extrabold text-primary">Analysis &amp; Simulation</h2>
+            </div>
+            <p class="text-on-surface-variant mb-8">Use these tools to check algebra, test relationships, and visualize physics ideas before or after you collect real data.</p>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4 p-4 bg-surface-container-lowest rounded-xl">
+                <div class="logo-shell">
+                  <img src="../Images/images-9.jpeg" alt="Wolfram Alpha logo">
+                </div>
+                <div class="flex-1">
+                  <h4 class="font-bold text-primary">Wolfram Alpha</h4>
+                  <p class="text-sm text-on-surface-variant mb-3">Useful for checking calculations, algebraic manipulation, and equation solving.</p>
+                  <a class="bg-primary text-on-primary px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider inline-flex" href="https://www.wolframalpha.com" target="_blank" rel="noreferrer">Visit</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 p-4 bg-surface-container-lowest rounded-xl">
+                <div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-secondary">science</span>
+                </div>
+                <div class="flex-1">
+                  <h4 class="font-bold text-primary">oPhysics</h4>
+                  <p class="text-sm text-on-surface-variant mb-3">Interactive simulations for visualizing physical ideas and testing variables.</p>
+                  <a class="bg-secondary text-on-secondary px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider inline-flex" href="https://ophysics.com" target="_blank" rel="noreferrer">Visit</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-7 bg-surface-container-high rounded-xl p-8">
+          <div class="flex items-center gap-3 mb-8">
+            <span class="material-symbols-outlined text-secondary text-3xl">article</span>
+            <h2 class="text-2xl font-headline font-extrabold text-primary">Scientific Writing</h2>
+          </div>
+          <div class="mb-6 rounded-xl bg-white px-6 py-5 border border-outline-variant/15">
+            <div class="flex items-center gap-4">
+              <div class="logo-shell logo-shell-wide">
+                <img src="../Images/LaTeX_logo.svg.png" alt="LaTeX logo">
+              </div>
+              <p class="text-sm text-on-surface-variant leading-relaxed">
+                All of my exams, documents, pages, images, and course materials are written in LaTeX.
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <a class="tool-tile p-6 bg-surface-container-lowest rounded-xl flex flex-col h-full shadow-sm border border-transparent hover:border-outline-variant/25" href="https://www.overleaf.com" target="_blank" rel="noreferrer">
+              <div class="logo-shell logo-shell-wide mb-4">
+                <img src="../Images/overleaf-logo-primary.jpg" alt="Overleaf logo">
+              </div>
+              <h3 class="font-headline font-bold text-lg mb-2">Overleaf</h3>
+              <p class="text-sm text-on-surface-variant flex-grow mb-6">The established standard for collaborative LaTeX writing in universities and research environments.</p>
+              <span class="w-full py-3 bg-surface-container-high text-primary font-bold rounded-xl border border-outline-variant/15 text-center">Visit</span>
+            </a>
+            <a class="tool-tile p-6 bg-surface-container-lowest rounded-xl flex flex-col h-full shadow-sm border border-transparent hover:border-outline-variant/25" href="https://openai.com/prism/" target="_blank" rel="noreferrer">
+              <div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-primary">edit_square</span>
+              </div>
+              <h3 class="font-headline font-bold text-lg mb-2">Prism</h3>
+              <p class="text-sm text-on-surface-variant flex-grow mb-6">A LaTeX-focused writing tool for drafting, editing, formatting, citations, and scientific writing workflows.</p>
+              <span class="w-full py-3 bg-surface-container-high text-primary font-bold rounded-xl border border-outline-variant/15 text-center">Visit</span>
+            </a>
+            <div class="sm:col-span-2 p-6 bg-surface-container-lowest rounded-xl flex flex-col md:flex-row md:items-center md:justify-between gap-4 shadow-sm">
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary text-3xl">support_agent</span>
+                <div>
+                  <h3 class="font-headline font-bold text-lg">LaTeX Support</h3>
+                  <p class="text-sm text-on-surface-variant">If you want to get started with LaTeX, feel free to email me or come speak with me and we can look at which tool fits your workflow best.</p>
+                </div>
+              </div>
+              <a class="px-6 py-2 signature-gradient text-white font-bold rounded-full text-center" href="meetings.html">Open Meetings</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-8 mb-24">
+      <div class="bg-primary-container p-12 rounded-[2rem] flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+        <div class="relative z-10 max-w-xl">
+          <h2 class="text-3xl md:text-4xl font-headline font-extrabold text-on-primary-container mb-4">Need help choosing the right workflow?</h2>
+          <p class="text-on-primary-container/80 text-lg">Open a tutorial if you want help deciding which tools to use for graphing, lab analysis, homework, or scientific writing.</p>
+        </div>
+        <a class="relative z-10 px-8 py-4 bg-white text-primary font-black rounded-xl text-lg hover:scale-[1.01] transition-transform" href="meetings.html">
+          Book Tutorial
+        </a>
+        <div class="absolute -top-24 -right-24 w-64 h-64 bg-[#1DA381]/20 rounded-full"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-50 w-full mt-auto">
+    <div class="w-full px-8 py-12 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 md:gap-10">
+        <div class="flex flex-col gap-2 text-center md:text-left">
+          <div class="text-lg font-bold text-slate-900">IB Physics &amp; TOK — UWC Costa Rica</div>
+          <div class="font-['Inter'] text-sm tracking-wide text-slate-500">Erick Loria Soto · <a class="hover:text-[#004099] transition-colors" href="mailto:erick.loria@uwccostarica.org">erick.loria@uwccostarica.org</a></div>
+        </div>
+        <div class="font-['Inter'] text-sm tracking-wide text-slate-500 text-center md:text-right max-w-2xl">
+          <strong class="text-slate-700">Copyright 2026 Erick Loria Soto.</strong> All original site content, course materials, design, and writing are my own unless otherwise credited. Built with HTML, CSS, JavaScript, and GitHub Pages.
+        </div>
       </div>
     </div>
-    <div class="callout callout-green"><span>Support</span><span>If you want to get started with LaTeX, feel free to email me or come speak with me and we can look at which tool fits your workflow best.</span></div>
-  </div>
-</div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isExpanded));
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+  <script src="../js/nav-dropdowns.js?v=20260321e"></script>
 </body>
 </html>
