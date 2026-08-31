@@ -286,56 +286,6 @@ function buildMarkdownToc(block) {
   window.addEventListener('hashchange', openGroupForHash);
 }
 
-function injectMarkdownBrand(block) {
-  if (block.querySelector('.markdown-brand')) return;
-
-  const brand = document.createElement('div');
-  brand.className = 'markdown-brand';
-
-  const logoWrap = document.createElement('div');
-  logoWrap.className = 'markdown-brand-logos';
-
-  const uwcLogo = document.createElement('img');
-  uwcLogo.className = 'markdown-brand-uwc';
-  uwcLogo.src = new URL('../Images/Logo-Main-Color.png', window.location.href).href;
-  uwcLogo.dataset.screenSrc = uwcLogo.src;
-  uwcLogo.dataset.printSrc = new URL('../Images/Logo-Main-Black.png', window.location.href).href;
-  uwcLogo.alt = 'UWC Costa Rica logo';
-
-  const personalLogo = document.createElement('img');
-  personalLogo.className = 'markdown-brand-personal';
-  personalLogo.src = new URL('../ELS_logo_exports/08_right_color_light.svg', window.location.href).href;
-  personalLogo.dataset.screenSrc = personalLogo.src;
-  personalLogo.dataset.printSrc = new URL('../ELS_logo_exports/10_right_black_white.svg', window.location.href).href;
-  personalLogo.alt = 'Erick Loria Soto logo';
-
-  const copy = document.createElement('div');
-  copy.className = 'markdown-brand-copy';
-  copy.innerHTML = `
-    <div class="markdown-brand-kicker">UWC Costa Rica</div>
-    <div class="markdown-brand-name">Erick Loría Soto</div>
-  `;
-
-  logoWrap.append(uwcLogo, personalLogo);
-  brand.append(logoWrap, copy);
-  block.prepend(brand);
-}
-
-function setupMarkdownPrintLogos() {
-  if (window.__markdownPrintLogosSetup) return;
-  window.__markdownPrintLogosSetup = true;
-
-  const swapLogosForPrint = (mode) => {
-    document.querySelectorAll('.markdown-brand img[data-print-src]').forEach((image) => {
-      const nextSrc = mode === 'print' ? image.dataset.printSrc : image.dataset.screenSrc;
-      if (nextSrc) image.src = nextSrc;
-    });
-  };
-
-  window.addEventListener('beforeprint', () => swapLogosForPrint('print'));
-  window.addEventListener('afterprint', () => swapLogosForPrint('screen'));
-}
-
 function injectMarkdownControls(block) {
   const section = block.closest('.section');
   if (!section || section.querySelector('.markdown-actions')) return;
@@ -372,7 +322,6 @@ async function renderMarkdownBlocks() {
       const markdown = await response.text();
       const renderMarkdown = createMarkdownRenderer(markdownSrc);
       block.innerHTML = renderMarkdown(markdown);
-      injectMarkdownBrand(block);
       block.classList.remove('markdown-loading');
       buildMarkdownToc(block);
       if (window.MathJax && typeof window.MathJax.typesetPromise === 'function') {
@@ -386,6 +335,5 @@ async function renderMarkdownBlocks() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  setupMarkdownPrintLogos();
   renderMarkdownBlocks();
 });
