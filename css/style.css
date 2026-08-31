@@ -687,21 +687,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .markdown-content { display: grid; gap: 16px; color: var(--text); }
 
-.markdown-brand {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--rule-soft);
-  margin-bottom: 4px;
-}
-.markdown-brand-logos { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-.markdown-brand-uwc, .markdown-brand-personal { height: 38px; width: auto; }
-.markdown-brand-copy { display: grid; gap: 2px; text-align: right; }
-.markdown-brand-kicker { color: var(--muted); font-family: var(--font-mono); font-size: 10.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
-.markdown-brand-name { color: var(--text); font-size: 14px; font-weight: 600; line-height: 1.2; }
-
 .markdown-actions { display: flex; justify-content: flex-end; margin-bottom: 16px; }
 .markdown-print-button {
   appearance: none;
@@ -828,8 +813,6 @@ h1, h2, h3, h4, h5, h6 {
   .page > :not(.markdown-shell) { display: none !important; }
   .page, .markdown-shell, .markdown-layout, .markdown-content { padding: 0; max-width: none; overflow: visible !important; background: transparent !important; }
   .markdown-layout { display: block; margin: 0; }
-  .markdown-brand { align-items: center; break-inside: avoid; }
-  .markdown-brand-uwc, .markdown-brand-personal { height: 34px; }
   .markdown-content img[src*="ia-force-extension-graph.svg"],
   .markdown-content img[src*="ia-linearization-graph.svg"] { border: 0; background: transparent; padding: 0; }
   .markdown-content { display: block; color: #111; }
@@ -885,8 +868,6 @@ h1, h2, h3, h4, h5, h6 {
   .footer-top { flex-direction: column; }
   .footer-legal { text-align: left; max-width: 100%; }
 
-  .markdown-brand { flex-direction: column; align-items: flex-start; }
-  .markdown-brand-copy { text-align: left; }
   .markdown-print-button { width: 100%; }
 }
 
