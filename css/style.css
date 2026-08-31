@@ -338,7 +338,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero p {
-  max-width: 640px;
+  max-width: 68ch;
   font-size: 17px;
   color: var(--muted);
   line-height: 1.7;
@@ -473,12 +473,12 @@ h1, h2, h3, h4, h5, h6 {
 /* ─── CARDS / LINK-CARDS (legacy component, still used by some pages) ── */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1px;
   background: var(--rule-soft);
   border: 1px solid var(--rule-soft);
 }
-.grid-2 { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
 
 .card, .link-card {
   background: var(--bg-raised);
