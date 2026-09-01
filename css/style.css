@@ -449,7 +449,8 @@ h1, h2, h3, h4, h5, h6 {
   color: inherit;
   transition: background 0.12s ease;
 }
-.doc-row:hover { background: var(--panel); }
+.doc-row:nth-child(even) { background: var(--panel); }
+.doc-row:hover { background: var(--rule-soft); }
 .doc-row-code {
   font-family: var(--font-mono);
   font-size: 12px;
@@ -616,8 +617,9 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid var(--text);
   padding-bottom: 6px;
 }
-.sidebar-list { display: grid; gap: 8px; list-style: none; }
-.sidebar-list li { font-size: 13.5px; color: var(--muted); line-height: 1.5; }
+.sidebar-list { display: grid; gap: 0; list-style: none; }
+.sidebar-list li { font-size: 13.5px; color: var(--muted); line-height: 1.5; padding: 6px 8px; margin: 0 -8px; }
+.sidebar-list li:nth-child(even) { background: var(--bg-raised); }
 .sidebar-list a { color: var(--muted-ink); text-decoration: none; }
 .sidebar-list a:hover { color: var(--technical-blue); text-decoration: underline; }
 .sidebar-count-row {
@@ -625,9 +627,11 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   gap: 10px;
   font-size: 13px;
-  padding: 5px 0;
+  padding: 5px 8px;
+  margin: 0 -8px;
   border-bottom: 1px solid var(--rule-soft);
 }
+.sidebar-count-row:nth-child(even) { background: var(--bg-raised); }
 .sidebar-count-row a { color: var(--muted-ink); text-decoration: none; }
 .sidebar-count-row a:hover { color: var(--technical-blue); }
 .sidebar-count-row span:last-child { font-family: var(--font-mono); color: var(--muted); font-size: 12px; }
@@ -742,6 +746,10 @@ h1, h2, h3, h4, h5, h6 {
 .markdown-content th, .markdown-content td { padding: 10px 12px; border-bottom: 1px solid var(--rule-soft); text-align: left; font-size: 13.5px; line-height: 1.6; }
 .markdown-content th { color: var(--text); background: var(--panel); font-weight: 600; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.02em; }
 .markdown-content tbody tr:last-child td { border-bottom: 0; }
+.markdown-content tbody tr:nth-child(even) td { background: var(--panel); }
+
+/* Reusable zebra striping for plain (non-markdown) tables */
+.zebra-table tbody tr:nth-child(even) td { background: var(--panel); }
 .markdown-content hr { border: 0; height: 1px; background: var(--rule-soft); margin: 8px 0; }
 
 .markdown-content blockquote {
