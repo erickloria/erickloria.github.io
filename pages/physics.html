@@ -33,7 +33,39 @@
 
     <section class="section">
       <div class="section-head">
-        <span><span class="section-num">02</span><h2 class="section-title">Scientific Computing and Data Analysis</h2></span>
+        <span><span class="section-num">02</span><h2 class="section-title">The Physics Lectures at UWC</h2></span>
+        <span class="section-meta"><a href="lectures.html">full collection →</a></span>
+      </div>
+      <p class="section-desc" style="max-width:none;">A summary of my classes, one page per lesson. Students can review a lesson or catch up if they missed one; other teachers are welcome to take an idea for their own classroom, or tell me what they think.</p>
+      <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:16px;">
+        <label for="lecture-jump" style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.05em; text-transform:uppercase; color:var(--muted); white-space:nowrap;">Jump to a lecture</label>
+        <select id="lecture-jump" style="flex:1; min-width:240px; font-family:var(--font-ui); font-size:14px; padding:9px 12px; border:1px solid var(--rule); border-radius:2px; background:var(--bg-raised); color:var(--text);">
+          <option value="">Select a lesson…</option>
+          <optgroup label="Unit 0 — Measurement, Uncertainty &amp; Vectors">
+            <option value="lecture-1-si-units.html">L1 — SI Units, Orders of Magnitude &amp; Significant Figures</option>
+            <option value="lecture-2-vectors.html">L2 — Vector Algebra and Component Addition</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="doc-index">
+        <a class="doc-row" href="lecture-1-si-units.html">
+          <span class="doc-row-code">L1</span>
+          <span class="doc-row-title">SI Units, Orders of Magnitude &amp; Significant Figures</span>
+          <span class="doc-row-desc">Unit 0 — the 2019 SI redefinition, the Mars Climate Orbiter, metric multipliers, and the Greek alphabet</span>
+          <span class="doc-row-date">→</span>
+        </a>
+        <a class="doc-row" href="lecture-2-vectors.html">
+          <span class="doc-row-code">L2</span>
+          <span class="doc-row-title">Vector Algebra and Component Addition</span>
+          <span class="doc-row-desc">Unit 0 — geometry, components, and the resultant, built on the whiteboard</span>
+          <span class="doc-row-date">→</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <span><span class="section-num">03</span><h2 class="section-title">Scientific Computing and Data Analysis</h2></span>
         <span class="section-meta"><a href="computing.html">full collection →</a></span>
       </div>
       <div class="doc-index">
@@ -45,23 +77,13 @@
         </div>
       </div>
     </section>
-
-    <section class="section">
-      <div class="section-head">
-        <span><span class="section-num">03</span><h2 class="section-title">Independent Experiments and Projects</h2></span>
-        <span class="section-meta"><a href="projects.html">full collection →</a></span>
-      </div>
-      <div class="doc-index">
-        <div class="doc-row" style="cursor:default;">
-          <span class="doc-row-code">—</span>
-          <span class="doc-row-title doc-row-empty">No entries published yet</span>
-          <span class="doc-row-desc">Apparatus builds and self-directed experiments, tracked separately in Projects.</span>
-          <span class="doc-row-date"></span>
-        </div>
-      </div>
-    </section>
   </div>
 
+  <script>
+    document.getElementById('lecture-jump').addEventListener('change', (e) => {
+      if (e.target.value) window.location.href = e.target.value;
+    });
+  </script>
   <script src="../js/layout.js"></script>
 </body>
 </html>

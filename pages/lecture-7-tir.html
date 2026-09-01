@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refraction, Part II: Total Internal Reflection — Erick Loría Soto</title>
+  <meta name="description" content="Unit C, Lesson 7: finding the critical angle by hand before it has a name, then working IB-style questions on the board.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Physics · The Physics Lectures at UWC · Unit C · Lesson 7</div>
+      <h1>Refraction, Part II: Total Internal Reflection</h1>
+      <p>A semi-circular lens, an adjustable angle, and ten minutes to work out why the ray stops crossing the boundary before anyone says "critical angle."</p>
+      <div style="display:flex; gap:6px; margin-top:4px;">
+        <span class="badge badge-purple">Lecture</span>
+        <span class="badge badge-green">Experiential Activity</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-grid">
+      <div class="page-main">
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">01</span><h2 class="section-title">Setup</h2></span></div>
+          <p class="section-desc" style="max-width:none;">This is Part II and day two of the sequence. I swap the standard rectangular block from <a href="lecture-6-refraction.html">Refraction, Part I</a> for a semi-circular lens on the <a href="https://www.carolina.com/physical-science-light-and-optics/hodson-light-box-and-optical-set/755160.pr?srsltid=AfmBOoqxT-_Zgk2vcLXkD8vEq9YqsZXXT3J2AxZVt7UM9tR2vtNqYz7Z" target="_blank" rel="noreferrer">light box</a>.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">02</span><h2 class="section-title">What Happens</h2></span></div>
+          <p class="section-desc" style="max-width:none;">The ray enters through the curved face and goes straight to the centre, so the angle at the flat face is the only one that matters. I keep that angle adjustable and give students about ten minutes to draw the path and work out why, past some angle, the ray stops crossing the boundary and reflects back instead. I do not say "critical angle" until they have had a go. Once their guesses are down, we formalise the relationship. Then I deliberately switch to a traditional "watch me solve this" approach and work through two or three representative IB questions on the board, especially questions that ask whether the light will leave the medium.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">03</span><h2 class="section-title">Field Notes</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Guesses cluster around "the light just cannot get out anymore," which is close enough to build on. The board work matters because IB questions use very specific language, and "determine whether the light will leave the medium" carries a lot of physics: which medium the ray is leaving, the critical angle, and whether total internal reflection can occur at all. This is why TIR stays as a standalone lesson. The activity gives students a physical event; the worked questions connect that event to the calculation and IB vocabulary. Later, I want that wording to call up a memory of the ray they actually saw, not only an abstract mathematical instruction.</p>
+          <p class="section-desc" style="max-width:none;">I also keep <a href="https://www.youtube.com/watch?v=NAaHPRsveJk" target="_blank" rel="noreferrer">this total internal reflection video</a> on my LMS so students can always go back to it. It is my absolute favourite: no commentary, no explanation, just the phenomenon. For someone using this guide who does not want to run the lab, the video is a great learning tool on its own.</p>
+        </section>
+
+      </div>
+
+      <aside class="sidebar-stack">
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Equipment</h3>
+          <ul class="sidebar-list">
+            <li>Semi-circular lens</li>
+            <li><a href="https://www.carolina.com/physical-science-light-and-optics/hodson-light-box-and-optical-set/755160.pr?srsltid=AfmBOoqxT-_Zgk2vcLXkD8vEq9YqsZXXT3J2AxZVt7UM9tR2vtNqYz7Z" target="_blank" rel="noreferrer">Light box</a> / ray source</li>
+            <li>Whiteboard; 2–3 representative IB questions</li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Physics</h3>
+          <p>TIR requires light to travel from higher to lower refractive index (\(n_1 > n_2\)) and \(\theta_1 > \theta_c\). At the critical angle, \(\theta_2 = 90^\circ\), so</p>
+          <p>\[\sin\theta_c = \frac{n_2}{n_1}.\]</p>
+        </div>
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Field Guide</h3>
+          <ul class="sidebar-list">
+            <li><a href="lectures.html">← All lectures</a></li>
+            <li><a href="lecture-6-refraction.html">← Previous: Refraction, Part I</a></li>
+            <li><a href="lecture-8-single-slit-first-look.html">Next: Single-Slit Diffraction →</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <figure class="portrait" style="max-width:520px; margin-top:8px;">
+      <div class="portrait-frame" style="aspect-ratio:4/3;">
+        <img src="../Images/lecture-tir.jpg" alt="A semicircular block near the transition to total internal reflection, with the incident angle marked from the normal">
+      </div>
+      <figcaption class="portrait-caption">The semicircular block near the transition to total internal reflection, with the incident angle marked from the normal.</figcaption>
+    </figure>
+  </div>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="../js/layout.js"></script>
+</body>
+</html>
