@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SI Units, Orders of Magnitude &amp; Significant Figures — Erick Loría Soto</title>
+  <meta name="description" content="Lesson notes: the seven SI base units, the 2019 redefinition, metric prefixes, orders of magnitude, significant figures, scientific notation, and the Greek alphabet used throughout the course.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Physics · The Physics Lectures at UWC · Unit 0 · Lesson 1</div>
+      <h1>SI Units, Orders of Magnitude &amp; Significant Figures</h1>
+      <p>Lesson notes on the seven SI base units, the 2019 redefinition, metric prefixes, orders of magnitude, significant figures, scientific notation, and the Greek alphabet you'll see for the rest of the course.</p>
+      <div style="display:flex; gap:6px; margin-top:4px;">
+        <span class="badge badge-purple">Lecture</span>
+        <span class="badge badge-green">Experiential Activity</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-grid">
+      <div class="page-main">
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">01</span><h2 class="section-title">The Seven SI Base Units</h2></span></div>
+          <p class="section-desc" style="max-width:none;">I begin here every year: why does a shared system of measurement matter at all? Every quantity you'll measure in this course, force, energy, charge, all of it, reduces to some combination of seven base units. Get comfortable with these now.</p>
+          <table class="markdown-content" style="width:100%; border-collapse:collapse; font-size:14px;">
+            <thead>
+              <tr style="border-bottom:1px solid var(--rule-soft);">
+                <th style="text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Quantity</th>
+                <th style="text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Unit</th>
+                <th style="text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Symbol</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">Length</td><td style="padding:8px 12px;">metre</td><td style="padding:8px 12px; font-family:var(--font-mono);">m</td></tr>
+              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">Mass</td><td style="padding:8px 12px;">kilogram</td><td style="padding:8px 12px; font-family:var(--font-mono);">kg</td></tr>
+              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">Time</td><td style="padding:8px 12px;">second</td><td style="padding:8px 12px; font-family:var(--font-mono);">s</td></tr>
+              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">Electric current</td><td style="padding:8px 12px;">ampere</td><td style="padding:8px 12px; font-family:var(--font-mono);">A</td></tr>
+              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">Temperature</td><td style="padding:8px 12px;">kelvin</td><td style="padding:8px 12px; font-family:var(--font-mono);">K</td></tr>
+              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">Amount of substance</td><td style="padding:8px 12px;">mole</td><td style="padding:8px 12px; font-family:var(--font-mono);">mol</td></tr>
+              <tr><td style="padding:8px 12px;">Luminous intensity</td><td style="padding:8px 12px;">candela</td><td style="padding:8px 12px; font-family:var(--font-mono);">cd</td></tr>
+            </tbody>
+          </table>
+          <p class="section-desc" style="max-width:none; margin-top:16px;">Every other unit you'll use, newtons, joules, watts, volts, is built out of these seven. That's the whole point of a shared, universal definition: a measurement made in my classroom means the same thing in any other lab on Earth, or on Mars, which matters more than it sounds like it should.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">02</span><h2 class="section-title">The 2019 Redefinition</h2></span></div>
+          <p class="section-desc" style="max-width:none;">I like to have students look up the official definitions themselves and read them out loud, because most of them sound strange the first time. Then I walk through the history of the 2019 redefinition, because it's a good story and it changes how the definitions feel. Until May 20, 2019, the kilogram was still defined by a physical object: a platinum-iridium cylinder kept in a vault in France, nicknamed Le Grand K. Every kilogram on Earth was, by definition, whatever that one cylinder happened to weigh. The trouble is that physical objects drift. Le Grand K's mass appears to have shifted slightly over a century of comparisons, which meant the unit of mass itself wasn't as fixed as physics needs it to be.</p>
+          <p class="section-desc" style="max-width:none;">On World Metrology Day, May 20, 2019, that changed. All seven base units were redefined so each one is fixed by an exact numerical value of a fundamental constant of nature, not a physical artefact. Four of the seven are worth pointing to directly:</p>
+          <div class="doc-index">
+            <div class="doc-row" style="cursor:default; grid-template-columns: 90px 1fr;">
+              <span class="doc-row-code">kg</span>
+              <span class="doc-row-desc">Fixed via the Planck constant, \(h = 6.62607015 \times 10^{-34}\ \mathrm{J\,s}\).</span>
+            </div>
+            <div class="doc-row" style="cursor:default; grid-template-columns: 90px 1fr;">
+              <span class="doc-row-code">A</span>
+              <span class="doc-row-desc">Fixed via the elementary charge, \(e = 1.602176634 \times 10^{-19}\ \mathrm{C}\).</span>
+            </div>
+            <div class="doc-row" style="cursor:default; grid-template-columns: 90px 1fr;">
+              <span class="doc-row-code">K</span>
+              <span class="doc-row-desc">Fixed via the Boltzmann constant, \(k = 1.380649 \times 10^{-23}\ \mathrm{J/K}\).</span>
+            </div>
+            <div class="doc-row" style="cursor:default; grid-template-columns: 90px 1fr;">
+              <span class="doc-row-code">mol</span>
+              <span class="doc-row-desc">Fixed via the Avogadro constant, \(N_A = 6.02214076 \times 10^{23}\ \mathrm{mol^{-1}}\).</span>
+            </div>
+          </div>
+          <p class="section-desc" style="max-width:none; margin-top:16px;">The metre and second were already defined this way, through the speed of light and a caesium-133 transition frequency. After 2019, no SI base unit depends on one physical object sitting somewhere in the world. Once students see that even a unit of mass no longer hangs on a specific cylinder in a vault, the definitions stop sounding arbitrary.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">03</span><h2 class="section-title">When Units Go Wrong</h2></span></div>
+          <p class="section-desc" style="max-width:none;">This is where the lesson turns into a TOK moment as much as a physics one. I use a Los Angeles Times article about the Mars Climate Orbiter to make the point.</p>
+          <div class="callout callout-orange">
+            <span>Mars Climate Orbiter, 1999</span>
+            <span>NASA's Mars Climate Orbiter was lost entering orbit because one engineering team's software produced thruster data in pound-force seconds, while the navigation team's software expected newton-seconds, the SI unit. Nobody caught the mismatch. The orbiter approached Mars roughly 100 km lower than planned and was lost in the Martian atmosphere. The team behind that mission included some of the best aerospace engineers in the world, and the mistake still happened.</span>
+          </div>
+          <p class="section-desc" style="max-width:none; margin-top:16px;">I want students to walk away from that story with the sense that units are not paperwork you get to relax about once you understand the physics. A unit mismatch can undo everything else that went correctly.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">04</span><h2 class="section-title">Metric Prefixes</h2></span></div>
+          <p class="section-desc" style="max-width:none;">From SI units we move into the multipliers, because the course will lean on them constantly and I don't want a lesson later to stall on a prefix. Wavelengths in nanometres, currents in milliamps, energies in megajoules, all of it comes back to this table.</p>
+          <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap:1px; background:var(--rule-soft); border:1px solid var(--rule-soft); font-family:var(--font-mono); font-size:13px;">
+            <div style="background:var(--bg-raised); padding:10px 12px;">nano (n) <span style="color:var(--muted);">\(10^{-9}\)</span></div>
+            <div style="background:var(--bg-raised); padding:10px 12px;">micro (μ) <span style="color:var(--muted);">\(10^{-6}\)</span></div>
+            <div style="background:var(--bg-raised); padding:10px 12px;">milli (m) <span style="color:var(--muted);">\(10^{-3}\)</span></div>
+            <div style="background:var(--bg-raised); padding:10px 12px;">centi (c) <span style="color:var(--muted);">\(10^{-2}\)</span></div>
+            <div style="background:var(--bg-raised); padding:10px 12px;">kilo (k) <span style="color:var(--muted);">\(10^{3}\)</span></div>
+            <div style="background:var(--bg-raised); padding:10px 12px;">mega (M) <span style="color:var(--muted);">\(10^{6}\)</span></div>
+            <div style="background:var(--bg-raised); padding:10px 12px;">giga (G) <span style="color:var(--muted);">\(10^{9}\)</span></div>
+            <div style="background:var(--bg-raised); padding:10px 12px;">tera (T) <span style="color:var(--muted);">\(10^{12}\)</span></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">05</span><h2 class="section-title">Orders of Magnitude and Scientific Notation</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Then I project a scale that runs from a proton to the observable universe and have students come up and fill it in wherever they can. Nobody fills in the whole thing alone, and that's the point: physics deals in scales that span roughly sixty orders of magnitude, and you need a way to hold that whole range in your head at once.</p>
+          <div class="doc-index">
+            <div class="doc-row" style="cursor:default;"><span class="doc-row-code">10⁻¹⁵</span><span class="doc-row-title">Proton radius</span><span class="doc-row-desc">≈ 1 femtometre</span><span class="doc-row-date"></span></div>
+            <div class="doc-row" style="cursor:default;"><span class="doc-row-code">10⁻¹⁰</span><span class="doc-row-title">Atom</span><span class="doc-row-desc">≈ 1 ångström</span><span class="doc-row-date"></span></div>
+            <div class="doc-row" style="cursor:default;"><span class="doc-row-code">10⁰</span><span class="doc-row-title">A person</span><span class="doc-row-desc">≈ 1–2 metres</span><span class="doc-row-date"></span></div>
+            <div class="doc-row" style="cursor:default;"><span class="doc-row-code">10⁷</span><span class="doc-row-title">Earth's radius</span><span class="doc-row-desc">≈ 6,400 km</span><span class="doc-row-date"></span></div>
+            <div class="doc-row" style="cursor:default;"><span class="doc-row-code">10²⁶</span><span class="doc-row-title">Observable universe</span><span class="doc-row-desc">≈ 8.8 × 10²⁶ m across</span><span class="doc-row-date"></span></div>
+          </div>
+          <p class="section-desc" style="max-width:none; margin-top:16px;">Scientific notation, \(a \times 10^{n}\) with \(1 \le a < 10\), is the natural next step: once you've accepted that quantities range from \(10^{-35}\) metres to \(10^{27}\) metres, writing them any other way stops making sense. \(6{,}400{,}000\ \mathrm{m}\) and \(6.4 \times 10^{6}\ \mathrm{m}\) are the same number; the second form puts the order of magnitude right there where you can see it.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">06</span><h2 class="section-title">Significant Figures</h2></span></div>
+          <p class="section-desc" style="max-width:none;">For this I put a digital scale and an old sliding-weight balance side by side with a handful of objects to measure. Students read a measurement off each and tell me how many digits are actually significant. I push on the sliding scale specifically: how many digits can you physically read off it before you're guessing? That question is what connects the abstract rule to something you can point to on a real instrument. The rules for counting significant figures:</p>
+          <div class="doc-index">
+            <div class="doc-row" style="cursor:default; grid-template-columns: 1fr;"><span class="doc-row-desc">All non-zero digits are significant. \(342\) has three significant figures.</span></div>
+            <div class="doc-row" style="cursor:default; grid-template-columns: 1fr;"><span class="doc-row-desc">Zeros between non-zero digits are significant. \(4{,}008\) has four.</span></div>
+            <div class="doc-row" style="cursor:default; grid-template-columns: 1fr;"><span class="doc-row-desc">Leading zeros are never significant. \(0.0034\) has two.</span></div>
+            <div class="doc-row" style="cursor:default; grid-template-columns: 1fr;"><span class="doc-row-desc">Trailing zeros count only if there's a decimal point. \(1{,}200\) has two; \(1{,}200.0\) has five.</span></div>
+          </div>
+          <p class="section-desc" style="max-width:none; margin-top:16px;">The number of significant figures you can honestly report is set by your instrument, not by how many digits your calculator shows. A digital scale reading to two decimal places lets you report more significant figures than an old sliding-weight balance you can only read to the nearest half-gram by eye. When you write down a measurement, you're implicitly claiming every digit except possibly the last is certain.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">07</span><h2 class="section-title">The Greek Alphabet in Physics</h2></span></div>
+          <p class="section-desc" style="max-width:none;">I close with this as more of a preview than a lesson. I go through the letters you'll see constantly for the next two years. None of it means much yet on its own. The point is that when one of these shows up next lesson, it's a symbol you've already met once, not a total stranger.</p>
+          <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap:1px; background:var(--rule-soft); border:1px solid var(--rule-soft); font-size:13.5px;">
+            <div style="background:var(--bg-raised); padding:10px 12px;"><strong>θ</strong> theta — angle</div>
+            <div style="background:var(--bg-raised); padding:10px 12px;"><strong>φ</strong> phi — angle, phase</div>
+            <div style="background:var(--bg-raised); padding:10px 12px;"><strong>λ</strong> lambda — wavelength</div>
+            <div style="background:var(--bg-raised); padding:10px 12px;"><strong>ω</strong> omega — angular velocity</div>
+            <div style="background:var(--bg-raised); padding:10px 12px;"><strong>Δ / δ</strong> delta — change in a quantity</div>
+            <div style="background:var(--bg-raised); padding:10px 12px;"><strong>μ</strong> mu — micro-, friction coefficient</div>
+            <div style="background:var(--bg-raised); padding:10px 12px;"><strong>σ</strong> sigma — sum, cross-section</div>
+            <div style="background:var(--bg-raised); padding:10px 12px;"><strong>Ω</strong> omega (cap.) — ohms, resistance</div>
+            <div style="background:var(--bg-raised); padding:10px 12px;"><strong>π</strong> pi — 3.14159…</div>
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="sidebar-stack">
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Jump to a Lecture</h3>
+          <select id="lecture-jump" style="width:100%; font-family:var(--font-ui); font-size:13.5px; padding:8px 10px; border:1px solid var(--rule); border-radius:2px; background:var(--bg-raised); color:var(--text);">
+            <option value="">Select a lesson…</option>
+            <optgroup label="Unit 0">
+              <option value="lecture-1-si-units.html" selected>L1 — SI Units &amp; Sig Figs</option>
+              <option value="lecture-2-vectors.html">L2 — Vector Algebra</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Key Constants</h3>
+          <p><strong>Planck constant</strong><br>\(h = 6.62607015 \times 10^{-34}\ \mathrm{J\,s}\)</p>
+          <p><strong>Elementary charge</strong><br>\(e = 1.602176634 \times 10^{-19}\ \mathrm{C}\)</p>
+          <p><strong>Boltzmann constant</strong><br>\(k = 1.380649 \times 10^{-23}\ \mathrm{J/K}\)</p>
+        </div>
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Sources</h3>
+          <ul class="sidebar-list">
+            <li><a href="https://www.latimes.com/archives/la-xpm-1999-oct-01-mn-17288-story.html" target="_blank" rel="noreferrer">LA Times: Mars Probe Lost Due to Simple Math Error</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Field Guide</h3>
+          <ul class="sidebar-list">
+            <li><a href="lectures.html">← All lectures</a></li>
+            <li><a href="lecture-2-vectors.html">Next: Vector Algebra →</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <figure class="portrait" style="max-width:520px; margin-top:8px;">
+      <div class="portrait-frame" style="aspect-ratio:4/3;">
+        <img src="../Images/lecture-si-units-board.jpg" alt="Students filling in the projected orders-of-magnitude scale, from a proton to the observable universe">
+      </div>
+      <figcaption class="portrait-caption">Filling in the orders-of-magnitude scale on the board, from a proton to the observable universe.</figcaption>
+    </figure>
+  </div>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    document.getElementById('lecture-jump').addEventListener('change', (e) => {
+      if (e.target.value) window.location.href = e.target.value;
+    });
+  </script>
+  <script src="../js/layout.js"></script>
+</body>
+</html>

@@ -20,6 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
     'meetings.html', 'sat.html', 'summer-programs.html', 'listening-corner.html', 'misc.html'
   ]);
 
+  const lectureSectionPages = new Set([
+    'physics.html', 'lectures.html',
+    'lecture-1-si-units.html', 'lecture-2-vectors.html', 'lecture-3-motion-sensor.html',
+    'lecture-4-ripple-tank.html', 'lecture-5-light-box.html', 'lecture-6-refraction.html',
+    'lecture-7-tir.html', 'lecture-8-single-slit-first-look.html',
+    'lecture-9-single-slit-quant.html', 'lecture-10-lunar-eclipse.html',
+  ]);
+
   const primaryNav = [
     { label: 'Physics', href: `${pagePrefix}physics.html`, key: 'physics.html' },
     { label: 'UWC', href: `${pagePrefix}uwc.html`, key: 'uwc', dropdown: uwcItems },
@@ -29,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const isUwcSection = uwcSectionPages.has(path);
+  const isLectureSection = lectureSectionPages.has(path);
   document.body.dataset.page = path;
 
   const navLinksHtml = primaryNav.map(item => {
@@ -43,7 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="dropdown-menu">${menu}</div>
         </li>`;
     }
-    return `<li><a href="${item.href}" class="${item.key === path ? 'active' : ''}">${item.label}</a></li>`;
+    const isActive = item.key === path || (item.key === 'physics.html' && isLectureSection);
+    return `<li><a href="${item.href}" class="${isActive ? 'active' : ''}">${item.label}</a></li>`;
   }).join('');
 
   const mobileNavHtml = primaryNav.map(item => {
@@ -53,7 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
       ).join('');
       return `<a href="${item.href}" class="${isUwcSection ? 'active' : ''}">${item.label}</a>${subs}`;
     }
-    return `<a href="${item.href}" class="${item.key === path ? 'active' : ''}">${item.label}</a>`;
+    const isActive = item.key === path || (item.key === 'physics.html' && isLectureSection);
+    return `<a href="${item.href}" class="${isActive ? 'active' : ''}">${item.label}</a>`;
   }).join('');
 
   const sysbar = `
