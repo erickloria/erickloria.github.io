@@ -354,7 +354,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 48px;
   align-items: start;
 }
-.hero-role {
+.hero .hero-role {
   font-family: var(--font-mono);
   font-size: 13px;
   letter-spacing: 0.04em;
@@ -644,7 +644,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .profile-avatar img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 22%; }
 .profile-name { font-family: var(--font-serif); font-size: 22px; font-weight: 600; margin-bottom: 4px; }
-.profile-role { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); margin-bottom: 16px; }
+.profile-role { font-family: var(--font-mono); font-size: 12.5px; color: var(--technical-blue); margin-bottom: 16px; }
 .profile-body { font-size: 15px; color: var(--text); line-height: 1.75; }
 .profile-body p + p { margin-top: 12px; }
 
