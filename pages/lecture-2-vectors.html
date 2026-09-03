@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vector Algebra and Component Addition — Erick Loría Soto</title>
-  <meta name="description" content="Unit 0, Lesson 2: vector addition as geometry, resolving into components, and recombining into a magnitude and direction.">
+  <meta name="description" content="Unit 0, Lesson 2: vectors as a new mathematical object, the short list of operations vector algebra defines, and addition and subtraction worked geometrically and through components, trigonometry, and the unit circle.">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <div class="hero-inner">
       <div class="hero-eyebrow">Physics · The Physics Lectures at UWC · Unit 0 · Lesson 2</div>
       <h1>Vector Algebra and Component Addition</h1>
-      <p>A whiteboard lecture: vectors as geometry first, then components, trigonometry, and the algebra of putting several vectors back together.</p>
+      <p>Vectors as a new mathematical object, the operations defined on them, and addition and subtraction worked two ways: geometrically, and through components, trigonometry, and the unit circle.</p>
       <div style="display:flex; gap:6px; margin-top:4px;">
         <span class="badge badge-purple">Lecture</span>
       </div>
@@ -24,18 +24,56 @@
       <div class="page-main">
 
         <section class="section">
-          <div class="section-head"><span><span class="section-num">01</span><h2 class="section-title">Setup</h2></span></div>
-          <p class="section-desc" style="max-width:none;">This lesson is completely lecture-based. I work through vectors on the whiteboard, drawing each one as I go. The slides give us the geometric and algebraic pictures, but I build the mathematics on the board with the students rather than presenting finished solutions.</p>
+          <div class="section-head"><span><span class="section-num">01</span><h2 class="section-title">Math as a Tool</h2></span></div>
+          <p class="section-desc" style="max-width:none;">I open this lesson by saying plainly what role math plays in this course: it's a tool. Mathematics on its own is a much bigger and deeper subject than anything we'll touch here, and every so often we'll pause and look at a piece of that bigger picture, but day to day, this course uses math instrumentally, to describe and predict what physical systems do.</p>
+          <p class="section-desc" style="max-width:none;">I frame it against something every student already did once. Years ago, you learned numbers: the object itself, then the rules for operating on that object, addition, subtraction, multiplication, square roots. Today I do the same thing with a new object, the vector. First the object, then the rules for what you're allowed to do with it.</p>
+          <p class="section-desc" style="max-width:none;">I also put vectors on a hierarchy, so it's clear this isn't the end of the line. Scalars and vectors are the tip of the iceberg. Matrices come after them, and tensors after that, later on if you keep going in this direction. Nobody needs to know what a tensor is today. The point is just that today's new object isn't the last one you'll meet.</p>
         </section>
 
         <section class="section">
-          <div class="section-head"><span><span class="section-num">02</span><h2 class="section-title">What Happens</h2></span></div>
-          <p class="section-desc" style="max-width:none;">I begin with addition and subtraction as geometry, drawing vectors tip-to-tail. Then we resolve vectors into \(x\) and \(y\) components, connect the diagram to the trigonometry, and work through the algebra. We finish by adding several vectors component by component and recombining the result into a magnitude and direction.</p>
+          <div class="section-head"><span><span class="section-num">02</span><h2 class="section-title">Scalars and Vectors</h2></span></div>
+          <p class="section-desc" style="max-width:none;">A scalar is a quantity with a magnitude and nothing else, a number and a unit. A vector is a quantity with a magnitude and a direction. Mass is a scalar: 2 kg doesn't point anywhere. Velocity is a vector: 2 m/s only means something once you say which way. Before doing anything with vectors, I give students the actual list of quantities from this course that fall on each side:</p>
+          <table class="markdown-content zebra-table" style="width:100%; border-collapse:collapse; font-size:14px;">
+            <thead>
+              <tr style="border-bottom:1px solid var(--rule-soft);">
+                <th style="text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Vectors</th>
+                <th style="text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Scalars</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">displacement</td><td style="padding:8px 12px;">distance</td></tr>
+              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">velocity</td><td style="padding:8px 12px;">speed</td></tr>
+              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">acceleration</td><td style="padding:8px 12px;">mass</td></tr>
+              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">force</td><td style="padding:8px 12px;">time</td></tr>
+              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">weight</td><td style="padding:8px 12px;">density</td></tr>
+              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">electric field</td><td style="padding:8px 12px;">electric potential</td></tr>
+              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">magnetic field</td><td style="padding:8px 12px;">electric charge</td></tr>
+              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">gravitational field</td><td style="padding:8px 12px;">gravitational potential</td></tr>
+              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">momentum</td><td style="padding:8px 12px;">temperature</td></tr>
+              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">area</td><td style="padding:8px 12px;">volume</td></tr>
+              <tr><td style="padding:8px 12px;">angular velocity</td><td style="padding:8px 12px;">work / energy / power</td></tr>
+            </tbody>
+          </table>
+          <p class="section-desc" style="max-width:none; margin-top:16px;">Notice how many of these come in pairs, distance and displacement, speed and velocity. Same underlying idea, but one of them carries a direction and the other doesn't. That distinction is going to matter for the rest of the course.</p>
         </section>
 
         <section class="section">
-          <div class="section-head"><span><span class="section-num">03</span><h2 class="section-title">Field Notes</h2></span></div>
-          <p class="section-desc" style="max-width:none;">Some students struggle more with the geometry or algebra than with the physics itself. I have taught vectors outside with rulers and meter sticks, having students physically construct them, but for this lesson I prefer the traditional whiteboard. Vectors matter in IB Physics, but vector algebra is not a major standalone topic. Over time I have become more comfortable not reteaching every piece of mathematics in the physics classroom. The mathematics courses can teach the structure. Part of the student's job is learning how to transfer it into physics, and this lesson helps with that transition.</p>
+          <div class="section-head"><span><span class="section-num">03</span><h2 class="section-title">What Vector Algebra Actually Includes</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Vector algebra defines its own operations: addition, subtraction, scalar multiplication, the dot product, and the cross product. I list all five so students know the algebra doesn't stop at what we're doing today. The dot and cross products come back later in the course, in work and in magnetic force, but they're not part of this lesson. What we need today is scalar multiplication and the addition and subtraction of vectors.</p>
+          <p class="section-desc" style="max-width:none;">Scalar multiplication is the simplest of the three: multiplying a vector by a plain number scales its magnitude, and a negative number also reverses its direction. Multiply a displacement vector by 2 and you get a vector twice as long pointing the same way; multiply it by \(-1\) and you get a vector the same length pointing the opposite way. Addition and subtraction take longer, because each one can be done two ways, geometrically and algebraically, and both need to agree with each other.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">04</span><h2 class="section-title">Addition and Subtraction, Geometrically</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Geometrically, two vectors add tip-to-tail: draw the first vector, then start the second one where the first one ends, and the sum runs from the start of the first vector to the end of the second. The same rule extends to any number of vectors, draw them one after another and the sum is the vector from the very first tail to the very last tip, regardless of the order you add them in.</p>
+          <p class="section-desc" style="max-width:none;">Subtraction is addition of the reverse: \(\vec{a} - \vec{b}\) is \(\vec{a} + (-\vec{b})\), where \(-\vec{b}\) is \(\vec{b}\) with its direction flipped and its magnitude unchanged.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">05</span><h2 class="section-title">Components, Trigonometry, and the Unit Circle</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Geometry alone gets awkward once you're adding more than two or three vectors, so I move to the algebraic version: breaking each vector into \(x\) and \(y\) components. For a vector of magnitude \(r\) at angle \(\theta\) from the \(x\)-axis, \(r_x = r\cos\theta\) and \(r_y = r\sin\theta\).</p>
+          <p class="section-desc" style="max-width:none;">Before students just trust those two formulas, I put the unit circle back on the board. It's the reason cosine gives you the horizontal piece and sine gives you the vertical one, and it's also what tells you the sign of a component in each quadrant, without memorizing a separate rule for every quadrant. A vector of length \(r\) at angle \(\theta\) is just the unit circle scaled by \(r\): its tip sits at \((r\cos\theta, r\sin\theta)\), the same \((\cos\theta, \sin\theta)\) coordinates you already know from the unit circle, stretched by \(r\).</p>
+          <p class="section-desc" style="max-width:none;">Once every vector in a sum is broken into components, addition becomes arithmetic: add all the \(x\) components together, add all the \(y\) components together, \(R_x = \sum r_x\), \(R_y = \sum r_y\). To get back to a single vector, recombine with the Pythagorean theorem for the magnitude, \(|\vec{R}| = \sqrt{R_x^2 + R_y^2}\), and the inverse tangent for the direction, \(\tan\theta = R_y / R_x\), checking which quadrant \(R_x\) and \(R_y\) actually put you in, since the inverse tangent alone can't tell a first-quadrant angle from a third-quadrant one.</p>
         </section>
 
       </div>
@@ -50,9 +88,10 @@
         </div>
         <div class="sidebar-block">
           <h3 class="sidebar-title">Physics</h3>
-          <p><strong>Geometry:</strong> add vectors head-to-tail; subtract by adding the opposite vector.</p>
-          <p><strong>Components:</strong> \(a_x = a\cos\theta\), \(a_y = a\sin\theta\).</p>
-          <p><strong>Resultant:</strong> \(R_x = \sum a_x\), \(R_y = \sum a_y\), \(R = \sqrt{R_x^2 + R_y^2}\), with direction from \(\theta = \arctan(R_y / R_x)\) and the correct quadrant.</p>
+          <p><strong>Vector algebra:</strong> addition, subtraction, scalar multiplication, the dot product, the cross product. Only scalar multiplication and addition/subtraction are used today.</p>
+          <p><strong>Geometry:</strong> add vectors tip-to-tail; subtract by adding the reversed vector.</p>
+          <p><strong>Components:</strong> \(r_x = r\cos\theta\), \(r_y = r\sin\theta\).</p>
+          <p><strong>Resultant:</strong> \(R_x = \sum r_x\), \(R_y = \sum r_y\), \(|\vec{R}| = \sqrt{R_x^2 + R_y^2}\), with direction from \(\tan\theta = R_y/R_x\) and the correct quadrant.</p>
         </div>
         <div class="sidebar-block">
           <h3 class="sidebar-title">Field Guide</h3>
@@ -68,14 +107,15 @@
     <div style="display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:24px; max-width:820px; margin-top:8px;">
       <figure class="portrait">
         <div class="portrait-frame" style="aspect-ratio:4/3;">
-          <img src="../Images/lecture-vectors-1.jpg" alt="Whiteboard diagram of vector addition and subtraction using the geometric method">
+          <img src="../Images/lecture-vectors-1.jpg" alt="Slide showing geometric vector addition: two vectors added tip-to-tail, and four vectors chained tip-to-tail into a single resultant">
         </div>
+        <figcaption class="portrait-caption">Addition, geometrically: tip-to-tail, for two vectors and for four.</figcaption>
       </figure>
       <figure class="portrait">
         <div class="portrait-frame" style="aspect-ratio:4/3;">
-          <img src="../Images/lecture-vectors-2.jpg" alt="Whiteboard diagram of vector components and the algebraic resultant">
+          <img src="../Images/lecture-vectors-2.jpg" alt="Slide showing a vector resolved into x and y components using r cos theta and r sin theta, with the magnitude and inverse tangent formulas for recombining components">
         </div>
-        <figcaption class="portrait-caption">The geometric and algebraic views used during the lecture.</figcaption>
+        <figcaption class="portrait-caption">Addition, algebraically: components, magnitude, and direction.</figcaption>
       </figure>
     </div>
   </div>
