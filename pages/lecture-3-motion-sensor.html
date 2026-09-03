@@ -42,9 +42,9 @@
               <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Velocity — Linear Fit</figcaption>
             </figure>
           </div>
-          <figure style="margin:0 0 16px;">
+          <figure style="margin:0 auto 16px; max-width:520px;">
             <img src="../Images/lecture-motion-sensor-acceleration.png" alt="Acceleration vs. time graph of the cart on the ramp, statistics over x-range 1.35 to 3.75 seconds: mean 0.449 m/s squared, std dev 0.048" style="width:100%; max-width:520px; display:block; border:1px solid var(--rule-soft);">
-            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">Acceleration — Mean 0.449 m/s², x-range 1.35–3.75 s</figcaption>
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Acceleration — Mean 0.449 m/s², x-range 1.35–3.75 s</figcaption>
           </figure>
           <p class="section-desc" style="max-width:none;">Outside that window, the acceleration trace spikes hard, down to around −2.5 m/s² at the push and down again to around −5 m/s² where a hand catches the cart at the bottom. Those spikes are real, but they're excluded from the fits on purpose: the push and the catch are a hand doing something to the cart, not the cart moving under gravity by itself.</p>
         </section>
@@ -86,9 +86,9 @@
               <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Velocity — Mean −0.892 m/s, x-range 0.90–1.55 s</figcaption>
             </figure>
           </div>
-          <figure style="margin:0 0 16px;">
+          <figure style="margin:0 auto 16px; max-width:520px;">
             <img src="../Images/lecture-motion-sensor-acceleration-2.png" alt="Acceleration vs. time graph of the spring-launched cart, showing a dip to about -4.8 m/s squared at the push and a spike to about +4.4 m/s squared at the catch, with near-zero acceleration between them" style="width:100%; max-width:520px; display:block; border:1px solid var(--rule-soft);">
-            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">Acceleration — Push and Catch Transients</figcaption>
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Acceleration — Push and Catch Transients</figcaption>
           </figure>
           <p class="section-desc" style="max-width:none;">Here the position graph is a straight line, not a curve, which is the whole point of the comparison: no curvature means no acceleration. The acceleration trace agrees, sitting near zero for the entire middle stretch, except for two sharp transients bracketing it, a dip to about −4.8 m/s² where the spring fires and a spike to about +4.4 m/s² where the hand stops the cart. Same pattern as the ramp run: the push and the catch are excluded from the model, because they're not the motion being modeled.</p>
           <p class="section-desc" style="max-width:none;">This is Model 2, written the same way as the first: <em>y = mx + b</em> in math, translated to \(x(t) = vt + x_i\) in physics, with \(v(t)\) constant and \(a(t) = 0\). Placed side by side, Model 1 for the ramp and Model 2 for the launched cart show that "constant acceleration" and "constant velocity" are two versions of the same kind of equation, one with the quadratic term and one without it.</p>
@@ -145,7 +145,7 @@
       </aside>
     </div>
 
-    <figure class="portrait" style="max-width:720px; margin-top:8px;">
+    <figure class="portrait" style="max-width:720px; margin:8px auto 0;">
       <div class="portrait-frame" style="aspect-ratio:4/3;">
         <img src="../Images/lecture-motion-sensor-board.jpg" alt="Whiteboard showing the three Graphical Analysis fits translated into physics equations, labeled Model 1, next to a second board translating Model 2 into IB SUVAT notation">
       </div>

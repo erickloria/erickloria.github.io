@@ -64,7 +64,7 @@
           </div>
           <p class="section-desc" style="max-width:none;">That "doesn't exist" row matters as much as the operations do. A field like \(\mathbb{R}\) requires that every nonzero number have a multiplicative inverse, which is exactly why \(1/0\) has no answer, not because nobody's found one yet, but because \(0\) is defined to have no inverse. Vectors were never built to be a field in the first place, so asking "what's \(\vec{b}\) divided by \(\vec{a}\)" isn't a hard question with a hidden answer, it's a question about an operation that was never defined to begin with.</p>
           <p class="section-desc" style="max-width:none;">That's also why I put vectors on a hierarchy, so it's clear this isn't the end of the line. Scalars and vectors are the tip of the iceberg, and what actually separates every object on that iceberg from the next has nothing to do with how it's drawn. It's how many indices you need to name a single one of its components. A scalar needs zero: it's just one number, \(s\), full stop. A vector needs one index, \(v_i\), because naming one component means saying which direction you mean, \(v_1\) or \(v_2\). A matrix needs two indices, \(M_{ij}\), a row \(i\) and a column \(j\). A tensor keeps that pattern going with no upper limit, \(T_{ijk}\) needs three indices, and there's nothing stopping a fourth or fifth. In that language, a vector and a matrix were never really separate from tensors in the first place, they're just the rank-1 and rank-2 cases of the same idea. Nobody needs the word "rank" today. The point is that the pattern which gets you from one object to the next is counting indices, not counting brackets.</p>
-          <figure style="margin:0 0 16px; max-width:640px;">
+          <figure style="margin:0 auto 16px; max-width:640px;">
             <img src="../Images/lecture-vectors-tensor-hierarchy.png" alt="Scalar, vector, matrix, and tensor shown as rank 0 through rank 3: s, v sub i, M sub ij, T sub ijk, with example components in matrix bracket notation" style="width:100%; display:block; border:1px solid var(--rule-soft); background:#fff;">
             <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">The hierarchy: one more index at every step</figcaption>
           </figure>
@@ -106,7 +106,7 @@
           <p class="section-desc" style="max-width:none;">Vector algebra defines five operations. Addition, \(\vec{a}+\vec{b}\), combines two vectors into one. Subtraction, \(\vec{a}-\vec{b}\), is addition of the reverse of the second vector. Scalar multiplication, \(k\vec{a}\), scales a vector by an ordinary number \(k\). The dot product, \(\vec{a}\cdot\vec{b}\), takes two vectors and returns a scalar. The cross product, \(\vec{a}\times\vec{b}\), takes two vectors and returns a third vector, perpendicular to both of the first two.</p>
           <p class="section-desc" style="max-width:none;">I list all five so students know the algebra doesn't stop at what we're doing today. The dot and cross products come back later in the course, in work and in magnetic force, but they're not part of this lesson. What we need today is scalar multiplication and the addition and subtraction of vectors.</p>
           <p class="section-desc" style="max-width:none;">For a vector \(\vec{a}\) and a scalar \(k\), the product \(k\vec{a}\) has magnitude \(|k|\,|\vec{a}|\): the vector's length is scaled by the size of \(k\), regardless of its sign. The direction depends on the sign of \(k\) alone. If \(k>0\), \(k\vec{a}\) points the same way as \(\vec{a}\); if \(k<0\), it points the opposite way. \(2\vec{a}\) is twice as long as \(\vec{a}\), same direction; \(-\vec{a}\) is the same length as \(\vec{a}\), reversed:</p>
-          <figure style="margin:0 0 16px; max-width:480px;">
+          <figure style="margin:0 auto 16px; max-width:480px;">
             <img src="../Images/lecture-vectors-scalar-mult.png" alt="A vector a shown next to 2a, twice as long and pointing the same way, and -a, the same length but pointing the opposite way" style="width:100%; display:block; border:1px solid var(--rule-soft);">
             <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">Scalar multiplication: 2a and −a</figcaption>
           </figure>
@@ -116,17 +116,17 @@
         <section class="section">
           <div class="section-head"><span><span class="section-num">04</span><h2 class="section-title">Addition and Subtraction, Geometrically</h2></span></div>
           <p class="section-desc" style="max-width:none;">Geometric addition follows one rule, usually called the tip-to-tail rule: to add \(\vec{a}+\vec{b}\), draw \(\vec{a}\), then draw \(\vec{b}\) starting from wherever \(\vec{a}\) ended. The sum \(\vec{a}+\vec{b}\) is the single vector that runs from the start of \(\vec{a}\) to the end of \(\vec{b}\), regardless of how long or short either one is:</p>
-          <figure style="margin:0 0 16px; max-width:480px;">
+          <figure style="margin:0 auto 16px; max-width:480px;">
             <img src="../Images/lecture-vectors-add-tip-to-tail.png" alt="Vector a and vector b added tip-to-tail, with the sum a+b running from the start of a to the end of b" style="width:100%; display:block; border:1px solid var(--rule-soft);">
             <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">a + b, tip-to-tail</figcaption>
           </figure>
           <p class="section-desc" style="max-width:none;">The same rule extends to any number of vectors. Below, four vectors, \(\vec{a}\), \(\vec{b}\), \(\vec{c}\), \(\vec{d}\), start from a common origin:</p>
-          <figure style="margin:0 0 16px; max-width:480px;">
+          <figure style="margin:0 auto 16px; max-width:480px;">
             <img src="../Images/lecture-vectors-four-from-origin.png" alt="Four vectors a, b, c, d drawn from a common origin at different angles" style="width:100%; display:block; border:1px solid var(--rule-soft);">
             <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">Four vectors, drawn from one origin</figcaption>
           </figure>
           <p class="section-desc" style="max-width:none;">Chain them tip-to-tail instead, in any order, and the sum \(\vec{a}+\vec{b}+\vec{c}+\vec{d}\) is the single vector from the very first tail to the very last tip:</p>
-          <figure style="margin:0 0 16px; max-width:480px;">
+          <figure style="margin:0 auto 16px; max-width:480px;">
             <img src="../Images/lecture-vectors-four-chained.png" alt="The same four vectors a, b, c, d chained tip-to-tail, with the resultant a+b+c+d running from the first tail to the last tip" style="width:100%; display:block; border:1px solid var(--rule-soft);">
             <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">a + b + c + d, chained tip-to-tail</figcaption>
           </figure>
@@ -137,7 +137,7 @@
           <div class="section-head"><span><span class="section-num">05</span><h2 class="section-title">Components, Trigonometry, and the Unit Circle</h2></span></div>
           <p class="section-desc" style="max-width:none;">Geometry alone gets awkward once you're adding more than two or three vectors at odd angles, so for anything beyond that I move to the algebraic version: breaking every vector into an \(x\) component and a \(y\) component, adding the components as plain numbers, then recombining.</p>
           <p class="section-desc" style="max-width:none;">Start with a single vector \(\vec{r}\) of magnitude \(r = |\vec{r}|\), drawn at angle \(\theta\) measured counterclockwise from the positive \(x\)-axis. Dropping a perpendicular from its tip down to the \(x\)-axis makes a right triangle: the vector itself is the hypotenuse, and its components \(r_x\) and \(r_y\) are the two legs.</p>
-          <figure style="margin:0 0 16px; max-width:420px;">
+          <figure style="margin:0 auto 16px; max-width:420px;">
             <img src="../Images/lecture-vectors-components.png" alt="A vector r at angle theta from the x-axis, decomposed into components r_x = r cos theta and r_y = r sin theta, with unit vectors x-hat and y-hat marked" style="width:100%; display:block; border:1px solid var(--rule-soft);">
             <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">A vector resolved into its x and y components</figcaption>
           </figure>
@@ -146,7 +146,7 @@
           <p class="section-desc" style="max-width:none;">Rearranged for \(r_x\) and \(r_y\), these become the two equations used constantly for the rest of the course:</p>
           <p class="section-desc" style="max-width:none; text-align:center;">\[r_x = r\cos\theta, \qquad r_y = r\sin\theta\]</p>
           <p class="section-desc" style="max-width:none;">Those two equations only look obviously true while \(\theta\) is an acute angle sitting inside a triangle. The unit circle is what makes them work for <em>any</em> angle at all, including angles well past 90° where there's no triangle left to draw. The unit circle is the circle of radius 1 centered at the origin. Walk around it by angle \(\theta\), measured counterclockwise from the positive \(x\)-axis, and by definition the point you land on has coordinates \((\cos\theta, \sin\theta)\). A vector of length \(r\) at angle \(\theta\) is that same point, scaled outward by \(r\): its tip lands at \((r\cos\theta, r\sin\theta)\), which is exactly \((r_x, r_y)\).</p>
-          <figure style="margin:0 0 16px; max-width:620px;">
+          <figure style="margin:0 auto 16px; max-width:620px;">
             <img src="../Images/lecture-vectors-unit-circle.png" alt="The unit circle with every multiple of 30 and 45 degrees labeled in degrees and radians, and its exact (cos theta, sin theta) coordinates marked at each angle" style="width:100%; display:block; border:1px solid var(--rule-soft);">
             <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">The unit circle: angle in and (cos θ, sin θ) out</figcaption>
           </figure>
@@ -159,7 +159,7 @@
           </div>
           <p class="section-desc" style="max-width:none; margin-top:16px;">Once every vector in a sum has been broken into components this way, addition stops being a geometric construction and becomes ordinary arithmetic: add every \(x\) component together, add every \(y\) component together.</p>
           <p class="section-desc" style="max-width:none; text-align:center;">\[R_x = \sum r_x, \qquad R_y = \sum r_y\]</p>
-          <figure style="margin:0 0 16px; max-width:380px;">
+          <figure style="margin:0 auto 16px; max-width:380px;">
             <img src="../Images/lecture-vectors-component-addition.png" alt="Vector a plus vector b, with the resultant's x component equal to a_x plus b_x and its y component equal to a_y plus b_y" style="width:100%; display:block; border:1px solid var(--rule-soft);">
             <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">Addition, component by component</figcaption>
           </figure>
