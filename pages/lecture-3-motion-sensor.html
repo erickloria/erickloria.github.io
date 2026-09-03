@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Motion Sensor and Graphical Analysis — Erick Loría Soto</title>
-  <meta name="description" content="Unit A, Lesson 3: a sonar motion sensor, a cart on a ramp, and connecting how a cart moves to its position, velocity, and acceleration graphs.">
+  <title>Cart on a Ramp: From Graphs to the Equations of Motion — Erick Loría Soto</title>
+  <meta name="description" content="Unit A, Lesson 3: a sonar motion sensor and a cart on a ramp generate position, velocity, and acceleration graphs, then the class derives the equations of motion from those graphs directly, no calculus required.">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <div class="hero">
     <div class="hero-inner">
       <div class="hero-eyebrow">Physics · The Physics Lectures at UWC · Unit A · Lesson 3</div>
-      <h1>Motion Sensor and Graphical Analysis</h1>
-      <p>Carts, a sonar motion sensor, and the mess of groups troubleshooting their own equipment on the way to reading how something moves straight off a graph.</p>
+      <h1>Cart on a Ramp: From Graphs to the Equations of Motion</h1>
+      <p>Two classes, one investigation. First a self-guided lab with a motion sensor and a cart on a ramp, generating three graphs. Then a lecture where those same three graphs become the equations of motion, built from data instead of handed down on a formula sheet.</p>
       <div style="display:flex; gap:6px; margin-top:4px;">
+        <span class="badge badge-purple">Lecture</span>
         <span class="badge badge-green">Experiential Activity</span>
       </div>
     </div>
@@ -24,27 +25,106 @@
       <div class="page-main">
 
         <section class="section">
-          <div class="section-head"><span><span class="section-num">01</span><h2 class="section-title">Setup</h2></span></div>
-          <p class="section-desc" style="max-width:none;">I put students in groups of three or four around a <a href="https://www.vernier.com/product/dynamics-cart-and-track-system-with-go-direct-sensor-carts/?srsltid=AfmBOoqENYLvIPLAX1AhMhfAT9KrDJrZIb7ScGyeWdmyEhw7vW-FHooM" target="_blank" rel="noreferrer">Vernier cart-and-track</a> station. I introduce the <a href="https://www.vernier.com/product/labquest-3/?srsltid=AfmBOopNyoV7GSy-BuarR3Ppu3NkkCua6k6MZd2IlHtg0-RwQRJKmCf4" target="_blank" rel="noreferrer">LabQuest</a>, <a href="https://www.vernier.com/product/graphical-analysis/?srsltid=AfmBOoqe3oZIl-BX07zwJYr7IqVTMOIFwC61SWe_7Ks40NmsucOQ_66I" target="_blank" rel="noreferrer">Graphical Analysis</a>, the cart, and the <a href="https://www.vernier.com/product/motion-detector/?srsltid=AfmBOopPm6taOOn5AzVgxsn5ovDJIPaJFZto28wxgNfPuPD0XtFGreko" target="_blank" rel="noreferrer">motion sensor</a> before anyone starts collecting data. I explain that the sensor uses sonar, sending out a sound pulse and using the returning signal to determine position. I also show them its range and effective detection region. I do not begin with the software running or a model of what a "good" graph should look like.</p>
+          <div class="section-head"><span><span class="section-num">01</span><h2 class="section-title">Day One: Generating the Graphs</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Working in groups of three or four, each station had a cart on an inclined ramp with a <a href="https://www.vernier.com/product/motion-detector/?srsltid=AfmBOopPm6taOOn5AzVgxsn5ovDJIPaJFZto28wxgNfPuPD0XtFGreko" target="_blank" rel="noreferrer">motion sensor</a> at one end. The sensor sends out a sonar pulse and reads position from how long the echo takes to come back, which is worth knowing before you look at the graphs: what you're seeing is a distance from the sensor, not a distance along the ramp measured some other way. Using the <a href="https://www.vernier.com/product/dynamics-cart-and-track-system-with-go-direct-sensor-carts/?srsltid=AfmBOoqENYLvIPLAX1AhMhfAT9KrDJrZIb7ScGyeWdmyEhw7vW-FHooM" target="_blank" rel="noreferrer">Vernier cart-and-track</a> kit and <a href="https://www.vernier.com/product/graphical-analysis/?srsltid=AfmBOoqe3oZIl-BX07zwJYr7IqVTMOIFwC61SWe_7Ks40NmsucOQ_66I" target="_blank" rel="noreferrer">Graphical Analysis</a> on a <a href="https://www.vernier.com/product/labquest-3/?srsltid=AfmBOopNyoV7GSy-BuarR3Ppu3NkkCua6k6MZd2IlHtg0-RwQRJKmCf4" target="_blank" rel="noreferrer">LabQuest</a>, running the <a href="https://www.vernier.com/experiment/pwv-3a_cart-on-a-ramp/" target="_blank" rel="noreferrer">Cart on a Ramp</a> activity, each group gave the cart a push toward the sensor and let it record the whole trip: the cart decelerates, comes to rest for an instant at the top of its travel, then rolls back down by itself, speeding up the whole way. That one push-and-return produces three graphs of the same five seconds, position, velocity, and acceleration.</p>
         </section>
 
         <section class="section">
-          <div class="section-head"><span><span class="section-num">02</span><h2 class="section-title">What Happens</h2></span></div>
-          <p class="section-desc" style="max-width:none;">Students first have some freedom to move the cart by hand, watch the live readouts, and understand what zeroing the sensor means. Then we begin the Vernier <a href="https://www.vernier.com/experiment/pwv-3a_cart-on-a-ramp/" target="_blank" rel="noreferrer">Cart on a Ramp</a> activity, but we work through the guide together. I stop the class at different points, we discuss what is happening, and then the groups continue. They run the cart and generate position-, velocity-, and acceleration-time graphs. Toward the end, we connect those graphs to mathematical models in Graphical Analysis.</p>
+          <div class="section-head"><span><span class="section-num">02</span><h2 class="section-title">The Three Graphs</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Graphical Analysis fits a curve to any stretch of a graph and reads the parameters straight off it. The fits below cover the "rolling on its own" section of each graph, the part after the push and before a hand touches the cart again to catch it, roughly 1.35 to 3.85 seconds:</p>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin-bottom:8px;">
+            <figure style="margin:0;">
+              <img src="../Images/lecture-motion-sensor-position.png" alt="Position vs. time graph of the cart on the ramp, quadratic fit y = ax^2 + bx + c with a = 0.226, b = -1.141, c = 1.826" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+              <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Position — Quadratic Fit</figcaption>
+            </figure>
+            <figure style="margin:0;">
+              <img src="../Images/lecture-motion-sensor-velocity.png" alt="Velocity vs. time graph of the cart on the ramp, linear fit y = mx + b with m = 0.4524, b = -1.148, r = 0.9989" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+              <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Velocity — Linear Fit</figcaption>
+            </figure>
+          </div>
+          <figure style="margin:0 0 16px;">
+            <img src="../Images/lecture-motion-sensor-acceleration.png" alt="Acceleration vs. time graph of the cart on the ramp, statistics over x-range 1.35 to 3.75 seconds: mean 0.449 m/s squared, std dev 0.048" style="width:100%; max-width:520px; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">Acceleration — Mean 0.449 m/s², x-range 1.35–3.75 s</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">Outside that window, the acceleration trace spikes hard, down to around −2.5 m/s² at the push and down again to around −5 m/s² where a hand catches the cart at the bottom. Those spikes are real, but they're excluded from the fits on purpose: the push and the catch are a hand doing something to the cart, not the cart moving under gravity by itself.</p>
         </section>
 
         <section class="section">
-          <div class="section-head"><span><span class="section-num">03</span><h2 class="section-title">Field Notes</h2></span></div>
-          <p class="section-desc" style="max-width:none;">These classes are a mess. Sensors stop working, equipment needs to be reset, and every group runs into a different problem at a different time. While I help one group, another is confused about something else. Students move equipment, watch graphs, troubleshoot, and sometimes write very little down. That mess is part of the experience: they watch the cart move while seeing the same motion appear on a graph. The central point is <em>how</em> the cart moves, not <em>why</em>. Students want to jump to forces or energy, but this lesson is descriptive. They need to connect the physical motion to its graphical representation before explaining its cause.</p>
+          <div class="section-head"><span><span class="section-num">03</span><h2 class="section-title">From the Fits to the Equations of Motion</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Those three fits are the starting point, exactly as Graphical Analysis reported them: two curves in plain math, <em>y = ax² + bx + c</em> and <em>y = mx + b</em>, plus the mean acceleration. That's not IB language yet, it's just what a curve fit gives you, before any physics is attached to the letters.</p>
+          <div class="callout callout-green">
+            <span>Dimensional Analysis</span>
+            A curve fit by itself is just numbers. <em>y = ax² + bx + c</em> doesn't know it's describing anything physical, <em>a</em>, <em>b</em>, and <em>c</em> are just whatever values minimize the error. But position is measured in metres and time in seconds, so for the equation to be dimensionally consistent, <em>a</em> has to carry units of m/s², <em>b</em> has to carry units of m/s, and <em>c</em> has to carry units of m. Those are the units of acceleration, velocity, and position. Checking units is the step that turns "Graphical Analysis reported a = 0.226" into "this cart has an acceleration." Only once that's established does it make sense to write the general equations, \(x(t) = \tfrac{1}{2}at^2 + v_it + x_i\) and \(v(t) = at + v_i\), and match <em>a</em>, <em>b</em>, <em>c</em> against \(\tfrac{1}{2}a\), \(v_i\), and \(x_i\).
+          </div>
+          <p class="section-desc" style="max-width:none;">With the units settled, the actual sizes of the numbers become worth comparing. The quadratic's coefficient is just about half the line's slope: \(2 \times 0.226 = 0.452\), against a measured slope of 0.4524. That factor of two is where the \(\tfrac{1}{2}\) in \(\tfrac{1}{2}at^2\) comes from, read straight off two independent graphs of the same five seconds. There's a third number to check it against: the acceleration graph's own mean, 0.449 m/s², measured directly rather than inferred from a fit. Three separate graphs, three separate routes to the same acceleration, agreeing to within a couple percent of each other. That agreement is what justifies treating the acceleration as constant over this interval, and it's why \(x(t) = \tfrac{1}{2}at^2 + v_it + x_i\) is the right model here.</p>
+          <p class="section-desc" style="max-width:none;">This isn't the only way to arrive at that equation. IB doesn't require calculus for this, the graphs and the units are enough to get there, but for anyone who already knows it, constant acceleration integrates directly into both equations:</p>
+          <p class="section-desc" style="max-width:none; text-align:center;">\[v(t) = \int a(t)\,dt = \int a\,dt = at + v_i\]</p>
+          <p class="section-desc" style="max-width:none; text-align:center;">\[x(t) = \int v(t)\,dt = \int (at + v_i)\,dt = \tfrac{1}{2}at^2 + v_it + x_i\]</p>
+          <p class="section-desc" style="max-width:none;">Same equation, the \(\tfrac{1}{2}\) falling out of the power rule instead of out of a comparison between two graphs. It's worth seeing that this route exists and lands in the same place, even for a course that doesn't ask for it.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">04</span><h2 class="section-title">A TOK Moment: What This Model Assumes</h2></span></div>
+          <p class="section-desc" style="max-width:none;">\(a = 0.452\ \mathrm{m/s^2}\) is not a universal constant. It's the acceleration of this cart, on this ramp, at this incline, and it would change if the incline changed. What does generalize is the form of the equation, \(x(t) = \tfrac{1}{2}at^2 + v_it + x_i\), and that form is only as good as the assumptions behind it: that the acceleration really is constant over the interval being modeled, that the motion is confined to one dimension, and that whatever forces aren't gravity along the ramp, friction, air resistance, are small enough to ignore.</p>
+          <div class="callout callout-orange">
+            <span>Cart vs. Soccer Ball</span>
+            The cart on its track is a good candidate for this model: low-friction wheels, a fixed incline so gravity's component along the ramp genuinely doesn't change, and a sonar beam that can track it in a straight line. Roll a soccer ball down the same ramp and the model gets worse fast. A soccer ball isn't confined to a track, so it can drift sideways or spin off a straight path. It's far lighter for its size than the cart, which makes air resistance a real factor instead of a rounding error. It can bounce and deform on contact. None of that shows up in \(x(t) = \tfrac{1}{2}at^2 + v_it + x_i\), because the equation assumes exactly the conditions the cart-and-track system was built to provide. The equation isn't wrong for the soccer ball, it's just not describing the right system anymore.
+          </div>
+          <p class="section-desc" style="max-width:none;">That's the actual claim being made whenever a model like this is used: not "this equation is true," but "under these specific conditions, this equation describes what happens well enough to be useful." Knowing what those conditions are, and being able to say when they stop holding, is as much a part of the physics as the equation itself.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">05</span><h2 class="section-title">A Second Model: Constant Velocity</h2></span></div>
+          <p class="section-desc" style="max-width:none;">The same cart has a spring-loaded plunger built into one end. Compressed against a wall at the end of the track and released, it fires the cart off at a roughly constant speed, caught by hand at the other end, giving a second set of graphs to compare against the ramp run.</p>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin-bottom:8px;">
+            <figure style="margin:0;">
+              <img src="../Images/lecture-motion-sensor-position-2.png" alt="Position vs. time graph of the spring-launched cart, linear fit y = mx + b with m = -0.9039, b = 1.618, r = -0.9997, over x-range 0.80 to 1.60 seconds" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+              <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Position — Linear Fit, x-range 0.80–1.60 s</figcaption>
+            </figure>
+            <figure style="margin:0;">
+              <img src="../Images/lecture-motion-sensor-velocity-2.png" alt="Velocity vs. time graph of the spring-launched cart, statistics over x-range 0.90 to 1.55 seconds: mean -0.892 m/s, std dev 0.060" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+              <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Velocity — Mean −0.892 m/s, x-range 0.90–1.55 s</figcaption>
+            </figure>
+          </div>
+          <figure style="margin:0 0 16px;">
+            <img src="../Images/lecture-motion-sensor-acceleration-2.png" alt="Acceleration vs. time graph of the spring-launched cart, showing a dip to about -4.8 m/s squared at the push and a spike to about +4.4 m/s squared at the catch, with near-zero acceleration between them" style="width:100%; max-width:520px; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">Acceleration — Push and Catch Transients</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">Here the position graph is a straight line, not a curve, which is the whole point of the comparison: no curvature means no acceleration. The acceleration trace agrees, sitting near zero for the entire middle stretch, except for two sharp transients bracketing it, a dip to about −4.8 m/s² where the spring fires and a spike to about +4.4 m/s² where the hand stops the cart. Same pattern as the ramp run: the push and the catch are excluded from the model, because they're not the motion being modeled.</p>
+          <p class="section-desc" style="max-width:none;">This is Model 2, written the same way as the first: <em>y = mx + b</em> in math, translated to \(x(t) = vt + x_i\) in physics, with \(v(t)\) constant and \(a(t) = 0\). Placed side by side, Model 1 for the ramp and Model 2 for the launched cart show that "constant acceleration" and "constant velocity" are two versions of the same kind of equation, one with the quadratic term and one without it.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">06</span><h2 class="section-title">Translating into IB Language</h2></span></div>
+          <p class="section-desc" style="max-width:none;">The last step is switching to the notation the exam uses. \(x(t)\) becomes \(s\), \(v_i\) becomes \(u\), and the equations get renamed SUVAT after their five letters: displacement, initial velocity, final velocity, acceleration, time.</p>
+          <div class="doc-index">
+            <div class="doc-row" style="cursor:default; grid-template-columns: 1fr;"><span class="doc-row-desc">Model 1, constant acceleration: \(x(t) = \tfrac{1}{2}at^2 + v_it + x_i\) becomes \(s = ut + \tfrac{1}{2}at^2\), and \(v(t) = at + v_i\) becomes \(v = u + at\).</span></div>
+            <div class="doc-row" style="cursor:default; grid-template-columns: 1fr;"><span class="doc-row-desc">Model 2, constant velocity: \(x(t) = vt + x_i\) becomes \(s = ut\), the same equation with \(a = 0\).</span></div>
+          </div>
+          <p class="section-desc" style="max-width:none; margin-top:16px;">The other two SUVAT equations, \(v^2 = u^2 + 2as\) and \(s = \tfrac{1}{2}(u+v)t\), follow algebraically from these two, though they aren't built from data the way the first two are here. Every term in \(s = ut + \tfrac{1}{2}at^2\) traces back to something measured directly off a graph, not a formula handed down on a sheet.</p>
         </section>
 
       </div>
 
       <aside class="sidebar-stack">
         <div class="sidebar-block">
+          <h3 class="sidebar-title">Jump to a Lecture</h3>
+          <select id="lecture-jump" style="width:100%; font-family:var(--font-ui); font-size:13.5px; padding:8px 10px; border:1px solid var(--rule); border-radius:2px; background:var(--bg-raised); color:var(--text);">
+            <option value="">Select a lesson…</option>
+            <optgroup label="Unit 0">
+              <option value="lecture-1-si-units.html">L1 — SI Units &amp; Sig Figs</option>
+              <option value="lecture-2-vectors.html">L2 — Vector Algebra</option>
+            </optgroup>
+            <optgroup label="Unit A">
+              <option value="lecture-3-motion-sensor.html" selected>L3 — Cart on a Ramp</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="sidebar-block">
           <h3 class="sidebar-title">Equipment</h3>
           <ul class="sidebar-list">
-            <li><a href="https://www.vernier.com/product/dynamics-cart-and-track-system-with-go-direct-sensor-carts/?srsltid=AfmBOoqENYLvIPLAX1AhMhfAT9KrDJrZIb7ScGyeWdmyEhw7vW-FHooM" target="_blank" rel="noreferrer">Vernier cart-and-track kit</a>, <a href="https://www.vernier.com/product/motion-detector/?srsltid=AfmBOopPm6taOOn5AzVgxsn5ovDJIPaJFZto28wxgNfPuPD0XtFGreko" target="_blank" rel="noreferrer">motion sensor</a></li>
+            <li><a href="https://www.vernier.com/product/dynamics-cart-and-track-system-with-go-direct-sensor-carts/?srsltid=AfmBOoqENYLvIPLAX1AhMhfAT9KrDJrZIb7ScGyeWdmyEhw7vW-FHooM" target="_blank" rel="noreferrer">Vernier cart-and-track kit</a> (built-in spring plunger)</li>
+            <li><a href="https://www.vernier.com/product/motion-detector/?srsltid=AfmBOopPm6taOOn5AzVgxsn5ovDJIPaJFZto28wxgNfPuPD0XtFGreko" target="_blank" rel="noreferrer">Motion sensor</a></li>
             <li>Inclined ramp, ruled markings</li>
             <li><a href="https://www.vernier.com/product/labquest-3/?srsltid=AfmBOopNyoV7GSy-BuarR3Ppu3NkkCua6k6MZd2IlHtg0-RwQRJKmCf4" target="_blank" rel="noreferrer">LabQuest Mini or LabQuest 3</a></li>
             <li>Laptop/tablet, <a href="https://www.vernier.com/product/graphical-analysis/?srsltid=AfmBOoqe3oZIl-BX07zwJYr7IqVTMOIFwC61SWe_7Ks40NmsucOQ_66I" target="_blank" rel="noreferrer">Graphical Analysis</a></li>
@@ -52,7 +132,7 @@
         </div>
         <div class="sidebar-block">
           <h3 class="sidebar-title">Physics</h3>
-          <p>The sensor determines position from the travel time of a reflected sound pulse. A position-time graph shows where the cart is; its slope gives velocity, \(v = \mathrm{d}s/\mathrm{d}t\). A velocity-time graph shows how that velocity changes; its slope gives acceleration, \(a = \mathrm{d}v/\mathrm{d}t\). These graphs describe <em>how</em> the cart moves, not <em>why</em>.</p>
+          <p>Two runs of the same cart, two models. Constant acceleration gives a quadratic position graph and a linear velocity graph, \(x(t) = \tfrac{1}{2}at^2 + v_it + x_i\). Constant velocity gives a linear position graph and a flat velocity graph, \(x(t) = vt + x_i\). Translated into IB notation, these are the SUVAT equations \(s = ut + \tfrac{1}{2}at^2\) and \(s = ut\).</p>
         </div>
         <div class="sidebar-block">
           <h3 class="sidebar-title">Field Guide</h3>
@@ -65,11 +145,11 @@
       </aside>
     </div>
 
-    <figure class="portrait" style="max-width:520px; margin-top:8px;">
+    <figure class="portrait" style="max-width:720px; margin-top:8px;">
       <div class="portrait-frame" style="aspect-ratio:4/3;">
-        <img src="../Images/lecture-motion-sensor.jpg" alt="The opening page of Vernier's Cart on a Ramp activity guide">
+        <img src="../Images/lecture-motion-sensor-board.jpg" alt="Whiteboard showing the three Graphical Analysis fits translated into physics equations, labeled Model 1, next to a second board translating Model 2 into IB SUVAT notation">
       </div>
-      <figcaption class="portrait-caption">The opening page of Vernier's <em>Cart on a Ramp</em> activity.</figcaption>
+      <figcaption class="portrait-caption">The three fits translated into physics on the board, labeled "Not IB language, 'College,' Real Physics," with Model 2 and its IB translation on the board to the right.</figcaption>
     </figure>
   </div>
 
@@ -82,6 +162,11 @@
     };
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    document.getElementById('lecture-jump').addEventListener('change', (e) => {
+      if (e.target.value) window.location.href = e.target.value;
+    });
+  </script>
   <script src="../js/layout.js"></script>
 </body>
 </html>
