@@ -54,7 +54,7 @@
             </div>
           </div>
           <p class="section-desc" style="max-width:none;">That "doesn't exist" row matters as much as the operations do. A field like \(\mathbb{R}\) requires that every nonzero number have a multiplicative inverse, which is exactly why \(1/0\) has no answer, not because nobody's found one yet, but because \(0\) is defined to have no inverse. Vectors were never built to be a field in the first place, so asking "what's \(\vec{b}\) divided by \(\vec{a}\)" isn't a hard question with a hidden answer, it's a question about an operation that was never defined to begin with.</p>
-          <p class="section-desc" style="max-width:none;">That's also why I put vectors on a hierarchy, so it's clear this isn't the end of the line. Scalars and vectors are the tip of the iceberg. Matrices come after them, and tensors after that, later on if you keep going in this direction. Nobody needs to know what a tensor is today. The point is just that today's new object isn't the last one you'll meet, and the method for meeting each new one, object first, then its operations, is the same method every time.</p>
+          <p class="section-desc" style="max-width:none;">That's also why I put vectors on a hierarchy, so it's clear this isn't the end of the line. Scalars and vectors are the tip of the iceberg, and what actually separates every object on that iceberg from the next has nothing to do with how it's drawn. It's how many indices you need to name a single one of its components. A scalar needs zero: it's just one number, \(s\), full stop. A vector needs one index, \(v_i\), because naming one component means saying which direction you mean, \(v_1\) or \(v_2\). A matrix needs two indices, \(M_{ij}\), a row \(i\) and a column \(j\). A tensor keeps that pattern going with no upper limit, \(T_{ijk}\) needs three indices, and there's nothing stopping a fourth or fifth. In that language, a vector and a matrix were never really separate from tensors in the first place, they're just the rank-1 and rank-2 cases of the same idea. Nobody needs the word "rank" today. The point is that the pattern which gets you from one object to the next is counting indices, not counting brackets.</p>
           <figure style="margin:0 0 16px; max-width:640px;">
             <svg viewBox="0 0 680 190" xmlns="http://www.w3.org/2000/svg" style="width:100%; display:block; border:1px solid var(--rule-soft); background:var(--bg-raised);" font-family="var(--font-mono)">
               <text x="55" y="34" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)">Scalar</text>
@@ -93,12 +93,14 @@
               <text x="600" y="123" text-anchor="middle" font-size="20" fill="var(--signal-red)">5</text>
               <text x="635" y="123" text-anchor="middle" font-size="20" fill="var(--signal-red)">4</text>
 
-              <text x="55" y="170" text-anchor="middle" font-size="11" fill="var(--muted)">0 brackets</text>
-              <text x="205" y="170" text-anchor="middle" font-size="11" fill="var(--muted)">1 bracket</text>
-              <text x="360" y="170" text-anchor="middle" font-size="11" fill="var(--muted)">2 brackets</text>
-              <text x="560" y="170" text-anchor="middle" font-size="11" fill="var(--muted)">3 brackets</text>
             </svg>
-            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">The hierarchy: one more bracket at every step</figcaption>
+            <div style="display:grid; grid-template-columns:repeat(4, 1fr); text-align:center; margin-top:8px; font-size:13px;">
+              <div><span style="font-family:var(--font-mono); font-size:11px; color:var(--muted);">rank 0</span><br>\(s\)</div>
+              <div><span style="font-family:var(--font-mono); font-size:11px; color:var(--muted);">rank 1</span><br>\(v_i\)</div>
+              <div><span style="font-family:var(--font-mono); font-size:11px; color:var(--muted);">rank 2</span><br>\(M_{ij}\)</div>
+              <div><span style="font-family:var(--font-mono); font-size:11px; color:var(--muted);">rank 3</span><br>\(T_{ijk}\)</div>
+            </div>
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">The hierarchy: one more index at every step</figcaption>
           </figure>
         </section>
 
