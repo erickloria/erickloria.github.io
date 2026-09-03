@@ -33,25 +33,34 @@
             Noticing that today's lesson uses the same method as your very first arithmetic class isn't just a study trick, it's a real observation about how mathematics as a field actually grows. Mathematics doesn't expand by writing more sentences about the same objects. It expands by inventing a new kind of object, deciding what's true and useful to define as an operation on that object, and building outward from there. Numbers gave you addition and multiplication. Vectors keep addition and a version of multiplication, scalar multiplication, but drop ordinary division entirely and add two operations, the dot and cross products, that a plain number never had or needed. Every new layer keeps some of what worked at the layer below and quietly changes the rest, and the only way to find out which is which is to check the definitions again, every time, rather than assume the old rules still apply.
           </div>
           <p class="section-desc" style="max-width:none;">I make this explicit on the board, side by side, for numbers and for vectors: the structure each one lives in, the object itself, the operations that are actually allowed, and just as important, what doesn't exist at all.</p>
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px; margin-bottom:16px;">
-            <div>
-              <div style="font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em; border-bottom:1px solid var(--text); padding-bottom:6px; margin-bottom:0;">Numbers</div>
-              <div class="doc-index">
-                <div class="doc-row" style="cursor:default;"><span class="doc-row-code">FLD</span><span class="doc-row-title">Field</span><span class="doc-row-desc">The real numbers, \(\mathbb{R}\)</span><span class="doc-row-date"></span></div>
-                <div class="doc-row" style="cursor:default;"><span class="doc-row-code">OBJ</span><span class="doc-row-title">Object</span><span class="doc-row-desc">A single number</span><span class="doc-row-date"></span></div>
-                <div class="doc-row" style="cursor:default;"><span class="doc-row-code">OPS</span><span class="doc-row-title">Operations</span><span class="doc-row-desc">+, −, ×, ÷, powers, roots</span><span class="doc-row-date"></span></div>
-                <div class="doc-row" style="cursor:default;"><span class="doc-row-code">N/A</span><span class="doc-row-title">Doesn't exist</span><span class="doc-row-desc">Division by zero. \(1/0\) is undefined, not just difficult</span><span class="doc-row-date"></span></div>
-              </div>
-            </div>
-            <div>
-              <div style="font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em; border-bottom:1px solid var(--text); padding-bottom:6px; margin-bottom:0;">Vectors</div>
-              <div class="doc-index">
-                <div class="doc-row" style="cursor:default;"><span class="doc-row-code">STR</span><span class="doc-row-title">Structure</span><span class="doc-row-desc">A vector space, built on \(\mathbb{R}\) as its scalars</span><span class="doc-row-date"></span></div>
-                <div class="doc-row" style="cursor:default;"><span class="doc-row-code">OBJ</span><span class="doc-row-title">Object</span><span class="doc-row-desc">A magnitude and a direction</span><span class="doc-row-date"></span></div>
-                <div class="doc-row" style="cursor:default;"><span class="doc-row-code">OPS</span><span class="doc-row-title">Operations</span><span class="doc-row-desc">+, −, scalar ×; later, the dot and cross products</span><span class="doc-row-date"></span></div>
-                <div class="doc-row" style="cursor:default;"><span class="doc-row-code">N/A</span><span class="doc-row-title">Doesn't exist</span><span class="doc-row-desc">Vector division. Nothing undoes vector multiplication the way division undoes multiplication for numbers</span><span class="doc-row-date"></span></div>
-              </div>
-            </div>
+          <div style="overflow-x:auto;">
+            <table class="markdown-content zebra-table" style="width:100%; border-collapse:collapse; font-size:14px;">
+              <thead>
+                <tr style="border-bottom:1px solid var(--rule-soft);">
+                  <th style="text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;"></th>
+                  <th style="text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Structure</th>
+                  <th style="text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Object</th>
+                  <th style="text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Operations</th>
+                  <th style="text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Doesn't Exist</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid var(--rule-soft);">
+                  <td style="padding:8px 12px; font-weight:600;">Numbers</td>
+                  <td style="padding:8px 12px;">The real numbers, \(\mathbb{R}\), a field</td>
+                  <td style="padding:8px 12px;">A single number</td>
+                  <td style="padding:8px 12px;">+, −, ×, ÷, powers, roots</td>
+                  <td style="padding:8px 12px;">Division by zero. \(1/0\) is undefined, not just difficult</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px 12px; font-weight:600;">Vectors</td>
+                  <td style="padding:8px 12px;">A vector space, built on \(\mathbb{R}\) as its scalars</td>
+                  <td style="padding:8px 12px;">A magnitude and a direction</td>
+                  <td style="padding:8px 12px;">+, −, scalar ×; later, the dot and cross products</td>
+                  <td style="padding:8px 12px;">Vector division. Nothing undoes vector multiplication the way division undoes multiplication for numbers</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <p class="section-desc" style="max-width:none;">That "doesn't exist" row matters as much as the operations do. A field like \(\mathbb{R}\) requires that every nonzero number have a multiplicative inverse, which is exactly why \(1/0\) has no answer, not because nobody's found one yet, but because \(0\) is defined to have no inverse. Vectors were never built to be a field in the first place, so asking "what's \(\vec{b}\) divided by \(\vec{a}\)" isn't a hard question with a hidden answer, it's a question about an operation that was never defined to begin with.</p>
           <p class="section-desc" style="max-width:none;">That's also why I put vectors on a hierarchy, so it's clear this isn't the end of the line. Scalars and vectors are the tip of the iceberg, and what actually separates every object on that iceberg from the next has nothing to do with how it's drawn. It's how many indices you need to name a single one of its components. A scalar needs zero: it's just one number, \(s\), full stop. A vector needs one index, \(v_i\), because naming one component means saying which direction you mean, \(v_1\) or \(v_2\). A matrix needs two indices, \(M_{ij}\), a row \(i\) and a column \(j\). A tensor keeps that pattern going with no upper limit, \(T_{ijk}\) needs three indices, and there's nothing stopping a fourth or fifth. In that language, a vector and a matrix were never really separate from tensors in the first place, they're just the rank-1 and rank-2 cases of the same idea. Nobody needs the word "rank" today. The point is that the pattern which gets you from one object to the next is counting indices, not counting brackets.</p>
