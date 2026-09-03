@@ -32,23 +32,21 @@
         <section class="section">
           <div class="section-head"><span><span class="section-num">02</span><h2 class="section-title">The Three Graphs</h2></span></div>
           <p class="section-desc" style="max-width:none;">Graphical Analysis fits a curve to any stretch of a graph and reads the parameters straight off it. The fits below cover the "rolling on its own" section of each graph, the part after the push and before a hand touches the cart again to catch it, roughly 1.35 to 3.85 seconds:</p>
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px; margin-bottom:16px;">
-            <div class="callout callout-purple" style="margin-bottom:0;">
-              <span>Position — Quadratic Fit</span>
-              <strong>y = ax² + bx + c</strong>
-              <p style="margin:8px 0 0; font-family:var(--font-mono); font-size:13px; line-height:1.9;">a = 0.226<br>b = −1.141<br>c = 1.826<br>RMSE = 0.004823</p>
-            </div>
-            <div class="callout callout-orange" style="margin-bottom:0;">
-              <span>Velocity — Linear Fit</span>
-              <strong>y = mx + b</strong>
-              <p style="margin:8px 0 0; font-family:var(--font-mono); font-size:13px; line-height:1.9;">m = 0.4524<br>b = −1.148<br>r = 0.9989<br>RMSE = 0.01567</p>
-            </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin-bottom:8px;">
+            <figure style="margin:0;">
+              <img src="../Images/lecture-motion-sensor-position.png" alt="Position vs. time graph of the cart on the ramp, quadratic fit y = ax^2 + bx + c with a = 0.226, b = -1.141, c = 1.826" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+              <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Position — Quadratic Fit</figcaption>
+            </figure>
+            <figure style="margin:0;">
+              <img src="../Images/lecture-motion-sensor-velocity.png" alt="Velocity vs. time graph of the cart on the ramp, linear fit y = mx + b with m = 0.4524, b = -1.148, r = 0.9989" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+              <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Velocity — Linear Fit</figcaption>
+            </figure>
           </div>
-          <div class="callout callout-blue">
-            <span>Acceleration — Statistics, x-range 1.35–3.75 s</span>
-            <p style="margin:8px 0 0; font-family:var(--font-mono); font-size:13px; line-height:1.9;">Samples: 49<br>Mean: 0.449 m/s²<br>Std dev: 0.048<br>Min: 0.304 m/s² @ 1.350 s · Max: 0.512 m/s² @ 1.550 s</p>
-          </div>
-          <p class="section-desc" style="max-width:none; margin-top:16px;">Outside that window, the acceleration trace spikes hard, down to around −2.5 m/s² at the push and down again to around −5 m/s² where a hand catches the cart at the bottom. Those spikes are real, but they're excluded from the fits on purpose: the push and the catch are a hand doing something to the cart, not the cart moving under gravity by itself.</p>
+          <figure style="margin:0 0 16px;">
+            <img src="../Images/lecture-motion-sensor-acceleration.png" alt="Acceleration vs. time graph of the cart on the ramp, statistics over x-range 1.35 to 3.75 seconds: mean 0.449 m/s squared, std dev 0.048" style="width:100%; max-width:520px; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">Acceleration — Mean 0.449 m/s², x-range 1.35–3.75 s</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">Outside that window, the acceleration trace spikes hard, down to around −2.5 m/s² at the push and down again to around −5 m/s² where a hand catches the cart at the bottom. Those spikes are real, but they're excluded from the fits on purpose: the push and the catch are a hand doing something to the cart, not the cart moving under gravity by itself.</p>
         </section>
 
         <section class="section">
@@ -65,17 +63,20 @@
         <section class="section">
           <div class="section-head"><span><span class="section-num">04</span><h2 class="section-title">A Second Model: Constant Velocity</h2></span></div>
           <p class="section-desc" style="max-width:none;">The same cart has a spring-loaded plunger built into one end. Compressed against a wall at the end of the track and released, it fires the cart off at a roughly constant speed, caught by hand at the other end, giving a second set of graphs to compare against the ramp run.</p>
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px; margin-bottom:16px;">
-            <div class="callout callout-purple" style="margin-bottom:0;">
-              <span>Position — Linear Fit, x-range 0.80–1.60 s</span>
-              <strong>y = mx + b</strong>
-              <p style="margin:8px 0 0; font-family:var(--font-mono); font-size:13px; line-height:1.9;">m = −0.9039<br>b = 1.618<br>r = −0.9997<br>RMSE = 0.005834</p>
-            </div>
-            <div class="callout callout-blue" style="margin-bottom:0;">
-              <span>Velocity — Statistics, x-range 0.90–1.55 s</span>
-              <p style="margin:8px 0 0; font-family:var(--font-mono); font-size:13px; line-height:1.9;">Samples: 14<br>Mean: −0.892 m/s<br>Std dev: 0.060<br>Min: −0.933 m/s @ 1.000 s · Max: −0.700 m/s @ 1.550 s</p>
-            </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin-bottom:8px;">
+            <figure style="margin:0;">
+              <img src="../Images/lecture-motion-sensor-position-2.png" alt="Position vs. time graph of the spring-launched cart, linear fit y = mx + b with m = -0.9039, b = 1.618, r = -0.9997, over x-range 0.80 to 1.60 seconds" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+              <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Position — Linear Fit, x-range 0.80–1.60 s</figcaption>
+            </figure>
+            <figure style="margin:0;">
+              <img src="../Images/lecture-motion-sensor-velocity-2.png" alt="Velocity vs. time graph of the spring-launched cart, statistics over x-range 0.90 to 1.55 seconds: mean -0.892 m/s, std dev 0.060" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+              <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Velocity — Mean −0.892 m/s, x-range 0.90–1.55 s</figcaption>
+            </figure>
           </div>
+          <figure style="margin:0 0 16px;">
+            <img src="../Images/lecture-motion-sensor-acceleration-2.png" alt="Acceleration vs. time graph of the spring-launched cart, showing a dip to about -4.8 m/s squared at the push and a spike to about +4.4 m/s squared at the catch, with near-zero acceleration between them" style="width:100%; max-width:520px; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">Acceleration — Push and Catch Transients</figcaption>
+          </figure>
           <p class="section-desc" style="max-width:none;">Here the position graph is a straight line, not a curve, which is the whole point of the comparison: no curvature means no acceleration. The acceleration trace agrees, sitting near zero for the entire middle stretch, except for two sharp transients bracketing it, a dip to about −4.8 m/s² where the spring fires and a spike to about +4.4 m/s² where the hand stops the cart. Same pattern as the ramp run: the push and the catch are excluded from the model, because they're not the motion being modeled.</p>
           <p class="section-desc" style="max-width:none;">This is Model 2, written the same way as the first: <em>y = mx + b</em> in math, translated to \(x(t) = vt + x_i\) in physics, with \(v(t)\) constant and \(a(t) = 0\). Placed side by side, Model 1 for the ramp and Model 2 for the launched cart show that "constant acceleration" and "constant velocity" are two versions of the same kind of equation, one with the quadratic term and one without it.</p>
         </section>
@@ -131,11 +132,11 @@
       </aside>
     </div>
 
-    <figure class="portrait" style="max-width:520px; margin-top:8px;">
+    <figure class="portrait" style="max-width:720px; margin-top:8px;">
       <div class="portrait-frame" style="aspect-ratio:4/3;">
-        <img src="../Images/lecture-motion-sensor.jpg" alt="The opening page of Vernier's Cart on a Ramp activity guide">
+        <img src="../Images/lecture-motion-sensor-board.jpg" alt="Whiteboard showing the three Graphical Analysis fits translated into physics equations, labeled Model 1, next to a second board translating Model 2 into IB SUVAT notation">
       </div>
-      <figcaption class="portrait-caption">The opening page of Vernier's <em>Cart on a Ramp</em> activity, the guide Day One runs from.</figcaption>
+      <figcaption class="portrait-caption">The three fits translated into physics on the board, labeled "Not IB language, 'College,' Real Physics," with Model 2 and its IB translation on the board to the right.</figcaption>
     </figure>
   </div>
 
