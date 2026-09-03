@@ -33,15 +33,15 @@
             Noticing that today's lesson uses the same method as your very first arithmetic class isn't just a study trick, it's a real observation about how mathematics as a field actually grows. Mathematics doesn't expand by writing more sentences about the same objects. It expands by inventing a new kind of object, deciding what's true and useful to define as an operation on that object, and building outward from there. Numbers gave you addition and multiplication. Vectors keep addition and a version of multiplication, scalar multiplication, but drop ordinary division entirely and add two operations, the dot and cross products, that a plain number never had or needed. Every new layer keeps some of what worked at the layer below and quietly changes the rest, and the only way to find out which is which is to check the definitions again, every time, rather than assume the old rules still apply.
           </div>
           <p class="section-desc" style="max-width:none;">I make this explicit on the board, side by side, for numbers and for vectors: the structure each one lives in, the object itself, the operations that are actually allowed, and just as important, what doesn't exist at all.</p>
-          <div style="overflow-x:auto;">
-            <table class="markdown-content zebra-table" style="width:100%; border-collapse:collapse; font-size:14px;">
+          <div class="markdown-content" style="overflow-x:auto; display:block;">
+            <table class="zebra-table" style="width:100%; min-width:640px; border-collapse:collapse; table-layout:fixed; font-size:14px;">
               <thead>
                 <tr style="border-bottom:1px solid var(--rule-soft);">
-                  <th style="text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;"></th>
-                  <th style="text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Structure</th>
-                  <th style="text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Object</th>
-                  <th style="text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Operations</th>
-                  <th style="text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Doesn't Exist</th>
+                  <th style="width:12%; text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;"></th>
+                  <th style="width:24%; text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Structure</th>
+                  <th style="width:18%; text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Object</th>
+                  <th style="width:20%; text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Operations</th>
+                  <th style="width:26%; text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Doesn't Exist</th>
                 </tr>
               </thead>
               <tbody>
@@ -75,27 +75,29 @@
           <p class="section-desc" style="max-width:none;">A scalar is a quantity described completely by a magnitude, a number and a unit, nothing else. A vector is a quantity that needs both a magnitude and a direction to be fully described. Mass is a scalar: 2 kg doesn't point anywhere. Velocity is a vector: 2 m/s isn't a complete statement until you say which way.</p>
           <p class="section-desc" style="max-width:none;">Vectors are usually written with an arrow, \(\vec{a}\), or in bold, \(\mathbf{a}\); the magnitude of a vector is written \(|\vec{a}|\), or just \(a\) without the arrow. Two vectors are equal exactly when they have the same magnitude and the same direction. Where a vector is drawn doesn't matter, only how long it is and which way it points, so the same vector can be redrawn starting from any point in space without becoming a different vector.</p>
           <p class="section-desc" style="max-width:none;">Before doing anything with vectors, I give students the actual list of quantities from this course that fall on each side:</p>
-          <table class="markdown-content zebra-table" style="width:100%; border-collapse:collapse; font-size:14px;">
-            <thead>
-              <tr style="border-bottom:1px solid var(--rule-soft);">
-                <th style="text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Vectors</th>
-                <th style="text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Scalars</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">displacement</td><td style="padding:8px 12px;">distance</td></tr>
-              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">velocity</td><td style="padding:8px 12px;">speed</td></tr>
-              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">acceleration</td><td style="padding:8px 12px;">mass</td></tr>
-              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">force</td><td style="padding:8px 12px;">time</td></tr>
-              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">weight</td><td style="padding:8px 12px;">density</td></tr>
-              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">electric field</td><td style="padding:8px 12px;">electric potential</td></tr>
-              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">magnetic field</td><td style="padding:8px 12px;">electric charge</td></tr>
-              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">gravitational field</td><td style="padding:8px 12px;">gravitational potential</td></tr>
-              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">momentum</td><td style="padding:8px 12px;">temperature</td></tr>
-              <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">area</td><td style="padding:8px 12px;">volume</td></tr>
-              <tr><td style="padding:8px 12px;">angular velocity</td><td style="padding:8px 12px;">work / energy / power</td></tr>
-            </tbody>
-          </table>
+          <div class="markdown-content" style="display:block; overflow-x:auto;">
+            <table class="zebra-table" style="width:100%; border-collapse:collapse; table-layout:fixed; font-size:14px;">
+              <thead>
+                <tr style="border-bottom:1px solid var(--rule-soft);">
+                  <th style="width:50%; text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Vectors</th>
+                  <th style="width:50%; text-align:left; padding:8px 12px; font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase;">Scalars</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">displacement</td><td style="padding:8px 12px;">distance</td></tr>
+                <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">velocity</td><td style="padding:8px 12px;">speed</td></tr>
+                <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">acceleration</td><td style="padding:8px 12px;">mass</td></tr>
+                <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">force</td><td style="padding:8px 12px;">time</td></tr>
+                <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">weight</td><td style="padding:8px 12px;">density</td></tr>
+                <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">electric field</td><td style="padding:8px 12px;">electric potential</td></tr>
+                <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">magnetic field</td><td style="padding:8px 12px;">electric charge</td></tr>
+                <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">gravitational field</td><td style="padding:8px 12px;">gravitational potential</td></tr>
+                <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">momentum</td><td style="padding:8px 12px;">temperature</td></tr>
+                <tr style="border-bottom:1px solid var(--rule-soft);"><td style="padding:8px 12px;">area</td><td style="padding:8px 12px;">volume</td></tr>
+                <tr><td style="padding:8px 12px;">angular velocity</td><td style="padding:8px 12px;">work / energy / power</td></tr>
+              </tbody>
+            </table>
+          </div>
           <p class="section-desc" style="max-width:none; margin-top:16px;">Notice how many of these come in pairs, distance and displacement, speed and velocity. Same underlying idea, but one of them carries a direction and the other doesn't. That distinction is going to matter for the rest of the course.</p>
         </section>
 
