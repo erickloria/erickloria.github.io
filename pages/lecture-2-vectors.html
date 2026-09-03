@@ -32,7 +32,74 @@
             <span>A TOK Moment: Object, Then Operations</span>
             Noticing that today's lesson uses the same method as your very first arithmetic class isn't just a study trick, it's a real observation about how mathematics as a field actually grows. Mathematics doesn't expand by writing more sentences about the same objects. It expands by inventing a new kind of object, deciding what's true and useful to define as an operation on that object, and building outward from there. Numbers gave you addition and multiplication. Vectors keep addition and a version of multiplication, scalar multiplication, but drop ordinary division entirely and add two operations, the dot and cross products, that a plain number never had or needed. Every new layer keeps some of what worked at the layer below and quietly changes the rest, and the only way to find out which is which is to check the definitions again, every time, rather than assume the old rules still apply.
           </div>
+          <p class="section-desc" style="max-width:none;">I make this explicit on the board, side by side, for numbers and for vectors: the structure each one lives in, the object itself, the operations that are actually allowed, and just as important, what doesn't exist at all.</p>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px; margin-bottom:16px;">
+            <div>
+              <div style="font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em; border-bottom:1px solid var(--text); padding-bottom:6px; margin-bottom:0;">Numbers</div>
+              <div class="doc-index">
+                <div class="doc-row" style="cursor:default;"><span class="doc-row-code">FLD</span><span class="doc-row-title">Field</span><span class="doc-row-desc">The real numbers, \(\mathbb{R}\)</span><span class="doc-row-date"></span></div>
+                <div class="doc-row" style="cursor:default;"><span class="doc-row-code">OBJ</span><span class="doc-row-title">Object</span><span class="doc-row-desc">A single number</span><span class="doc-row-date"></span></div>
+                <div class="doc-row" style="cursor:default;"><span class="doc-row-code">OPS</span><span class="doc-row-title">Operations</span><span class="doc-row-desc">+, −, ×, ÷, powers, roots</span><span class="doc-row-date"></span></div>
+                <div class="doc-row" style="cursor:default;"><span class="doc-row-code">N/A</span><span class="doc-row-title">Doesn't exist</span><span class="doc-row-desc">Division by zero. \(1/0\) is undefined, not just difficult</span><span class="doc-row-date"></span></div>
+              </div>
+            </div>
+            <div>
+              <div style="font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em; border-bottom:1px solid var(--text); padding-bottom:6px; margin-bottom:0;">Vectors</div>
+              <div class="doc-index">
+                <div class="doc-row" style="cursor:default;"><span class="doc-row-code">STR</span><span class="doc-row-title">Structure</span><span class="doc-row-desc">A vector space, built on \(\mathbb{R}\) as its scalars</span><span class="doc-row-date"></span></div>
+                <div class="doc-row" style="cursor:default;"><span class="doc-row-code">OBJ</span><span class="doc-row-title">Object</span><span class="doc-row-desc">A magnitude and a direction</span><span class="doc-row-date"></span></div>
+                <div class="doc-row" style="cursor:default;"><span class="doc-row-code">OPS</span><span class="doc-row-title">Operations</span><span class="doc-row-desc">+, −, scalar ×; later, the dot and cross products</span><span class="doc-row-date"></span></div>
+                <div class="doc-row" style="cursor:default;"><span class="doc-row-code">N/A</span><span class="doc-row-title">Doesn't exist</span><span class="doc-row-desc">Vector division. Nothing undoes vector multiplication the way division undoes multiplication for numbers</span><span class="doc-row-date"></span></div>
+              </div>
+            </div>
+          </div>
+          <p class="section-desc" style="max-width:none;">That "doesn't exist" row matters as much as the operations do. A field like \(\mathbb{R}\) requires that every nonzero number have a multiplicative inverse, which is exactly why \(1/0\) has no answer, not because nobody's found one yet, but because \(0\) is defined to have no inverse. Vectors were never built to be a field in the first place, so asking "what's \(\vec{b}\) divided by \(\vec{a}\)" isn't a hard question with a hidden answer, it's a question about an operation that was never defined to begin with.</p>
           <p class="section-desc" style="max-width:none;">That's also why I put vectors on a hierarchy, so it's clear this isn't the end of the line. Scalars and vectors are the tip of the iceberg. Matrices come after them, and tensors after that, later on if you keep going in this direction. Nobody needs to know what a tensor is today. The point is just that today's new object isn't the last one you'll meet, and the method for meeting each new one, object first, then its operations, is the same method every time.</p>
+          <figure style="margin:0 0 16px; max-width:640px;">
+            <svg viewBox="0 0 680 190" xmlns="http://www.w3.org/2000/svg" style="width:100%; display:block; border:1px solid var(--rule-soft); background:var(--bg-raised);" font-family="var(--font-mono)">
+              <text x="55" y="34" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)">Scalar</text>
+              <text x="205" y="34" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)">Vector</text>
+              <text x="360" y="34" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)">Matrix</text>
+              <text x="560" y="34" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)">Tensor</text>
+
+              <text x="55" y="115" text-anchor="middle" font-size="22" fill="var(--technical-blue)">1</text>
+
+              <path d="M 175 65 h -10 v 70 h 10" stroke="var(--rule)" stroke-width="2" fill="none"/>
+              <path d="M 235 65 h 10 v 70 h -10" stroke="var(--rule)" stroke-width="2" fill="none"/>
+              <text x="205" y="93" text-anchor="middle" font-size="20" fill="var(--technical-blue)">1</text>
+              <text x="205" y="123" text-anchor="middle" font-size="20" fill="var(--technical-green)">2</text>
+
+              <path d="M 300 65 h -10 v 70 h 10" stroke="var(--rule)" stroke-width="2" fill="none"/>
+              <path d="M 420 65 h 10 v 70 h -10" stroke="var(--rule)" stroke-width="2" fill="none"/>
+              <text x="330" y="93" text-anchor="middle" font-size="20" fill="var(--technical-blue)">1</text>
+              <text x="390" y="93" text-anchor="middle" font-size="20" fill="var(--technical-green)">2</text>
+              <text x="330" y="123" text-anchor="middle" font-size="20" fill="var(--signal-red)">3</text>
+              <text x="390" y="123" text-anchor="middle" font-size="20" fill="var(--signal-red)">4</text>
+
+              <path d="M 445 55 h -12 v 90 h 12" stroke="var(--rule)" stroke-width="2" fill="none"/>
+              <path d="M 665 55 h 12 v 90 h -12" stroke="var(--rule)" stroke-width="2" fill="none"/>
+
+              <path d="M 470 65 h -8 v 70 h 8" stroke="var(--rule)" stroke-width="1.5" fill="none"/>
+              <path d="M 555 65 h 8 v 70 h -8" stroke="var(--rule)" stroke-width="1.5" fill="none"/>
+              <text x="495" y="93" text-anchor="middle" font-size="20" fill="var(--technical-blue)">1</text>
+              <text x="530" y="93" text-anchor="middle" font-size="20" fill="var(--technical-green)">2</text>
+              <text x="495" y="123" text-anchor="middle" font-size="20" fill="var(--technical-blue)">1</text>
+              <text x="530" y="123" text-anchor="middle" font-size="20" fill="var(--signal-red)">7</text>
+
+              <path d="M 575 65 h -8 v 70 h 8" stroke="var(--rule)" stroke-width="1.5" fill="none"/>
+              <path d="M 660 65 h 8 v 70 h -8" stroke="var(--rule)" stroke-width="1.5" fill="none"/>
+              <text x="600" y="93" text-anchor="middle" font-size="20" fill="var(--technical-green)">3</text>
+              <text x="635" y="93" text-anchor="middle" font-size="20" fill="var(--technical-green)">2</text>
+              <text x="600" y="123" text-anchor="middle" font-size="20" fill="var(--signal-red)">5</text>
+              <text x="635" y="123" text-anchor="middle" font-size="20" fill="var(--signal-red)">4</text>
+
+              <text x="55" y="170" text-anchor="middle" font-size="11" fill="var(--muted)">0 brackets</text>
+              <text x="205" y="170" text-anchor="middle" font-size="11" fill="var(--muted)">1 bracket</text>
+              <text x="360" y="170" text-anchor="middle" font-size="11" fill="var(--muted)">2 brackets</text>
+              <text x="560" y="170" text-anchor="middle" font-size="11" fill="var(--muted)">3 brackets</text>
+            </svg>
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">The hierarchy: one more bracket at every step</figcaption>
+          </figure>
         </section>
 
         <section class="section">
