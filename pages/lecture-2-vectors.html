@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vector Algebra and Component Addition — Erick Loría Soto</title>
-  <meta name="description" content="Unit 0, Lesson 2: vectors as a new mathematical object, the short list of operations vector algebra defines, and addition and subtraction worked geometrically and through components, trigonometry, and the unit circle.">
+  <meta name="description" content="Unit 0, Lesson 2: vectors as a new mathematical object, the five operations vector algebra defines, and addition and subtraction worked geometrically and through components, right-triangle trigonometry, and the unit circle.">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <div class="hero-inner">
       <div class="hero-eyebrow">Physics · The Physics Lectures at UWC · Unit 0 · Lesson 2</div>
       <h1>Vector Algebra and Component Addition</h1>
-      <p>Vectors as a new mathematical object, the operations defined on them, and addition and subtraction worked two ways: geometrically, and through components, trigonometry, and the unit circle.</p>
+      <p>Vectors as a new mathematical object, the five operations vector algebra defines, and addition and subtraction worked two ways: geometrically, and through components, right-triangle trigonometry, and the unit circle.</p>
       <div style="display:flex; gap:6px; margin-top:4px;">
         <span class="badge badge-purple">Lecture</span>
       </div>
@@ -32,7 +32,9 @@
 
         <section class="section">
           <div class="section-head"><span><span class="section-num">02</span><h2 class="section-title">Scalars and Vectors</h2></span></div>
-          <p class="section-desc" style="max-width:none;">A scalar is a quantity with a magnitude and nothing else, a number and a unit. A vector is a quantity with a magnitude and a direction. Mass is a scalar: 2 kg doesn't point anywhere. Velocity is a vector: 2 m/s only means something once you say which way. Before doing anything with vectors, I give students the actual list of quantities from this course that fall on each side:</p>
+          <p class="section-desc" style="max-width:none;">A scalar is a quantity described completely by a magnitude, a number and a unit, nothing else. A vector is a quantity that needs both a magnitude and a direction to be fully described. Mass is a scalar: 2 kg doesn't point anywhere. Velocity is a vector: 2 m/s isn't a complete statement until you say which way.</p>
+          <p class="section-desc" style="max-width:none;">Vectors are usually written with an arrow, \(\vec{a}\), or in bold, \(\mathbf{a}\); the magnitude of a vector is written \(|\vec{a}|\), or just \(a\) without the arrow. Two vectors are equal exactly when they have the same magnitude and the same direction. Where a vector is drawn doesn't matter, only how long it is and which way it points, so the same vector can be redrawn starting from any point in space without becoming a different vector.</p>
+          <p class="section-desc" style="max-width:none;">Before doing anything with vectors, I give students the actual list of quantities from this course that fall on each side:</p>
           <table class="markdown-content zebra-table" style="width:100%; border-collapse:collapse; font-size:14px;">
             <thead>
               <tr style="border-bottom:1px solid var(--rule-soft);">
@@ -59,21 +61,71 @@
 
         <section class="section">
           <div class="section-head"><span><span class="section-num">03</span><h2 class="section-title">What Vector Algebra Actually Includes</h2></span></div>
-          <p class="section-desc" style="max-width:none;">Vector algebra defines its own operations: addition, subtraction, scalar multiplication, the dot product, and the cross product. I list all five so students know the algebra doesn't stop at what we're doing today. The dot and cross products come back later in the course, in work and in magnetic force, but they're not part of this lesson. What we need today is scalar multiplication and the addition and subtraction of vectors.</p>
-          <p class="section-desc" style="max-width:none;">Scalar multiplication is the simplest of the three: multiplying a vector by a plain number scales its magnitude, and a negative number also reverses its direction. Multiply a displacement vector by 2 and you get a vector twice as long pointing the same way; multiply it by \(-1\) and you get a vector the same length pointing the opposite way. Addition and subtraction take longer, because each one can be done two ways, geometrically and algebraically, and both need to agree with each other.</p>
+          <p class="section-desc" style="max-width:none;">Vector algebra defines five operations. Addition, \(\vec{a}+\vec{b}\), combines two vectors into one. Subtraction, \(\vec{a}-\vec{b}\), is addition of the reverse of the second vector. Scalar multiplication, \(k\vec{a}\), scales a vector by an ordinary number \(k\). The dot product, \(\vec{a}\cdot\vec{b}\), takes two vectors and returns a scalar. The cross product, \(\vec{a}\times\vec{b}\), takes two vectors and returns a third vector, perpendicular to both of the first two.</p>
+          <p class="section-desc" style="max-width:none;">I list all five so students know the algebra doesn't stop at what we're doing today. The dot and cross products come back later in the course, in work and in magnetic force, but they're not part of this lesson. What we need today is scalar multiplication and the addition and subtraction of vectors.</p>
+          <p class="section-desc" style="max-width:none;">For a vector \(\vec{a}\) and a scalar \(k\), the product \(k\vec{a}\) has magnitude \(|k|\,|\vec{a}|\): the vector's length is scaled by the size of \(k\), regardless of its sign. The direction depends on the sign of \(k\) alone. If \(k>0\), \(k\vec{a}\) points the same way as \(\vec{a}\); if \(k<0\), it points the opposite way. \(2\vec{a}\) is twice as long as \(\vec{a}\), same direction; \(-\vec{a}\) is the same length as \(\vec{a}\), reversed:</p>
+          <figure style="margin:0 0 16px; max-width:480px;">
+            <img src="../Images/lecture-vectors-scalar-mult.png" alt="A vector a shown next to 2a, twice as long and pointing the same way, and -a, the same length but pointing the opposite way" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">Scalar multiplication: 2a and −a</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">Addition and subtraction take longer, because each one can be done two ways, geometrically and algebraically, and both need to agree with each other.</p>
         </section>
 
         <section class="section">
           <div class="section-head"><span><span class="section-num">04</span><h2 class="section-title">Addition and Subtraction, Geometrically</h2></span></div>
-          <p class="section-desc" style="max-width:none;">Geometrically, two vectors add tip-to-tail: draw the first vector, then start the second one where the first one ends, and the sum runs from the start of the first vector to the end of the second. The same rule extends to any number of vectors, draw them one after another and the sum is the vector from the very first tail to the very last tip, regardless of the order you add them in.</p>
-          <p class="section-desc" style="max-width:none;">Subtraction is addition of the reverse: \(\vec{a} - \vec{b}\) is \(\vec{a} + (-\vec{b})\), where \(-\vec{b}\) is \(\vec{b}\) with its direction flipped and its magnitude unchanged.</p>
+          <p class="section-desc" style="max-width:none;">Geometric addition follows one rule, usually called the tip-to-tail rule: to add \(\vec{a}+\vec{b}\), draw \(\vec{a}\), then draw \(\vec{b}\) starting from wherever \(\vec{a}\) ended. The sum \(\vec{a}+\vec{b}\) is the single vector that runs from the start of \(\vec{a}\) to the end of \(\vec{b}\), regardless of how long or short either one is:</p>
+          <figure style="margin:0 0 16px; max-width:480px;">
+            <img src="../Images/lecture-vectors-add-tip-to-tail.png" alt="Vector a and vector b added tip-to-tail, with the sum a+b running from the start of a to the end of b" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">a + b, tip-to-tail</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">The same rule extends to any number of vectors. Below, four vectors, \(\vec{a}\), \(\vec{b}\), \(\vec{c}\), \(\vec{d}\), start from a common origin:</p>
+          <figure style="margin:0 0 16px; max-width:480px;">
+            <img src="../Images/lecture-vectors-four-from-origin.png" alt="Four vectors a, b, c, d drawn from a common origin at different angles" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">Four vectors, drawn from one origin</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">Chain them tip-to-tail instead, in any order, and the sum \(\vec{a}+\vec{b}+\vec{c}+\vec{d}\) is the single vector from the very first tail to the very last tip:</p>
+          <figure style="margin:0 0 16px; max-width:480px;">
+            <img src="../Images/lecture-vectors-four-chained.png" alt="The same four vectors a, b, c, d chained tip-to-tail, with the resultant a+b+c+d running from the first tail to the last tip" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">a + b + c + d, chained tip-to-tail</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">Subtraction is addition of the reverse: \(\vec{a} - \vec{b}\) is defined as \(\vec{a} + (-\vec{b})\), where \(-\vec{b}\) is \(\vec{b}\) scaled by \(k=-1\), same magnitude, opposite direction, exactly the scalar multiplication rule from the previous section. Once \(-\vec{b}\) is drawn, subtraction is just tip-to-tail addition again. There's no separate geometric rule to learn for it.</p>
         </section>
 
         <section class="section">
           <div class="section-head"><span><span class="section-num">05</span><h2 class="section-title">Components, Trigonometry, and the Unit Circle</h2></span></div>
-          <p class="section-desc" style="max-width:none;">Geometry alone gets awkward once you're adding more than two or three vectors, so I move to the algebraic version: breaking each vector into \(x\) and \(y\) components. For a vector of magnitude \(r\) at angle \(\theta\) from the \(x\)-axis, \(r_x = r\cos\theta\) and \(r_y = r\sin\theta\).</p>
-          <p class="section-desc" style="max-width:none;">Before students just trust those two formulas, I put the unit circle back on the board. It's the reason cosine gives you the horizontal piece and sine gives you the vertical one, and it's also what tells you the sign of a component in each quadrant, without memorizing a separate rule for every quadrant. A vector of length \(r\) at angle \(\theta\) is just the unit circle scaled by \(r\): its tip sits at \((r\cos\theta, r\sin\theta)\), the same \((\cos\theta, \sin\theta)\) coordinates you already know from the unit circle, stretched by \(r\).</p>
-          <p class="section-desc" style="max-width:none;">Once every vector in a sum is broken into components, addition becomes arithmetic: add all the \(x\) components together, add all the \(y\) components together, \(R_x = \sum r_x\), \(R_y = \sum r_y\). To get back to a single vector, recombine with the Pythagorean theorem for the magnitude, \(|\vec{R}| = \sqrt{R_x^2 + R_y^2}\), and the inverse tangent for the direction, \(\tan\theta = R_y / R_x\), checking which quadrant \(R_x\) and \(R_y\) actually put you in, since the inverse tangent alone can't tell a first-quadrant angle from a third-quadrant one.</p>
+          <p class="section-desc" style="max-width:none;">Geometry alone gets awkward once you're adding more than two or three vectors at odd angles, so for anything beyond that I move to the algebraic version: breaking every vector into an \(x\) component and a \(y\) component, adding the components as plain numbers, then recombining.</p>
+          <p class="section-desc" style="max-width:none;">Start with a single vector \(\vec{r}\) of magnitude \(r = |\vec{r}|\), drawn at angle \(\theta\) measured counterclockwise from the positive \(x\)-axis. Dropping a perpendicular from its tip down to the \(x\)-axis makes a right triangle: the vector itself is the hypotenuse, and its components \(r_x\) and \(r_y\) are the two legs.</p>
+          <figure style="margin:0 0 16px; max-width:420px;">
+            <img src="../Images/lecture-vectors-components.png" alt="A vector r at angle theta from the x-axis, decomposed into components r_x = r cos theta and r_y = r sin theta, with unit vectors x-hat and y-hat marked" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">A vector resolved into its x and y components</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">By the definition of cosine and sine in a right triangle, cosine of an angle is the adjacent leg over the hypotenuse, and sine is the opposite leg over the hypotenuse:</p>
+          <p class="section-desc" style="max-width:none; text-align:center;">\[\cos\theta = \frac{r_x}{r}, \qquad \sin\theta = \frac{r_y}{r}\]</p>
+          <p class="section-desc" style="max-width:none;">Rearranged for \(r_x\) and \(r_y\), these become the two equations used constantly for the rest of the course:</p>
+          <p class="section-desc" style="max-width:none; text-align:center;">\[r_x = r\cos\theta, \qquad r_y = r\sin\theta\]</p>
+          <p class="section-desc" style="max-width:none;">Those two equations only look obviously true while \(\theta\) is an acute angle sitting inside a triangle. The unit circle is what makes them work for <em>any</em> angle at all, including angles well past 90° where there's no triangle left to draw. The unit circle is the circle of radius 1 centered at the origin. Walk around it by angle \(\theta\), measured counterclockwise from the positive \(x\)-axis, and by definition the point you land on has coordinates \((\cos\theta, \sin\theta)\). A vector of length \(r\) at angle \(\theta\) is that same point, scaled outward by \(r\): its tip lands at \((r\cos\theta, r\sin\theta)\), which is exactly \((r_x, r_y)\).</p>
+          <figure style="margin:0 0 16px; max-width:620px;">
+            <img src="../Images/lecture-vectors-unit-circle.png" alt="The unit circle with every multiple of 30 and 45 degrees labeled in degrees and radians, and its exact (cos theta, sin theta) coordinates marked at each angle" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">The unit circle: angle in and (cos θ, sin θ) out</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">Reading the unit circle also fixes the sign of every component automatically, without a separate memorized rule for each quadrant, since a coordinate on the circle is negative exactly where that side of the circle sits on the negative side of the axis:</p>
+          <div class="doc-index">
+            <div class="doc-row" style="cursor:default;"><span class="doc-row-code">I</span><span class="doc-row-title">0°–90°</span><span class="doc-row-desc">\(\cos\theta > 0\), \(\sin\theta > 0\)</span><span class="doc-row-date">r_x, r_y both +</span></div>
+            <div class="doc-row" style="cursor:default;"><span class="doc-row-code">II</span><span class="doc-row-title">90°–180°</span><span class="doc-row-desc">\(\cos\theta < 0\), \(\sin\theta > 0\)</span><span class="doc-row-date">r_x −, r_y +</span></div>
+            <div class="doc-row" style="cursor:default;"><span class="doc-row-code">III</span><span class="doc-row-title">180°–270°</span><span class="doc-row-desc">\(\cos\theta < 0\), \(\sin\theta < 0\)</span><span class="doc-row-date">r_x, r_y both −</span></div>
+            <div class="doc-row" style="cursor:default;"><span class="doc-row-code">IV</span><span class="doc-row-title">270°–360°</span><span class="doc-row-desc">\(\cos\theta > 0\), \(\sin\theta < 0\)</span><span class="doc-row-date">r_x +, r_y −</span></div>
+          </div>
+          <p class="section-desc" style="max-width:none; margin-top:16px;">Once every vector in a sum has been broken into components this way, addition stops being a geometric construction and becomes ordinary arithmetic: add every \(x\) component together, add every \(y\) component together.</p>
+          <p class="section-desc" style="max-width:none; text-align:center;">\[R_x = \sum r_x, \qquad R_y = \sum r_y\]</p>
+          <figure style="margin:0 0 16px; max-width:380px;">
+            <img src="../Images/lecture-vectors-component-addition.png" alt="Vector a plus vector b, with the resultant's x component equal to a_x plus b_x and its y component equal to a_y plus b_y" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">Addition, component by component</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">To turn that pair of numbers back into a single vector, the same right triangle runs in reverse. \(R_x\) and \(R_y\) are the legs, and \(|\vec{R}|\) is the hypotenuse, so the Pythagorean theorem gives the magnitude:</p>
+          <p class="section-desc" style="max-width:none; text-align:center;">\[|\vec{R}| = \sqrt{R_x^2 + R_y^2}\]</p>
+          <p class="section-desc" style="max-width:none;">and since \(\tan\theta\) is opposite over adjacent, the inverse tangent gives the angle:</p>
+          <p class="section-desc" style="max-width:none; text-align:center;">\[\theta = \arctan\left(\frac{R_y}{R_x}\right)\]</p>
+          <p class="section-desc" style="max-width:none;">There's one catch. A calculator's arctan only ever returns an angle between \(-90°\) and \(90°\), so on its own it can't distinguish a vector in the first quadrant from the vector pointing the opposite way in the third, since \(R_y/R_x\) comes out identical for both. The fix is to never trust arctan blindly: look at the actual signs of \(R_x\) and \(R_y\), find the quadrant they put you in from the table above, and add or subtract \(180°\) from the calculator's answer if that's what it takes to land in the right one.</p>
         </section>
 
       </div>
@@ -91,7 +143,7 @@
           <p><strong>Vector algebra:</strong> addition, subtraction, scalar multiplication, the dot product, the cross product. Only scalar multiplication and addition/subtraction are used today.</p>
           <p><strong>Geometry:</strong> add vectors tip-to-tail; subtract by adding the reversed vector.</p>
           <p><strong>Components:</strong> \(r_x = r\cos\theta\), \(r_y = r\sin\theta\).</p>
-          <p><strong>Resultant:</strong> \(R_x = \sum r_x\), \(R_y = \sum r_y\), \(|\vec{R}| = \sqrt{R_x^2 + R_y^2}\), with direction from \(\tan\theta = R_y/R_x\) and the correct quadrant.</p>
+          <p><strong>Resultant:</strong> \(R_x = \sum r_x\), \(R_y = \sum r_y\), \(|\vec{R}| = \sqrt{R_x^2 + R_y^2}\), with direction from \(\theta = \arctan(R_y/R_x)\) and the correct quadrant.</p>
         </div>
         <div class="sidebar-block">
           <h3 class="sidebar-title">Field Guide</h3>
@@ -102,21 +154,6 @@
           </ul>
         </div>
       </aside>
-    </div>
-
-    <div style="display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:24px; max-width:820px; margin-top:8px;">
-      <figure class="portrait">
-        <div class="portrait-frame" style="aspect-ratio:4/3;">
-          <img src="../Images/lecture-vectors-1.jpg" alt="Slide showing geometric vector addition: two vectors added tip-to-tail, and four vectors chained tip-to-tail into a single resultant">
-        </div>
-        <figcaption class="portrait-caption">Addition, geometrically: tip-to-tail, for two vectors and for four.</figcaption>
-      </figure>
-      <figure class="portrait">
-        <div class="portrait-frame" style="aspect-ratio:4/3;">
-          <img src="../Images/lecture-vectors-2.jpg" alt="Slide showing a vector resolved into x and y components using r cos theta and r sin theta, with the magnitude and inverse tangent formulas for recombining components">
-        </div>
-        <figcaption class="portrait-caption">Addition, algebraically: components, magnitude, and direction.</figcaption>
-      </figure>
     </div>
   </div>
 
