@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Single-Slit Diffraction — Aperture Size vs. Fringe Width — Erick Loría Soto</title>
-  <meta name="description" content="Unit C, Lesson 9: one shared diffraction apparatus, live data on every student's device, and the relationship between slit width and fringe angle.">
+  <title>Single-Slit Diffraction: Aperture vs. Fringe Width — Erick Loría Soto</title>
+  <meta name="description" content="Unit C, Lesson 9: one shared diffraction apparatus, live data on every student's device, real measured fringe widths for three slit widths, and why a wider slit makes the pattern narrower and brighter rather than 'more diffracted.'">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -25,44 +25,138 @@
 
         <section class="section">
           <div class="section-head"><span><span class="section-num">01</span><h2 class="section-title">Setup</h2></span></div>
-          <p class="section-desc" style="max-width:none;">This is an experiential activity built around one <a href="https://www.vernier.com/product/diffraction-apparatus/?srsltid=AfmBOoqCPrg-FRYzT0R8U3P6FBwjE3mMHwGTL-4jtJzHHByertdz6Cc1" target="_blank" rel="noreferrer">Vernier diffraction apparatus</a>. I do not have one for every group. Instead, <a href="https://www.vernier.com/product/graphical-analysis/?srsltid=AfmBOoqe3oZIl-BX07zwJYr7IqVTMOIFwC61SWe_7Ks40NmsucOQ_66I" target="_blank" rel="noreferrer">Graphical Analysis Pro</a> shares its live data directly to every student's device. There is no projector: students look at the physical apparatus and the resulting data on their own screens at the same time. I begin with the \(b = 0.16\ \mathrm{mm}\) aperture.</p>
+          <p class="section-desc" style="max-width:none;">This is an experiential activity built around one <a href="https://www.vernier.com/product/diffraction-apparatus/?srsltid=AfmBOoqCPrg-FRYzT0R8U3P6FBwjE3mMHwGTL-4jtJzHHByertdz6Cc1" target="_blank" rel="noreferrer">Vernier diffraction apparatus</a>. I do not have one for every group. Instead, <a href="https://www.vernier.com/product/graphical-analysis/?srsltid=AfmBOoqe3oZIl-BX07zwJYr7IqVTMOIFwC61SWe_7Ks40NmsucOQ_66I" target="_blank" rel="noreferrer">Graphical Analysis Pro</a> shares its live data directly to every student's device. There is no projector: students look at the physical apparatus and the resulting data on their own screens at the same time. Lesson 8 stopped at one fixed slit width, \(b\). This lesson exists to change \(b\) on purpose and measure what happens to the pattern.</p>
         </section>
 
         <section class="section">
-          <div class="section-head"><span><span class="section-num">02</span><h2 class="section-title">What Happens</h2></span></div>
-          <p class="section-desc" style="max-width:none;">When the first pattern appears, a student goes to the board and records what the class observes. We change the aperture, measure the new pattern, compare it with the earlier result, and discuss the difference. Because everyone has the shared data, I can move from table to table and work directly on students' screens: showing them how to measure, noticing what they are doing correctly, correcting their analysis, and answering questions. One apparatus becomes a shared experiment rather than something the class passively watches at the front.</p>
+          <div class="section-head"><span><span class="section-num">02</span><h2 class="section-title">Three Slits, Side by Side</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Before any sensor is involved, a direct photograph of the pattern at three different real slit widths already shows the effect plainly. Read top to bottom: the pattern gets visibly wider and dimmer as the slit gets narrower, and tighter and brighter as the slit gets wider.</p>
+          <figure style="margin:0 auto 16px; max-width:520px;">
+            <img src="../Images/lecture-single-slit-widths-photo.jpg" alt="Three photographed single-slit diffraction patterns at 0.19 mm, 0.30 mm, and 0.36 mm slit widths: the 0.19 mm pattern is faint and spread thin across the frame, the 0.36 mm pattern is a tight, bright, concentrated blob" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Same laser, same screen distance, three different slit widths</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">A student's first guess for why is usually the same guess: a wider slit lets more of the wavefront through, so more Huygens wavelets are radiating, so there's "more interference," so the diffraction pattern should be more visible. It's a reasonable guess, and it's half right for the wrong reason, worth taking seriously before the data corrects it.</p>
         </section>
 
         <section class="section">
-          <div class="section-head"><span><span class="section-num">03</span><h2 class="section-title">Field Notes</h2></span></div>
-          <p class="section-desc" style="max-width:none;">I finish with the double slit. Students immediately see that its pattern is different, but they can still identify the broader single-slit diffraction envelope around the finer interference structure. I do not resolve that observation here. It is the hook for the next class and the transition into double-slit interference.</p>
-        </section>
-
-        <figure class="portrait" style="max-width:520px;">
-          <div class="portrait-frame" style="aspect-ratio:4/3;">
-            <img src="../Images/lecture-single-slit-board.jpg" alt="Board measurements comparing the diffraction patterns and recording the relationship between aperture width and fringe angle">
+          <div class="section-head"><span><span class="section-num">03</span><h2 class="section-title">The Data</h2></span></div>
+          <p class="section-desc" style="max-width:none;">This is what the class actually recorded, live, with the Vernier sensor and Graphical Analysis Pro, holding the laser and screen distance fixed and swapping only the slit.</p>
+          <figure style="margin:0 auto 16px; max-width:640px;">
+            <img src="../Images/lecture-single-slit-varying-b.png" alt="Graphical Analysis Pro intensity vs. position graph for three slit widths: 0.16 mm in purple is a tall, narrow peak reaching about 25.5 percent intensity; 0.08 mm in teal is a shorter, broader hump reaching about 6.2 percent; 0.04 mm in pink is nearly flat, barely above the noise floor" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Live class data: intensity vs. position for b = 0.16, 0.08, and 0.04 mm</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">A student went to the board and built a table from the same data, measuring the width of the central maximum and the width of a secondary maximum directly off the screen for each slit width:</p>
+          <div class="markdown-content" style="display:block; overflow-x:auto; margin-bottom:16px;">
+            <table class="zebra-table" style="table-layout:fixed; width:100%;">
+              <thead>
+                <tr>
+                  <th style="width:28%;">Slit width, \(b\)</th>
+                  <th style="width:36%;">Central maximum width</th>
+                  <th style="width:36%;">Secondary maximum width</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>0.16 mm</td>
+                  <td>5.249 mm</td>
+                  <td>2.45 mm</td>
+                </tr>
+                <tr>
+                  <td>0.08 mm</td>
+                  <td>10.075 mm</td>
+                  <td>4.74 mm</td>
+                </tr>
+                <tr>
+                  <td>0.04 mm</td>
+                  <td>≈ 20 mm (predicted, not directly measured)</td>
+                  <td>≈ 10 mm (predicted, not directly measured)</td>
+                </tr>
+                <tr>
+                  <td>0.02 mm</td>
+                  <td>— no measurement recorded</td>
+                  <td>— no measurement recorded</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <figcaption class="portrait-caption">Board measurements comparing the patterns and recording the relationship \(b \propto 1/\theta\).</figcaption>
-        </figure>
+          <figure style="margin:0 auto 16px; max-width:480px;">
+            <img src="../Images/lecture-single-slit-board.jpg" alt="Whiteboard with the class's diffraction apparatus diagram, the slit-width-vs-fringe-width table, the relationship b proportional to 1 over theta written in red, and a sketch comparing the intensity curves for 0.16, 0.08, and 0.04 mm" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">The board this table comes from, including the apparatus geometry: about 60 cm from slit to sensor</figcaption>
+          </figure>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">04</span><h2 class="section-title">Correcting the First Guess</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Halving \(b\), from 0.16 mm to 0.08 mm, roughly doubled the central maximum's width, 5.249 mm to 10.075 mm. Halving it again, to 0.04 mm, was predicted to double it again, to roughly 20 mm, consistent with the pattern already established. That is the opposite of "more visible diffraction" in the spreading sense: the <em>wider</em> slit produced the <em>narrower</em> pattern.</p>
+          <p class="section-desc" style="max-width:none;">This is exactly what Lesson 8's derivation already predicts, nothing new has to be invented. The first dark fringe sits at \(b\sin\theta = \lambda\), or in the small-angle form the data booklet gives, \(\theta = \lambda/b\). \(\lambda\) doesn't change, the laser is the same laser throughout, so \(\theta\) and \(b\) are inversely related: \(b \propto 1/\theta\), the exact relationship written on the board. Double the slit width and the angle to the first minimum is cut in half; the whole pattern, central maximum included, is compressed into a narrower cone around the straight-through direction.</p>
+          <div class="callout callout-green">
+            <span>A Check Worth Making</span>
+            The table also shows the secondary maximum consistently coming out to a little under half the central maximum's width, 2.45/5.249 ≈ 0.47 and 4.74/10.075 ≈ 0.47 in both measured rows. That is the same "central maximum is twice as wide as a secondary maximum" fact from Lesson 8's Keynote slide, now confirmed with real numbers instead of just asserted.
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">05</span><h2 class="section-title">What a Wider Slit Actually Buys You: Intensity</h2></span></div>
+          <p class="section-desc" style="max-width:none;">The "more wavelets, more interference" instinct wasn't wrong, it was pointed at the wrong feature of the graph. More wavelets across a wider opening don't spread the pattern out further, they concentrate it. Look at the peak intensities instead of the widths: roughly 25.5% at \(b=0.16\) mm against roughly 6.2% at \(b=0.08\) mm, a jump of about 4 times for a slit only twice as wide.</p>
+          <p class="section-desc" style="max-width:none;">That factor of four, not two, is the signature of an intensity that scales with \(b^2\), not \(b\). It follows from putting together two things already on this page: a wider slit admits proportionally more light energy, roughly \(\propto b\), and that same wider slit squeezes its pattern into a proportionally narrower angle, \(\propto 1/b\). The same or greater amount of energy, packed into an angular range that keeps shrinking, has to show up as sharply rising intensity at the centre, intensity \(\propto b \times \tfrac{1}{1/b} = b^2\). Narrower and brighter aren't two separate effects, they're the same effect looked at two different ways.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">06</span><h2 class="section-title">The Limiting Cases</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Push \(b\) the other way from the classroom's smallest slit, far below any of the values measured here, and \(\theta=\lambda/b\) grows without bound: the pattern spreads across the whole wall and its intensity, falling as it's spread thinner, drops toward nothing, which is exactly the trend the 0.04 mm trace already shows nearly buried in the sensor's noise floor. This is the deep-diffraction regime, \(b \sim \lambda\), where wave behaviour completely dominates what a ray picture would ever predict.</p>
+          <p class="section-desc" style="max-width:none;">Push \(b\) the other way, far larger than any slit used today, and \(\theta = \lambda/b \to 0\): the central maximum collapses down onto the undiffracted, straight-through direction, and the pattern one would have to call "diffraction" simply disappears into a sharp, bright, undeviated beam. That is the classical, geometric-optics limit, light travelling in straight lines through an opening, and it's not a different kind of physics from what's on this page. It's the same \(b\sin\theta_m = m\lambda\) relationship, evaluated at a slit width most of everyday experience never gets far from.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">07</span><h2 class="section-title">Field Notes</h2></span></div>
+          <p class="section-desc" style="max-width:none;">I finish with the double slit. Students immediately see that its pattern is different, but they can still identify the broader single-slit diffraction envelope around the finer interference structure. I do not resolve that observation here. It is the hook for the next class and the transition into double-slit interference.</p>
+          <figure class="portrait" style="max-width:520px;">
+            <div class="portrait-frame" style="aspect-ratio:4/3;">
+              <img src="../Images/lecture-single-slit-data.jpg" alt="Graphical Analysis diffraction data for 0.16, 0.08, and 0.04 mm slits together with a double-slit trace, showing fine, closely spaced interference fringes sitting inside the same broad single-slit diffraction envelope">
+            </div>
+            <figcaption class="portrait-caption">The same live data, with a double slit added: fine fringes riding inside the familiar single-slit envelope.</figcaption>
+          </figure>
+        </section>
 
       </div>
 
       <aside class="sidebar-stack">
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Jump to a Lecture</h3>
+          <select id="lecture-jump" style="width:100%; font-family:var(--font-ui); font-size:13.5px; padding:8px 10px; border:1px solid var(--rule); border-radius:2px; background:var(--bg-raised); color:var(--text);">
+            <option value="">Select a lesson…</option>
+            <optgroup label="Unit 0">
+              <option value="lecture-1-si-units.html">L1 — SI Units &amp; Sig Figs</option>
+              <option value="lecture-2-vectors.html">L2 — Vector Algebra</option>
+            </optgroup>
+            <optgroup label="Unit A">
+              <option value="lecture-3-motion-sensor.html">L3 — Cart on a Ramp</option>
+            </optgroup>
+            <optgroup label="Unit C">
+              <option value="lecture-4-ripple-tank.html">L4 — Ripple Tank</option>
+              <option value="lecture-6-refraction.html">L6 — Refraction, Part I</option>
+              <option value="lecture-7-tir.html">L7 — Total Internal Reflection</option>
+              <option value="lecture-8-single-slit-first-look.html">L8 — Single-Slit: First Look</option>
+              <option value="lecture-9-single-slit-quant.html" selected>L9 — Aperture vs. Fringe Width</option>
+            </optgroup>
+          </select>
+        </div>
         <div class="sidebar-block">
           <h3 class="sidebar-title">Equipment</h3>
           <ul class="sidebar-list">
             <li>One <a href="https://www.vernier.com/product/diffraction-apparatus/?srsltid=AfmBOoqCPrg-FRYzT0R8U3P6FBwjE3mMHwGTL-4jtJzHHByertdz6Cc1" target="_blank" rel="noreferrer">Vernier diffraction apparatus</a> with screen</li>
             <li><a href="https://www.vernier.com/product/graphical-analysis/?srsltid=AfmBOoqe3oZIl-BX07zwJYr7IqVTMOIFwC61SWe_7Ks40NmsucOQ_66I" target="_blank" rel="noreferrer">Graphical Analysis Pro</a></li>
             <li>Student devices</li>
-            <li>Single-slit apertures, beginning with \(b = 0.16\ \mathrm{mm}\); double slit</li>
+            <li>Single-slit apertures: 0.16, 0.08, 0.04, 0.02 mm; double slit</li>
+            <li>Slit to sensor distance ≈ 60 cm</li>
             <li><a href="https://www.phywe.com/experiments-sets/teacher-demonstration-sets-demo/demo-advanced-physics-set-diffraction-and-interference-on-the-profile-bench_2323_3254/" target="_blank" rel="noreferrer">PHYWE diffraction and interference set</a> (slits/grating)</li>
           </ul>
         </div>
         <div class="sidebar-block">
           <h3 class="sidebar-title">Physics</h3>
-          <p>For slit width \(b\), the first minimum satisfies the exact relationship \(b\sin\theta = \lambda\). For small angles, \(\sin\theta \approx \theta\), so the IB form emphasised here is</p>
+          <p>From Lesson 8, the first minimum satisfies \(b\sin\theta = \lambda\), or in the small-angle, data-booklet form,</p>
           <p>\[\theta = \frac{\lambda}{b}.\]</p>
-          <p>A smaller \(b\) therefore gives a greater angular fringe width.</p>
+          <p>Since \(\lambda\) is fixed, \(b \propto 1/\theta\): a wider slit gives a narrower pattern. Because the same or more energy is compressed into that narrower angle, peak intensity grows faster still, roughly \(\propto b^2\).</p>
         </div>
         <div class="sidebar-block">
           <h3 class="sidebar-title">Field Guide</h3>
@@ -74,13 +168,6 @@
         </div>
       </aside>
     </div>
-
-    <figure class="portrait" style="max-width:520px; margin-top:8px;">
-      <div class="portrait-frame" style="aspect-ratio:4/3;">
-        <img src="../Images/lecture-single-slit-data.jpg" alt="Graphical Analysis diffraction data, including the double-slit preview inside the broader diffraction envelope">
-      </div>
-      <figcaption class="portrait-caption">Graphical Analysis data, including the double-slit preview inside the broader diffraction envelope.</figcaption>
-    </figure>
   </div>
 
   <script>
@@ -92,6 +179,11 @@
     };
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    document.getElementById('lecture-jump').addEventListener('change', (e) => {
+      if (e.target.value) window.location.href = e.target.value;
+    });
+  </script>
   <script src="../js/layout.js"></script>
 </body>
 </html>
