@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wave Behaviour &amp; Light, Part I: Ripple Tank — Erick Loría Soto</title>
-  <meta name="description" content="Unit C, Lesson 4: standing waves, wavelength, and speed in a ripple tank, and what an obstacle does depending on its size relative to the wave.">
+  <meta name="description" content="Unit C, Lesson 4: wavelength and amplitude in a ripple tank, why the source sets the frequency, the experimental link between frequency and wavelength at constant speed, and the law of reflection built from the Huygens–Fresnel principle.">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -12,8 +12,9 @@
     <div class="hero-inner">
       <div class="hero-eyebrow">Physics · The Physics Lectures at UWC · Unit C · Lesson 4</div>
       <h1>Wave Behaviour &amp; Light, Part I: Ripple Tank</h1>
-      <p>No wave-vocabulary warm-up. Just a shallow tray of water, a strobe, a motorised source, and the class learning to build an explanation from what they actually see.</p>
+      <p>A shallow tray of water, a motorised source, and two things to discover firsthand: what happens to a wave when you change the frequency that makes it, and why a wavefront reflects the way it does.</p>
       <div style="display:flex; gap:6px; margin-top:4px;">
+        <span class="badge badge-purple">Lecture</span>
         <span class="badge badge-orange">Demonstration</span>
       </div>
     </div>
@@ -25,33 +26,90 @@
 
         <section class="section">
           <div class="section-head"><span><span class="section-num">01</span><h2 class="section-title">Setup</h2></span></div>
-          <p class="section-desc" style="max-width:none;">This is Part I of a two-demonstration lesson taught on the same day. I set the <a href="https://www.fishersci.com/shop/products/advanced-ripple-tank/S83794#?keyword=" target="_blank" rel="noreferrer">ripple tank</a> up at the front of the room, old school: a shallow tray of water, a strobe/lamp, and a motorised wave source. I do not begin with a wave-vocabulary warm-up. I turn it on and let them look.</p>
+          <p class="section-desc" style="max-width:none;">I set the <a href="https://www.fishersci.com/shop/products/advanced-ripple-tank/S83794#?keyword=" target="_blank" rel="noreferrer">ripple tank</a> up at the front of the room the same way every year: a shallow tray of water, a lamp overhead so the wave pattern shows up as light and dark bands, and a motorised source that dips into the water at a fixed, adjustable rate. I don't open with wave vocabulary. I turn it on and let the class watch first, then start asking what they're actually seeing.</p>
         </section>
 
         <section class="section">
-          <div class="section-head"><span><span class="section-num">02</span><h2 class="section-title">What Happens</h2></span></div>
-          <p class="section-desc" style="max-width:none;">I use the source as a quick SHM review: its oscillation generates each wavefront and establishes the frequency. We look at standing waves, measure wavelength from the spacing of the wavefronts, and combine it with the motor's frequency to find speed using \(v = f\lambda\). Then I add obstacles and ask what changes as their size changes relative to the wavelength. I also freeze a wavefront and use Huygens–Fresnel to treat each point as a source whose wavelets rebuild the next front. Throughout, students have to tell me what they actually observe and use the source, wavelength, and obstacle to justify it. That language carries directly into Part II and the later refraction lesson.</p>
+          <div class="section-head"><span><span class="section-num">02</span><h2 class="section-title">Wavelength and Amplitude</h2></span></div>
+          <p class="section-desc" style="max-width:none;">A snapshot of the water's surface at one instant looks like any other transverse wave: crests, troughs, and a flat equilibrium level in between. The <strong>wavelength</strong>, \(\lambda\), is the distance between two consecutive points doing the same thing in the cycle, crest to crest, or trough to trough. The <strong>amplitude</strong>, \(A\), is the maximum displacement from that equilibrium level, crest height above it or trough depth below it, not the full crest-to-trough distance.</p>
+          <figure style="margin:0 auto 16px; max-width:640px;">
+            <img src="../Images/lecture-ripple-tank-side-view.png" alt="Side view of the ripple tank showing the source oscillating vertically, the resulting wave profile, wavelength lambda marked between two crests, and amplitude A marked from equilibrium to a crest" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Side view: wavelength and amplitude on the surface profile</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">The source itself is what's generating this: a motor drives it up and down in simple harmonic motion, and each downstroke pushes out one new wavefront. The wave travels outward, at velocity \(\vec{v}\), carrying the pattern the source is producing, but not carrying the water itself anywhere. A cork floating on the surface would bob up and down in place, not travel with the wave.</p>
         </section>
 
         <section class="section">
-          <div class="section-head"><span><span class="section-num">03</span><h2 class="section-title">Field Notes</h2></span></div>
-          <p class="section-desc" style="max-width:none;">This is the first activity that sets up a little bit of everything that comes later in waves. Students tend to say that an obstacle simply blocks a wave. What they miss is that the result depends on the obstacle's size relative to the wavelength. The source fixing the frequency is another fact I need them to carry forward. More importantly, I want them to build an explanation from what is happening in front of them. Recognising a textbook diagram or repeating somebody else's explanation is not enough.</p>
+          <div class="section-head"><span><span class="section-num">03</span><h2 class="section-title">Wavefronts From a Point Source</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Viewed from above instead of from the side, each dip of a point source sends out a circular ripple. Successive dips send out successive circles, one wavefront per cycle, each one a ring of points that are all doing the same thing at the same time, all at a crest, say. The spacing between one wavefront and the next, measured along the direction of travel, is still \(\lambda\), the same quantity as the side view, just read off a different picture.</p>
+          <figure style="margin:0 auto 16px; max-width:640px;">
+            <img src="../Images/lecture-ripple-tank-top-view.png" alt="Top view of circular wavefronts spreading outward from a point source, with wavelength lambda marked as the spacing between two consecutive wavefronts, and arrows showing the direction of travel" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Top view: circular wavefronts from a point source</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">Far enough from the source, a small stretch of one of these circles is almost indistinguishable from a straight line. That's the plane-wavefront picture used everywhere else in this unit, ripple tank included: it's not a different kind of wave, just a circular wavefront looked at from close enough that its curvature stops being visible.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">04</span><h2 class="section-title">The Source Sets the Frequency</h2></span></div>
+          <p class="section-desc" style="max-width:none;">This is the fact I need the class to leave with. The motor's dial controls how many times per second the source dips into the water, 40 Hz drives out 40 wavefronts every second. In a ripple tank, frequency isn't something you read off the water. It's a setting on the source. Everything else in the wave, wavelength included, is downstream of that choice.</p>
+          <figure style="margin:0 auto 16px; max-width:680px;">
+            <img src="../Images/lecture-ripple-tank-frequency.png" alt="The ripple tank's motorised source connected by a lead to a variable-frequency controller set to 40 Hz, with a dial for adjusting the rate" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">The frequency is a dial setting on the source, not a property of the water</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">Before I touch the dial, I have the class predict what happens to the spacing between wavefronts if I turn the frequency up. Then I turn it up, and they watch the wavefronts bunch closer together. Turn it down, and the wavefronts spread back out. Wavelength changes, visibly, every time frequency does.</p>
+          <div class="callout callout-green">
+            <span>What Stays the Same</span>
+            \(v = f\lambda\) ties frequency, wavelength, and speed together, so if \(f\) goes up and \(\lambda\) comes down by roughly the same factor, \(v\) hasn't moved. The tank, the water, and its depth haven't changed between one setting of the dial and the next, so that's exactly what the class ends up measuring: turn the frequency up or down and the wavelength responds, but the speed the wavefronts travel across the tank stays put. The conclusion has to come from the class's own numbers, from timing the wavefronts or comparing wavelength measurements at two different settings, not from being told the answer in advance.
+          </div>
+          <p class="section-desc" style="max-width:none;">The reasoning behind that result matters more than the measurement itself, because it's the sentence that has to survive intact to the refraction lesson later in this unit: frequency is a property of the source, speed is a property of the medium, and wavelength is whatever value keeps \(v = f\lambda\) true for that particular source in that particular medium. When the same wave later crosses into a different medium, the source still fixes \(f\), but the new medium fixes a new \(v\), which forces \(\lambda\) to change again, for a completely different reason than turning a dial.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">05</span><h2 class="section-title">Reflection and the Huygens–Fresnel Principle</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Put a straight barrier in the tank at an angle to the incoming wavefronts and the reflected pattern that comes back off it isn't arbitrary, it follows a rule the tank lets you watch happen instead of just stating. The rule underneath it is the <strong>Huygens–Fresnel principle</strong>: every point on a wavefront can be treated as a source of its own secondary circular wavelets, and the wavefront a moment later is the surface tangent to all of those wavelets at once. It's a recipe for building the next wavefront out of the current one, point by point, without needing to know anything about what originally generated the wave.</p>
+          <figure style="margin:0 auto 16px; max-width:640px;">
+            <img src="../Images/lecture-ripple-tank-reflection.png" alt="Top view of circular wavefronts from a point source striking an inclined straight barrier, with the incident wavefronts in blue, the reflected wavefronts in red, and arrows showing the incident and reflected directions of travel" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Incident wavefronts (blue) and reflected wavefronts (red) off an inclined barrier</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">Apply that point by point construction to a wavefront meeting the barrier. The part of the wavefront closest to the barrier arrives first and starts sending its secondary wavelets back out into the tank while the rest of the wavefront is still on its way in. Because every one of those secondary wavelets travels at the same speed, the same medium, the envelope they build up is itself a straight wavefront, leaving the barrier at the same angle it arrived at, measured from the barrier's normal. That's the law of reflection, angle of incidence equals angle of reflection, arrived at by construction rather than handed down as a rule to memorize.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">06</span><h2 class="section-title">The Takeaway</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Both of the big results in this lesson were built the same way: watch a live system, change one thing about it, and let the class's own observation supply the conclusion. Turn the frequency dial and watch what happens to the wavelength, that's how "speed depends on the medium, not the source" stops being a sentence to memorize and becomes something the class measured themselves. Tilt a barrier and watch the reflected wavefronts come back at a matching angle, that's how the law of reflection stops being a rule and becomes the visible result of every point on a wavefront acting as its own source, exactly as Huygens' principle says it should.</p>
+          <p class="section-desc" style="max-width:none;">Neither conclusion was announced before the tank was turned on. The class predicted what the dial would do to the wavelength, then checked it. Huygens' principle predicts what a tilted barrier should do to a wavefront, and the tank confirms it in front of everyone, together, the same way the two cart experiments confirmed a model against real motion in the previous lesson. That's the shape of this course: a model gets proposed, then tested against a real system, in the room, before anyone is asked to trust it.</p>
         </section>
 
       </div>
 
       <aside class="sidebar-stack">
         <div class="sidebar-block">
+          <h3 class="sidebar-title">Jump to a Lecture</h3>
+          <select id="lecture-jump" style="width:100%; font-family:var(--font-ui); font-size:13.5px; padding:8px 10px; border:1px solid var(--rule); border-radius:2px; background:var(--bg-raised); color:var(--text);">
+            <option value="">Select a lesson…</option>
+            <optgroup label="Unit 0">
+              <option value="lecture-1-si-units.html">L1 — SI Units &amp; Sig Figs</option>
+              <option value="lecture-2-vectors.html">L2 — Vector Algebra</option>
+            </optgroup>
+            <optgroup label="Unit A">
+              <option value="lecture-3-motion-sensor.html">L3 — Cart on a Ramp</option>
+            </optgroup>
+            <optgroup label="Unit C">
+              <option value="lecture-4-ripple-tank.html" selected>L4 — Ripple Tank</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="sidebar-block">
           <h3 class="sidebar-title">Equipment</h3>
           <ul class="sidebar-list">
-            <li><a href="https://www.fishersci.com/shop/products/advanced-ripple-tank/S83794#?keyword=" target="_blank" rel="noreferrer">Ripple tank</a>, strobe/lamp</li>
-            <li>Motorised wave source</li>
-            <li>Obstacles/barriers of varying size</li>
+            <li><a href="https://www.fishersci.com/shop/products/advanced-ripple-tank/S83794#?keyword=" target="_blank" rel="noreferrer">Ripple tank</a>, lamp</li>
+            <li>Motorised wave source, variable-frequency controller</li>
+            <li>Straight barrier, for reflection</li>
           </ul>
         </div>
         <div class="sidebar-block">
           <h3 class="sidebar-title">Physics</h3>
-          <p>The source oscillates in SHM and establishes \(f\). Students observe standing waves, read \(\lambda\) from the wavefront spacing, and find speed from \(v = f\lambda\). The effect of an obstacle depends on its size relative to \(\lambda\); Huygens–Fresnel connects those observations to diffraction.</p>
+          <p>The source oscillates in SHM and fixes \(f\). Wavelength \(\lambda\) is read from the wavefront spacing; speed follows from \(v = f\lambda\). At a fixed depth, \(v\) is set by the medium, so changing \(f\) changes \(\lambda\), not \(v\). The Huygens–Fresnel principle treats every point on a wavefront as a secondary source; applied at a barrier, it produces the law of reflection.</p>
         </div>
         <div class="sidebar-block">
           <h3 class="sidebar-title">Field Guide</h3>
@@ -64,7 +122,7 @@
       </aside>
     </div>
 
-    <figure class="portrait" style="max-width:520px; margin-top:8px;">
+    <figure class="portrait" style="max-width:520px; margin:8px auto 0;">
       <div class="portrait-frame" style="aspect-ratio:4/3;">
         <img src="../Images/lecture-ripple-tank.jpg" alt="Circular wavefronts spreading from a point source in the ripple tank">
       </div>
@@ -81,6 +139,11 @@
     };
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    document.getElementById('lecture-jump').addEventListener('change', (e) => {
+      if (e.target.value) window.location.href = e.target.value;
+    });
+  </script>
   <script src="../js/layout.js"></script>
 </body>
 </html>
