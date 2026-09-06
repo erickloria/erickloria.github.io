@@ -13,8 +13,8 @@
      Paper/panel values match the original mockup's sRGB spec:
      paper (0.982, 0.972, 0.947) → #FAF8F1
      panel (0.901, 0.906, 0.884) → #E6E7E1 */
-  --paper:        #FAF8F1;
-  --paper-light:  #FAF8F1;
+  --paper:        #FCFBF7;
+  --paper-light:  #FCFBF7;
   --ink:          #151819;
   --muted-ink:    #596165;
   --technical-blue: #004099;
