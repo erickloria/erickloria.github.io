@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Refraction, Part II: Total Internal Reflection — Erick Loría Soto</title>
-  <meta name="description" content="Unit C, Lesson 7: finding the critical angle by hand before it has a name, then working IB-style questions on the board.">
+  <meta name="description" content="Unit C, Lesson 7: watching the critical angle happen on a real protractor, deriving it from Snell's law, the exact reasoning IB exam questions expect for 'will the light escape?', and why fiber optic cables rely on total internal reflection.">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <div class="hero-inner">
       <div class="hero-eyebrow">Physics · The Physics Lectures at UWC · Unit C · Lesson 7</div>
       <h1>Refraction, Part II: Total Internal Reflection</h1>
-      <p>A semi-circular lens, an adjustable angle, and ten minutes to work out why the ray stops crossing the boundary before anyone says "critical angle."</p>
+      <p>This lesson is only about one question: past what angle does light stop leaving a medium at all? Everything here, the demonstration, the derivation, the worked questions, is aimed at answering that one thing precisely.</p>
       <div style="display:flex; gap:6px; margin-top:4px;">
         <span class="badge badge-purple">Lecture</span>
         <span class="badge badge-green">Experiential Activity</span>
@@ -26,35 +26,120 @@
 
         <section class="section">
           <div class="section-head"><span><span class="section-num">01</span><h2 class="section-title">Setup</h2></span></div>
-          <p class="section-desc" style="max-width:none;">This is Part II and day two of the sequence. I swap the standard rectangular block from <a href="lecture-6-refraction.html">Refraction, Part I</a> for a semi-circular lens on the <a href="https://www.carolina.com/physical-science-light-and-optics/hodson-light-box-and-optical-set/755160.pr?srsltid=AfmBOoqxT-_Zgk2vcLXkD8vEq9YqsZXXT3J2AxZVt7UM9tR2vtNqYz7Z" target="_blank" rel="noreferrer">light box</a>.</p>
+          <p class="section-desc" style="max-width:none;">This is Part II and day two of the sequence. I swap the standard rectangular block from <a href="lecture-6-refraction.html">Refraction, Part I</a> for a semicircular acrylic block on the light box. The curved face matters: a ray aimed at the centre of the flat face always enters the curved face travelling straight toward that centre, without bending, so the only angle that ever changes is the one at the flat face, the one we actually care about.</p>
         </section>
 
         <section class="section">
-          <div class="section-head"><span><span class="section-num">02</span><h2 class="section-title">What Happens</h2></span></div>
-          <p class="section-desc" style="max-width:none;">The ray enters through the curved face and goes straight to the centre, so the angle at the flat face is the only one that matters. I keep that angle adjustable and give students about ten minutes to draw the path and work out why, past some angle, the ray stops crossing the boundary and reflects back instead. I do not say "critical angle" until they have had a go. Once their guesses are down, we formalise the relationship. Then I deliberately switch to a traditional "watch me solve this" approach and work through two or three representative IB questions on the board, especially questions that ask whether the light will leave the medium.</p>
+          <div class="section-head"><span><span class="section-num">02</span><h2 class="section-title">Watching the Angle Increase</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Before any formula, I give students the adjustable angle and about ten minutes to move it up from zero and describe what they see happening at the flat face. The same sequence shows up every time:</p>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px; margin-bottom:8px;">
+            <figure style="margin:0;">
+              <img src="../Images/lecture-tir-angle-1.jpg" alt="Ray travelling straight through the semicircular block at normal incidence, no bending" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+              <figcaption style="font-family:var(--font-mono); font-size:10.5px; color:var(--muted); margin-top:4px; text-align:center; text-transform:uppercase; letter-spacing:0.03em;">Straight through, no angle</figcaption>
+            </figure>
+            <figure style="margin:0;">
+              <img src="../Images/lecture-tir-angle-2.jpg" alt="Small angle of incidence: the ray refracts through the flat face with only a faint reflected beam" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+              <figcaption style="font-family:var(--font-mono); font-size:10.5px; color:var(--muted); margin-top:4px; text-align:center; text-transform:uppercase; letter-spacing:0.03em;">Small angle: mostly transmitted</figcaption>
+            </figure>
+            <figure style="margin:0;">
+              <img src="../Images/lecture-tir-angle-3.jpg" alt="Larger angle of incidence: the refracted beam bends further from the normal and the reflected beam is more visible" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+              <figcaption style="font-family:var(--font-mono); font-size:10.5px; color:var(--muted); margin-top:4px; text-align:center; text-transform:uppercase; letter-spacing:0.03em;">Larger angle: reflection grows</figcaption>
+            </figure>
+            <figure style="margin:0;">
+              <img src="../Images/lecture-tir-angle-4.jpg" alt="Angle of incidence approaching the critical angle: the transmitted beam has grown very faint" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+              <figcaption style="font-family:var(--font-mono); font-size:10.5px; color:var(--muted); margin-top:4px; text-align:center; text-transform:uppercase; letter-spacing:0.03em;">Nearing the critical angle</figcaption>
+            </figure>
+            <figure style="margin:0;">
+              <img src="../Images/lecture-tir-angle-5.jpg" alt="Measuring the angle at the transition with a ruler for precision" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+              <figcaption style="font-family:var(--font-mono); font-size:10.5px; color:var(--muted); margin-top:4px; text-align:center; text-transform:uppercase; letter-spacing:0.03em;">Measuring the transition angle</figcaption>
+            </figure>
+            <figure style="margin:0;">
+              <img src="../Images/lecture-tir-angle-6.jpg" alt="At the critical angle: the transmitted beam grazes along the boundary while a strong reflected beam appears" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+              <figcaption style="font-family:var(--font-mono); font-size:10.5px; color:var(--muted); margin-top:4px; text-align:center; text-transform:uppercase; letter-spacing:0.03em;">At the critical angle</figcaption>
+            </figure>
+          </div>
+          <p class="section-desc" style="max-width:none;">As the angle grows, the transmitted beam gets dimmer and the reflected one gets brighter, both gradually, energy shifting from one to the other exactly as it does at any boundary. Then, at one specific angle, the transmitted beam doesn't just get dim, it disappears, all at once, and every bit of the light comes back as the reflected beam instead. Past that angle, no adjustment brings the transmitted beam back. That angle is the one this whole lesson is built around.</p>
         </section>
 
         <section class="section">
-          <div class="section-head"><span><span class="section-num">03</span><h2 class="section-title">Field Notes</h2></span></div>
-          <p class="section-desc" style="max-width:none;">Guesses cluster around "the light just cannot get out anymore," which is close enough to build on. The board work matters because IB questions use very specific language, and "determine whether the light will leave the medium" carries a lot of physics: which medium the ray is leaving, the critical angle, and whether total internal reflection can occur at all. This is why TIR stays as a standalone lesson. The activity gives students a physical event; the worked questions connect that event to the calculation and IB vocabulary. Later, I want that wording to call up a memory of the ray they actually saw, not only an abstract mathematical instruction.</p>
-          <p class="section-desc" style="max-width:none;">I also keep <a href="https://www.youtube.com/watch?v=NAaHPRsveJk" target="_blank" rel="noreferrer">this total internal reflection video</a> on my LMS so students can always go back to it. It is my absolute favourite: no commentary, no explanation, just the phenomenon. For someone using this guide who does not want to run the lab, the video is a great learning tool on its own.</p>
+          <div class="section-head"><span><span class="section-num">03</span><h2 class="section-title">Finding the Critical Angle</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Snell's law already contains the answer, it just needs one specific case plugged in. The transmitted ray vanishes exactly when it would have to leave along the boundary itself, at \(\theta_2 = 90°\), rather than into the second medium at any angle less than that. Set \(\theta_2 = 90°\) in \(n_1\sin\theta_1 = n_2\sin\theta_2\) and solve for the angle of incidence that produces it, now called the critical angle, \(\theta_c\):</p>
+          <p class="section-desc" style="max-width:none; text-align:center;">\[n_1\sin\theta_c = n_2\sin 90° = n_2 \qquad \Longrightarrow \qquad \sin\theta_c = \frac{n_2}{n_1}\]</p>
+          <p class="section-desc" style="max-width:none;">This only produces a real angle, and only means anything, when light is travelling from a higher-index medium into a lower-index one, \(n_1 > n_2\). Going the other way, from a lower index into a higher one, \(n_2/n_1\) would be greater than 1, and no angle has a sine greater than 1, there's no critical angle to find, and total internal reflection simply cannot happen in that direction. It is exclusively a higher-to-lower crossing.</p>
+          <p class="section-desc" style="max-width:none;">For the acrylic block used in this demonstration, increasing the angle until the transmitted beam disappears and measuring where that happens gives a critical angle of about 42°, matching what \(\sin\theta_c = n_2/n_1\) predicts for acrylic meeting air. The class doesn't take that number from a table, it's read directly off the same protractor used for every angle before it.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">04</span><h2 class="section-title">"Will the Light Escape?"</h2></span></div>
+          <p class="section-desc" style="max-width:none;">This is the exact phrasing IB questions use, and it's worth taking seriously as a piece of language before it's treated as a calculation. "Escape" means cross the boundary and continue into the second medium at all, refracted at whatever angle Snell's law gives. It does not mean bright, or undimmed, or unreflected, some of the light reflects at every boundary regardless. The question is only ever yes or no: does any refracted ray exist.</p>
+          <p class="section-desc" style="max-width:none;">Answering it is a fixed procedure, the same one every time:</p>
+          <div class="doc-index">
+            <div class="doc-row" style="cursor:default; grid-template-columns: 1fr;"><span class="doc-row-desc"><strong>1.</strong> Confirm the light is travelling from the higher-index medium toward the lower-index one. If it isn't, total internal reflection isn't possible at all, and the light always escapes.</span></div>
+            <div class="doc-row" style="cursor:default; grid-template-columns: 1fr;"><span class="doc-row-desc"><strong>2.</strong> Find the critical angle for that specific pair of media, \(\sin\theta_c = n_2/n_1\).</span></div>
+            <div class="doc-row" style="cursor:default; grid-template-columns: 1fr;"><span class="doc-row-desc"><strong>3.</strong> Compare the actual angle of incidence, \(\theta_1\), to \(\theta_c\).</span></div>
+            <div class="doc-row" style="cursor:default; grid-template-columns: 1fr;"><span class="doc-row-desc"><strong>4.</strong> \(\theta_1 < \theta_c\): the light escapes, refracted into the second medium. \(\theta_1 \ge \theta_c\): it doesn't, every bit of it reflects back into the first medium instead.</span></div>
+          </div>
+          <p class="section-desc" style="max-width:none; margin-top:16px;">After the demonstration, I switch deliberately to a plain "watch me solve this" style and work two or three representative IB questions on the board using exactly this procedure. The point of switching styles is not to abandon the exploratory approach, it's that the board work and the demonstration are answering two different questions. The block showed what happens. The board work shows how to decide it on paper, for a pair of media nobody in the room can hold up to a light box.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">05</span><h2 class="section-title">Why This Stays Its Own Lesson</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Total internal reflection could be squeezed into the end of a lesson on refraction, but IB questions use language precise enough that it earns a full lesson on its own. "Determine whether the light will leave the medium" is carrying the entire four-step procedure above inside one sentence, which medium, which critical angle, which comparison. Guesses about what "the light just can't get out anymore" means cluster in the right direction immediately, but turning that intuition into the specific comparison an exam question is actually asking for is the part that needs practice. The demonstration gives students a real event to attach that vocabulary to, so that later, "will the light escape" calls up the memory of watching a beam disappear at 42°, not just an abstract instruction.</p>
+          <p class="section-desc" style="max-width:none;">I also keep <a href="https://www.youtube.com/watch?v=NAaHPRsveJk" target="_blank" rel="noreferrer">this total internal reflection video</a> on the class LMS. No commentary, no explanation, just the phenomenon, which makes it worth returning to on its own after the vocabulary is already in place.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">06</span><h2 class="section-title">Fiber Optic Cables</h2></span></div>
+          <p class="section-desc" style="max-width:none;">A fiber optic cable is a practical application of exactly this condition, engineered on purpose rather than encountered by accident. Each fiber is built from two layers of glass or plastic, a central core with a higher refractive index, surrounded by a cladding layer with a slightly lower one. Light injected into the core at a shallow enough angle relative to the fiber's own axis strikes the core-cladding boundary beyond the critical angle every time, so it never leaves the core at all. It reflects internally down the entire length of the fiber, bouncing between the same two surfaces for kilometers, guided by the same \(\theta_1 \ge \theta_c\) condition from a light box demonstration, just repeated continuously instead of checked once.</p>
+          <p class="section-desc" style="max-width:none;">That's the specific advantage over a copper cable carrying an electrical signal instead of light. Copper loses signal strength to electrical resistance and picks up electromagnetic interference from anything nearby, so the signal needs boosting roughly every hundred meters. A light signal confined by total internal reflection loses only a small fraction of its strength, commonly cited around 3% per hundred meters for modern fiber against roughly 90% for copper over the same distance, and isn't affected by nearby electromagnetic noise at all, since it isn't carried by an electric current in the first place. That difference in attenuation, how much signal strength is lost per unit distance, is why a single fiber run can carry a signal for tens of kilometers before it needs to be regenerated, while copper needs help far sooner.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">07</span><h2 class="section-title">The Takeaway</h2></span></div>
+          <p class="section-desc" style="max-width:none;">The critical angle isn't a separate rule bolted onto Snell's law, it's the one specific case where Snell's law's own answer runs out of room, \(\theta_2\) trying to reach 90° and having nowhere further to go. Every angle below it behaves exactly like ordinary refraction, energy splitting between a transmitted beam and a reflected one. At the critical angle and beyond it, the transmitted beam isn't dim, it's absent, because Snell's law has no answer left to give it.</p>
+          <p class="section-desc" style="max-width:none;">The closing photograph is worth a careful look for one more reason. Near the critical angle, the escaping beam isn't quite white, it's faintly split into a visible band of colour. That's Refraction, Part I's dispersion showing up again in a new place: violet has a slightly higher refractive index than red in this block, so by \(\sin\theta_c = n_2/n_1\), violet's critical angle is very slightly smaller than red's. In the narrow band of angles between the two, red is still escaping while violet has already crossed into total internal reflection, and the colour smear at the edge of the beam is that separation happening in real time.</p>
+          <figure style="margin:0 auto 16px; max-width:640px;">
+            <div class="portrait-frame" style="aspect-ratio:4/3;">
+              <img src="../Images/lecture-tir.jpg" alt="A semicircular block near the critical angle, with the emerging beam showing a faint separation of colors, red escaping while violet undergoes total internal reflection" style="width:100%; height:100%; object-fit:cover; display:block;">
+            </div>
+            <figcaption class="portrait-caption" style="margin-top:6px; text-align:center;">Near the critical angle: red still escaping, violet already reflecting.</figcaption>
+          </figure>
         </section>
 
       </div>
 
       <aside class="sidebar-stack">
         <div class="sidebar-block">
+          <h3 class="sidebar-title">Jump to a Lecture</h3>
+          <select id="lecture-jump" style="width:100%; font-family:var(--font-ui); font-size:13.5px; padding:8px 10px; border:1px solid var(--rule); border-radius:2px; background:var(--bg-raised); color:var(--text);">
+            <option value="">Select a lesson…</option>
+            <optgroup label="Unit 0">
+              <option value="lecture-1-si-units.html">L1 — SI Units &amp; Sig Figs</option>
+              <option value="lecture-2-vectors.html">L2 — Vector Algebra</option>
+            </optgroup>
+            <optgroup label="Unit A">
+              <option value="lecture-3-motion-sensor.html">L3 — Cart on a Ramp</option>
+            </optgroup>
+            <optgroup label="Unit C">
+              <option value="lecture-4-ripple-tank.html">L4 — Ripple Tank</option>
+              <option value="lecture-6-refraction.html">L6 — Refraction, Part I</option>
+              <option value="lecture-7-tir.html" selected>L7 — Total Internal Reflection</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="sidebar-block">
           <h3 class="sidebar-title">Equipment</h3>
           <ul class="sidebar-list">
-            <li>Semi-circular lens</li>
-            <li><a href="https://www.carolina.com/physical-science-light-and-optics/hodson-light-box-and-optical-set/755160.pr?srsltid=AfmBOoqxT-_Zgk2vcLXkD8vEq9YqsZXXT3J2AxZVt7UM9tR2vtNqYz7Z" target="_blank" rel="noreferrer">Light box</a> / ray source</li>
+            <li>Semicircular acrylic block</li>
+            <li><a href="https://www.carolina.com/physical-science-light-and-optics/hodson-light-box-and-optical-set/755160.pr?srsltid=AfmBOoqxT-_Zgk2vcLXkD8vEq9YqsZXXT3J2AxZVt7UM9tR2vtNqYz7Z" target="_blank" rel="noreferrer">Light box</a> / ray source, protractor</li>
             <li>Whiteboard; 2–3 representative IB questions</li>
           </ul>
         </div>
         <div class="sidebar-block">
           <h3 class="sidebar-title">Physics</h3>
-          <p>TIR requires light to travel from higher to lower refractive index (\(n_1 > n_2\)) and \(\theta_1 > \theta_c\). At the critical angle, \(\theta_2 = 90^\circ\), so</p>
-          <p>\[\sin\theta_c = \frac{n_2}{n_1}.\]</p>
+          <p>TIR requires light travelling from a higher to a lower refractive index (\(n_1 > n_2\)) at \(\theta_1 \ge \theta_c\). The critical angle comes from setting \(\theta_2 = 90°\) in Snell's law:</p>
+          <p>\[\sin\theta_c = \frac{n_2}{n_1}\]</p>
+          <p>Fiber optics guide light down a higher-index core surrounded by a lower-index cladding, keeping every internal ray beyond \(\theta_c\) for the length of the fiber.</p>
         </div>
         <div class="sidebar-block">
           <h3 class="sidebar-title">Field Guide</h3>
@@ -66,13 +151,6 @@
         </div>
       </aside>
     </div>
-
-    <figure class="portrait" style="max-width:520px; margin-top:8px;">
-      <div class="portrait-frame" style="aspect-ratio:4/3;">
-        <img src="../Images/lecture-tir.jpg" alt="A semicircular block near the transition to total internal reflection, with the incident angle marked from the normal">
-      </div>
-      <figcaption class="portrait-caption">The semicircular block near the transition to total internal reflection, with the incident angle marked from the normal.</figcaption>
-    </figure>
   </div>
 
   <script>
@@ -84,6 +162,11 @@
     };
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    document.getElementById('lecture-jump').addEventListener('change', (e) => {
+      if (e.target.value) window.location.href = e.target.value;
+    });
+  </script>
   <script src="../js/layout.js"></script>
 </body>
 </html>
