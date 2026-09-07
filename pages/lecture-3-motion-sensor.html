@@ -42,9 +42,9 @@
               <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Velocity — Linear Fit</figcaption>
             </figure>
           </div>
-          <figure style="margin:0 0 16px;">
+          <figure style="margin:0 auto 16px; max-width:520px;">
             <img src="../Images/lecture-motion-sensor-acceleration.png" alt="Acceleration vs. time graph of the cart on the ramp, statistics over x-range 1.35 to 3.75 seconds: mean 0.449 m/s squared, std dev 0.048" style="width:100%; max-width:520px; display:block; border:1px solid var(--rule-soft);">
-            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">Acceleration — Mean 0.449 m/s², x-range 1.35–3.75 s</figcaption>
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Acceleration — Mean 0.449 m/s², x-range 1.35–3.75 s</figcaption>
           </figure>
           <p class="section-desc" style="max-width:none;">Outside that window, the acceleration trace spikes hard, down to around −2.5 m/s² at the push and down again to around −5 m/s² where a hand catches the cart at the bottom. Those spikes are real, but they're excluded from the fits on purpose: the push and the catch are a hand doing something to the cart, not the cart moving under gravity by itself.</p>
         </section>
@@ -86,9 +86,9 @@
               <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Velocity — Mean −0.892 m/s, x-range 0.90–1.55 s</figcaption>
             </figure>
           </div>
-          <figure style="margin:0 0 16px;">
+          <figure style="margin:0 auto 16px; max-width:520px;">
             <img src="../Images/lecture-motion-sensor-acceleration-2.png" alt="Acceleration vs. time graph of the spring-launched cart, showing a dip to about -4.8 m/s squared at the push and a spike to about +4.4 m/s squared at the catch, with near-zero acceleration between them" style="width:100%; max-width:520px; display:block; border:1px solid var(--rule-soft);">
-            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.04em;">Acceleration — Push and Catch Transients</figcaption>
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Acceleration — Push and Catch Transients</figcaption>
           </figure>
           <p class="section-desc" style="max-width:none;">Here the position graph is a straight line, not a curve, which is the whole point of the comparison: no curvature means no acceleration. The acceleration trace agrees, sitting near zero for the entire middle stretch, except for two sharp transients bracketing it, a dip to about −4.8 m/s² where the spring fires and a spike to about +4.4 m/s² where the hand stops the cart. Same pattern as the ramp run: the push and the catch are excluded from the model, because they're not the motion being modeled.</p>
           <p class="section-desc" style="max-width:none;">This is Model 2, written the same way as the first: <em>y = mx + b</em> in math, translated to \(x(t) = vt + x_i\) in physics, with \(v(t)\) constant and \(a(t) = 0\). Placed side by side, Model 1 for the ramp and Model 2 for the launched cart show that "constant acceleration" and "constant velocity" are two versions of the same kind of equation, one with the quadratic term and one without it.</p>
@@ -104,6 +104,13 @@
           <p class="section-desc" style="max-width:none; margin-top:16px;">The other two SUVAT equations, \(v^2 = u^2 + 2as\) and \(s = \tfrac{1}{2}(u+v)t\), follow algebraically from these two, though they aren't built from data the way the first two are here. Every term in \(s = ut + \tfrac{1}{2}at^2\) traces back to something measured directly off a graph, not a formula handed down on a sheet.</p>
         </section>
 
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">07</span><h2 class="section-title">The Takeaway</h2></span></div>
+          <p class="section-desc" style="max-width:none;">This lesson ran as two experiments on purpose, not one. Experiment one: a cart accelerating. Experiment two: the same cart, not accelerating. Each one produced its own position, velocity, and acceleration graph, and each triad got its own model built from scratch, out of your own data, not out of a formula sheet. That's the actual exercise, twice over: observe a scenario, build the model that fits it, and only then find out whether the model was right by checking it against a second, independent measurement of the same motion.</p>
+          <p class="section-desc" style="max-width:none;">The real takeaway is what happens when those two models get placed next to each other. Model 1, the accelerating cart: a curved position graph, a straight-line velocity graph, a flat but nonzero acceleration graph. Model 2, the constant-velocity cart: a straight-line position graph, a flat velocity graph, an acceleration graph that sits at zero except for the push and the catch. Nobody told you those two triads would look different before you ran the carts. You ran both, measured both, and the two data sets separated themselves cleanly, curved against straight, sloped against flat, nonzero against zero. That separation is the test: two scenarios, two models built independently from observation, checked against each other, and confirmed to disagree exactly where the physics says they should.</p>
+          <p class="section-desc" style="max-width:none;">That is what "constructing physics" means in this course, specifically. You are not shown a finished model and asked to trust it. You build a model from one observation, build a second model from a contrasting observation, and the two models earn their credibility by being tested against each other, in front of you, with your own cart and your own sensor. The next time an acceleration-vs-velocity distinction matters anywhere else in this course, on a different object, in a different unit, you will already know what each case looks like on a graph, because you built both cases yourself and watched them disagree correctly.</p>
+        </section>
+
       </div>
 
       <aside class="sidebar-stack">
@@ -117,6 +124,17 @@
             </optgroup>
             <optgroup label="Unit A">
               <option value="lecture-3-motion-sensor.html" selected>L3 — Cart on a Ramp</option>
+              <option value="lecture-4-problem-solving-suvat.html">L4 — Problem-Solving with SUVAT</option>
+            </optgroup>
+            <optgroup label="Unit C">
+              <option value="lecture-5-ripple-tank.html">L5 — Ripple Tank</option>
+              <option value="lecture-7-refraction.html">L7 — Refraction, Part I</option>
+              <option value="lecture-8-tir.html">L8 — Total Internal Reflection</option>
+              <option value="lecture-9-single-slit-first-look.html">L9 — Single-Slit: First Look</option>
+              <option value="lecture-10-single-slit-quant.html">L10 — Aperture vs. Fringe Width</option>
+              <option value="lecture-11-double-slit.html">L11 — Double-Slit Diffraction</option>
+              <option value="lecture-12-lunar-eclipse.html">L12 — Lunar Eclipse</option>
+              <option value="lecture-13-screen-distance-and-gratings.html">L13 — Screen Distance &amp; Gratings</option>
             </optgroup>
           </select>
         </div>
@@ -139,13 +157,13 @@
           <ul class="sidebar-list">
             <li><a href="lectures.html">← All lectures</a></li>
             <li><a href="lecture-2-vectors.html">← Previous: Vector Algebra</a></li>
-            <li><a href="lecture-4-ripple-tank.html">Next: Ripple Tank →</a></li>
+            <li><a href="lecture-4-problem-solving-suvat.html">Next: Problem-Solving with SUVAT →</a></li>
           </ul>
         </div>
       </aside>
     </div>
 
-    <figure class="portrait" style="max-width:720px; margin-top:8px;">
+    <figure class="portrait" style="max-width:720px; margin:8px auto 0;">
       <div class="portrait-frame" style="aspect-ratio:4/3;">
         <img src="../Images/lecture-motion-sensor-board.jpg" alt="Whiteboard showing the three Graphical Analysis fits translated into physics equations, labeled Model 1, next to a second board translating Model 2 into IB SUVAT notation">
       </div>

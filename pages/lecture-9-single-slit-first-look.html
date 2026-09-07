@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single-Slit Diffraction: First Look — Erick Loría Soto</title>
+  <meta name="description" content="Unit C, Lesson 9: the vocabulary of a single-slit diffraction pattern, the specific criterion for diffraction to be noticeable, deriving the positions of the dark fringes from path difference, and exactly what the IB data booklet does and doesn't give you.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Physics · The Physics Lectures at UWC · Unit C · Lesson 9</div>
+      <h1>Single-Slit Diffraction: First Look</h1>
+      <p>A student's own hair strand in a green laser beam, a prediction drawn before anyone sees the real pattern, and then the red laser and a slit narrow enough to build the explanation from scratch.</p>
+      <div style="display:flex; gap:6px; margin-top:4px;">
+        <span class="badge badge-orange">Demonstration</span>
+        <span class="badge badge-purple">Lecture</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-grid">
+      <div class="page-main">
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">01</span><h2 class="section-title">Setup</h2></span></div>
+          <p class="section-desc" style="max-width:none;">I ask a student for a strand of hair without explaining what it's for. I use a green laser first, its pattern is easier to see clearly across the room than red. I point the beam at something large first, often a student standing safely in front of it with the beam kept below eye level, and the light just stops, the way everyone already expects light to behave at an obstacle. Then, before the hair goes anywhere near the beam, I ask for a prediction of what happens when the obstacle gets very small instead. If putting it into words is hard, I hand out paper and ask for a drawing instead.</p>
+          <p class="section-desc" style="max-width:none;">Only after the predictions are down does the hair go into the beam. A visible pattern spreads out on the wall, nothing like the sharp shadow anyone predicted. Once that contrast has landed, I switch to a red laser and an actual single slit, narrow and machined rather than a strand of hair, so the pattern can be examined properly instead of just observed.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">02</span><h2 class="section-title">What the Pattern Actually Looks Like</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Before any explanation, the pattern itself needs a name for every part of it. A bright band sits in the centre, wider and dramatically brighter than anything else on the wall, called the <strong>central maximum</strong>. Spaced out on either side of it are dimmer, narrower bright bands, the <strong>secondary maxima</strong>, each one separated from its neighbours by a completely dark band, a <strong>minimum</strong>, where no light arrives at all.</p>
+          <figure style="margin:0 auto 16px; max-width:520px;">
+            <img src="../Images/lecture-single-slit-photo.jpg" alt="Real photograph of a red laser single-slit diffraction pattern: a bright central maximum with dimmer secondary maxima fading out on either side, separated by dark minima" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">The actual pattern, red laser through a single slit</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">Every bright or dark band is a <strong>fringe</strong>, and each one gets labelled by an integer \(n\): the dark minima sit at \(n = \pm 1, \pm 2, \pm 3, \ldots\), every non-zero integer, negative counting outward on one side of the centre and positive on the other, and the secondary maxima sit roughly between consecutive minima. \(n\) isn't a measurement, it's a count, which minimum or maximum you're pointing at, first, second, third out from the centre, on whichever side.</p>
+          <figure style="margin:0 auto 16px; max-width:560px;">
+            <img src="../Images/lecture-single-slit-keynote.png" alt="Slide from the classroom presentation showing the diffraction pattern with the angular width of the central maximum marked as Delta theta, and a note that the central maximum is twice as wide as a secondary maximum, with intensity proportional to the square of the amplitude" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">How this pattern gets presented on the board</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">Two things in that slide are worth carrying forward on their own. First, the central maximum's angular width is exactly twice a secondary maximum's, \(2 \times \Delta\theta\) against \(\Delta\theta\), which is going to fall directly out of how the minima are spaced once that's derived. Second, intensity is not the same thing as amplitude, intensity is proportional to amplitude squared, which is why the secondary maxima look so much dimmer than the central one even though the underlying wave amplitude hasn't dropped by nearly as much.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">03</span><h2 class="section-title">The Criterion for Diffraction</h2></span></div>
+          <p class="section-desc" style="max-width:none;">A hair strand and a slit both produced a visible pattern. A doorway or a window doesn't, even though light passes through both of those too. The difference is a specific, comparable-sizes condition, not a vague one.</p>
+          <div class="callout callout-orange">
+            <span>The Criterion</span>
+            Diffraction becomes noticeable when the size of the opening (or obstacle) is comparable to the wavelength of the wave passing through it, roughly \(b \sim \lambda\). Make the opening much larger than the wavelength and the wave mostly just carries on in a straight line, spreading only slightly at the very edges of the beam. Make it comparable to the wavelength and the spreading dominates the entire pattern. This is exactly why a doorway doesn't diffract visible light, roughly \(10^{-7}\ \text{m}\), noticeably: the doorway is many orders of magnitude larger than the wavelength. A human hair, at tens of micrometres, is close enough to visible wavelengths to diffract it clearly.
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px; margin-top:16px;">
+            <figure style="margin:0;">
+              <img src="../Images/lecture-single-slit-large-aperture.png" alt="Plane waves passing through an aperture much wider than the wavelength: the wavefronts stay almost flat, with only slight curving at the very edges" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+              <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Aperture ≫ λ: barely any spreading</figcaption>
+            </figure>
+            <figure style="margin:0;">
+              <img src="../Images/lecture-single-slit-small-aperture.png" alt="Plane waves passing through an aperture comparable to the wavelength: the wavefronts emerge as nearly complete circles, spreading widely in every direction" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+              <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Aperture ~ λ: spreading dominates</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">04</span><h2 class="section-title">Building the Explanation from Wavefronts</h2></span></div>
+          <p class="section-desc" style="max-width:none;">The same Huygens–Fresnel construction used at the ripple tank's barrier and at every refracting boundary since applies here without changing at all. Every point across the open slit acts as a source of its own secondary wavelets, spreading outward from that point in every direction. Where the slit is wide compared to \(\lambda\), those wavelets from across the opening mostly reinforce each other straight ahead and the result looks like an almost undisturbed plane wave, the large-aperture picture above. Where the slit is narrow enough that \(b \sim \lambda\), there are too few independent source points across the opening for that straight-ahead reinforcement to dominate, and the wavelets spread out nearly as a single circular wave instead, the small-aperture picture. The pattern on the wall is what happens when all of those wavelets, launched from every point across the slit, arrive back together at a screen and interfere.</p>
+          <figure style="margin:0 auto 16px; max-width:680px;">
+            <img src="../Images/lecture-single-slit-pattern-diagram.png" alt="A single narrow slit generating spreading wavelets from Huygens' principle, projected onto a screen showing alternating bright and dark fringes, with an intensity graph on the right labeled by fringe order n equals plus and minus 1 and 2" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Wavelets from the slit, the fringe pattern, and the intensity graph, side by side</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">That last panel is worth sitting with. The dark bands on the wall are exactly the zeros of the red intensity curve, and the bright bands are its peaks, the same pattern, drawn two different ways. Reading one off the other is the whole point of learning to read this graph: a wide flat hump in the middle, decaying, narrower humps further out, with true zero intensity in between every one of them.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">05</span><h2 class="section-title">Path Difference</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Interference needs one more idea before the fringe positions can be pinned down: wavelets launched from different points across the slit travel different distances to reach the same point on the wall, and that difference in distance is what decides whether they arrive in step or out of step.</p>
+          <figure style="margin:0 auto 16px; max-width:520px;">
+            <img src="../Images/lecture-single-slit-path-difference.png" alt="Geometry of path difference: rays from the top, middle, and bottom of the slit converging on a point P on the screen, at slightly different angles theta and theta prime, with the extra distance b over 2 times sine theta prime marked" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">The exact geometry: rays converging on one point P</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">Split the slit into a top half and a bottom half, each of width \(b/2\). A ray from the very top of the slit and a ray from the middle travel to the same point P at very slightly different angles, \(\theta\) and \(\theta'\), because P is only a finite distance \(D\) away. The extra distance the lower ray has to cover works out to \(\tfrac{b}{2}\sin\theta'\).</p>
+          <p class="section-desc" style="max-width:none;">In every real setup here, the screen is far enough away, and the slit narrow enough, that this is worth simplifying. Sending \(D\) to effectively infinity, or equivalently forcing \(b\) to stay small, makes every ray leaving the slit travel to the screen at essentially the same angle, \(\theta' \to \theta\). This is the same <strong>small-angle approximation</strong> used everywhere else in this course, \(\sin\theta \approx \tan\theta \approx \theta\) in radians for small \(\theta\), applied here to angles across the slit rather than to a single ray. The rays become parallel, and the geometry simplifies:</p>
+          <figure style="margin:0 auto 16px; max-width:340px;">
+            <img src="../Images/lecture-single-slit-path-difference-approx.png" alt="The small-angle, far-field approximation: rays from the slit treated as parallel, all leaving at the same angle theta, with the path difference simplified to b over 2 times sine theta" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">The far-field approximation: every ray at the same angle θ</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">With the rays parallel, the path difference between a wavelet from the top of the slit and one from its exact centre is simply \(\tfrac{b}{2}\sin\theta\), a single clean expression instead of two slightly different angles to track.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">06</span><h2 class="section-title">From Path Difference to the Dark Fringes</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Pair up the slit this way: the point at the very top with the point at the exact centre, the point just below the top with the point just below the centre, and so on, every point in the top half matched with the point exactly \(b/2\) below it in the bottom half. Every one of these pairs has the identical path difference, \(\tfrac{b}{2}\sin\theta\), by the geometry above.</p>
+          <p class="section-desc" style="max-width:none;">If that shared path difference happens to equal exactly half a wavelength, every pair arrives at the screen perfectly out of step, crest meeting trough, and cancels. Since this holds for every pair across the whole slit simultaneously, the entire slit cancels itself out at that angle, producing the first dark fringe:</p>
+          <p class="section-desc" style="max-width:none; text-align:center;">\[\frac{b}{2}\sin\theta = \frac{\lambda}{2} \qquad \Longrightarrow \qquad b\sin\theta = \lambda\]</p>
+          <p class="section-desc" style="max-width:none;">The same pairing argument, applied to a slit divided into four equal quarters instead of two halves, produces a second dark fringe when \(b\sin\theta = 2\lambda\), and dividing into \(2n\) equal strips gives the general condition for every dark fringe on the pattern:</p>
+          <p class="section-desc" style="max-width:none; text-align:center;">\[b\sin\theta_n = n\lambda, \qquad n = \pm 1, \pm 2, \pm 3, \ldots\]</p>
+          <p class="section-desc" style="max-width:none;">That's the \(n\) from the vocabulary in Section 02, now attached to an actual angle: always a non-zero integer, negative on one side of the centre and positive on the other. \(n\) never equals zero here, zero path difference is the centre of the pattern, the brightest point on the whole screen, not a dark one. Converting an angle to a position on the wall uses the same small-angle step again, \(\sin\theta_n \approx \theta_n \approx y_n/D\) for a screen a distance \(D\) away, which is what turns this angular condition into an actual distance you can mark with a ruler.</p>
+          <div class="callout callout-green">
+            <span>What's Actually in the Data Booklet</span>
+            The IB data booklet gives exactly one single-slit equation, and it's narrower than it looks: \(\theta = \lambda/b\). That's the general formula above, \(b\sin\theta_n = n\lambda\), with two things already done to it: the small-angle approximation, \(\sin\theta \approx \theta\), and \(n\) fixed at 1. It is specifically the angle to the <em>first</em> minimum, not a general formula for any fringe. If a question asks about the second or third minimum instead, the booklet doesn't have a line for that, the general relationship, \(b\sin\theta_n = n\lambda\), is what has to be remembered, or rebuilt from the pairing argument above, to get there. Anything beyond that single line, the position form \(y_n \approx n\lambda D/b\), the central maximum's width being twice a secondary maximum's, all of it either needs to be memorized separately or derived on the page from \(b\sin\theta_n = n\lambda\) and the small-angle approximation, the same two ingredients used to build the booklet's own line in the first place.
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">07</span><h2 class="section-title">The Takeaway</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Nobody was handed \(b\sin\theta_n = n\lambda\) before seeing the pattern it describes. A prediction came first, wrong in an interesting way. The actual pattern came next, forcing a vocabulary onto something that didn't have one yet. Only then did the explanation get built, wavefront by wavefront, pair by pair, out of the same Huygens construction this course has used since the ripple tank. The formula at the end is a compressed record of that build, not a rule that arrived from nowhere, and it's more complete than the one line the data booklet actually gives.</p>
+          <p class="section-desc" style="max-width:none;">A second observation gets explained the same way, from something students already know rather than something new. Move the screen further from the slit and the whole pattern dims, not just at the edges but everywhere, the central maximum included. That's the same inverse square law used everywhere else light or sound spreads from a source, intensity falling as \(1/D^2\) as the same total energy spreads across a larger area. Nothing about diffraction changes that; the fringe pattern just rides on top of an overall brightness that was already going to fall off with distance.</p>
+          <p class="section-desc" style="max-width:none;">This lesson stops at the shape of the explanation on purpose. Every measurement here used one slit at one width. The next lesson changes that width and asks what happens to the pattern when it does, which is a question this lesson has already supplied every tool needed to answer.</p>
+        </section>
+
+      </div>
+
+      <aside class="sidebar-stack">
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Jump to a Lecture</h3>
+          <select id="lecture-jump" style="width:100%; font-family:var(--font-ui); font-size:13.5px; padding:8px 10px; border:1px solid var(--rule); border-radius:2px; background:var(--bg-raised); color:var(--text);">
+            <option value="">Select a lesson…</option>
+            <optgroup label="Unit 0">
+              <option value="lecture-1-si-units.html">L1 — SI Units &amp; Sig Figs</option>
+              <option value="lecture-2-vectors.html">L2 — Vector Algebra</option>
+            </optgroup>
+            <optgroup label="Unit A">
+              <option value="lecture-3-motion-sensor.html">L3 — Cart on a Ramp</option>
+              <option value="lecture-4-problem-solving-suvat.html">L4 — Problem-Solving with SUVAT</option>
+            </optgroup>
+            <optgroup label="Unit C">
+              <option value="lecture-5-ripple-tank.html">L5 — Ripple Tank</option>
+              <option value="lecture-7-refraction.html">L7 — Refraction, Part I</option>
+              <option value="lecture-8-tir.html">L8 — Total Internal Reflection</option>
+              <option value="lecture-9-single-slit-first-look.html" selected>L9 — Single-Slit: First Look</option>
+              <option value="lecture-10-single-slit-quant.html">L10 — Aperture vs. Fringe Width</option>
+              <option value="lecture-11-double-slit.html">L11 — Double-Slit Diffraction</option>
+              <option value="lecture-12-lunar-eclipse.html">L12 — Lunar Eclipse</option>
+              <option value="lecture-13-screen-distance-and-gratings.html">L13 — Screen Distance &amp; Gratings</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Equipment</h3>
+          <ul class="sidebar-list">
+            <li>A student's hair strand</li>
+            <li><a href="https://www.amazon.com/dp/B0BVHLF8W4" target="_blank" rel="noreferrer">Green laser pointer (example)</a>, then a red laser</li>
+            <li>A single slit of width \(b\) (fixed), screen a distance \(D\) away</li>
+            <li>Paper and pencils, for prediction sketches</li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Physics</h3>
+          <p>Diffraction is noticeable when the opening is comparable to the wavelength, \(b \sim \lambda\). By Huygens' principle, every point across the slit radiates a wavelet; path difference between wavelets from across the slit, \(\tfrac{b}{2}\sin\theta\) in the small-angle limit, determines constructive or destructive interference. Dark fringes occur at</p>
+          <p>\[b\sin\theta_n = n\lambda, \quad n = \pm1, \pm2, \ldots\]</p>
+          <p>The data booklet gives only the \(n=1\) case, small-angle approximated: \(\theta = \lambda/b\).</p>
+        </div>
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Field Guide</h3>
+          <ul class="sidebar-list">
+            <li><a href="lectures.html">← All lectures</a></li>
+            <li><a href="lecture-8-tir.html">← Previous: Total Internal Reflection</a></li>
+            <li><a href="lecture-10-single-slit-quant.html">Next: Aperture vs. Fringe Width →</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    document.getElementById('lecture-jump').addEventListener('change', (e) => {
+      if (e.target.value) window.location.href = e.target.value;
+    });
+  </script>
+  <script src="../js/layout.js"></script>
+</body>
+</html>

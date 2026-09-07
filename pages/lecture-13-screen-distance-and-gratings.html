@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screen Distance & Diffraction Gratings — Erick Loría Soto</title>
+  <meta name="description" content="Unit C, Lesson 13: a dual class. First, what moving the screen does to the double-slit pattern, closing the loop from Lesson 11 into the full double-slit equation. Then diffraction gratings, and why more lines per millimetre spreads light out further.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Physics · The Physics Lectures at UWC · Unit C · Lesson 13</div>
+      <h1>Screen Distance &amp; Diffraction Gratings</h1>
+      <p>A dual class: closing the loop Lesson 11 deliberately left open, and then swapping two slits for hundreds to see what a diffraction grating actually does with them.</p>
+      <div style="display:flex; gap:6px; margin-top:4px;">
+        <span class="badge badge-green">Experiential Activity</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-grid">
+      <div class="page-main">
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">01</span><h2 class="section-title">Setup</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Lesson 11 changed slit width \(b\) and slit separation \(d\) and left one variable alone on purpose: the distance from the slits to the screen, \(D\). This class picks that up first, with the same double-slit apparatus, only moving the screen this time. Once that question is answered, the second half of the class swaps the double slit for a diffraction grating, hundreds of slits ruled into the same small space, and looks at what changes when two slits becomes many.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">02</span><h2 class="section-title">The Data: Two Screen Distances</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Same slit, same laser, two screen distances, \(D=30\) cm and \(D=60\) cm, recorded live with Graphical Analysis Pro exactly as before.</p>
+          <figure style="margin:0 auto 16px; max-width:680px;">
+            <img src="../Images/lecture-double-slit-screen-distance.png" alt="Graphical Analysis Pro traces at D=30cm (orange) and D=60cm (purple): the purple trace's envelope and internal fringes are both spread out roughly twice as wide as the orange trace's, and both traces sit on a baseline around 19-20 percent rather than zero" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Same b, same d: only the screen moved</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">Doubling the screen distance roughly doubled everything on the wall at once: the spacing between the fine interference fringes and the width of the single-slit envelope they sit inside both stretched out by close to the same factor. Nothing about the pattern's shape changed, only its scale.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">03</span><h2 class="section-title">What D Does, Compared to b and d</h2></span></div>
+          <p class="section-desc" style="max-width:none;">This is a genuinely different role from the last lesson's two variables. Changing \(b\) reshaped the envelope without touching the fringe spacing. Changing \(d\) reshaped the fringe spacing without touching the envelope. Changing \(D\) reshapes neither, it leaves the pattern's actual shape alone and just magnifies the whole thing, envelope and fringes together, by the same factor. \(D\) is the distance the light has to travel to turn a given angle \(\theta\) into an actual position \(y\) on the wall, so stretching that travel distance stretches every position on the pattern in exactly the same proportion, no matter which feature of the pattern you're looking at.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">04</span><h2 class="section-title">A Correction: Intensity Barely Moved</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Look at the baseline of the graph above instead of the peaks: both traces sit around 19–20%, not at zero, and the peak heights between the two distances are close, not dramatically different the way peak heights were when \(b\) changed in Lesson 10. That's worth stopping on, because Lesson 9's own closing argument was that intensity should fall off with distance the way it does for any spreading source, roughly as \(1/D^2\).</p>
+          <div class="callout callout-orange">
+            <span>A TOK Moment: When a Model's Own Limits Show Up in the Data</span>
+            \(1/D^2\) is the right law for a source spreading its energy over an expanding sphere, and it's still true here in principle. But this laser is a powerful, tightly collimated beam observed only a few centimetres from where it leaves the source, and doubling \(D\) from 30 cm to 60 cm is a tiny change on the scale the beam actually spreads over. A model isn't wrong just because its predicted effect doesn't show up strongly in a particular regime, it's a reminder that "intensity falls with distance" and "by how much" are two different claims, and the second one depends on exactly how the source radiates, not only on the inverse-square law by itself.
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">05</span><h2 class="section-title">Enough to Finally Write the Equation</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Three lessons have each nailed down one piece: Lesson 11 found the geometric path difference between the two slits, \(d\sin\theta\), and the condition for a bright fringe, that path difference landing on a whole number of wavelengths, \(n\lambda\). \(n\) can be any integer, positive, negative, or zero, with \(n=0\) marking the undeviated bright fringe straight ahead at the centre and every other integer counting outward, negative on one side and positive on the other. This lesson found that \(D\) converts an angle into an actual distance on the wall, \(y\), through the same small-angle step used everywhere else in this unit, \(\sin\theta \approx \tan\theta \approx y/D\). Put those two together, and consecutive bright fringes, order \(n\) and order \(n+1\), turn out to sit a constant distance apart no matter which \(n\) you start counting from, exactly the fringe separation the data booklet gives its own symbol, \(s\):</p>
+          <p class="section-desc" style="max-width:none; text-align:center;">\[\text{path difference} = n\lambda \qquad \Longrightarrow \qquad s = \frac{\lambda D}{d}\]</p>
+          <p class="section-desc" style="max-width:none;">Every piece of that expression is something this course measured before it was ever written as one line: \(d\) narrows or widens the fringe spacing (Lesson 11), \(D\) magnifies the whole pattern (this lesson), and \(s\) isn't any single fringe's position, it's the constant spacing between one bright fringe and the next, the actual quantity the data booklet defines.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">06</span><h2 class="section-title">Then: From Two Slits to Many</h2></span></div>
+          <p class="section-desc" style="max-width:none;">The second half of the class swaps the double slit for a diffraction grating, a plate ruled with hundreds of slits per millimetre instead of two. Nothing about the physics changes, every slit is still a coherent source spaced \(d\) apart from its neighbour, interfering exactly the way two slits did.</p>
+          <figure style="margin:0 auto 16px; max-width:500px;">
+            <img src="../Images/lecture-grating-diagram.png" alt="A diffraction grating diagram: six parallel slits each spaced d apart, with parallel incoming rays and parallel outgoing rays all leaving at the same angle theta from the grating normal" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">The same geometry as Lesson 11, extended to many slits at once</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">The difference is what \(d\) means here. A grating is usually labelled by how many lines are ruled into it per millimetre, \(N\), so the spacing between neighbouring slits is \(d = 1/N\). More lines per millimetre means a smaller \(d\), and the exact same bright-fringe condition, path difference \(= n\lambda\), \(d\sin\theta = n\lambda\), says that a smaller \(d\) forces a bigger angle \(\theta\) for the same order \(n\) and the same wavelength. Denser gratings bend light through wider angles.</p>
+          <p class="section-desc" style="max-width:none;">The class compared two real gratings, 530 lines per millimetre and 1,000 lines per millimetre, shining the same laser straight up and marking where each order landed on the ceiling.</p>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px; margin-top:16px; margin-bottom:16px;">
+            <figure style="margin:0;">
+              <img src="../Images/lecture-grating-530-lines.jpg" alt="530 lines per mm grating: a laser aimed at the ceiling produces a bright central spot with a narrow rainbow spread close to the beam" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+              <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">530 lines/mm: a narrower spread</figcaption>
+            </figure>
+            <figure style="margin:0;">
+              <img src="../Images/lecture-grating-1000-lines.jpg" alt="1000 lines per mm grating: the same laser now produces a bright central spot with two distinct rainbow streaks landing on the ceiling far apart from the central beam" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+              <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">1000 lines/mm: a much wider spread</figcaption>
+            </figure>
+          </div>
+          <p class="section-desc" style="max-width:none;">Nearly double the line density and the diffracted orders landed noticeably farther from the central beam, exactly the direction \(d = 1/N\) predicts: the denser grating has the smaller \(d\), and the smaller \(d\) forces the larger angle.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">07</span><h2 class="section-title">White Light Through a Grating</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Because the angle depends on \(\lambda\) as well as \(d\), a grating fed white light instead of a single laser colour sends every wavelength to its own angle, spreading white light into a full spectrum at each order, exactly the way a prism does, but built from interference instead of dispersion in glass.</p>
+          <figure style="margin:0 auto 16px; max-width:640px;">
+            <img src="../Images/lecture-grating-keynote.png" alt="Class slide titled Diffraction Grating, showing a white laser through a grating splitting into full rainbow spectra on either side of an undeviated white central beam, captioned that the n=0 order appears white because it is not dispersed" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">The one order that never splits: n = 0</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">The one exception is the very centre. At \(n=0\), the path-difference condition \(d\sin\theta = n\lambda\) is satisfied at \(\theta=0\) for every wavelength at once, since the right-hand side is zero regardless of \(\lambda\). Every colour lands in exactly the same place there, which is why the central beam stays white while every other order fans each colour out to its own position.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">08</span><h2 class="section-title">The Takeaway</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Two experiments, and neither one needed a new equation to be handed down first. Moving the screen showed that \(D\) only rescales the picture, which is what finally justified writing the fringe separation \(s = \lambda D/d\) instead of leaving it as an angle nobody could measure directly. Swapping two slits for hundreds showed the same path-difference condition, \(d\sin\theta = n\lambda\), still governs everything, just with a \(d\) small enough to send colours to very different angles. The equation at the end of this lesson is a record of four classes of data, not a starting point.</p>
+        </section>
+
+      </div>
+
+      <aside class="sidebar-stack">
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Jump to a Lecture</h3>
+          <select id="lecture-jump" style="width:100%; font-family:var(--font-ui); font-size:13.5px; padding:8px 10px; border:1px solid var(--rule); border-radius:2px; background:var(--bg-raised); color:var(--text);">
+            <option value="">Select a lesson…</option>
+            <optgroup label="Unit 0">
+              <option value="lecture-1-si-units.html">L1 — SI Units &amp; Sig Figs</option>
+              <option value="lecture-2-vectors.html">L2 — Vector Algebra</option>
+            </optgroup>
+            <optgroup label="Unit A">
+              <option value="lecture-3-motion-sensor.html">L3 — Cart on a Ramp</option>
+              <option value="lecture-4-problem-solving-suvat.html">L4 — Problem-Solving with SUVAT</option>
+            </optgroup>
+            <optgroup label="Unit C">
+              <option value="lecture-5-ripple-tank.html">L5 — Ripple Tank</option>
+              <option value="lecture-7-refraction.html">L7 — Refraction, Part I</option>
+              <option value="lecture-8-tir.html">L8 — Total Internal Reflection</option>
+              <option value="lecture-9-single-slit-first-look.html">L9 — Single-Slit: First Look</option>
+              <option value="lecture-10-single-slit-quant.html">L10 — Aperture vs. Fringe Width</option>
+              <option value="lecture-11-double-slit.html">L11 — Double-Slit Diffraction</option>
+              <option value="lecture-12-lunar-eclipse.html">L12 — Lunar Eclipse</option>
+              <option value="lecture-13-screen-distance-and-gratings.html" selected>L13 — Screen Distance &amp; Gratings</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Equipment</h3>
+          <ul class="sidebar-list">
+            <li>One <a href="https://www.vernier.com/product/diffraction-apparatus/?srsltid=AfmBOoqCPrg-FRYzT0R8U3P6FBwjE3mMHwGTL-4jtJzHHByertdz6Cc1" target="_blank" rel="noreferrer">Vernier diffraction apparatus</a> with screen, moved to \(D=30\) and \(60\) cm</li>
+            <li><a href="https://www.vernier.com/product/graphical-analysis/?srsltid=AfmBOoqe3oZIl-BX07zwJYr7IqVTMOIFwC61SWe_7Ks40NmsucOQ_66I" target="_blank" rel="noreferrer">Graphical Analysis Pro</a></li>
+            <li>Diffraction gratings: 530 and 1,000 lines/mm</li>
+            <li>Laser pointer</li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Physics</h3>
+          <p>Bright fringes occur where path difference \(=n\lambda\), \(n\) any integer, positive, negative, or zero. Combined with the small-angle position rule \(y\approx D\theta\), consecutive fringes turn out to be a constant distance apart, the fringe separation the data booklet defines:</p>
+          <p>\[s = \frac{\lambda D}{d}\]</p>
+          <p>A grating is the same relationship with \(d=1/N\) for \(N\) lines per millimetre; every order except \(n=0\) spreads a range of wavelengths to a range of angles.</p>
+        </div>
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Field Guide</h3>
+          <ul class="sidebar-list">
+            <li><a href="lectures.html">← All lectures</a></li>
+            <li><a href="lecture-12-lunar-eclipse.html">← Previous: Lunar Eclipse</a></li>
+            <li><a href="lecture-11-double-slit.html">See also: Double-Slit Diffraction</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    document.getElementById('lecture-jump').addEventListener('change', (e) => {
+      if (e.target.value) window.location.href = e.target.value;
+    });
+  </script>
+  <script src="../js/layout.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refraction, Part I — Erick Loría Soto</title>
+  <meta name="description" content="Unit C, Lesson 7: reading a real refraction photograph, deriving Snell's law from the Huygens–Fresnel principle and wavefront geometry, why light actually slows in a medium, energy splitting between reflection and refraction, and why a prism splits white light into a spectrum.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Physics · The Physics Lectures at UWC · Unit C · Lesson 7</div>
+      <h1>Refraction, Part I</h1>
+      <p>One photograph, one beam of light, four things happening to it at once: reflecting, bending on the way in, traveling slower than it should look like it's traveling, and bending again on the way back out.</p>
+      <div style="display:flex; gap:6px; margin-top:4px;">
+        <span class="badge badge-purple">Lecture</span>
+        <span class="badge badge-green">Experiential Activity</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-grid">
+      <div class="page-main">
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">01</span><h2 class="section-title">Setup</h2></span></div>
+          <p class="section-desc" style="max-width:none;">The day starts with Light Box, Part II, where a mirror sends the beam straight back the way it came. I swap the mirror for a clear acrylic block and ask what happens once light can pass through the boundary instead of bouncing off it. Same light box, same protractor, same beam. The only thing that's changed is what the beam is hitting.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">02</span><h2 class="section-title">What the Photo Shows</h2></span></div>
+          <p class="section-desc" style="max-width:none;">This is the one image every group actually produces and argues about, so it's worth reading carefully before anything gets named. A single beam leaves the light box and hits the acrylic block sitting on a protractor. From that one beam, four separate things are visible at once:</p>
+          <figure style="margin:0 auto 16px; max-width:560px;">
+            <img src="../Images/lecture-refraction.jpg" alt="A beam of light from a ray box entering an acrylic block on a protractor, showing a faint reflected beam, the refracted beam bending inside the block, and the beam exiting the far side" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">One beam, entering, reflecting, bending, and exiting</figcaption>
+          </figure>
+          <div class="doc-index">
+            <div class="doc-row" style="cursor:default; grid-template-columns: 1fr;"><span class="doc-row-desc"><strong>Reflection:</strong> a faint second beam comes off the entry face at the same angle the incident beam arrived at. Most of the light isn't going there, but some of it is, every time, at every boundary.</span></div>
+            <div class="doc-row" style="cursor:default; grid-template-columns: 1fr;"><span class="doc-row-desc"><strong>Bending on entry:</strong> the beam that does enter the block changes direction right at the boundary, not gradually inside it. The bend happens at the surface.</span></div>
+            <div class="doc-row" style="cursor:default; grid-template-columns: 1fr;"><span class="doc-row-desc"><strong>The path not taken:</strong> the undeviated straight-line continuation of the original beam is visible faintly beneath the block, the path the light would have followed if the acrylic weren't there. Comparing it to where the beam actually goes is what makes the bend measurable instead of just visible.</span></div>
+            <div class="doc-row" style="cursor:default; grid-template-columns: 1fr;"><span class="doc-row-desc"><strong>Bending again on exit:</strong> the beam bends a second time leaving the far side of the block, back into air.</span></div>
+          </div>
+          <p class="section-desc" style="max-width:none; margin-top:16px;">The question I want students building their own answer to, not repeating one, is why the beam bends toward the normal on the way in and away from it on the way out, why some light reflects instead of all of it refracting, and why the amount of bending depends on the material. Everything else in this lesson is building the pieces of that answer.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">03</span><h2 class="section-title">Two Things Happen at Every Boundary</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Reflection and refraction aren't alternatives, they happen together, every time a wave meets a boundary between two media. \(\theta_1\) is the angle of incidence, \(\theta_\mathrm{r}\) the angle of reflection, \(\theta_2\) the angle of refraction, all measured from the normal, the line perpendicular to the boundary.</p>
+          <figure style="margin:0 auto 16px; max-width:380px;">
+            <img src="../Images/lecture-refraction-snell-diagram.png" alt="A ray hitting a boundary between medium n1 and denser medium n2, with the incident angle theta 1, reflected angle theta r, and refracted angle theta 2 all marked from the normal" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Reflection and refraction at one boundary</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">Reflection follows the same law it always does, \(\theta_1 = \theta_\mathrm{r}\), by the same Huygens construction used at the barrier in the ripple tank lesson. Refraction is the new piece: going into the denser medium, \(n_2 > n_1\), the beam bends toward the normal, \(\theta_2 < \theta_1\). None of that is arbitrary, and none of it needs to be memorized as a rule. The next section works out exactly why, using nothing but the geometry of a wavefront crossing the boundary, before Snell's law is even written down.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">04</span><h2 class="section-title">Why the Wavefront Turns</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Snell's law is a piece of algebra. The bend itself has a simpler explanation underneath it, one that only needs the shape of a wavefront crossing a boundary at an angle, no formula required yet.</p>
+          <p class="section-desc" style="max-width:none;">Picture a flat wavefront approaching the glass at an angle, so one edge of it reaches the boundary before the other edge does. Call the leading edge A and the trailing edge B. At the instant A crosses into the glass, B is still travelling through air. Glass makes light propagate more slowly than air does, so in the next stretch of time, A, now inside the glass, covers less distance than B, still moving through air at the faster speed. The two edges of what used to be one flat wavefront stop keeping pace with each other. The wavefront can't stay flat and parallel to where it started, it has to rotate, because one edge has fallen behind the other. Propagation direction is always perpendicular to the wavefront, so rotating the wavefront rotates the direction of travel along with it. That's the entire mechanism: the leading edge falls behind because it entered the slower medium first, the wavefront tilts because of that lag, and the ray bends because the ray is defined by which way the wavefront is facing.</p>
+          <div class="callout callout-green">
+            <span>Why Toward the Normal, and Not Away From It</span>
+            For the ray to bend away from the normal instead, the edge that reaches the glass first would have to get ahead of the edge still in air. But entering the glass is exactly what slows a wavefront down, not what speeds it up, so the leading edge can only fall behind, never pull ahead. The rotation can only go one way: toward the normal. Run the crossing in reverse, light leaving glass for air, and the same logic flips with it. The edge that reaches the air first speeds up and pulls ahead of the edge still lagging in the glass, so that rotation goes the other way, and the ray bends away from the normal instead. Which way the bend goes was never a separate rule to memorize, it falls straight out of which edge fell behind and which one got ahead.
+          </div>
+          <p class="section-desc" style="max-width:none;">Reflection is the same construction with one restriction added: both edges stay in the same medium the whole time, so neither one ever falls behind or gets ahead of the other. Same speed on both sides means the wavefront can only rotate by a symmetric amount, sending the incoming angle back out unchanged, \(\theta_1 = \theta_\mathrm{r}\). Refraction is what happens the moment that restriction is lifted and the two edges are allowed to be in different media, moving at different speeds, at the same time.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">05</span><h2 class="section-title">Deriving Snell's Law from the Wavefront</h2></span></div>
+          <p class="section-desc" style="max-width:none;">The previous section described the rotation in words. Making it precise just means putting the same picture into a right triangle. Apply the Huygens–Fresnel construction directly at the boundary. Two points on the same incident wavefront, A and A\('\), are shown a moment apart: A has already reached the boundary while A\('\) is still on its way, still in the first medium.</p>
+          <figure style="margin:0 auto 16px; max-width:620px;">
+            <img src="../Images/lecture-refraction-huygens-construction.png" alt="Huygens construction deriving Snell's law: wavefront points A and A prime in the incident medium, B and B prime in the refracted medium, with distances v1 delta t and v2 delta t marked as the legs of two right triangles sharing the hypotenuse AB prime" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Huygens' construction: the geometry behind Snell's law</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">In the time \(\Delta t\) it takes A\('\) to reach the boundary at B\('\), the wavelet launched from A has already been travelling into the second medium, covering a distance \(v_2\Delta t\) to reach point B. Both right triangles, AA\('\)B\('\) in the first medium and ABB\('\) in the second, share the same hypotenuse AB\('\). That shared hypotenuse is what ties the two angles together:</p>
+          <p class="section-desc" style="max-width:none; text-align:center;">\[\sin\theta_1 = \frac{v_1\Delta t}{AB'}, \qquad \sin\theta_2 = \frac{v_2\Delta t}{AB'}\]</p>
+          <p class="section-desc" style="max-width:none;">This is the same construction used already, in the ripple tank, to get the law of reflection, and the comparison is worth making directly. In reflection, both wavelets travel in the same medium, so \(v_1 = v_2\): same speed, same time interval \(\Delta t\), same distance travelled, which forces \(\theta_1 = \theta_\mathrm{r}\) exactly, because the two triangles are congruent. Refraction is the identical argument with one thing changed. The two wavelets are travelling in different media at different speeds, so in that same shared \(\Delta t\) they cover different distances, \(v_1\Delta t \ne v_2\Delta t\), which is the only reason the triangles stop being congruent and the angles stop matching. The time is the same on both sides of the boundary. The distance travelled is not, and that difference in distance, not a difference in time, is the entire argument for why refraction concludes the speed has changed while reflection concludes it hasn't.</p>
+          <p class="section-desc" style="max-width:none;">Dividing one by the other cancels \(\Delta t\) and \(AB'\) entirely, leaving a relationship between the two angles and the two speeds alone:</p>
+          <p class="section-desc" style="max-width:none; text-align:center;">\[\frac{\sin\theta_1}{\sin\theta_2} = \frac{v_1}{v_2} \qquad \Longleftrightarrow \qquad \frac{\sin\theta_1}{v_1} = \frac{\sin\theta_2}{v_2}\]</p>
+          <p class="section-desc" style="max-width:none;">That's Snell's law already, in the form the geometry actually produces it, before any mention of a refractive index. The refractive index is just a convenient relabeling, defined loosely as \(n = c/v\), the ratio of light's speed in vacuum to its speed in that medium. Substituting \(v = c/n\) into the relation above and cancelling \(c\) gives the familiar form:</p>
+          <p class="section-desc" style="max-width:none; text-align:center;">\[n_1\sin\theta_1 = n_2\sin\theta_2\]</p>
+          <p class="section-desc" style="max-width:none;">Written this way it looks like a statement about indices. It's really a statement about speed, which is the way IB physics itself prefers to treat it, and the way this derivation builds it: the bend exists because the wave travels at a different speed on each side of the boundary, and the angle is just how that speed change shows up geometrically in a wavefront that has to stay unbroken across the boundary.</p>
+          <p class="section-desc" style="max-width:none;">Frequency doesn't appear anywhere in that derivation, on purpose. The number of wavefronts arriving at the boundary per second has to equal the number leaving it per second, nothing is created or destroyed at the boundary, so \(f\) carries straight through unchanged. Speed changes, frequency doesn't, so \(v = f\lambda\) forces \(\lambda\) to change instead, exactly the same three-way relationship first built in the ripple tank, now doing the same job at a refracting boundary instead of a reflecting one.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">06</span><h2 class="section-title">Wave or Particle? A Historical Test</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Refraction wasn't always understood as a wave phenomenon. Christiaan Huygens laid out the wave picture in 1690, in his <em>Traité de la Lumière</em>, and in it he described the construction used in the previous section: every point on a wavefront can be treated as the source of its own secondary wavelets, and the wavefront a moment later is what you get by adding all of those wavelets together. Huygens imagined the wave as carried by the ether, a weightless medium believed to fill all of space, an idea that stayed part of physics for another two centuries, elaborated on by Charles Wheatstone and James Clerk Maxwell among others, before being abandoned entirely. The wave construction itself outlived the ether it was originally invented to describe.</p>
+          <p class="section-desc" style="max-width:none;">Isaac Newton preferred a different picture, that light is a stream of particles, and for over a century his corpuscular theory had the larger following. Both theories had to explain the same bend toward the normal, and they explained it in opposite ways. The wave picture says it directly: part of an angled wavefront reaches the denser medium first and starts moving slower there while the rest of the wavefront is still crossing the faster medium, and travelling at two different speeds along its own length is what turns it. The particle picture had no equivalent mechanism sitting inside it already. To make corpuscles bend toward the normal, Newton's followers proposed a force acting perpendicular to the boundary, pulling particles into the denser medium, a force with no independent evidence for it and no clear physical origin. Worse for that version of the theory, pulling particles in like that requires them to speed up entering the denser medium, the exact opposite of what the wave picture predicts.</p>
+          <p class="section-desc" style="max-width:none;">Faster or slower is a testable difference, it just took until 1850 for anyone to measure the speed of light inside a medium precisely enough to settle it. Léon Foucault measured light's speed in water directly and found it slower than in air, matching the wave prediction and contradicting the particle one outright. It's one of the cleaner examples in the history of physics of two competing models making opposite, testable predictions, with a single measurement deciding which one was describing something real.</p>
+          <p class="section-desc" style="max-width:none;">Huygens' construction had already done something else no stream of particles could easily explain, well before anyone could test the speed prediction. Two beams of light can cross paths and pass straight through each other, undisturbed, which is exactly what waves do when they meet, they superpose and separate again, but is not what a beam of colliding particles should do at all.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">07</span><h2 class="section-title">Why Light Actually Slows Down</h2></span></div>
+          <p class="section-desc" style="max-width:none;">\(n = c/v\) names what changes without saying why. The honest answer at this stage of the course is that light is a wave interacting with whatever it's moving through, and how strongly it interacts is what sets its propagation speed. Air barely interacts, so light crosses it at very nearly \(c\). Glass interacts more, so light propagates through it slower. That's already enough to explain every bend in this lesson: a change in propagation speed is a change in propagation speed, whatever produces it, and the wavefront turns because of it exactly as worked out in Section 04.</p>
+          <div class="callout callout-blue">
+            <span>A Closer Look: What the Glass Is Actually Doing</span>
+            A more complete picture exists, built on the electric charges inside the material rather than on the wave alone. Every atom in glass has electrons that respond to an electric field, and light's electric field is oscillating as it travels, so it drives those electrons into oscillation at the light's own frequency. Each oscillating electron radiates its own small electromagnetic field, and the wave that actually propagates through the glass is the combination of the original field and every one of these secondary fields together. Because the electrons don't respond to the driving field instantly, their combined contribution ends up shifted in phase relative to how the wave would have travelled through empty space, and that phase shift is what shows up, at the scale of the whole material, as a reduced propagation speed. Nothing inside the glass is ever moving faster than light in vacuum, and no individual bit of light is being paused and released again, the delay is a collective effect of the entire material continuously responding and re-radiating together.
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">08</span><h2 class="section-title">Exiting the Medium: The Same Rule, Reversed</h2></span></div>
+          <p class="section-desc" style="max-width:none;">The photograph's last bend, the beam leaving the acrylic and returning to air, is the same physics run backward. Going from a denser medium into a less dense one, \(n_1 > n_2\), the beam bends away from the normal instead of toward it, and its speed picks back up to whatever value that medium's electrons allow, in this case back to the speed light already had in air before it ever reached the block.</p>
+          <figure style="margin:0 auto 16px; max-width:380px;">
+            <img src="../Images/lecture-refraction-dense-to-rare.png" alt="A ray inside a denser medium n1 hitting the boundary with a less dense medium n2, with the refracted ray bending away from the normal, plus a partially reflected ray" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Leaving the denser medium: bending away from the normal</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">Nothing new needs deriving here. The same Huygens construction, the same \(\sin\theta_1/v_1 = \sin\theta_2/v_2\) relationship, and the same \(n_1\sin\theta_1 = n_2\sin\theta_2\) apply with the labels swapped, which is exactly why the beam in the photograph exits parallel to its original direction rather than at some unrelated angle: it crossed into a slower medium and back out of it, and the two bends undo each other's geometry.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">09</span><h2 class="section-title">Energy Splits Too</h2></span></div>
+          <p class="section-desc" style="max-width:none;">The faint reflected beam in the photograph isn't a measurement error or stray light. At every boundary between two media, the incident wave's energy genuinely splits: some fraction reflects, the rest refracts through. Exactly how much goes each way depends on the angle of incidence and the two refractive indices, but the split itself happens at every boundary, every time, whether the mismatch in speed is large or small.</p>
+          <p class="section-desc" style="max-width:none;">That splitting is what sets the intensity of each beam. A brighter refracted beam and a dimmer reflected one, or the reverse, is a direct read on how the incident energy divided at that specific boundary. Nothing about the light is lost between the incident beam and the two beams leaving the boundary, the energy is simply shared between a reflected path and a refracted one instead of travelling down a single path the way it did before the light arrived.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">10</span><h2 class="section-title">Why the Colors Split</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Send white light through a triangular prism instead of a flat block and the exit beam fans out into a full spectrum, red bending least, violet bending most, every color in between falling in order.</p>
+          <figure style="margin:0 auto 16px; max-width:520px;">
+            <img src="../Images/lecture-refraction-prism-spectrum.png" alt="White light entering a triangular prism and splitting into a continuous rainbow spectrum on exit, red bending least and violet bending most" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">White light separated into its spectrum by a prism</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">The key idea is easy to get backward. Different colors don't refract differently because they have different wavelengths. They refract differently because the glass responds differently to different frequencies, which means each color propagates through the same piece of glass at a slightly different speed. The wavelength difference inside the glass is a consequence of that speed difference, not the cause of the bending.</p>
+          <p class="section-desc" style="max-width:none;">Section 04's wavefront-rotation argument applies separately to every frequency in the beam. White light entering the glass obliquely carries every visible frequency across the same tilted wavefront at once, and each color's wavefront rotates by an amount that depends on how much that color slows down entering the glass. In ordinary glass, violet light slows down more than red light does, so violet's leading edge falls behind more sharply and its wavefront rotates further. Since propagation direction is perpendicular to the wavefront, violet ends up bent more toward the normal than red.</p>
+          <div class="callout callout-green">
+            <span>A Check Worth Asking</span>
+            If red and violet travelled at exactly the same speed inside the glass, would a prism separate them at all? It wouldn't. Both colors would undergo the identical wavefront rotation and leave the glass at the identical angle, still overlapping as white light. A prism only works because \(v_\text{red} \ne v_\text{violet}\) inside it. That's also the cleanest way to keep refraction and dispersion apart as ideas: refraction is a wave's speed changing at a boundary; dispersion is that speed change being different for different frequencies.
+          </div>
+          <p class="section-desc" style="max-width:none;">It's tempting to shorten all of this to "shorter wavelengths bend more," and for ordinary visible dispersion in glass that statement happens to give the right answer, but it names the wrong cause. The chain runs frequency first: a different frequency gets a different response from the glass, which sets a different speed, which is what actually decides how far the wavefront rotates. Wavelength inside the glass is downstream of that, fixed by \(\lambda = v/f\) once \(v\) is already decided, not the thing doing the deciding. Every color keeps its own frequency crossing the boundary, for the same reason any single frequency does: the oscillation has to stay continuous from one side of the interface to the other. What changes per color is speed, and wavelength follows from speed, not the other way around.</p>
+          <div class="callout callout-blue">
+            <span>A Closer Look: Why Glass Slows Violet More Than Red</span>
+            The electrons bound in glass can be modeled, approximately, as tiny objects each with their own natural resonant frequency, pushed by light's oscillating electric field at whatever frequency that light happens to have. How strongly an electron responds, and how delayed that response is, depends on how close the driving frequency sits to the electron's own resonance: closer to resonance means a stronger, more delayed response, and by the mechanism in Section 07, more delay means a lower propagation speed. For ordinary glass, the relevant resonances sit up in the ultraviolet, past the violet end of the visible spectrum. Violet, being the highest-frequency visible light, sits closer to those resonances than red does, so violet gets the stronger response and the lower speed. That is also why the refractive index isn't really one fixed number for a material, it's a function of frequency, \(n(\omega)\), and the largest \(n\) in the visible range belongs to violet.
+          </div>
+          <div class="callout callout-orange">
+            <span>A TOK Moment: One Model, Several Wavelengths</span>
+            \(n = c/v\) is the useful classroom definition, one number per material. It's also a simplification of something more complete. David Attwood's <em>Soft X-Rays and Extreme Ultraviolet Radiation</em> writes the refractive index as an explicit function \(n(\omega)\), with resonances at specific frequencies and regions where \(n\) can even drop below 1. The single-number \(n = c/v\) used in this lesson is the right model for what a prism does to visible light. It stops being the right model once the question moves to a different part of the spectrum, and the more general \(n(\omega)\) picture is what explains why: the same physical mechanism, electrons responding to a driving frequency, produces a different answer depending on how close that frequency sits to resonance.
+            <div style="margin-top:12px;">
+              <img src="../Images/lecture-refraction-attwood.jpg" alt="Excerpt from Attwood's Soft X-Rays and Extreme Ultraviolet Radiation showing the frequency-dependent refractive index n of omega, with resonances in the infrared, ultraviolet, and x-ray regions" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">11</span><h2 class="section-title">The Takeaway</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Every piece of this lesson was already sitting in the ripple tank. The source still fixes the frequency. The medium still fixes the speed. Changing the speed still forces the wavelength to change to keep \(v = f\lambda\) true, and the wavefront still has to stay unbroken across a boundary, which is what turns a speed change into a bend. Refraction isn't a new topic bolted onto waves, it's the same wavefront construction crossing into a new medium instead of bouncing off a barrier.</p>
+          <p class="section-desc" style="max-width:none;">The explanation for why the angles turn toward or away from the normal was never handed to the class as a rule. It was built, from the same Huygens construction used on the ripple tank, checked against a real photograph of a real beam bending exactly where the geometry says it should, both entering the block and leaving it. That's the same shape every lesson in this course has followed: propose the mechanism, then find it confirmed in front of you, in the room, before being asked to trust it.</p>
+        </section>
+
+      </div>
+
+      <aside class="sidebar-stack">
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Jump to a Lecture</h3>
+          <select id="lecture-jump" style="width:100%; font-family:var(--font-ui); font-size:13.5px; padding:8px 10px; border:1px solid var(--rule); border-radius:2px; background:var(--bg-raised); color:var(--text);">
+            <option value="">Select a lesson…</option>
+            <optgroup label="Unit 0">
+              <option value="lecture-1-si-units.html">L1 — SI Units &amp; Sig Figs</option>
+              <option value="lecture-2-vectors.html">L2 — Vector Algebra</option>
+            </optgroup>
+            <optgroup label="Unit A">
+              <option value="lecture-3-motion-sensor.html">L3 — Cart on a Ramp</option>
+              <option value="lecture-4-problem-solving-suvat.html">L4 — Problem-Solving with SUVAT</option>
+            </optgroup>
+            <optgroup label="Unit C">
+              <option value="lecture-5-ripple-tank.html">L5 — Ripple Tank</option>
+              <option value="lecture-7-refraction.html" selected>L7 — Refraction, Part I</option>
+              <option value="lecture-8-tir.html">L8 — Total Internal Reflection</option>
+              <option value="lecture-9-single-slit-first-look.html">L9 — Single-Slit: First Look</option>
+              <option value="lecture-10-single-slit-quant.html">L10 — Aperture vs. Fringe Width</option>
+              <option value="lecture-11-double-slit.html">L11 — Double-Slit Diffraction</option>
+              <option value="lecture-12-lunar-eclipse.html">L12 — Lunar Eclipse</option>
+              <option value="lecture-13-screen-distance-and-gratings.html">L13 — Screen Distance &amp; Gratings</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Equipment</h3>
+          <ul class="sidebar-list">
+            <li><a href="https://www.carolina.com/physical-science-light-and-optics/hodson-light-box-and-optical-set/755160.pr?srsltid=AfmBOoqxT-_Zgk2vcLXkD8vEq9YqsZXXT3J2AxZVt7UM9tR2vtNqYz7Z" target="_blank" rel="noreferrer">Light Box &amp; Optical Set</a></li>
+            <li>Clear acrylic block, protractor</li>
+            <li>Triangular prism</li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Physics</h3>
+          <p>At a boundary, part of a wave reflects (\(\theta_1=\theta_\mathrm{r}\)) and part refracts. The Huygens construction gives \(\sin\theta_1/v_1 = \sin\theta_2/v_2\); with \(n=c/v\), this is \(n_1\sin\theta_1 = n_2\sin\theta_2\). \(f\) is fixed by the source and unchanged by the medium; \(v=f\lambda\) forces \(\lambda\) to change with \(v\). \(n\) depends on frequency, \(n(\omega)\), which is why a prism disperses white light into a spectrum.</p>
+        </div>
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Sources</h3>
+          <ul class="sidebar-list">
+            <li>Halliday, Resnick &amp; Walker, <a href="https://www.wiley.com/en-us/shop/general-physics/fundamentals-of-physics-extended-12th-edition-p-9781119773511" target="_blank" rel="noreferrer">Fundamentals of Physics</a>, for the full derivation and worked problems</li>
+            <li>Attwood, <em>Soft X-Rays and Extreme Ultraviolet Radiation</em>, for \(n(\omega)\)</li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Field Guide</h3>
+          <ul class="sidebar-list">
+            <li><a href="lectures.html">← All lectures</a></li>
+            <li><a href="lecture-6-light-box.html">← Previous: Light Box</a></li>
+            <li><a href="lecture-8-tir.html">Next: Total Internal Reflection →</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    document.getElementById('lecture-jump').addEventListener('change', (e) => {
+      if (e.target.value) window.location.href = e.target.value;
+    });
+  </script>
+  <script src="../js/layout.js"></script>
+</body>
+</html>
