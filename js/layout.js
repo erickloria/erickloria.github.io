@@ -112,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
       <div class="footer-legal">
         <strong>Copyright ${currentYear} Erick Loría Soto.</strong> All original site content, writing, and design are my own unless otherwise credited. Built with HTML, CSS, JavaScript, and GitHub Pages.
+        <br>Many of the physics diagrams on this site are adapted or modified from templates by Izaak Neutelings and other contributors at <a href="https://tikz.net" target="_blank" rel="noopener">tikz.net</a>, used and adapted under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> license.
       </div>
     </div>
   </footer>`;

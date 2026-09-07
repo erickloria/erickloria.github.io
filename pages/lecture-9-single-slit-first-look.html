@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Single-Slit Diffraction: First Look — Erick Loría Soto</title>
-  <meta name="description" content="Unit C, Lesson 8: the vocabulary of a single-slit diffraction pattern, the specific criterion for diffraction to be noticeable, deriving the positions of the dark fringes from path difference, and exactly what the IB data booklet does and doesn't give you.">
+  <meta name="description" content="Unit C, Lesson 9: the vocabulary of a single-slit diffraction pattern, the specific criterion for diffraction to be noticeable, deriving the positions of the dark fringes from path difference, and exactly what the IB data booklet does and doesn't give you.">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <div class="hero">
     <div class="hero-inner">
-      <div class="hero-eyebrow">Physics · The Physics Lectures at UWC · Unit C · Lesson 8</div>
+      <div class="hero-eyebrow">Physics · The Physics Lectures at UWC · Unit C · Lesson 9</div>
       <h1>Single-Slit Diffraction: First Look</h1>
       <p>A student's own hair strand in a green laser beam, a prediction drawn before anyone sees the real pattern, and then the red laser and a slit narrow enough to build the explanation from scratch.</p>
       <div style="display:flex; gap:6px; margin-top:4px;">
@@ -37,7 +37,7 @@
             <img src="../Images/lecture-single-slit-photo.jpg" alt="Real photograph of a red laser single-slit diffraction pattern: a bright central maximum with dimmer secondary maxima fading out on either side, separated by dark minima" style="width:100%; display:block; border:1px solid var(--rule-soft);">
             <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">The actual pattern, red laser through a single slit</figcaption>
           </figure>
-          <p class="section-desc" style="max-width:none;">Every bright or dark band is a <strong>fringe</strong>, and each one gets labelled by an integer \(m\): the dark minima sit at \(m = \pm 1, \pm 2, \pm 3, \ldots\) counting outward from the centre, and the secondary maxima sit roughly between consecutive minima. \(m\) isn't a measurement, it's a count, which minimum or maximum you're pointing at, first, second, third out from the centre, on whichever side.</p>
+          <p class="section-desc" style="max-width:none;">Every bright or dark band is a <strong>fringe</strong>, and each one gets labelled by an integer \(n\): the dark minima sit at \(n = \pm 1, \pm 2, \pm 3, \ldots\), every non-zero integer, negative counting outward on one side of the centre and positive on the other, and the secondary maxima sit roughly between consecutive minima. \(n\) isn't a measurement, it's a count, which minimum or maximum you're pointing at, first, second, third out from the centre, on whichever side.</p>
           <figure style="margin:0 auto 16px; max-width:560px;">
             <img src="../Images/lecture-single-slit-keynote.png" alt="Slide from the classroom presentation showing the diffraction pattern with the angular width of the central maximum marked as Delta theta, and a note that the central maximum is twice as wide as a secondary maximum, with intensity proportional to the square of the amplitude" style="width:100%; display:block; border:1px solid var(--rule-soft);">
             <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">How this pattern gets presented on the board</figcaption>
@@ -68,7 +68,7 @@
           <div class="section-head"><span><span class="section-num">04</span><h2 class="section-title">Building the Explanation from Wavefronts</h2></span></div>
           <p class="section-desc" style="max-width:none;">The same Huygens–Fresnel construction used at the ripple tank's barrier and at every refracting boundary since applies here without changing at all. Every point across the open slit acts as a source of its own secondary wavelets, spreading outward from that point in every direction. Where the slit is wide compared to \(\lambda\), those wavelets from across the opening mostly reinforce each other straight ahead and the result looks like an almost undisturbed plane wave, the large-aperture picture above. Where the slit is narrow enough that \(b \sim \lambda\), there are too few independent source points across the opening for that straight-ahead reinforcement to dominate, and the wavelets spread out nearly as a single circular wave instead, the small-aperture picture. The pattern on the wall is what happens when all of those wavelets, launched from every point across the slit, arrive back together at a screen and interfere.</p>
           <figure style="margin:0 auto 16px; max-width:680px;">
-            <img src="../Images/lecture-single-slit-pattern-diagram.png" alt="A single narrow slit generating spreading wavelets from Huygens' principle, projected onto a screen showing alternating bright and dark fringes, with an intensity graph on the right labeled by fringe order m equals plus and minus 1 and 2" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <img src="../Images/lecture-single-slit-pattern-diagram.png" alt="A single narrow slit generating spreading wavelets from Huygens' principle, projected onto a screen showing alternating bright and dark fringes, with an intensity graph on the right labeled by fringe order n equals plus and minus 1 and 2" style="width:100%; display:block; border:1px solid var(--rule-soft);">
             <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Wavelets from the slit, the fringe pattern, and the intensity graph, side by side</figcaption>
           </figure>
           <p class="section-desc" style="max-width:none;">That last panel is worth sitting with. The dark bands on the wall are exactly the zeros of the red intensity curve, and the bright bands are its peaks, the same pattern, drawn two different ways. Reading one off the other is the whole point of learning to read this graph: a wide flat hump in the middle, decaying, narrower humps further out, with true zero intensity in between every one of them.</p>
@@ -95,18 +95,18 @@
           <p class="section-desc" style="max-width:none;">Pair up the slit this way: the point at the very top with the point at the exact centre, the point just below the top with the point just below the centre, and so on, every point in the top half matched with the point exactly \(b/2\) below it in the bottom half. Every one of these pairs has the identical path difference, \(\tfrac{b}{2}\sin\theta\), by the geometry above.</p>
           <p class="section-desc" style="max-width:none;">If that shared path difference happens to equal exactly half a wavelength, every pair arrives at the screen perfectly out of step, crest meeting trough, and cancels. Since this holds for every pair across the whole slit simultaneously, the entire slit cancels itself out at that angle, producing the first dark fringe:</p>
           <p class="section-desc" style="max-width:none; text-align:center;">\[\frac{b}{2}\sin\theta = \frac{\lambda}{2} \qquad \Longrightarrow \qquad b\sin\theta = \lambda\]</p>
-          <p class="section-desc" style="max-width:none;">The same pairing argument, applied to a slit divided into four equal quarters instead of two halves, produces a second dark fringe when \(b\sin\theta = 2\lambda\), and dividing into \(2m\) equal strips gives the general condition for every dark fringe on the pattern:</p>
-          <p class="section-desc" style="max-width:none; text-align:center;">\[b\sin\theta_m = m\lambda, \qquad m = \pm 1, \pm 2, \pm 3, \ldots\]</p>
-          <p class="section-desc" style="max-width:none;">That's the \(m\) from the vocabulary in Section 02, now attached to an actual angle. \(m\) never equals zero here, zero path difference is the centre of the pattern, the brightest point on the whole screen, not a dark one. Converting an angle to a position on the wall uses the same small-angle step again, \(\sin\theta_m \approx \theta_m \approx y_m/D\) for a screen a distance \(D\) away, which is what turns this angular condition into an actual distance you can mark with a ruler.</p>
+          <p class="section-desc" style="max-width:none;">The same pairing argument, applied to a slit divided into four equal quarters instead of two halves, produces a second dark fringe when \(b\sin\theta = 2\lambda\), and dividing into \(2n\) equal strips gives the general condition for every dark fringe on the pattern:</p>
+          <p class="section-desc" style="max-width:none; text-align:center;">\[b\sin\theta_n = n\lambda, \qquad n = \pm 1, \pm 2, \pm 3, \ldots\]</p>
+          <p class="section-desc" style="max-width:none;">That's the \(n\) from the vocabulary in Section 02, now attached to an actual angle: always a non-zero integer, negative on one side of the centre and positive on the other. \(n\) never equals zero here, zero path difference is the centre of the pattern, the brightest point on the whole screen, not a dark one. Converting an angle to a position on the wall uses the same small-angle step again, \(\sin\theta_n \approx \theta_n \approx y_n/D\) for a screen a distance \(D\) away, which is what turns this angular condition into an actual distance you can mark with a ruler.</p>
           <div class="callout callout-green">
             <span>What's Actually in the Data Booklet</span>
-            The IB data booklet gives exactly one single-slit equation, and it's narrower than it looks: \(\theta = \lambda/b\). That's the general formula above, \(b\sin\theta_m = m\lambda\), with two things already done to it: the small-angle approximation, \(\sin\theta \approx \theta\), and \(m\) fixed at 1. It is specifically the angle to the <em>first</em> minimum, not a general formula for any fringe. If a question asks about the second or third minimum instead, the booklet doesn't have a line for that, the general relationship, \(b\sin\theta_m = m\lambda\), is what has to be remembered, or rebuilt from the pairing argument above, to get there. Anything beyond that single line, the position form \(y_m \approx m\lambda D/b\), the central maximum's width being twice a secondary maximum's, all of it either needs to be memorized separately or derived on the page from \(b\sin\theta_m = m\lambda\) and the small-angle approximation, the same two ingredients used to build the booklet's own line in the first place.
+            The IB data booklet gives exactly one single-slit equation, and it's narrower than it looks: \(\theta = \lambda/b\). That's the general formula above, \(b\sin\theta_n = n\lambda\), with two things already done to it: the small-angle approximation, \(\sin\theta \approx \theta\), and \(n\) fixed at 1. It is specifically the angle to the <em>first</em> minimum, not a general formula for any fringe. If a question asks about the second or third minimum instead, the booklet doesn't have a line for that, the general relationship, \(b\sin\theta_n = n\lambda\), is what has to be remembered, or rebuilt from the pairing argument above, to get there. Anything beyond that single line, the position form \(y_n \approx n\lambda D/b\), the central maximum's width being twice a secondary maximum's, all of it either needs to be memorized separately or derived on the page from \(b\sin\theta_n = n\lambda\) and the small-angle approximation, the same two ingredients used to build the booklet's own line in the first place.
           </div>
         </section>
 
         <section class="section">
           <div class="section-head"><span><span class="section-num">07</span><h2 class="section-title">The Takeaway</h2></span></div>
-          <p class="section-desc" style="max-width:none;">Nobody was handed \(b\sin\theta_m = m\lambda\) before seeing the pattern it describes. A prediction came first, wrong in an interesting way. The actual pattern came next, forcing a vocabulary onto something that didn't have one yet. Only then did the explanation get built, wavefront by wavefront, pair by pair, out of the same Huygens construction this course has used since the ripple tank. The formula at the end is a compressed record of that build, not a rule that arrived from nowhere, and it's more complete than the one line the data booklet actually gives.</p>
+          <p class="section-desc" style="max-width:none;">Nobody was handed \(b\sin\theta_n = n\lambda\) before seeing the pattern it describes. A prediction came first, wrong in an interesting way. The actual pattern came next, forcing a vocabulary onto something that didn't have one yet. Only then did the explanation get built, wavefront by wavefront, pair by pair, out of the same Huygens construction this course has used since the ripple tank. The formula at the end is a compressed record of that build, not a rule that arrived from nowhere, and it's more complete than the one line the data booklet actually gives.</p>
           <p class="section-desc" style="max-width:none;">A second observation gets explained the same way, from something students already know rather than something new. Move the screen further from the slit and the whole pattern dims, not just at the edges but everywhere, the central maximum included. That's the same inverse square law used everywhere else light or sound spreads from a source, intensity falling as \(1/D^2\) as the same total energy spreads across a larger area. Nothing about diffraction changes that; the fringe pattern just rides on top of an overall brightness that was already going to fall off with distance.</p>
           <p class="section-desc" style="max-width:none;">This lesson stops at the shape of the explanation on purpose. Every measurement here used one slit at one width. The next lesson changes that width and asks what happens to the pattern when it does, which is a question this lesson has already supplied every tool needed to answer.</p>
         </section>
@@ -126,14 +126,14 @@
               <option value="lecture-3-motion-sensor.html">L3 — Cart on a Ramp</option>
             </optgroup>
             <optgroup label="Unit C">
-              <option value="lecture-4-ripple-tank.html">L4 — Ripple Tank</option>
-              <option value="lecture-6-refraction.html">L6 — Refraction, Part I</option>
-              <option value="lecture-7-tir.html">L7 — Total Internal Reflection</option>
-              <option value="lecture-8-single-slit-first-look.html" selected>L8 — Single-Slit: First Look</option>
-              <option value="lecture-9-single-slit-quant.html">L9 — Aperture vs. Fringe Width</option>
-              <option value="lecture-10-double-slit.html">L10 — Double-Slit Diffraction</option>
-              <option value="lecture-11-lunar-eclipse.html">L11 — Lunar Eclipse</option>
-              <option value="lecture-12-screen-distance-and-gratings.html">L12 — Screen Distance &amp; Gratings</option>
+              <option value="lecture-5-ripple-tank.html">L5 — Ripple Tank</option>
+              <option value="lecture-7-refraction.html">L7 — Refraction, Part I</option>
+              <option value="lecture-8-tir.html">L8 — Total Internal Reflection</option>
+              <option value="lecture-9-single-slit-first-look.html" selected>L9 — Single-Slit: First Look</option>
+              <option value="lecture-10-single-slit-quant.html">L10 — Aperture vs. Fringe Width</option>
+              <option value="lecture-11-double-slit.html">L11 — Double-Slit Diffraction</option>
+              <option value="lecture-12-lunar-eclipse.html">L12 — Lunar Eclipse</option>
+              <option value="lecture-13-screen-distance-and-gratings.html">L13 — Screen Distance &amp; Gratings</option>
             </optgroup>
           </select>
         </div>
@@ -149,15 +149,15 @@
         <div class="sidebar-block">
           <h3 class="sidebar-title">Physics</h3>
           <p>Diffraction is noticeable when the opening is comparable to the wavelength, \(b \sim \lambda\). By Huygens' principle, every point across the slit radiates a wavelet; path difference between wavelets from across the slit, \(\tfrac{b}{2}\sin\theta\) in the small-angle limit, determines constructive or destructive interference. Dark fringes occur at</p>
-          <p>\[b\sin\theta_m = m\lambda, \quad m = \pm1, \pm2, \ldots\]</p>
-          <p>The data booklet gives only the \(m=1\) case, small-angle approximated: \(\theta = \lambda/b\).</p>
+          <p>\[b\sin\theta_n = n\lambda, \quad n = \pm1, \pm2, \ldots\]</p>
+          <p>The data booklet gives only the \(n=1\) case, small-angle approximated: \(\theta = \lambda/b\).</p>
         </div>
         <div class="sidebar-block">
           <h3 class="sidebar-title">Field Guide</h3>
           <ul class="sidebar-list">
             <li><a href="lectures.html">← All lectures</a></li>
-            <li><a href="lecture-7-tir.html">← Previous: Total Internal Reflection</a></li>
-            <li><a href="lecture-9-single-slit-quant.html">Next: Aperture vs. Fringe Width →</a></li>
+            <li><a href="lecture-8-tir.html">← Previous: Total Internal Reflection</a></li>
+            <li><a href="lecture-10-single-slit-quant.html">Next: Aperture vs. Fringe Width →</a></li>
           </ul>
         </div>
       </aside>
