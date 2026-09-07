@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problem-Solving with the Equations of Motion — Erick Loría Soto</title>
+  <meta name="description" content="Unit A, Lesson 4: putting the SUVAT equations from Lesson 3 into practice on textbook problems, the method I expect for full marks — frame of reference, explicit vs. implicit information, choosing an equation, and rounding to the correct significant figures.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Physics · The Physics Lectures at UWC · Unit A · Lesson 4</div>
+      <h1>Problem-Solving with the Equations of Motion</h1>
+      <p>Lesson 3 built the equations of motion from real data. This class is about putting them to work on ordinary textbook problems, the way I actually expect an answer to be laid out.</p>
+      <div style="display:flex; gap:6px; margin-top:4px;">
+        <span class="badge badge-purple">Lecture</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-grid">
+      <div class="page-main">
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">01</span><h2 class="section-title">Setup</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Deriving the SUVAT equations in Lesson 3 was the easy part, in a sense, they came straight out of a curve fit on real data. Using them correctly on a textbook question is a different skill entirely, and it's the one exam questions actually test. This class works through a set of standard exercises from the textbook, but the point was never the specific numbers in any one problem. It was the method: how to read a question for what it actually tells you, how to notice what it doesn't say out loud but still expects you to know, and how to write an answer that shows that reasoning instead of just a final number.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">02</span><h2 class="section-title">The Method</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Every one of these problems gets worked the same way, in the same order, regardless of what it's actually asking about:</p>
+          <div class="doc-index">
+            <div class="doc-row" style="cursor:default; grid-template-columns: 40px 1fr;">
+              <span class="doc-row-code">1</span>
+              <span class="doc-row-desc"><strong>Draw a diagram and choose a frame of reference.</strong> Pick an origin and a positive direction before writing down a single number. Every sign in the rest of the solution depends on that one choice, made once, at the start.</span>
+            </div>
+            <div class="doc-row" style="cursor:default; grid-template-columns: 40px 1fr;">
+              <span class="doc-row-code">2</span>
+              <span class="doc-row-desc"><strong>List what you know, explicit and implicit.</strong> Explicit information is whatever the question states directly, a speed, a time, a distance. Implicit information is whatever the physics of the situation tells you without the question saying it in so many words, that something "comes to rest" means \(v=0\), that a reaction time before braking means \(a=0\) for that interval. Write both down, and note any assumption or piece of theory you're leaning on.</span>
+            </div>
+            <div class="doc-row" style="cursor:default; grid-template-columns: 40px 1fr;">
+              <span class="doc-row-code">3</span>
+              <span class="doc-row-desc"><strong>Choose the equation.</strong> Out of the four SUVAT equations, pick the one that connects the quantities you have to the one you're actually being asked for, without needing anything you don't have.</span>
+            </div>
+            <div class="doc-row" style="cursor:default; grid-template-columns: 40px 1fr;">
+              <span class="doc-row-code">4</span>
+              <span class="doc-row-desc"><strong>Solve, one of two ways.</strong> Either substitute every known value directly into the equation and let the calculator's solver find the unknown numerically, or rearrange the equation algebraically for the target variable first and then substitute once, for a single clean calculation. Both routes are legitimate; the second one is usually faster to check by hand.</span>
+            </div>
+            <div class="doc-row" style="cursor:default; grid-template-columns: 40px 1fr;">
+              <span class="doc-row-code">5</span>
+              <span class="doc-row-desc"><strong>Round to the correct significant figures.</strong> The final answer can only be as precise as the least precise value the question gave you. Find the smallest number of significant figures among the given quantities, and round the answer to match, not to whatever the calculator happens to display.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">03</span><h2 class="section-title">Worked Example: Runway Take-off</h2></span></div>
+          <p class="section-desc" style="max-width:none;">A plane starts from rest and accelerates uniformly down a runway, covering 450 m before it takes off, 15.0 s after it began moving. Find its take-off velocity.</p>
+          <figure style="margin:0 auto 16px; max-width:520px;">
+            <img src="../Images/lecture-suvat-method-plane-diagram.png" alt="Frame of reference diagram: a plane at rest at the origin, positive x direction to the right, acceleration a pointing right, with the 450 metre runway distance marked from start to take-off" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Step 1: origin at the start, positive direction down the runway</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">The explicit information is the runway distance and the time. "Starts from rest" is implicit for \(u\), the question never writes "\(u=0\)" in those words. The acceleration is never given and never asked for, so it doesn't belong in the list of knowns at all, it's simply absent from this problem:</p>
+          <div class="markdown-content" style="display:block; overflow-x:auto; margin-bottom:16px;">
+            <table class="zebra-table" style="table-layout:fixed; width:100%; max-width:360px;">
+              <thead><tr><th style="width:30%;">Quantity</th><th style="width:35%;">Value</th><th style="width:35%;">Source</th></tr></thead>
+              <tbody>
+                <tr><td>\(s\)</td><td>450 m</td><td>explicit</td></tr>
+                <tr><td>\(u\)</td><td>0</td><td>implicit — "from rest"</td></tr>
+                <tr><td>\(v\)</td><td>?</td><td>target</td></tr>
+                <tr><td>\(a\)</td><td>—</td><td>not needed</td></tr>
+                <tr><td>\(t\)</td><td>15.0 s</td><td>explicit</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="section-desc" style="max-width:none;">With \(s\), \(u\), \(t\) known and \(v\) wanted, the equation that uses exactly those four quantities and nothing else is \(s = \tfrac{(u+v)}{2}t\). Both solving routes reach the same place:</p>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px; margin-bottom:8px;">
+            <div>
+              <p class="section-desc" style="max-width:none; font-family:var(--font-mono); font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em; margin-bottom:4px;">Route A — substitute, then solve</p>
+              <p class="section-desc" style="max-width:none; text-align:center;">\[450 = \frac{(0+v)}{2}(15.0)\]</p>
+              <p class="section-desc" style="max-width:none; text-align:center;">\[v = 60\ \mathrm{m\,s^{-1}}\ \text{(solver)}\]</p>
+            </div>
+            <div>
+              <p class="section-desc" style="max-width:none; font-family:var(--font-mono); font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em; margin-bottom:4px;">Route B — rearrange, then substitute once</p>
+              <p class="section-desc" style="max-width:none; text-align:center;">\[v = \frac{2s}{t} - u = \frac{2(450)}{15.0} - 0 = 60\]</p>
+            </div>
+          </div>
+          <p class="section-desc" style="max-width:none;">The two given values are 450 m and 15.0 s. Read strictly, 450 m carries 2 significant figures and 15.0 s carries 3, so the answer is limited to the smaller of the two:</p>
+          <p class="section-desc" style="max-width:none; text-align:center;">\[v = 6.0 \times 10^{1}\ \mathrm{m\,s^{-1}}\]</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">04</span><h2 class="section-title">Worked Example: Emergency Stop</h2></span></div>
+          <p class="section-desc" style="max-width:none;">A car travels at 40.0 m/s. The driver sees an emergency ahead and, 0.50 s later, brakes with a deceleration of 4.0 m/s². Find the total distance travelled before the car stops.</p>
+          <figure style="margin:0 auto 16px; max-width:600px;">
+            <img src="../Images/lecture-suvat-method-car-diagram.png" alt="Two-phase frame of reference diagram: the car travelling at 40.0 metres per second during a reaction phase with zero acceleration, then a dashed line marking where brakes are applied, followed by a braking phase with constant deceleration ending where the car stops at v equals zero" style="width:100%; display:block; border:1px solid var(--rule-soft);">
+            <figcaption style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:6px; text-align:center; text-transform:uppercase; letter-spacing:0.04em;">Step 1: two separate phases need two separate frames of reference in time</figcaption>
+          </figure>
+          <p class="section-desc" style="max-width:none;">This one has more implicit information than explicit, which is exactly why it's worth doing slowly. The 0.50 s reaction time is a phase where the driver hasn't touched the brakes yet, so however fast the car was going stays constant, \(a=0\) for that interval, even though the question never says so. "The car stops" fixes \(v=0\) for the second phase, another value the question implies rather than states. And the velocity at the start of the braking phase is whatever the car was still doing at the end of the reaction phase, carried over, not re-given:</p>
+          <div class="markdown-content" style="display:block; overflow-x:auto; margin-bottom:16px;">
+            <table class="zebra-table" style="table-layout:fixed; width:100%;">
+              <thead><tr><th style="width:22%;">Quantity</th><th style="width:26%;">Phase 1 (reaction)</th><th style="width:26%;">Phase 2 (braking)</th><th style="width:26%;">Source</th></tr></thead>
+              <tbody>
+                <tr><td>\(u\)</td><td>40.0 m/s</td><td>40.0 m/s</td><td>explicit, then carried over</td></tr>
+                <tr><td>\(v\)</td><td>40.0 m/s</td><td>0</td><td>implicit — "stops"</td></tr>
+                <tr><td>\(a\)</td><td>0</td><td>−4.0 m/s²</td><td>implicit, then explicit</td></tr>
+                <tr><td>\(t\)</td><td>0.50 s</td><td>—</td><td>explicit</td></tr>
+                <tr><td>\(s\)</td><td>?</td><td>?</td><td>target (each, then summed)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="section-desc" style="max-width:none;">Phase 1 has \(u\) and \(t\) with constant velocity, so \(s_1 = ut\). Phase 2 has \(u\), \(v\), and \(a\), with no time given, so \(v^2 = u^2 + 2as_2\) is the one that avoids needing \(t\) at all:</p>
+          <p class="section-desc" style="max-width:none; text-align:center;">\[s_1 = (40.0)(0.50) = 20\ \mathrm{m}\]</p>
+          <p class="section-desc" style="max-width:none; text-align:center;">\[0 = (40.0)^2 + 2(-4.0)s_2 \quad \Longrightarrow \quad s_2 = 2.0\times10^{2}\ \mathrm{m}\]</p>
+          <p class="section-desc" style="max-width:none;">The total distance is the sum of both phases, \(s_1+s_2\). The least precise given values, 0.50 s and 4.0 m/s², both carry 2 significant figures, so the final answer is rounded to match:</p>
+          <p class="section-desc" style="max-width:none; text-align:center;">\[s = 20 + 2.0\times10^{2} = 2.2\times10^{2}\ \mathrm{m}\]</p>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><span><span class="section-num">05</span><h2 class="section-title">The Takeaway</h2></span></div>
+          <p class="section-desc" style="max-width:none;">Neither of these problems asked for anything beyond the four equations Lesson 3 already built. What actually separates a full-marks answer from a partial one is almost never the arithmetic, it's whether the implicit information got written down at all. "The car stops" and "starts from rest" are not the equations, they're the translation step before the equations, and it's the step most answers skip straight past. Writing it down explicitly, a frame of reference, then every known value labelled by where it actually came from, is what makes an answer checkable, by an exam marker or by the student rereading their own work a week later.</p>
+        </section>
+
+      </div>
+
+      <aside class="sidebar-stack">
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Jump to a Lecture</h3>
+          <select id="lecture-jump" style="width:100%; font-family:var(--font-ui); font-size:13.5px; padding:8px 10px; border:1px solid var(--rule); border-radius:2px; background:var(--bg-raised); color:var(--text);">
+            <option value="">Select a lesson…</option>
+            <optgroup label="Unit 0">
+              <option value="lecture-1-si-units.html">L1 — SI Units &amp; Sig Figs</option>
+              <option value="lecture-2-vectors.html">L2 — Vector Algebra</option>
+            </optgroup>
+            <optgroup label="Unit A">
+              <option value="lecture-3-motion-sensor.html">L3 — Cart on a Ramp</option>
+              <option value="lecture-4-problem-solving-suvat.html" selected>L4 — Problem-Solving with SUVAT</option>
+            </optgroup>
+            <optgroup label="Unit C">
+              <option value="lecture-5-ripple-tank.html">L5 — Ripple Tank</option>
+              <option value="lecture-7-refraction.html">L7 — Refraction, Part I</option>
+              <option value="lecture-8-tir.html">L8 — Total Internal Reflection</option>
+              <option value="lecture-9-single-slit-first-look.html">L9 — Single-Slit: First Look</option>
+              <option value="lecture-10-single-slit-quant.html">L10 — Aperture vs. Fringe Width</option>
+              <option value="lecture-11-double-slit.html">L11 — Double-Slit Diffraction</option>
+              <option value="lecture-12-lunar-eclipse.html">L12 — Lunar Eclipse</option>
+              <option value="lecture-13-screen-distance-and-gratings.html">L13 — Screen Distance &amp; Gratings</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Equipment</h3>
+          <ul class="sidebar-list">
+            <li>Textbook exercises on the equations of motion</li>
+            <li>Whiteboard, worked in full for every step</li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Physics</h3>
+          <p>The four equations of motion, from Lesson 3:</p>
+          <p>\[v = u+at, \quad s = ut+\tfrac{1}{2}at^2,\]</p>
+          <p>\[v^2 = u^2+2as, \quad s = \tfrac{(u+v)}{2}t.\]</p>
+          <p>Choose the one equation that connects your known quantities to the one you want, without needing anything you weren't given.</p>
+        </div>
+        <div class="sidebar-block">
+          <h3 class="sidebar-title">Field Guide</h3>
+          <ul class="sidebar-list">
+            <li><a href="lectures.html">← All lectures</a></li>
+            <li><a href="lecture-3-motion-sensor.html">← Previous: Cart on a Ramp</a></li>
+            <li><a href="lecture-5-ripple-tank.html">Next: Ripple Tank →</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    document.getElementById('lecture-jump').addEventListener('change', (e) => {
+      if (e.target.value) window.location.href = e.target.value;
+    });
+  </script>
+  <script src="../js/layout.js"></script>
+</body>
+</html>
